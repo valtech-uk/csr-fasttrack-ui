@@ -23,6 +23,6 @@
     "grunt-modernizr": "~0.5.2",
     "grunt-prettify": "~0.3.4",
     "grunt-sass": "^1.0.0",
-    "grunt-text-replace": "~0.3.11",
+    "grunt-text-replace": "~0.3.11"
   }
 }
