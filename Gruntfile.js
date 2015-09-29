@@ -193,6 +193,27 @@ module.exports = function(grunt) {
                     open: true
                 }
             }
+        },
+        buildcontrol: {
+          options: {
+            dir: 'prototype',
+            commit: true,
+            push: true,
+            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+          },
+          heroku: {
+            options: {
+              remote: 'git@heroku.com:csr-ft-prototype.git',
+              branch: 'master',
+              tag: pkg.version
+            }
+          },
+          local: {
+            options: {
+              remote: '../',
+              branch: 'build'
+            }
+          }
         }
 
     });
@@ -212,7 +233,8 @@ module.exports = function(grunt) {
         'grunt-browser-sync',
         'grunt-dev-update',
         'grunt-contrib-connect',
-        'grunt-prettify'
+        'grunt-prettify',
+        'grunt-build-control'
     ].forEach(function(task) {
         grunt.loadNpmTasks(task);
     });
