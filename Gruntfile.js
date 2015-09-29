@@ -204,8 +204,8 @@ module.exports = function(grunt) {
           heroku: {
             options: {
               remote: 'git@heroku.com:csr-ft-prototype.git',
-              branch: 'master',
-              tag: pkg.version
+              branch: 'master'
+              //tag: pkg.version
             }
           },
           local: {
@@ -247,7 +247,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-    grunt.registerTask('proto', ['uglify:dist', 'replace:map', 'clean:prototype', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
+    grunt.registerTask('proto', ['uglify:dist', 'replace:map', 'clean:prototype', 'replace:scripts', 'copyto:prototype', 'prettify:prototype', 'buildcontrol']);
 
     grunt.registerTask('screenshots', ['phantomjs_screenshot']);
 
