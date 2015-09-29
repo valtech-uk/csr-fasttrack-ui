@@ -205,7 +205,6 @@ module.exports = function(grunt) {
             options: {
               remote: 'git@heroku.com:csr-ft-prototype.git',
               branch: 'master'
-              //tag: pkg.version
             }
           },
           local: {
