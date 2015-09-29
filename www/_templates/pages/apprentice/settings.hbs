@@ -1,0 +1,258 @@
+---
+headerTitle: Find an apprenticeship
+---
+
+<div class="panel-success toggle-content" id="successVerified">
+  <p>You've successfully verified your mobile number</p>
+</div>
+
+<div class="panel-success toggle-content" id="successEmailVerified">
+  <p>You've successfully verified your new email address</p>
+</div>
+
+<div class="grid-wrapper">
+  <div class="grid grid-1-2">
+    <h1 class="heading-xlarge">Settings</h1>
+  </div>
+  <div class="grid grid-1-2">
+    <p>
+      <a href="#" class="page-link">Find an apprenticeship</a>
+    </p>
+  </div>
+</div>
+
+<nav class="tabbed-nav">
+  <a class="tabbed-tab active" href="#" id="account-tab-control" tab="#tab1">Your account</a>
+  <a class="tabbed-tab" href="#" id="savedsearch-tab-control" tab="#tab2">Saved searches</a>
+</nav>
+<div class="tabbed-content active">
+
+  <div id="account" class="tabbed-element tab1 active width-all-1-1">
+
+    <h2 class="heading-large">Personal details</h2>
+
+    <div class="panel-indent">
+      <p class="text">Any changes you make will be seen on draft or new applications. Submitted applications will continue to show your old details.</p>
+    </div>
+
+    <div class="form-group form-group-compound">
+      <label for="firstName" class="form-label">First name</label>
+      <input type="text" id="firstName" class="form-control" value="John">
+    </div>
+    <div class="form-group">
+      <label for="lastName" class="form-label">Last name</label>
+      <input type="text" id="lastName" class="form-control" value="Smith">
+    </div>
+    <div class="form-group inline-fixed">
+      <p class="form-label">Date of birth</p>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="dob-day">Day</label>
+        <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*" id="dob-day" value="12">
+      </div>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="dob-month">Month</label>
+        <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*" id="dob-month" value="11">
+      </div>
+      <div class="form-group form-group-compound form-group-year">
+        <label class="form-hint" for="dob-year">Year</label>
+        <input type="tel" class="form-control form-control-small" maxlength="4" pattern="[0-9]*" id="dob-year" value="1990">
+      </div>
+    </div>
+    <div class="form-group form-group-compound" id="addressInputWrapper">
+      <label for="pca-addressInput" class="form-label">Enter your postcode or start typing address</label>
+      <span class="form-hint">For example, WR2 6NJ</span>
+      <input id="pca-addressInput" type="text" class="form-control form-control-1-3" autocapitalize="characters" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <a href="#" class="copy-19" id="enterAddressManually">Or enter address manually</a>
+      <span class="toggle-content loading-text" id="addressLoading">Loading address...</span>
+    </div>
+    <div id="manualAddressWrapper">
+      <div class="address-manual-input" id="addressManualInput">
+        <div class="form-group form-group-compound">
+          <label for="pca-address1" class="form-label">Address</label>
+          <input id="pca-address1" type="text" class="form-control" autocorrect="off" value="123">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="pca-address2" class="form-label visuallyhidden">Second line (optional)</label>
+          <input id="pca-address2" type="text" class="form-control" autocorrect="off" value="Glocuester Avenue">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="pca-address3" class="form-label visuallyhidden">Third line (optional)</label>
+          <input id="pca-address3" type="text" class="form-control" autocorrect="off" value="">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="pca-address4" class="form-label visuallyhidden">Fourth line (optional)</label>
+          <input id="pca-address4" type="text" class="form-control" autocorrect="off" value="Birmingham">
+        </div>
+        <div class="form-group">
+          <label for="pca-postcode" class="form-label">Postcode</label>
+          <input id="pca-postcode" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="B23 8JK">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber" class="form-label">Phone</label>
+      <div class="input-withlink">
+        <input type="tel" id="phoneNumber" class="form-control" value="07942 733876" />
+        <span class="input-withlink__link" id="verifyContainer">
+        </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <p class="form-label">Email</p>
+      <span class="form-prepopped">yourname@email.com</span><a class="inl-block" href="change-email.html">Change email address</a>
+    </div>
+
+    <details>
+      <summary>Your equality and diversity information</summary>
+      <div class="detail-content">
+        {{> monitoring }}
+      </div>
+    </details>
+
+    <h2 class="heading-large" id="settingsNotifications">How we contact you</h2>
+    <!-- <div class="form-group">
+      <div class="form-group form-group-compound">
+        <p class="form-label">Receive notifications?</p>
+        <span class="form-hint">If you don't select an option you won't receive notifications</span>
+        <label for="email" class="block-label">
+          <input checked type="checkbox" id="email">Email
+        </label>
+        <label for="textMessage" class="block-label">
+          <input type="checkbox" id="textMessage">Text
+        </label>
+      </div>
+    </div> -->
+    <div class="text para-btm-margin">
+      <p class="small-btm-margin">Choose to be notified by <i class="fa fa-envelope-o"></i>email or <i class="icon-sms"></i> text when:</p>
+      <div class="display-table">
+        <div class="display-table__row va-bottom">
+          <a id="emailToggle" href="" title="Email notifications" class="display-table__cell ta-center font-black">
+            <span class="notification-pulltop"><i class="fa fa-envelope-o no-right-margin"></i></span>
+          </a>
+          <a id="textToggle" href="" title="Text notifications" class="display-table__cell ta-center"><i class="icon-sms"></i></a>
+          <span class="display-table__cell ta-left">
+          </span>
+        </div>
+        <div class="display-table__row">
+          <span class="display-table__cell ta-center">
+            <input class="no-margins email-input" checked type="checkbox" id="appStatus">
+          </span>
+          <span class="display-table__cell ta-center">
+            <input class="no-margins text-input" checked type="checkbox" id="appStatus-text">
+          </span>
+          <span class="display-table__cell ta-left">
+            the status of one of your applications changes
+          </span>
+        </div>
+        <div class="display-table__row">
+          <span class="display-table__cell ta-center">
+            <input class="no-margins email-input" checked type="checkbox" id="appClosing">
+          </span>
+          <span class="display-table__cell ta-center">
+            <input class="no-margins text-input" checked type="checkbox" id="appClosing-text">
+          </span>
+          <span class="display-table__cell ta-left">
+            an apprenticeship is approaching its closing date
+          </span>
+        </div>
+        <div class="display-table__row">
+          <span class="display-table__cell ta-center">
+            <input class="no-margins email-input" checked type="checkbox" id="sendUpdates">
+          </span>
+          <span class="display-table__cell ta-center">
+            <input class="no-margins text-input" checked type="checkbox" id="sendUpdates-text">
+          </span>
+          <span class="display-table__cell ta-left">
+            we send you news and information
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <a href="#" class="button" id="verifyNumBtn">Save settings</a>
+    </div>
+  </div>
+<div id="savedsearch" class="tabbed-element tab2">
+
+  <div class="form-group" id="savedSearch">
+
+    <h2 class="heading-large">Saved searches</h2>
+    <p class="savedInitalText text">You currently don't have any active saved searches, <a href="search-index.html">use the search</a> and you can receive alerts when we find an apprenticeship that matches your criteria.</p>
+
+    <div id="savedSearches" class="toggle-content text">
+
+      <div class="form-group form-group-compound">
+        <p class="form-label">Receive notifications?</p>
+        <span class="form-hint">If you don't select an option you won't receive notifications</span>
+        <label for="email" class="block-label">
+          <input checked type="checkbox" id="email">Email
+        </label>
+        <label for="textMessage" class="block-label">
+          <input type="checkbox" id="textMessage">Text
+        </label>
+      </div>
+
+      <div class="para-btm-margin">
+        <a href="search-results-search.html" title="Run search">engineering within 5 miles of CV1 2WT</a> <span class="inl-block font-xsmall">(Last alert: today)</span>
+        <ul class="list-text">
+          <li><input class="no-left-margin" checked type="checkbox" id="alert1"><label for="alert1">Receive alerts for this search</label></li>
+          <li><a href="#" class="link-unimp icon-black"><fa class="fa fa-times-circle"></fa>Delete saved search</a></li>
+        </ul>
+      </div>
+      <div class="para-btm-margin">
+        <a href="search-results-search.html" title="Run search">admin within 5 miles of CV1 2WT</a> <span class="inl-block font-xsmall">(Last alert: today)</span>
+        <ul class="list-text">
+          <li><b>Refined by:</b> Job title</li>
+          <li><input class="no-left-margin" checked type="checkbox" id="alert1"><label for="alert1">Receive alerts for this search</label></li>
+          <li><a href="#" class="link-unimp icon-black"><fa class="fa fa-times-circle"></fa>Delete saved search</a></li>
+        </ul>
+      </div>
+      <div class="para-btm-margin">
+        <a href="search-results-search.html" title="Run search">Within 10 miles of Coventry</a> <span class="inl-block font-xsmall">(Last alert: 3 days ago)</span>
+        <ul class="list-text">
+          <li><b>Apprenticeship level:</b> Higher</li>
+          <li><input class="no-left-margin" checked type="checkbox" id="alert2"><label for="alert2">Receive alerts for this search</label></li>
+          <li><a href="#" class="link-unimp icon-black"><fa class="fa fa-times-circle"></fa>Delete saved search</a></li>
+        </ul>
+      </div>
+      <div class="para-btm-margin">
+        <a href="search-results-search.html" title="Run search">Construction, Planning and the Built Environment within England</a> <span class="inl-block font-xsmall">(Last alert: 4 days ago)</span>
+        <ul class="list-text">
+          <li><b>Apprenticeship level:</b> Higher</li>
+          <li><input class="no-left-margin" checked type="checkbox" id="alert3"><label for="alert3">Receive alerts for this search</label></li>
+          <li><a href="#" class="link-unimp icon-black"><fa class="fa fa-times-circle"></fa>Delete saved search</a></li>
+        </ul>
+      </div>
+      <div class="para-btm-margin">
+        <a href="search-results-search.html" title="Run search">Construction, Planning and the Built Environment within England</a> <span class="inl-block font-xsmall">(Last alert: 2 Mar 2015)</span>
+        <ul class="list-text">
+          <li><b>Sub-categories:</b> Surveying, Construction Civil Engineering</li>
+          <li><input class="no-left-margin" checked type="checkbox" id="alert4"><label for="alert4">Receive alerts for this search</label></li>
+          <li><a href="#" class="link-unimp icon-black"><fa class="fa fa-times-circle"></fa>Delete saved search</a></li>
+        </ul>
+      </div>
+      <div class="para-btm-margin">
+        <a href="search-results-search.html" title="Run search">Engineering and Manufacturing Technologies</a> <span class="inl-block font-xsmall">(Last alert: 2 Mar 2015)</span>
+        <ul class="list-text">
+          <li><b>Sub-categories:</b> Ceramics Manufacturing, Consumer Electrical and Electronic Products, Engineering Environmental Technologies, Engineering Manufacture, Mineral Products Technology (+ 6 more)</li>
+          <li><input class="no-left-margin" checked type="checkbox" id="alert4"><label for="alert4">Receive alerts for this search</label></li>
+          <li><a href="#" class="link-unimp icon-black"><fa class="fa fa-times-circle"></fa>Delete saved search</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+   <div class="form-group">
+    <a href="" class="button">Save settings</a>
+  </div>
+
+
+</div>
+
+
+  </div>
+
+<script src="{{assets}}/js/vendor/jquery-ui-1.10.4.custom.min.js"></script>

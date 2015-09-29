@@ -1,0 +1,235 @@
+.responsive-nav {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .heading {
+    display: inline-block;
+    margin-right: -4px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 80%;
+    a {
+      text-decoration: none;
+    }
+  }
+  @include media(tablet) {
+    clear: none;
+  }
+}
+
+.responsive-nav__trigger {
+  display: inline-block;
+  margin-right: -4px;
+  text-align: right;
+  vertical-align: middle;
+  width: 20%;
+  &:after {
+    content: " \25BC";
+    display: inline-block;
+    font-size: 8px;
+    height: 8px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+  &.triggered {
+    &:after {
+      content: " \25B2";
+    }
+  }
+  @include media(tablet) {
+    display: none;
+  }
+}
+
+.responsive-nav__links {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  li {
+    border-bottom: 1px solid #2E3133;
+    float: left;
+    font-size: 16px;
+    width: 50%;
+  }
+  a {
+    display: block;
+    padding: 5px 15px 5px 0;
+  }
+  &.menu-open, .no-js & {
+    height: auto;
+  }
+  @include media(tablet) {
+    height: auto;
+    li {
+      border-bottom: none;
+      display: inline-block;
+      float: none;
+      font-size: 18px;
+      width: auto;
+    }
+    a {
+      display: inline-block;
+      padding: 0 15px 0 0;
+    }
+  }
+}
+
+// .breadcrumbs {
+//   ul {
+//     list-style: none;
+//     margin-bottom: 10px;
+//     padding: 0;
+//   }
+//   a {
+//     color: $black;
+//     &:hover {
+//       color: $link-active-colour;
+//     }
+//   }
+// }
+
+// .breadcrumbs__item {
+//   background: url(../img/separator.png) no-repeat center right;
+//   background-size: 6px 11px;
+//   display: inline-block;
+//   margin-left: 8px;
+//   padding-right: 18px;
+//   @include device-pixel-ratio(2) {
+//     background-image: url(../img/separator-2x.png);
+//   }
+//   &:first-child {
+//     margin: 0;
+//   }
+//   &:last-child {
+//     background-image: none;
+//   }
+// }
+
+.page-navigation {
+  padding-top: 10px;
+  .description {
+    display: block;
+  }
+  .counter {
+    display: block;
+    font-size: 14px;
+  }
+  .hide-mob {
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+}
+
+.page-navigation__btn {
+  display: inline-block;
+  font-size: 1em;
+  margin-right: -4px; /*Inline block pixel fix*/
+  overflow: hidden;
+  padding: 1.2em 0.6em;
+  text-decoration: none;
+  vertical-align: top;
+  width: 50%;
+  .arrow-button {
+    color: $purple;
+    float: left;
+    font-size: 3.5em;
+    margin-right: 10px;
+    margin-top: -0.2em;
+  }
+  &.previous {
+    text-align: left;
+  }
+  &.next {
+    text-align: right;
+    .arrow-button {
+      float: right;
+      margin-left: 10px;
+      margin-right: 0;
+    }
+  }
+  &:hover {
+    text-decoration: underline;
+    .arrow-button {
+      color: $link-hover-colour;
+    }
+  }
+  &:active, &:focus {
+    background-color: $grey-4;
+  }
+}
+
+.block-link {
+  background: $grey-3;
+  border: 1px solid $grey-3;
+  color: $black;
+  cursor: pointer; // Encourage clicking on block labels
+  display: block;
+  margin-bottom: $gutter-half;
+  padding: 20px $gutter-half;
+  text-decoration: none;
+  &:hover {
+    border-color: $black;
+    color: $black;
+  }
+  &.active {
+    background: $white;
+    border-color: $black;
+  }
+}
+
+.tabbed-tab {
+  border: 1px solid transparent;
+  border-bottom: 1px solid $grey-2;
+  display: inline-block;
+  margin-bottom: -1px;
+  margin-right: 1px;
+  padding: $gutter-half 10px;
+  &.active {
+    background: $white;
+    border-color: $grey-2;
+    border-bottom-color: $white;
+    color: $black;
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    // background: inherit;
+    outline: none;
+  }
+}
+
+.tabbed-content {
+  border: 1px solid $grey-2;
+  // border-bottom: 0;
+  // border-right: 0;
+  // border-left: 0;
+  display: none;
+  margin-bottom: $gutter-half;
+  padding: $gutter 10px 0;
+  &.active {
+    display: block;
+  }
+}
+
+.tabbed-element {
+  display: none;
+  &.active {
+    display: inline-block;
+  }
+}
+

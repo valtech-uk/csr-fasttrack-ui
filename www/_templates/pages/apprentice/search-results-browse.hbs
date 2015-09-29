@@ -1,0 +1,371 @@
+---
+headerTitle: Find an apprenticeship
+---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<div class="search-results-wrapper grid-wrapper">
+  <div class="hgroup">
+    <h1 class="heading-xlarge">Search results</h1>
+    <p class="small-btm-margin">We've found <b class="bold-medium">37</b> apprenticeships in your selected apprenticeship category</p>
+  </div>
+  <section class="grid grid-1-3">
+    <fieldset class="search-filter">
+      <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
+      <div class="form-group mob-collpanel toggle-content--mob" id="editSearchPanel">
+        <div class="form-group form-group-compound">
+          <ul id="category-list" class="copy-16 list-text list-checkradio">
+                  <li>
+                      <input type="radio" name="Category" id="category-alb" value="ALB"><label for="category-alb">Agriculture, Horticulture and Animal Care (12)</label>
+                      <details>
+                          <summary class="copy-16">16 sub-categories</summary>
+                          <ul id="sub-category-alb-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-528" value="528"><label for="sub-category-528">Agriculture</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-439" value="439"><label for="sub-category-439">Animal Care</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-342" value="342"><label for="sub-category-342">Animal Technology</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-598" value="598"><label for="sub-category-598">Animal Technology</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-524" value="524"><label for="sub-category-524">Environmental Conservation</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-511" value="511"><label for="sub-category-511">Equine</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-526" value="526"><label for="sub-category-526">Farriery</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-530" value="530"><label for="sub-category-530">Fencing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-568" value="568"><label for="sub-category-568">Fish Husbandry and Fisheries Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-523" value="523"><label for="sub-category-523">Floristry</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-438" value="438"><label for="sub-category-438">Game and Wildlife Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-527" value="527"><label for="sub-category-527">Horticulture</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-525" value="525"><label for="sub-category-525">Landbased Engineering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-569" value="569"><label for="sub-category-569">Nursing Assistants in a Veterinary Environment</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-531" value="531"><label for="sub-category-531">Trees and Timber</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-529" value="529"><label for="sub-category-529">Veterinary Nursing</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-acc" value="ACC"><label for="category-acc">Arts, Media and Publishing (5)</label>
+                      <details>
+                          <summary class="copy-16">19 sub-categories</summary>
+                          <ul id="sub-category-acc-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-586" value="586"><label for="sub-category-586">Advertising &amp; Marketing Communications </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-639" value="639"><label for="sub-category-639">Automative Clay Modelling</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-610" value="610"><label for="sub-category-610">Broadcast Production </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-605" value="605"><label for="sub-category-605">Broadcasting Technology</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-492" value="492"><label for="sub-category-492">Community Arts</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-493" value="493"><label for="sub-category-493">Costume and Wardrobe</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-621" value="621"><label for="sub-category-621">Craft and Technical Roles in Film and Television</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-449" value="449"><label for="sub-category-449">Creative and Digital Media</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-495" value="495"><label for="sub-category-495">Cultural and Heritage Venue operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-497" value="497"><label for="sub-category-497">Design</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-636" value="636"><label for="sub-category-636">Digital Learning Design</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-622" value="622"><label for="sub-category-622">Interactive Design and Development</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-599" value="599"><label for="sub-category-599">Journalism</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-491" value="491"><label for="sub-category-491">Live Events and Promotion</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-496" value="496"><label for="sub-category-496">Music Business</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-448" value="448"><label for="sub-category-448">Photo Imaging</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-555" value="555"><label for="sub-category-555">SetCrafts</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-609" value="609"><label for="sub-category-609">Sound Recording, Engineering and Studio Facilities</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-494" value="494"><label for="sub-category-494">Technical Theatre</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-ahr" value="AHR"><label for="category-ahr">Business, Administration and Law (14)</label>
+                      <details>
+                          <summary class="copy-16">29 sub-categories</summary>
+                          <ul id="sub-category-ahr-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-454" value="454"><label for="sub-category-454">Accounting</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-590" value="590"><label for="sub-category-590">Banking</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-452" value="452"><label for="sub-category-452">Bookkeeping</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-490" value="490"><label for="sub-category-490">Business and Administration</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-581" value="581"><label for="sub-category-581">Business Innovation and Growth</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-556" value="556"><label for="sub-category-556">Campaigning</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-489" value="489"><label for="sub-category-489">Contact Centre Operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-614" value="614"><label for="sub-category-614">Criminal Investigation</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-488" value="488"><label for="sub-category-488">Customer Service</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-552" value="552"><label for="sub-category-552">Enterprise</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-557" value="557"><label for="sub-category-557">Fundraising</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-574" value="574"><label for="sub-category-574">Human Resource Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-589" value="589"><label for="sub-category-589">Insurance</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-601" value="601"><label for="sub-category-601">Legal Advice</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-565" value="565"><label for="sub-category-565">Legal Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-487" value="487"><label for="sub-category-487">Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-486" value="486"><label for="sub-category-486">Marketing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-451" value="451"><label for="sub-category-451">Payroll</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-575" value="575"><label for="sub-category-575">Professional Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-573" value="573"><label for="sub-category-573">Project Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-417" value="417"><label for="sub-category-417">Providing Financial Advice</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-455" value="455"><label for="sub-category-455">Providing Financial Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-453" value="453"><label for="sub-category-453">Providing Mortgage Advice</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-572" value="572"><label for="sub-category-572">Public Relations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-594" value="594"><label for="sub-category-594">Recruitment</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-485" value="485"><label for="sub-category-485">Sales and Telesales</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-579" value="579"><label for="sub-category-579">Social Media and Digital Marketing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-616" value="616"><label for="sub-category-616">Trade Business</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-558" value="558"><label for="sub-category-558">Volunteer Management</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input checked="" type="radio" name="Category" id="category-cst" value="CST"><label for="category-cst">Construction, Planning and the Built Environment (22)</label>
+                      <details>
+                          <summary class="copy-16">12 sub-categories</summary>
+                          <ul id="sub-category-cst-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-554" value="554"><label for="sub-category-554">Building Energy Management Systems (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-543" value="543"><label for="sub-category-543">Building Services Engineering Technology  (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-522" value="522"><label for="sub-category-522">Construction Building  (1)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-520" value="520"><label for="sub-category-520">Construction Civil Engineering  (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-612" value="612"><label for="sub-category-612">Construction Management (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-519" value="519"><label for="sub-category-519">Construction Specialist (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-521" value="521"><label for="sub-category-521">Construction Technical  (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-516" value="516"><label for="sub-category-516">Domestic Heating (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-515" value="515"><label for="sub-category-515">Heating and Ventilation (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-512" value="512"><label for="sub-category-512">Plumbing and Heating (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-514" value="514"><label for="sub-category-514">Refrigeration and Air Conditioning (0)</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-532" value="532"><label for="sub-category-532">Surveying (0)</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-13" value="13"><label for="category-13">Education and Training (9)</label>
+                      <details>
+                          <summary class="copy-16">4 sub-categories</summary>
+                          <ul id="sub-category-13-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-541" value="541"><label for="sub-category-541">Learning and Development</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-592" value="592"><label for="sub-category-592">Learning Support</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-613" value="613"><label for="sub-category-613">Supporting Teaching and Learning in Physical Education </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-420" value="420"><label for="sub-category-420">Supporting Teaching and Learning in Schools</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-mfp" value="MFP"><label for="category-mfp">Engineering and Manufacturing Technologies (5)</label>
+                      <details>
+                          <summary class="copy-16">58 sub-categories</summary>
+                          <ul id="sub-category-mfp-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-627" value="627"><label for="sub-category-627">Advanced Diagnostics and Management Principles </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-517" value="517"><label for="sub-category-517">Advanced Engineering Construction</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-550" value="550"><label for="sub-category-550">Advanced Manufacturing Engineering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-626" value="626"><label for="sub-category-626">Automotive Management and Leadership</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-405" value="405"><label for="sub-category-405">Aviation Operations on the Ground</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-625" value="625"><label for="sub-category-625">Blacksmithing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-559" value="559"><label for="sub-category-559">Building Products Industry Occupations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-431" value="431"><label for="sub-category-431">Bus and Coach Engineering and Maintenance</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-469" value="469"><label for="sub-category-469">Ceramics Manufacturing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-546" value="546"><label for="sub-category-546">Combined Manufacturing Processes </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-596" value="596"><label for="sub-category-596">Composite Engineering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-587" value="587"><label for="sub-category-587">Consumer Electrical and Electronic Products</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-441" value="441"><label for="sub-category-441">Driving Goods Vehicles</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-513" value="513"><label for="sub-category-513">Electrotechnical</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-564" value="564"><label for="sub-category-564">Engineering Construction – ECITB</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-604" value="604"><label for="sub-category-604">Engineering Environmental Technologies</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-540" value="540"><label for="sub-category-540">Engineering Manufacture</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-539" value="539"><label for="sub-category-539">Engineering Manufacture</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-607" value="607"><label for="sub-category-607">Explosives, Storage &amp; Maintenance</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-553" value="553"><label for="sub-category-553">Extractives</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-585" value="585"><label for="sub-category-585">Fashion and Textiles:Technical</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-403" value="403"><label for="sub-category-403">Food and Drink</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-551" value="551"><label for="sub-category-551">Furniture, Furnishing and Interiors </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-502" value="502"><label for="sub-category-502">Glass Industry</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-504" value="504"><label for="sub-category-504">Improving Operational Performance</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-548" value="548"><label for="sub-category-548">Jewellery, Silversmithing and Allied Trades</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-506" value="506"><label for="sub-category-506">Laboratory and Science Technicians</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-234" value="234"><label for="sub-category-234">Marine Industry</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-560" value="560"><label for="sub-category-560">Maritime Occupations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-597" value="597"><label for="sub-category-597">Metal Processing and Allied Operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-593" value="593"><label for="sub-category-593">Mineral Products Technology</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-606" value="606"><label for="sub-category-606">Multi-Skilled Vehicle Collision Repair</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-426" value="426"><label for="sub-category-426">Nuclear Working</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-562" value="562"><label for="sub-category-562">Operations and Quality Improvement</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-430" value="430"><label for="sub-category-430">Passenger Carrying Vehicle Driving</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-424" value="424"><label for="sub-category-424">Polymer Processing Operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-600" value="600"><label for="sub-category-600">Power Engineering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-542" value="542"><label for="sub-category-542">Print and Printed Packaging</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-425" value="425"><label for="sub-category-425">Process Manufacturing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-503" value="503"><label for="sub-category-503">Production of Coatings</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-615" value="615"><label for="sub-category-615">Professional Aviation Pilot Practice </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-428" value="428"><label for="sub-category-428">Rail Engineering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-623" value="623"><label for="sub-category-623">Rail Engineering Overhead Line Construction</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-545" value="545"><label for="sub-category-545">Rail Infrastructure Engineering </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-429" value="429"><label for="sub-category-429">Rail Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-544" value="544"><label for="sub-category-544">Rail Traction and Rolling Stock Engineering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-229" value="229"><label for="sub-category-229">Sea Fishing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-416" value="416"><label for="sub-category-416">Signmaking</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-570" value="570"><label for="sub-category-570">Smart Meter Installations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-505" value="505"><label for="sub-category-505">Sustainable Resource Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-446" value="446"><label for="sub-category-446">The Gas Industry</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-427" value="427"><label for="sub-category-427">The Power Industry </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-535" value="535"><label for="sub-category-535">The Water Industry</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-434" value="434"><label for="sub-category-434">Vehicle Body and Paint</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-437" value="437"><label for="sub-category-437">Vehicle Fitting </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-436" value="436"><label for="sub-category-436">Vehicle Maintenance and Repair </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-433" value="433"><label for="sub-category-433">Vehicle Parts </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-576" value="576"><label for="sub-category-576">Wood &amp; Timber Processing and Merchants Industry</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-pub" value="PUB"><label for="category-pub">Health, Public Services and Care (15)</label>
+                      <details>
+                          <summary class="copy-16">32 sub-categories</summary>
+                          <ul id="sub-category-pub-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-584" value="584"><label for="sub-category-584">Care Leadership and Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-445" value="445"><label for="sub-category-445">Children and Young People's Workforce</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-406" value="406"><label for="sub-category-406">Courts, Tribunal and Prosecution Administration</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-410" value="410"><label for="sub-category-410">Custodial Care</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-409" value="409"><label for="sub-category-409">Emergency Fire Service Operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-536" value="536"><label for="sub-category-536">Employment Related Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-478" value="478"><label for="sub-category-478">Health  - Allied Health Profession Support</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-472" value="472"><label for="sub-category-472">Health - Blood Donor Support</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-473" value="473"><label for="sub-category-473">Health - Clinical Healthcare</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-479" value="479"><label for="sub-category-479">Health - Dental Nursing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-476" value="476"><label for="sub-category-476">Health - Emergency Care</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-474" value="474"><label for="sub-category-474">Health - Healthcare Support Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-475" value="475"><label for="sub-category-475">Health - Maternity and Paediatric Support</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-471" value="471"><label for="sub-category-471">Health - Optical Retail</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-470" value="470"><label for="sub-category-470">Health - Pathology Support</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-477" value="477"><label for="sub-category-477">Health - Perioperative Support</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-480" value="480"><label for="sub-category-480">Health - Pharmacy Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-567" value="567"><label for="sub-category-567">Health (Informatics) </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-444" value="444"><label for="sub-category-444">Health and Social Care</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-602" value="602"><label for="sub-category-602">Health Assistant Practitioner -</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-537" value="537"><label for="sub-category-537">HM Forces</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-499" value="499"><label for="sub-category-499">Housing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-603" value="603"><label for="sub-category-603">Intelligence Analysis</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-450" value="450"><label for="sub-category-450">Libraries Records and IM Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-549" value="549"><label for="sub-category-549">Local Taxation and Benefits</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-571" value="571"><label for="sub-category-571">Locksmithing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-407" value="407"><label for="sub-category-407">Policing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-591" value="591"><label for="sub-category-591">Professional Development for Work Based Learning Practitioners </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-440" value="440"><label for="sub-category-440">Providing Security Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-421" value="421"><label for="sub-category-421">Security Systems</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-538" value="538"><label for="sub-category-538">Witness Care</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-447" value="447"><label for="sub-category-447">Youth Work</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-itc" value="ITC"><label for="category-itc">Information and Communication Technology (7)</label>
+                      <details>
+                          <summary class="copy-16">3 sub-categories</summary>
+                          <ul id="sub-category-itc-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-611" value="611"><label for="sub-category-611">Information Security</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-419" value="419"><label for="sub-category-419">IT Application Specialist</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-418" value="418"><label for="sub-category-418">IT, Software, Web &amp; Telecoms Professionals</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-htl" value="HTL"><label for="category-htl">Leisure, Travel and Tourism (2)</label>
+                      <details>
+                          <summary class="copy-16">15 sub-categories</summary>
+                          <ul id="sub-category-htl-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-460" value="460"><label for="sub-category-460">Activity Leadership</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-461" value="461"><label for="sub-category-461">Advanced Fitness</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-457" value="457"><label for="sub-category-457">Advanced Playwork</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-459" value="459"><label for="sub-category-459">Advanced Spectator Safety</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-432" value="432"><label for="sub-category-432">Cabin Crew</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-561" value="561"><label for="sub-category-561">Coaching</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-462" value="462"><label for="sub-category-462">Exercise and Fitness</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-463" value="463"><label for="sub-category-463">Leisure Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-466" value="466"><label for="sub-category-466">Leisure Operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-464" value="464"><label for="sub-category-464">Outdoor Programmes</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-456" value="456"><label for="sub-category-456">Playwork</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-458" value="458"><label for="sub-category-458">Spectator Safety</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-465" value="465"><label for="sub-category-465">Sporting Excellence</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-467" value="467"><label for="sub-category-467">Sports Development </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-408" value="408"><label for="sub-category-408">Travel Services</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-hby" value="HBY"><label for="category-hby">Retail and Commercial Enterprise (8)</label>
+                      <details>
+                          <summary class="copy-16">29 sub-categories</summary>
+                          <ul id="sub-category-hby-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-507" value="507"><label for="sub-category-507">Barbering</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-422" value="422"><label for="sub-category-422">Beauty Therapy</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-582" value="582"><label for="sub-category-582">Catering and Professional Chefs</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-498" value="498"><label for="sub-category-498">Cleaning and Environmental Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-415" value="415"><label for="sub-category-415">Commercial Moving </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-401" value="401"><label for="sub-category-401">Drinks Dispense Systems</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-588" value="588"><label for="sub-category-588">Energy Assessment and Advice</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-577" value="577"><label for="sub-category-577">Express Logistics</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-501" value="501"><label for="sub-category-501">Facilities Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-423" value="423"><label for="sub-category-423">Fashion and Textiles</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-578" value="578"><label for="sub-category-578">Funeral Operations and Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-508" value="508"><label for="sub-category-508">Hairdressing</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-583" value="583"><label for="sub-category-583">Hospitality</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-580" value="580"><label for="sub-category-580">Hospitality Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-628" value="628"><label for="sub-category-628">International Supply Chain Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-413" value="413"><label for="sub-category-413">International Trade and Logistics</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-404" value="404"><label for="sub-category-404">Licensed Hospitality</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-442" value="442"><label for="sub-category-442">Logistics Operations</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-411" value="411"><label for="sub-category-411">Mail Services and Package Distribution</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-509" value="509"><label for="sub-category-509">Nail Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-500" value="500"><label for="sub-category-500">Property Services</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-365" value="365"><label for="sub-category-365">Purchasing and  Supply Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-443" value="443"><label for="sub-category-443">Retail</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-608" value="608"><label for="sub-category-608">Retail Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-510" value="510"><label for="sub-category-510">Spa Therapy</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-566" value="566"><label for="sub-category-566">Supply Chain Management</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-412" value="412"><label for="sub-category-412">Traffic Office</label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-435" value="435"><label for="sub-category-435">Vehicle Sales </label></li>
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-414" value="414"><label for="sub-category-414">Warehousing and Storage</label></li>
+                          </ul>
+                      </details>
+                  </li>
+                  <li>
+                      <input type="radio" name="Category" id="category-02" value="02"><label for="category-02">Science and Mathematics (2)</label>
+                      <details>
+                          <summary class="copy-16">1 sub-categories</summary>
+                          <ul id="sub-category-02-list" class="max-height-6ish scrolling-panel detail-content copy-16 list-text list-checkradio">
+                                  <li><input type="checkbox" name="SubCategories" id="sub-category-563" value="563"><label for="sub-category-563">Life Sciences</label></li>
+                          </ul>
+                      </details>
+                  </li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label for="location" class="form-label">Your location</label>
+          <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+        </div>
+        <div class="form-group">
+          <label for="loc-within" class="form-label">Within</label>
+          <select data-val="true" data-val-number="The field WithinDistance must be a number." id="loc-within" name="WithinDistance"><option value="2">2 miles</option>
+            <option selected="selected" value="5">5 miles</option>
+            <option value="10">10 miles</option>
+            <option value="15">15 miles</option>
+            <option value="20">20 miles</option>
+            <option value="30">30 miles</option>
+            <option value="40">40 miles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="apprenticeship-level" class="form-label">Apprenticeship level</label>
+          <select id="apprenticeship-level" name="ApprenticeshipLevel"><option selected="selected" value="All">All levels</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="Higher">Higher</option>
+          </select>
+        </div>
+        <div class="form-group form-group-compound">
+          <button class="button no-btm-margin" id="search-button" name="SearchAction" value="Search">Update results</button>
+        </div>
+        <div class="form-group">
+          <a href="search-index.html">Start again</a>
+        </div>
+        <div class="form-group">
+          <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+  <section class="grid grid-2-3">
+    {{> search-results }}
+  </section>
+</div>
+
+<script>
+  $(function() {
+    $('.hidden-subcategory').each(function() {
+      $(this).show();
+    });
+  });
+</script>

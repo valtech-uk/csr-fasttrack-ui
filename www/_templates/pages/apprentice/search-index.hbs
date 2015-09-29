@@ -1,0 +1,284 @@
+---
+headerTitle: Find an apprenticeship
+---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<div class="hgroup">
+  <h1 class="heading-xlarge">Find an apprenticeship</h1>
+  <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
+</div>
+<div class="grid-wrapper controls-3-4">
+  <section class="grid grid-2-3">
+    <nav class="tabbed-nav">
+      <a class="tabbed-tab active" href="#" id="keywords-tab-control" tab="#tab1">Search</a>
+      <a class="tabbed-tab" href="#" id="categories-tab-control" tab="#tab2">Browse</a>
+      <a class="tabbed-tab" href="#" id="saved-tab-control" tab="#tab3">Saved searches</a>
+    </nav>
+    <div class="tabbed-content active">
+      <div id="categories" class="form-group tabbed-element tab2 ">
+        <span class="form-label" id="tourBrowseCategory">Browse by category</span>
+        <div class="grid-wrapper">
+          <div class="grid grid-1-2">
+            <div class="inner-block-padr">
+              <ul id="category-list-left" class="copy-16 list-text list-checkradio">
+                <li>
+                  <input type="radio" name="Category" id="category-alb" value="ALB"><label for="category-alb">Agriculture, Horticulture and Animal Care</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Category" id="category-acc" value="ACC"><label for="category-acc">Arts, Media and Publishing</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Category" id="category-ahr" value="AHR"><label for="category-ahr">Business, Administration and Law</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Category" id="category-cst" value="CST"><label for="category-cst">Construction, Planning and the Built Environment</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Category" id="category-13" value="13"><label for="category-13">Education and Training</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="Category" id="category-mfp" value="MFP"><label for="category-mfp">Engineering and Manufacturing Technologies</label>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-1-2">
+                <ul id="category-list-right" class="copy-16 list-text list-checkradio">
+                        <li>
+                            <input type="radio" name="Category" id="category-pub" value="PUB"><label for="category-pub">Health, Public Services and Care</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="Category" id="category-itc" value="ITC"><label for="category-itc">Information and Communication Technology</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="Category" id="category-htl" value="HTL"><label for="category-htl">Leisure, Travel and Tourism</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="Category" id="category-hby" value="HBY"><label for="category-hby">Retail and Commercial Enterprise</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="Category" id="category-02" value="02"><label for="category-02">Science and Mathematics</label>
+                        </li>
+                </ul>
+            </div>
+
+    </div>
+</div>
+
+<!-- <div class="tabbed-element tab1 active form-group" id="tourKeyword">
+  <a name="keywords"></a>
+  <label class="form-label" for="Keywords">Keywords (optional)</label>
+  <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
+
+  <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
+  <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true" aria-live="polite"></span>
+</div> -->
+<div class="tabbed-element tab1 active form-group">
+  <a name="keywords"></a>
+    <label class="form-label" for="tourKeyword">Keywords (optional)</label>
+    <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
+  <div class="input-withlink input-withlink--all-select">
+      <label for="refineSelect" class="hide-js inl-block">Refine search</label>
+      <select name="" id="refineSelect" class="input-withlink__select all-select">
+        <option value="All">All</option>
+        <option value="Job title">Job title</option>
+        <option value="Description">Description</option>
+        <option value="Employer">Employer</option>
+        <option value="Ref. number">Ref. number</option>
+      </select>
+      <input aria-describedby="keywordsHint" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$"  id="tourKeyword" name="Keywords" type="text" value="">
+    </div>
+</div>
+<p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for example “carpentry” or “mechanics”.</p>
+
+<div class="disp-block tabbed-element tab1 tab2">
+  <div class="form-group" id="tourLocation">
+    <a name="location"></a>
+    <label class="form-label" for="Location">Your location</label>
+    <span class="form-hint">Enter postcode, town or city or <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">use current location</span></span>
+    <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+    <input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode" data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters" id="Location" name="Location" type="text" autocomplete="off">
+    <span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" aria-live="polite"></span>
+  </div>
+
+  <div class="inline">
+    <div class="form-group" id="tourWithin">
+      <label for="loc-within" class="form-label">Within</label>
+      <select data-val="true" data-val-number="The field WithinDistance must be a number." id="loc-within" name="WithinDistance">
+        <option value="2">2 miles</option>
+        <option selected="selected" value="5">5 miles</option>
+        <option value="10">10 miles</option>
+        <option value="15">15 miles</option>
+        <option value="20">20 miles</option>
+        <option value="30">30 miles</option>
+        <option value="40">40 miles</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="apprenticeship-level" class="form-label">Apprenticeship level</label>
+      <select id="apprenticeship-level" name="ApprenticeshipLevel">
+        <option selected="selected" value="All">All levels</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+        <option value="Higher">Higher</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group form-group-compound">
+  <a href="search-results-search.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5" class="button tabbed-element tab1 active" id="search-button">Search</a>
+</div>
+<div class="form-group tabbed-element tab2">
+  <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=40&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="button tabbed-element tab2 " id="browse-button">Browse</a>
+</div>
+
+<div class="tabbed-element disp-block form-group tab1 tab2">
+  <a href="" class="" id="tourReset">Reset search options</a>
+</div>
+
+<input data-val="true" data-val-number="The field Latitude must be a number." id="Latitude" name="Latitude" type="hidden" value="">
+<input data-val="true" data-val-number="The field Longitude must be a number." id="Longitude" name="Longitude" type="hidden" value="">
+<input data-val="true" data-val-number="The field Hash must be a number." id="Hash" name="Hash" type="hidden" value="0">
+<input id="LocationType" name="LocationType" type="hidden" value="NonNational">
+<input data-val="true" data-val-number="The field ResultsPerPage must be a number." id="ResultsPerPage" name="ResultsPerPage" type="hidden" value="5">
+<input id="SearchMode" name="SearchMode" type="hidden" value="Keyword">
+  <div class="tabbed-element tab3" id="savedSearch">
+    <div class="savedInitalText">
+      <p>You can run your saved searches from here. When you search using keyword or category, you can save your search by clicking “Receive alerts for this search” on the results page.</p>
+    </div>
+    <div id="savedSearches" class="toggle-content">
+      <ul class="list-text list-checkradio" id="tourSavedList">
+        <li><input type="radio" name="savedSearches" id="name1"><label for="name1">engineering within 5 miles of CV1 2WT</label>
+        </li>
+        <li><input type="radio" name="savedSearches" id="name2"><label for="name2">Within 10 miles of Coventry</label></li>
+        <li><input type="radio" name="savedSearches" id="name3"><label for="name3">Construction, Planning and the Built Environment within England</label>
+          <p class="font-xsmall no-btm-margin"><b>Apprenticeship level:</b> Higher</p>
+        </li>
+        <li><input type="radio" name="savedSearches" id="name4"><label for="name4">Construction, Planning and the Built Environment within England</label>
+          <p class="font-xsmall no-btm-margin"><b>Sub-categories:</b> Surveying, Construction Civil Engineering</p>
+        </li>
+        <li><input type="radio" name="savedSearches" id="name5"><label for="name5">Construction, Planning and the Built Environment within England</label>
+          <p class="font-xsmall no-btm-margin"><b>Apprenticeship level:</b> Higher</p>
+          <p class="font-xsmall no-btm-margin"><b>Sub-categories:</b> Surveying, Construction Civil Engineering</p>
+        </li>
+      </ul>
+      <div class="form-group">
+        <a href="search-results-search.html" class="button">Run search</a>
+      </div>
+      <p>
+        You can edit your saved searches in the <a href="settings.html">alert settings</a> section.
+      </p>
+    </div>
+  </div>
+
+                </div>
+
+
+  </section>
+  <aside class="grid grid-1-3">
+    <div class="inner-block">
+      <div class="gov-border">
+        <h2 class="heading-medium">Help</h2>
+        <ul class="list-text">
+          <li><a href="#" id="runSearchHelp"><i class="fa fa-question-circle"></i>How to search for an apprenticeship</a> <span class="inl-block">(interactive walkthrough)</span></li>
+          <li>
+            <a href="overview.html">About apprenticeships</a>
+          </li>
+        </ul>
+        <ul class="list-text">
+          <li>0800 015 0400</li>
+          <li><a href="helpdesk.html">Contact us</a></li>
+        </ul>
+
+
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script>
+
+</script>
+
+<ol id="firstSearchTour" class="alwayshidden">
+  <li class="startTourGuide" data-id="runSearchHelp" data-button="Start tour">
+    <h3 class="heading-small med-btm-margin">Start tour</h3>
+    <p aria-live="polite">If you'd like some help on how to use the search to find apprenticeships that are suitable for you, start the tour here.</p>
+  </li>
+  <li class="startNextTourGuide" data-id="keywords-tab-control">
+    <p aria-live="polite">If you know the type of apprenticeship you’re looking for use the keyword search.</p>
+  </li>
+</ol>
+
+<ol id="searchTour" class="alwayshidden">
+  <li data-id="keywords-tab-control">
+    <p aria-live="polite">If you know the type of apprenticeship you’re looking for use the keyword search.</p>
+  </li>
+  <li class="browseHelp" data-id="categories-tab-control">
+    <p aria-live="polite">If you want to see what apprenticeships are available in different industries you can search by category (eg construction or retail).</p>
+  </li>
+  <li class="savedHelp" data-id="saved-tab-control">
+    <p aria-live="polite">If you have saved searches you can run them from here. You can save as many different searches as you like.</p>
+  </li>
+  <li data-id="refineSelect">
+    <p aria-live="polite">Select an option if you'd like to refine your search.</p>
+  </li>
+  <li class="browseHelp" data-id="tourKeyword">
+    <p aria-live="polite">Type your keyword here. Leaving it blank will look for any apprenticeships in your selected area.</p>
+  </li>
+  <li data-id="getLocation">
+    <p aria-live="polite">If you'd like to use your device's position to get your current postcode, click 'get current location' and then click "Allow" when prompted.</p>
+  </li>
+  <li data-id="tourLocation">
+    <p aria-live="polite">You can search for apprenticeships in any location in England. This can be near your home or where you’d like to work.</p>
+  </li>
+  <li data-id="tourWithin">
+    <p aria-live="polite">Choose how far from your location you want to search.</p>
+  </li>
+  <li data-id="apprenticeship-level">
+    <p aria-live="polite">You can also search by level. Intermediate is equivalent to 5 GCSE passes, Advanced is 2 A-level passes and a Higher can lead to a foundation degree.</p>
+  </li>
+  <li data-id="tourReset">
+    <p aria-live="polite">If you want to start with blank fields, you can clear the form with this button.</p>
+  </li>
+  <li class="joyride-withborder" data-id="headerLinkFAA" data-button="Finish">
+    <div aria-live="polite">
+      <p>At any time, quickly come back to this page by clicking the link in the header.</p>
+    </div>
+  </li>
+
+</ol>
+
+<ol id="browseTour" class="alwayshidden">
+  <li class="browseHelp" data-id="categories-tab-control">
+    <p aria-live="polite">If you want to see what apprenticeships are available in different industries you can search by category (eg construction or retail).</p>
+  </li>
+  <li data-id="tourBrowseCategory">
+    <p aria-live="polite">Select a category from this list, once you hit browse you'll then see a list of sub-categories on the result page.</p>
+  </li>
+  <li data-id="getLocation">
+    <p aria-live="polite">If you'd like to use your device's position to get your current post code, click here and then click "Allow" when prompted.</p>
+  </li>
+  <li data-id="tourLocation">
+    <p aria-live="polite">You can search for apprenticeships in any location in England. This can be near your home or where you’d like to work.</p>
+  </li>
+  <li data-id="tourWithin">
+    <p aria-live="polite">Choose how far from your location you want to search.</p>
+  </li>
+  <li data-id="apprenticeship-level">
+    <p aria-live="polite">You can also search by level. Intermediate is equivalent to 5 GCSE passes, Advanced is 2 A-level passes and a Higher can lead to a foundation degree.</p>
+  </li>
+  <li data-id="tourReset" data-button="Finish">
+    <p aria-live="polite">If you want to start with blank fields, you can clear the form with this button.</p>
+  </li>
+</ol>
+
+<ol id="savedSearchTour" class="alwayshidden">
+  <li class="savedHelp" data-id="saved-tab-control">
+    <p aria-live="polite">If you have saved searches you can run them from here. You can save as many different searches as you like.</p>
+  </li>
+  <li data-id="tourSavedList" data-button="Finish">
+    <p aria-live="polite">Select one of your saved searches and then run your saved search.</p>
+  </li>
+</ol>

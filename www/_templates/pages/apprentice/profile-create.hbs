@@ -1,0 +1,146 @@
+---
+headerTitle: Find an apprenticeship
+---
+
+<h1 class="heading-xlarge">Create an account</h1>
+<form action="">
+
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Your details</legend>
+    <div class="form-group form-group-compound">
+      <label for="first-name" class="form-label">First name</label>
+      <input id="first-name" type="text" class="form-control" autocorrect="off" value="" >
+    </div>
+    <div class="form-group">
+      <label for="last-name" class="form-label">Last name</label>
+      <input id="last-name" type="text" class="form-control" autocorrect="off" value="" >
+    </div>
+    <div class="form-group inline-fixed">
+      <p class="form-label">Date of birth</p>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="dob-day">Day</label>
+        <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
+      </div>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="dob-month">Month</label>
+        <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
+      </div>
+      <div class="form-group form-group-compound form-group-year">
+        <label class="form-hint" for="dob-year">Year</label>
+        <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
+      </div>
+    </div>
+    <div class="form-group toggle-content">
+      <label for="understand-age" class="block-label">
+        <input type="checkbox" id="understand-age">I understand that I may have to fund all or part of the training myself
+      </label>
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Contact details</legend>
+
+    <div class="form-group form-group-compound" id="addressInputWrapper">
+      <label for="pca-addressInput" class="form-label">Enter your postcode or start typing address</label>
+      <span class="form-hint">For example, WR2 6NJ</span>
+      <input id="pca-addressInput" type="text" class="form-control form-control-1-3" autocapitalize="characters" autocorrect="off" value="">
+      <span class="visuallyhidden" id="ariaAddressEntered" aria-live="polite"></span>
+    </div>
+    <div class="form-group form-group-compound">
+      <a href="#" class="copy-19" id="enterAddressManually">Or enter address manually</a>
+      <span class="toggle-content loading-text" id="addressLoading">Loading address...</span>
+    </div>
+    <div id="manualAddressWrapper">
+      <div class="address-manual-input" id="addressManualInput">
+        <div class="form-group form-group-compound">
+          <label for="pca-address1" class="form-label">Address</label>
+          <input id="pca-address1" type="text" class="form-control" autocorrect="off" value="">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="pca-address2" class="form-label visuallyhidden">Second line (optional)</label>
+          <input id="pca-address2" type="text" class="form-control" autocorrect="off">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="pca-address3" class="form-label visuallyhidden">Third line (optional)</label>
+          <input id="pca-address3" type="text" class="form-control" autocorrect="off" value="">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="pca-address4" class="form-label visuallyhidden">Fourth line (optional)</label>
+          <input id="pca-address4" type="text" class="form-control" autocorrect="off" value="">
+        </div>
+        <div class="form-group">
+          <label for="pca-postcode" class="form-label">Postcode</label>
+          <input id="pca-postcode" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="email-input" class="form-label" id="emailInput">Enter email address</label>
+      <span class="form-hint text">You'll need this to sign in to your account. The address you choose will be seen by employers.</span>
+      <input type="email" class="form-control linked-input-master" id="email-input" spellcheck="false">
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="phone-input">Enter mobile phone number</label>
+      <span class="form-hint text">If you don't have a mobile, enter a landline number.</span>
+      <input type="tel" class="form-control form-control-1-3 med-btm-margin" id="phone-input">
+      <details class="text">
+        <summary>Why we ask for your number</summary>
+        <div class="detail-content panel-indent">
+          <p>
+            Once you verify your mobile number you'll be able to receive notifications via text message. These notifications can be turned off in your settings.
+          </p>
+        </div>
+      </details>
+    </div>
+
+  </fieldset>
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Sign in details</legend>
+    <div class="form-group">
+      <p class="form-label">Email address</p>
+      <span class="form-prepopped hidden linked-input-slave"></span>
+      <input type="hidden" class="form-prepopped hidden linked-input-slave" name="username">
+      <a class="inl-block inpage-focus" href="#emailInput">Edit your email</a>
+    </div>
+    <div class="form-group">
+      <label for="Password" class="form-label">Create password</label>
+      <span class="form-hint">Requires upper and lowercase letters, a number and at least 8 characters</span>
+      <div class="form-group password-wrapper">
+        <input type="password" class="form-control" id="Password">
+        <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span></p>
+
+      </div>
+      <div class="password-second form-group">
+        <label for="confirm-password" class="form-label">Confirm password</label>
+        <input type="password" class="form-control">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="form-group form-group-compound">
+      <label for="accept-updates" class="block-label selected">
+        <input type="checkbox" checked id="accept-updates">I would like to receive the latest careers news and updates
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="accept-terms" class="block-label">
+        <input type="checkbox" id="accept-terms">I accept the <a href="terms.html" target="_blank" id="">terms &amp; conditions</a>
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="form-group">
+    <a id="createAccountBtn" class="button" href="profile-success.html">Create account</a>
+  </div>
+</form>
+<script src="{{assets}}/js/vendor/zxcvbn-async.js"></script>
+<script src="{{assets}}/js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
+
+<script>
+  $(function () {
+    $('#addressManualInput').addClass('disabled');
+  });
+</script>

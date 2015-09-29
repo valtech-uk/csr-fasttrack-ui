@@ -1,0 +1,31 @@
+---
+headerTitle: Find an apprenticeship
+---
+
+<h1 class="heading-xlarge">
+  Delete your account
+</h1>
+
+<div class="text">
+  <p>If you delete your account your personal information and application history will be removed. You’ll need to register again to use the service. </p>
+</div>
+
+<div class="form-group inline">
+  <p>Do you still wish to delete your account?</p>
+  <label data-target="deleteAccount" for="deleteYes" class="block-label">
+    <input type="radio" name="delete" id="deleteYes">
+    Yes
+  </label>
+  <label for="deleteNo" class="block-label">
+    <input checked type="radio" name="delete" id="deleteNo">
+    No
+  </label>
+</div>
+
+<div id="deleteAccount" class="form-group toggle-content">
+  <div class="password-second form-group">
+    <label for="confirm-password" class="form-label">Confirm password</label>
+    <input type="password" class="form-control">
+  </div>
+  <a id="btnDeleteAccount" href="profile-signin.html?Status=deleted" class="button">Delete my account</a>
+</div>

@@ -1,0 +1,74 @@
+---
+headerTitle: Find an apprenticeship
+---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<div id="savedSearchPanel" class="panel-success toggle-content">
+    <p class="text">We'll send you an alert when we find an apprenticeship that matches your search. <a href="settings.html#savedSearch">View your alerts</a></p>
+</div>
+<div class="search-results-wrapper grid-wrapper">
+  <div class="hgroup">
+    <h1 class="heading-xlarge">Search results</h1>
+    <p id="result-message" class="small-btm-margin">We've found <b class="bold-medium">24</b> apprenticeships in your selected area.</p>
+    <p class="small-btm-margin"><span class="fake-link" id="receiveSaveSearchAlert"><i class="fa fa-bell-o"></i>Receive alerts for this search</span></p>
+  </div>
+  <section class="grid grid-1-3">
+    <fieldset class="search-filter">
+      <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
+      <div class="mob-collpanel toggle-content--mob">
+          <div class="form-group">
+            <label for="keywords" class="form-label">Keywords (optional)</label>
+            <select name="" id="refineSelect" class="width-all-3-4 small-btm-margin">
+              <option value="">-- Refine search --</option>
+              <option value="All">All</option>
+              <option value="Job title">Job title</option>
+              <option value="Description">Description</option>
+              <option value="Employer">Employer</option>
+              <option value="Ref. number">Ref. number</option>
+            </select>
+            <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1" value="building">
+          </div>
+
+          <div class="form-group">
+            <label for="location" class="form-label">Your location</label>
+            <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+          </div>
+          <div class="form-group">
+            <label for="loc-within" class="form-label">Within</label>
+            <select id="loc-within">
+              <option value="">2 miles</option>
+              <option value="">5 miles</option>
+              <option selected value="">10 miles</option>
+              <option value="">15 miles</option>
+              <option value="">20 miles</option>
+              <option value="">30 miles</option>
+              <option value="">40 miles</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="apprType" class="form-label">Apprenticeship level</label>
+            <select name="" id="apprType">
+              <option value="">All levels</option>
+              <option value="">Intermediate</option>
+              <option value="">Advanced</option>
+              <option value="">Higher</option>
+            </select>
+          </div>
+          <div class="form-group form-group-compound">
+            <a href="#" class="button no-btm-margin">Update results</a>
+          </div>
+          <div class="form-group">
+            <a href="search-index.html">Start again</a>
+          </div>
+          <div class="form-group">
+            <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+          </div>
+        </div>
+    </fieldset>
+  </section>
+  <section class="grid grid-2-3">
+    {{> search-results }}
+  </section>
+</div>
+
+

@@ -1,0 +1,258 @@
+.cookie-banner {
+  background: $light-blue-25;
+  padding: 10px 0;
+}
+
+.maintenance-banner {
+  background: $yellow-25;
+  padding: 15px 0;
+  .maintenance-content {
+    padding-right: 35px;
+    position: relative;
+  }
+  .maintenance-close {
+    font-size: 16px;
+    margin-right: 0;
+    margin-top: -14px;
+    padding: 5px;
+    position: absolute;
+    top: 50%; right: 0;
+    .fa {
+      margin-right: 0;
+    }
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.global-header {
+  background: $black;
+  color: $white;
+  @media print {
+    * {
+      color: $black !important;
+    }
+  }
+}
+
+.global-header__wrapper {
+  margin: 0 auto;
+  max-width: 1020px;
+  overflow: hidden;
+  padding: 15px;
+  @include media(tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+.global-header__logo {
+  display: inline-block;
+  font-size: 0;
+  margin: 0 -4px 15px 0;
+  vertical-align: top;
+  @include media(tablet) {
+    margin-bottom: 0;
+    width: 33.33%;
+  }
+}
+
+.govuk-logo {
+  color: $white;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1em;
+  padding-bottom: 1px;
+  text-decoration: none;
+  img {
+    display: inline-block;
+    line-height: inherit;
+    margin: -6px 6px 0 0;
+    max-width: 35px;
+    vertical-align: middle;
+    width: 35px; height: 31px;
+  }
+  &:hover, &:visited {
+    color: $white;
+  }
+  &:hover, &:focus {
+    border-bottom: 1px solid $white;
+    padding-bottom: 0;
+  }
+  &:active {
+    color: $link-active-colour;
+    &:hover {
+      border-color: $link-active-colour;
+    }
+  }
+}
+
+.global-header__title {
+  font-size: 16px; /* 16px */
+  font-weight: 700;
+  line-height: 1.11111;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  @include media(tablet) {
+    font-size: 24px; /* 20px */
+  }
+  a {
+    border-bottom: 1px solid transparent;
+    color: $white;
+    display: inline-block;
+    padding: 2px 0;
+    text-decoration: none;
+    &:hover {
+      border-color: $white;
+    }
+  }
+}
+
+.global-header__link {
+  color: $white;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    color: $white;
+    .no-touch & {
+      text-decoration: underline;
+    }
+  }
+  @include media(tablet) {
+    font-size: 16px;
+  }
+}
+
+.global-header__nav {
+  display: block;
+  vertical-align: top;
+  @include media(tablet) {
+    display: inline-block;
+    margin-right: -4px;
+    width: 66.66%;
+  }
+}
+
+.alpha__label {
+  background: $alpha-colour;
+  color: $white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.14286;
+  margin-right: 10px;
+  padding: 2px 5px 0;
+  text-transform: uppercase;
+  vertical-align: top;
+  .heading-large & {
+    margin-top: -11px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  @include media(tablet) {
+    line-height: 1.25;
+  }
+}
+
+.beta__label {
+  background: $beta-colour;
+  color: $white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.14286;
+  margin-right: 10px;
+  padding: 2px 5px 0;
+  text-transform: uppercase;
+  vertical-align: top;
+  .heading-large & {
+    margin-top: -11px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  @include media(tablet) {
+    line-height: 1.25;
+  }
+}
+
+.phase-notice {
+  border-bottom: 1px solid $border-colour;
+  color: $black;
+  font-size: 14px; /*16px*/
+  padding: 10px 0;
+  vertical-align: middle;
+  @include media(tablet) {
+    font-size: 16px;
+  }
+  @media print {
+    display: none !important;
+  }
+}
+
+.prototype-warning {
+  margin-bottom: 5px;
+  @include media(tablet) {
+    margin-bottom: 0;
+  }
+  span {
+    display: inline-block;
+    vertical-align: top;
+    width: 77%;
+    @include media(tablet) {
+      width: 81.5%;
+    }
+  }
+}
+
+.fixed-container.fixed-header {
+  background: $white;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  .banner-container {
+    margin: 0 auto;
+    max-width: 1020px;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    @media screen and (max-width: 640px) {
+      padding-left: $gutter-half;
+      padding-right: $gutter-half;
+    }
+  }
+}
+
+.dwarf-header {
+  max-height: 0;
+  overflow: hidden;
+  &.grown-header {
+    max-height: 400px;
+    // overflow: visible;
+    transition: max-height 0.5s ease-in;
+  }
+}
+
+.account-info {
+  padding-left: 0;
+  text-align: right;
+  .your-name {
+    padding: 0 5px;
+  }
+  summary {
+    margin-right: 8px;
+    margin-top: 1px;
+  }
+  .account-link {
+    padding: 0 5px;
+  }
+  .last-link {
+    padding-right: 0;
+  }
+}
