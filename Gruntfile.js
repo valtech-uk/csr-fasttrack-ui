@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                 separator: ';'
             },
             dev: {
-                src: ['www/_assets/js/vendor-concat/*.js', 'www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/frameworks.js', '!www/_assets/js/jobtitles.js', '!www/_assets/js/prototype-recruit.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
+                src: ['www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
                 dest: 'www/_assets/js/scripts.js'
             }
         },
@@ -246,7 +246,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-    grunt.registerTask('proto', ['uglify:dist', 'replace:map', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
+    grunt.registerTask('proto', ['replace:map', 'copyto:prototype', 'prettify:prototype']);
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
