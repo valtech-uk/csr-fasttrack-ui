@@ -110,7 +110,6 @@ module.exports = function(grunt) {
                         '!www/_assets/js/vendor{,/**/*}',
                         '!www/_assets/js/scripts.min.js',
                         '!www/_assets/js/prototype.js',
-                        '!www/_assets/js/prototype-recruit.js',
                         'www/_templates{,/**/*}',
                         'www/_assets/css/*.map'
                     ]
@@ -118,9 +117,13 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            prototype: {
-                src: ['prototype/']
-            }
+          prototype: [
+            "prototype/_assets/",
+            "prototype/fasttrack/",
+            "prototype/offline/",
+            "prototype/*.html",
+            "!prototype/not/"
+          ]
         },
         replace: {
             map: {
@@ -154,7 +157,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'prototype/',
-                    src: ['apprentice/*.html', '*.html', '!pattern-library.html'],
+                    src: ['fasttrack/*.html', '*.html', '!pattern-library.html'],
                     dest: 'prototype/',
                     ext: '.html'
                 }]
@@ -246,7 +249,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-    grunt.registerTask('proto', ['replace:map', 'copyto:prototype', 'prettify:prototype']);
+    grunt.registerTask('proto', ['clean', 'replace:map', 'copyto:prototype', 'prettify:prototype']);
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
