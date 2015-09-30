@@ -163,6 +163,18 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        localscreenshots: {
+          options: {
+              path: 'screenshots',
+              type: 'png',
+              local : {
+                  path: 'prototype',
+                  port: 5000
+              },
+              viewport: ['1024x1024', '480x480']
+          },
+          src: ['prototype/**/*.html']
+        },
         browserSync: {
             dev: {
                 bsFiles: {
@@ -236,7 +248,8 @@ module.exports = function(grunt) {
         'grunt-dev-update',
         'grunt-contrib-connect',
         'grunt-prettify',
-        'grunt-build-control'
+        'grunt-build-control',
+        'grunt-localscreenshots'
     ].forEach(function(task) {
         grunt.loadNpmTasks(task);
     });
@@ -253,6 +266,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
-    grunt.registerTask('screenshots', ['phantomjs_screenshot']);
+    grunt.registerTask('screenshots', ['localscreenshots']);
 
 };
