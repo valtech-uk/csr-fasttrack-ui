@@ -246,7 +246,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-    grunt.registerTask('proto', ['uglify:dist', 'replace:map', 'clean:prototype', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
+    grunt.registerTask('proto', ['uglify:dist', 'replace:map', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
