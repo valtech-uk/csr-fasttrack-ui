@@ -10,17 +10,17 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <!--[if gt IE 8]><!--> <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
-  <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+  <!--[if gt IE 8]><!--> <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+  <!--[if lte IE 8]><link href="_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
 
   <!--[if lte IE 8]>
-    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if gte IE 9]><!-->
-      <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
+      <link href="_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
     <!--<![endif]-->
-  <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
-  <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon">
+  <link href="_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <script>
     var html = document.documentElement;
     html.className += " js-enabled";
@@ -29,18 +29,23 @@
       document.documentElement.className += ' no-details';
     }
   </script>
-  <script src="../_assets/js/vendor/modernizr-custom.js"></script>
-  <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
+  <!--[if lte IE 8]>
+    <script>
+      var head = document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+
+      style.type = 'text/css';
+      style.styleSheet.cssText = ':before,:after{content:none !important';
+      head.appendChild(style);
+      setTimeout(function(){
+          head.removeChild(style);
+      }, 0);
+    </script>
+  <![endif]-->
+  <script src="_assets/js/vendor/modernizr-custom.js"></script>
+  <script src="_assets/js/vendor/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-  <div id="planned-outage-message" class="maintenance-banner">
-    <div class="content-container" role="alert">
-      <div class="font-xsmall maintenance-content">
-        <p>This service will be down for maintenance on 12 March 2015, 2pm - 4pm GMT</p>
-        <a href="@Url.Action("DismissPlannedOutageMessage", "Account", new { isJavascript = false })" class="maintenance-close"><i id="dismiss-planned-outage-message" class="icon-black fa fa-times-circle"></i></a>
-      </div>
-    </div>
-  </div>
   <!-- <div id="global-cookie-message" class="cookie-banner">
   <div class="content-container">
       <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
@@ -55,11 +60,11 @@
   <div class="global-header__wrapper">
     <div class="global-header__logo">
       <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-        <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+        <img src="_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
       </a>
     </div>
     <div class="global-header__nav">
-      <div class="global-header__title beta"><a href="/index.html">Find an apprenticeship</a></div>
+      <div class="global-header__title beta"><a href="/index.html">Civil Service Resourcing</a></div>
     </div>
   </div>
 </header>
@@ -132,67 +137,80 @@
     <main role="main" id="main">
       
 <div class="hgroup">
-  <h1 class="heading-xlarge">Find an apprenticeship</h1>
-  <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
+  <h1 class="heading-xlarge">Contact us</h1>
 </div>
 <div class="grid-wrapper">
-  <section class="grid grid-2-3">
-    <div class="form-group">
-      <label for="keywords" class="form-label">Keywords (optional)</label>
-      <span class="form-hint">Can include job title, employer or reference number</span>
-      <input id="keywords" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-1">
-    </div>
-    <div class="form-group">
-      <label for="location" class="form-label">Apprenticeship location</label>
-      <span class="form-hint">Enter postcode, town or city</span>
-      <input id="location" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-2">
-    </div>
-    <div class="inline">
-      <div class="form-group">
-        <label for="loc-within" class="form-label">Within</label>
-        <select id="loc-within">
-          <option value="">2 miles</option>
-          <option value="">5 miles</option>
-          <option value="">10 miles</option>
-          <option value="">15 miles</option>
-          <option value="">20 miles</option>
-          <option value="">30 miles</option>
-          <option value="">40 miles</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="apprType" class="form-label">Apprenticeship level</label>
-        <select name="" id="apprType">
-          <option value="">All levels</option>
-          <option value="">Intermediate</option>
-          <option value="">Advanced</option>
-          <option value="">Higher</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <a class="button" href="search-results.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5">Search</a>
-    </div>
-  </section>
-  <aside class="grid grid-1-3">
-    <div class="inner-block">
-      <div class="gov-border">
-        <h2 class="heading-medium">Contact us</h2>
-        <ul class="list-text">
-          <li>0800 015 0400</li>
-          <li><a href="mailto:nationalhelpdesk@apprenticeships.gov.uk">Send us an email</a></li>
-        </ul>
-        <ul class="list-text">
-          <li>
-            <a href="overview.html">About apprenticeships</a>
-          </li>
-        </ul>
+  <div class="grid grid-2-3">
 
+    <section class="controls-3-4">
+      <div class="form-group">
+        <label for="contactName" class="form-label">Full name</label>
+        <input type="text" id="contactName" class="form-control">
       </div>
-    </div>
-  </aside>
+      <div class="form-group">
+        <label for="contactEmail" class="form-label">Email address</label>
+        <input type="email" id="contactEmail" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="contactSubject" class="form-label">Briefly describe your question</label>
+        <select name="" id="" class="hide-nojs small-btm-margin select-inject">
+          <option value="noSelect">-- Or choose from one of these questions --</option>
+          <option value="changeEmail">I need to change my email address</option>
+          <option value="forgottenEmailAddress">I’ve forgotten my email address</option>
+          <option value="cantSignIn">I can't sign in to my account</option>
+          <option value="activationHelp">I can't activate my account</option>
+          <option value="">I'd like to know more about eligibility and funding</option>
+          <option value="">I'm having problems submitting my application</option>
+          <option value="">I can't see my application</option>
+          <option value="">I want to withdraw an application</option>
+          <option value="">I want to delete my account</option>
+        </select>
+        <div id="changeEmail" class="selfServe panel-indent toggle-content hide-nojs text">
+          If you'd like to change your email address visit the <a href="change-email.html">update email</a> page. If you're still having problems contact us using this form.
+        </div>
+
+        <div id="forgottenEmailAddress" class="selfServe panel-indent toggle-content hide-nojs text">
+          <p>If you've forgotten your email address, visit the <a href="profile-noaccess.html">forgotten password</a> page. If you're still having problems contact us using this form.</p>
+        </div>
+
+        <div id="activationHelp" class="selfServe panel-indent toggle-content hide-nojs text">
+          <p><a href="profile-success.html">Activate your account</a> by signing in. You'll need the email address and password you used to create your account.</p>
+          <p>If you haven't received your activation code, you can re-send it from the activation page. Make sure you've checked your junk email folder.</p>
+          <p>If you're still having problems contact us using this form.</p>
+        </div>
+
+        <div id="cantSignIn" class="selfServe panel-indent toggle-content hide-nojs text">
+          <p>If you're having trouble signing in to your account, visit the <a href="profile-noaccess.html">forgotten password</a> page. If you're still having problems contact us using this form.</p>
+        </div>
+        <input type="text" class="form-control select-injected" id="contactSubject">
+      </div>
+
+
+      <div class="form-group">
+        <label for="contactQuery" class="form-label">More details about your question (optional)</label>
+        <textarea name="" id="contactQuery" rows="4" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <a href="#" class="button">Send</a>
+      </div>
+    </section>
+
+    <section class="text">
+      <h2 class="heading-medium">Apprenticeship helpline</h2>
+
+<!--       <p>Contact the helpline if you’d prefer to speak to somebody, or if you're having difficulty with the contact form.</p> -->
+
+      <p class="small-btm-margin">Telephone (free): 0800 015 0400</p>
+      <p>Telephone (from mobiles): 02476 826482</p>
+
+      <p>Email: <a href="mailto:nationalhelpdesk@findapprenticeship.service.gov.uk">nationalhelpdesk@findapprenticeship.service.gov.uk</a></p>
+
+      <p>Contact the <a href="https://nationalcareersservice.direct.gov.uk/Pages/Home.aspx" rel="external">National Careers Service</a> if you're wondering whether an apprenticeship is right for you.</p>
+    </section>
+
+  </div>
+
 </div>
-
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
@@ -201,17 +219,17 @@
       <ul class="footer__nav" role="navigation">
         <li class="small-btm-margin">
           <div>
-            <a class="footer__link bold-medium" href="/apprentice/helpdesk.html">Contact us</a>
-            <a class="footer__link bold-medium" href="/apprentice/feedback.html">Give feedback</a>
+            <a class="footer__link bold-medium" href="/helpdesk.html">Contact us</a>
+            <a class="footer__link bold-medium" href="/feedback.html">Give feedback</a>
           </div>
         </li>
         <li class="footer__link"><a href="/apprentice/privacy.html">Privacy and cookies</a></li>
         <li class="footer__link"><a href="/apprentice/terms.html">Terms and conditions</a></li>
         <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing" target="_blank">Civil Service Resourcing</a></li>
-        <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>, except where otherwise stated</li>
+        <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v3.0</a>, except where otherwise stated</li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
-        <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+        <img src="_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
         <p>&copy; Crown copyright</p>
       </a>
     </div>
@@ -222,12 +240,13 @@
     <p>Telephone (from mobiles): 02476 826482</p>
   </div> -->
 </footer>
-  <script src="../_assets/js/vendor/fastclick.js"></script>
-  <script src="../_assets/js/scripts.min.js"></script>
-  <script src="../_assets/js/vendor/jstorage.js"></script>
+
+  <script src="_assets/js/vendor/fastclick.js"></script>
+  <script src="_assets/js/scripts.min.js"></script>
+  <script src="_assets/js/vendor/jstorage.js"></script>
   <!-- Prototype specific scripts -->
-  <script src="../_assets/js/vendor/jquery.cookie.js"></script>
-  <script src="../_assets/js/prototype.js"></script>
+  <script src="_assets/js/vendor/jquery.cookie.js"></script>
+  <script src="_assets/js/prototype.js"></script>
 </body>
 </html>
 

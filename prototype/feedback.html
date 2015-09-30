@@ -13,18 +13,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <!--[if gt IE 8]><!-->
-    <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
     <!--<![endif]-->
-    <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if lte IE 8]><link href="_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
     <!--[if lte IE 8]>
-    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if gte IE 9]><!-->
-    <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
+    <link href="_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
     />
     <!--<![endif]-->
-    <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
-    <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+    <link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon">
+    <link href="_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
     type="text/css">
     <script>
     var html = document.documentElement;
@@ -46,8 +46,8 @@
       }, 0);
     </script>
   <![endif]-->
-    <script src="../_assets/js/vendor/modernizr-custom.js"></script>
-    <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="_assets/js/vendor/modernizr-custom.js"></script>
+    <script src="_assets/js/vendor/jquery-1.11.1.min.js"></script>
   </head>
   <body>
     <!-- <div id="global-cookie-message" class="cookie-banner">
@@ -64,11 +64,11 @@
       <div class="global-header__wrapper">
         <div class="global-header__logo">
           <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-            <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+            <img src="_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
           </a>
         </div>
         <div class="global-header__nav">
-          <div class="global-header__title beta"><a href="/index.html">Find an apprenticeship</a>
+          <div class="global-header__title beta"><a href="/index.html">Civil Service Resourcing</a>
           </div>
         </div>
       </div>
@@ -139,47 +139,37 @@
         </div>
       </div>
       <main role="main" id="main">
-        <div class="hgroup">
-          <h1 class="heading-xlarge">Contact us</h1>
+        <div class="panel-success toggle-content" id="feedbackSuccess">
+          <p id="" class="text"><i class="fa fa-check"></i>Your feedback has been successfully sent.
+            Thank you.</p>
+        </div>
+        <div class="hgroup text">
+          <h1 class="heading-xlarge">Give feedback</h1>
+          <p class="no-btm-margin">Please leave your suggestions or comments about our service.</p>
+          <p>If you're looking for help then <a href="helpdesk.html">contact us</a> instead.</p>
         </div>
         <div class="grid-wrapper">
           <div class="grid grid-2-3">
             <section class="controls-3-4">
-              <h2 class="heading-medium">Contact form</h2>
               <div class="form-group">
-                <label for="contactName" class="form-label">Full name</label>
+                <label for="contactName" class="form-label">Full name (optional)</label>
                 <input type="text" id="contactName" class="form-control">
               </div>
               <div class="form-group">
-                <label for="contactEmail" class="form-label">Email address</label>
+                <label for="contactEmail" class="form-label">Email address (optional)</label>
                 <input type="email" id="contactEmail" class="form-control">
               </div>
               <div class="form-group">
-                <label for="contactSubject" class="form-label">Briefly describe your question</label>
-                <input type="text" class="form-control select-injected" id="contactSubject">
+                <label for="contactQuery" class="form-label">Your feedback</label>
+                <textarea name="" id="contactQuery" rows="4" data-val-length-max="4000" class="form-control"></textarea>
+                <span class="form-hint"><span class="maxchar-count">4000</span> 
+                <span
+                class="maxchar-text">characters remaining</span>
+                  </span>
               </div>
               <div class="form-group">
-                <label for="contactQuery" class="form-label">More details about your question (optional)</label>
-                <textarea name="" id="contactQuery" rows="4" class="form-control"></textarea>
+                <a href="#" id="feedbackButton" class="button">Give feedback</a>
               </div>
-              <div class="form-group">
-                <a href="#" class="button">Send email</a>
-              </div>
-            </section>
-          </div>
-          <div class="grid grid-1-3">
-            <section class="text">
-              <h2 class="heading-medium">Apprenticeship helpline</h2>
-              <p>Contact the helpline if you’d prefer to speak to somebody in person,
-                or the contact form isn't working for you.</p>
-              <p>Phone:
-                <br>0800 015 0400
-                <br>02476 826482</p>
-              <p>Email: <a href="mailto:nationalhelpdesk@findapprenticeship.service.gov.uk">nationalhelpdesk@findapprenticeship.service.gov.uk</a>
-              </p>
-              <p>Contact <a href="https://nationalcareersservice.direct.gov.uk/Pages/Home.aspx"
-                rel="external">National Careers Service</a> (NCS) if you have a
-                question about whether an apprenticeship is right for you.</p>
             </section>
           </div>
         </div>
@@ -191,8 +181,8 @@
           <ul class="footer__nav" role="navigation">
             <li class="small-btm-margin">
               <div>
-                <a class="footer__link bold-medium" href="/apprentice/helpdesk.html">Contact us</a>
-                <a class="footer__link bold-medium" href="/apprentice/feedback.html">Give feedback</a>
+                <a class="footer__link bold-medium" href="/helpdesk.html">Contact us</a>
+                <a class="footer__link bold-medium" href="/feedback.html">Give feedback</a>
               </div>
             </li>
             <li class="footer__link"><a href="/apprentice/privacy.html">Privacy and cookies</a>
@@ -202,13 +192,13 @@
             <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing"
               target="_blank">Civil Service Resourcing</a>
             </li>
-            <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2"
-              class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>,
+            <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"
+              class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v3.0</a>,
               except where otherwise stated</li>
           </ul>
           <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
           target="_blank">
-            <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+            <img src="_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
             <p>&copy; Crown copyright</p>
           </a>
         </div>
@@ -219,11 +209,11 @@
     <p>Telephone (from mobiles): 02476 826482</p>
   </div> -->
     </footer>
-    <script src="../_assets/js/vendor/fastclick.js"></script>
-    <script src="../_assets/js/scripts.min.js"></script>
-    <script src="../_assets/js/vendor/jstorage.js"></script>
+    <script src="_assets/js/vendor/fastclick.js"></script>
+    <script src="_assets/js/scripts.min.js"></script>
+    <script src="_assets/js/vendor/jstorage.js"></script>
     <!-- Prototype specific scripts -->
-    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
-    <script src="../_assets/js/prototype.js"></script>
+    <script src="_assets/js/vendor/jquery.cookie.js"></script>
+    <script src="_assets/js/prototype.js"></script>
   </body>
 </html>

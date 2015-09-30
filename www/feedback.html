@@ -10,17 +10,17 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <!--[if gt IE 8]><!--> <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
-  <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+  <!--[if gt IE 8]><!--> <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+  <!--[if lte IE 8]><link href="_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
 
   <!--[if lte IE 8]>
-    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if gte IE 9]><!-->
-      <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
+      <link href="_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
     <!--<![endif]-->
-  <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
-  <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon">
+  <link href="_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <script>
     var html = document.documentElement;
     html.className += " js-enabled";
@@ -42,8 +42,8 @@
       }, 0);
     </script>
   <![endif]-->
-  <script src="../_assets/js/vendor/modernizr-custom.js"></script>
-  <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="_assets/js/vendor/modernizr-custom.js"></script>
+  <script src="_assets/js/vendor/jquery-1.11.1.min.js"></script>
 </head>
 <body>
   <!-- <div id="global-cookie-message" class="cookie-banner">
@@ -60,11 +60,11 @@
   <div class="global-header__wrapper">
     <div class="global-header__logo">
       <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-        <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+        <img src="_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
       </a>
     </div>
     <div class="global-header__nav">
-      <div class="global-header__title beta"><a href="/index.html">Find an apprenticeship</a></div>
+      <div class="global-header__title beta"><a href="/index.html">Civil Service Resourcing</a></div>
     </div>
   </div>
 </header>
@@ -136,90 +136,40 @@
 </div>
     <main role="main" id="main">
       
-<h2 class="heading-xlarge">Next steps</h2>
-
-<div class="text">
-  <p>If your application was unsuccessful there are a few things you can do to ensure you have a better chance next time.</p>
+<div class="panel-success toggle-content" id="feedbackSuccess">
+  <p id="" class="text"><i class="fa fa-check"></i>Your feedback has been successfully sent. Thank you.</p>
 </div>
-
-<div class="text">
-  <p>Read the <a href="https://nationalcareersservice.direct.gov.uk/advice/courses/typesoflearning/Pages/apprenticeship-application-help.aspx" rel="external" target="_blank">National Careers Service’s application guide</a> if you'd like more advice.</p>
-
-  <p>To help you write a better application you can take a guided tour of the application form.</p>
-  <div class="form-group">
-    <a class="button" href="apply-index.html?Tour=start">Start tour</a>
-  </div>
+<div class="hgroup text">
+  <h1 class="heading-xlarge">Give feedback</h1>
+  <p class="no-btm-margin">Please leave your suggestions or comments about our service.</p>
+  <p>If you're looking for help then <a href="helpdesk.html">contact us</a> instead.</p>
 </div>
+<div class="grid-wrapper">
+  <div class="grid grid-2-3">
 
+    <section class="controls-3-4">
+      <div class="form-group">
+        <label for="contactName" class="form-label">Full name (optional)</label>
+        <input type="text" id="contactName" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="contactEmail" class="form-label">Email address (optional)</label>
+        <input type="email" id="contactEmail" class="form-control">
+      </div>
 
-<div class="text">
-  <h3 class="heading-medium heading-with-check">
-    <i class="font-large fa fa-users"></i>What the shortlisters say
-  </h3>
-  <div class="panel-indent">
-    <div class="med-btm-margin">
-      <p><i class="fa fa-quote-left"></i>Good applicants have well-written application forms where they have taken the time to give examples of their skills and have a good balance between academic achievement and enthusiasm for the job/industry that they are applying for. </p>
-    </div>
-    <div class="med-btm-margin">
-      <p><i class="fa fa-quote-left"></i>Your application needs to show that you have thought about why you are applying for the job. </p>
-    </div>
-    <div class="med-btm-margin">
-      <p><i class="fa fa-quote-left"></i>Avoid poor spelling, grammar and punctuation. This is critical if you want to be taken seriously in your application. Ask someone else with a good eye for detail to proofread your application before you submit it. </p>
-    </div>
-    <div class="med-btm-margin">
-      <p><i class="fa fa-quote-left"></i>Remember to tailor your application for the job that you are applying for. </p>
-    </div>
+      <div class="form-group">
+        <label for="contactQuery" class="form-label">Your feedback</label>
+        <textarea name="" id="contactQuery" rows="4" data-val-length-max="4000" class="form-control"></textarea>
+        <span class="form-hint"><span class="maxchar-count">4000</span> <span class="maxchar-text">characters remaining</span></span>
+      </div>
+      <div class="form-group">
+        <a href="#" id="feedbackButton" class="button">Give feedback</a>
+      </div>
+    </section>
+
   </div>
 
-  <h3 class="heading-medium heading-with-check">
-    <i class="font-large fa fa-check-square-o"></i>Mistakes can spell trouble
-  </h3>
-  <details>
-    <summary>More details</summary>
-    <div class="detail-content panel-indent">
-      <p>Mistakes make employers think you haven’t taken the time to get things right. They could be concerned about how you will communicate with customers and other organisations.</p>
-
-      <p>If spelling and grammar aren’t your strong points, ask someone who’s good with words to check your application. Our advisers can also tell you how to improve your writing.</p>
-
-    </div>
-  </details>
-
-  <h3 class="heading-medium heading-with-check">
-    <i class="font-large fa fa-check-square-o"></i>Tailored applications, not mass mailshot
-  </h3>
-  <details>
-    <summary>More details</summary>
-    <div class="detail-content panel-indent">
-      <p>Employers will be impressed if your application seems carefully considered, and if you’ve made an effort to understand the role and what’s required of you.</p>
-
-      <p>You can create this impression by applying for fewer jobs but taking the time to make sure each application is tailored to an organisation and role.</p>
-    </div>
-  </details>
-
-  <h3 class="heading-medium heading-with-check">
-    <i class="font-large fa fa-check-square-o"></i>The perfect apprentice
-  </h3>
-  <details>
-    <summary>More details</summary>
-    <div class="detail-content panel-indent">
-      Employers want an apprentice who’s:
-      <ul class="list-bullet med-btm-margin">
-        <li>reliable </li>
-        <li>hard-working</li>
-        <li>eager to learn</li>
-        <li>good at dealing with people</li>
-      </ul>
-
-      <p>In your application try to include examples of times when you’ve shown these qualities. You can then apply for another apprenticeship and see if you're more successful. </p>
-    </div>
-  </details>
-
-  <p>If you'd like more advice on careers contact the <a href="https://nationalcareersservice.direct.gov.uk/advice/Pages/default.aspx" rel="external" target="_blank">National Careers Service</a>.</p>
-  <div class="get-started">
-    <a href="search-index.html" class="button">Find an apprenticeship</a>
-  </div>
 </div>
-
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
@@ -228,17 +178,17 @@
       <ul class="footer__nav" role="navigation">
         <li class="small-btm-margin">
           <div>
-            <a class="footer__link bold-medium" href="/apprentice/helpdesk.html">Contact us</a>
-            <a class="footer__link bold-medium" href="/apprentice/feedback.html">Give feedback</a>
+            <a class="footer__link bold-medium" href="/helpdesk.html">Contact us</a>
+            <a class="footer__link bold-medium" href="/feedback.html">Give feedback</a>
           </div>
         </li>
         <li class="footer__link"><a href="/apprentice/privacy.html">Privacy and cookies</a></li>
         <li class="footer__link"><a href="/apprentice/terms.html">Terms and conditions</a></li>
         <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing" target="_blank">Civil Service Resourcing</a></li>
-        <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>, except where otherwise stated</li>
+        <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v3.0</a>, except where otherwise stated</li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
-        <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+        <img src="_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
         <p>&copy; Crown copyright</p>
       </a>
     </div>
@@ -250,12 +200,12 @@
   </div> -->
 </footer>
 
-  <script src="../_assets/js/vendor/fastclick.js"></script>
-  <script src="../_assets/js/scripts.min.js"></script>
-  <script src="../_assets/js/vendor/jstorage.js"></script>
+  <script src="_assets/js/vendor/fastclick.js"></script>
+  <script src="_assets/js/scripts.min.js"></script>
+  <script src="_assets/js/vendor/jstorage.js"></script>
   <!-- Prototype specific scripts -->
-  <script src="../_assets/js/vendor/jquery.cookie.js"></script>
-  <script src="../_assets/js/prototype.js"></script>
+  <script src="_assets/js/vendor/jquery.cookie.js"></script>
+  <script src="_assets/js/prototype.js"></script>
 </body>
 </html>
 
