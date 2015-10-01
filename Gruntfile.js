@@ -97,24 +97,38 @@ module.exports = function(grunt) {
             }
         },
         copyto: {
-            prototype: {
-                files: [{
-                    cwd: 'www/',
-                    src: ['**/*'],
-                    dest: 'prototype/'
-                }],
-                options: {
-                    ignore: [
-                        'www/_assets/scss{,/**/*}',
-                        'www/_assets/js{,/**/*}',
-                        '!www/_assets/js/vendor{,/**/*}',
-                        '!www/_assets/js/scripts.min.js',
-                        '!www/_assets/js/prototype.js',
-                        'www/_templates{,/**/*}',
-                        'www/_assets/css/*.map'
-                    ]
-                }
+          prototype: {
+            files: [{
+              cwd: 'www/',
+              src: ['**/*'],
+              dest: 'prototype/'
+            }],
+            options: {
+              ignore: [
+                'www/_assets/scss{,/**/*}',
+                'www/_assets/js{,/**/*}',
+                '!www/_assets/js/vendor{,/**/*}',
+                '!www/_assets/js/scripts.min.js',
+                '!www/_assets/js/prototype.js',
+                'www/_templates{,/**/*}',
+                'www/_assets/css/*.map'
+              ]
             }
+          },
+          screenshots: {
+            files: [{
+              expand: true,
+              dot: true,
+              cwd: 'screens',
+              dest: 'screens/',
+              src: ['{,*/}*.png'],
+              rename: function(dest, src) {
+                var date = new Date();
+                return dest + src.replace('.png', date + '.png');
+              }
+            }]
+
+          }
         },
         clean: {
           prototype: [
@@ -165,7 +179,7 @@ module.exports = function(grunt) {
         },
         localscreenshots: {
           options: {
-              path: 'screenshots',
+              path: 'screens',
               type: 'png',
               local : {
                   path: 'prototype',
@@ -267,5 +281,8 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', ['buildcontrol']);
 
     grunt.registerTask('screenshots', ['localscreenshots']);
+
+    grunt.registerTask('copyscreens', ['copyto:screenshots']);
+
 
 };
