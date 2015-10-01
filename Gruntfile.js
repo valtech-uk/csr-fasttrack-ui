@@ -127,7 +127,7 @@ module.exports = function(grunt) {
               dest: '/Users/henrycharge/Google\ Drive/_CSR/Beta/Screenshots/',
               rename: function(dest, src) {
                 var date = new Date();
-                    now = "-" + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + "-" + date.getHours() + "-" + date.getMinutes();
+                    now = "-" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" + date.getHours() + "-" + date.getMinutes();
 
                 return dest + src.replace(/\.png$/, now + ".png");
               }
@@ -259,7 +259,6 @@ module.exports = function(grunt) {
         'grunt-contrib-concat',
         'grunt-text-replace',
         'grunt-contrib-watch',
-        'grunt-copy-to',
         'grunt-contrib-copy',
         'grunt-contrib-clean',
         'grunt-contrib-compress',
