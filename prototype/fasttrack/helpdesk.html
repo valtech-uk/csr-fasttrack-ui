@@ -13,18 +13,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <!--[if gt IE 8]><!-->
-    <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
     <!--<![endif]-->
-    <!--[if lte IE 8]><link href="_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
     <!--[if lte IE 8]>
-    <link href="_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if gte IE 9]><!-->
-    <link href="_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
+    <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
     />
     <!--<![endif]-->
-    <link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon">
-    <link href="_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+    <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
+    <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
     type="text/css">
     <script>
     var html = document.documentElement;
@@ -46,8 +46,8 @@
       }, 0);
     </script>
   <![endif]-->
-    <script src="_assets/js/vendor/modernizr-custom.js"></script>
-    <script src="_assets/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="../_assets/js/vendor/modernizr-custom.js"></script>
+    <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
   </head>
   <body>
     <!-- <div id="global-cookie-message" class="cookie-banner">
@@ -64,7 +64,7 @@
       <div class="global-header__wrapper">
         <div class="global-header__logo">
           <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-            <img src="_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+            <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
           </a>
         </div>
         <div class="global-header__nav">
@@ -105,40 +105,65 @@
         </div>
       </div>
       <main role="main" id="main">
-        <div class="panel-success toggle-content" id="feedbackSuccess">
-          <p id="" class="text"><i class="fa fa-check"></i>Your feedback has been successfully sent.
-            Thank you.</p>
+        <div class="hgroup">
+          <h1 class="heading-xlarge">Contact us</h1>
         </div>
-        <div class="hgroup text">
-          <h1 class="heading-xlarge">Give feedback</h1>
-          <p class="no-btm-margin">Please leave your suggestions or comments about our service.</p>
-          <p>If you're looking for help then <a href="helpdesk.html">contact us</a> instead.</p>
-        </div>
-        <div class="grid-wrapper">
-          <div class="grid grid-2-3">
-            <section class="controls-3-4">
-              <div class="form-group">
-                <label for="contactName" class="form-label">Full name (optional)</label>
-                <input type="text" id="contactName" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="contactEmail" class="form-label">Email address (optional)</label>
-                <input type="email" id="contactEmail" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="contactQuery" class="form-label">Your feedback</label>
-                <textarea name="" id="contactQuery" rows="4" data-val-length-max="4000" class="form-control"></textarea>
-                <span class="form-hint"><span class="maxchar-count">4000</span> 
-                <span
-                class="maxchar-text">characters remaining</span>
-                  </span>
-              </div>
-              <div class="form-group">
-                <a href="#" id="feedbackButton" class="button">Give feedback</a>
-              </div>
-            </section>
-          </div>
-        </div>
+        <!-- <section>
+  <div class="form-group">
+    <label for="contactName" class="form-label">Full name</label>
+    <input type="text" id="contactName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="contactEmail" class="form-label">Email address</label>
+    <input type="email" id="contactEmail" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="contactSubject" class="form-label">Briefly describe your question</label>
+    <select name="" id="" class="hide-nojs small-btm-margin select-inject">
+      <option value="noSelect">-- Or choose from one of these questions --</option>
+      <option value="changeEmail">I need to change my email address</option>
+      <option value="forgottenEmailAddress">I’ve forgotten my email address</option>
+      <option value="cantSignIn">I can't sign in to my account</option>
+      <option value="activationHelp">I can't activate my account</option>
+      <option value="">I'd like to know more about eligibility and funding</option>
+      <option value="">I'm having problems submitting my application</option>
+      <option value="">I can't see my application</option>
+      <option value="">I want to withdraw an application</option>
+      <option value="">I want to delete my account</option>
+    </select>
+    <div id="changeEmail" class="selfServe panel-indent toggle-content hide-nojs text">
+      If you'd like to change your email address visit the <a href="change-email.html">update email</a> page. If you're still having problems contact us using this form.
+    </div>
+    <div id="forgottenEmailAddress" class="selfServe panel-indent toggle-content hide-nojs text">
+      <p>If you've forgotten your email address, visit the <a href="profile-noaccess.html">forgotten password</a> page. If you're still having problems contact us using this form.</p>
+    </div>
+    <div id="activationHelp" class="selfServe panel-indent toggle-content hide-nojs text">
+      <p><a href="profile-success.html">Activate your account</a> by signing in. You'll need the email address and password you used to create your account.</p>
+      <p>If you haven't received your activation code, you can re-send it from the activation page. Make sure you've checked your junk email folder.</p>
+      <p>If you're still having problems contact us using this form.</p>
+    </div>
+    <div id="cantSignIn" class="selfServe panel-indent toggle-content hide-nojs text">
+      <p>If you're having trouble signing in to your account, visit the <a href="profile-noaccess.html">forgotten password</a> page. If you're still having problems contact us using this form.</p>
+    </div>
+    <input type="text" class="form-control select-injected" id="contactSubject">
+  </div>
+  <div class="form-group">
+    <label for="contactQuery" class="form-label">More details about your question (optional)</label>
+    <textarea name="" id="contactQuery" rows="4" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <a href="#" class="button">Send</a>
+  </div>
+</section> -->
+        <section class="text">
+          <h2 class="heading-medium">Fast Track helpline</h2>
+          <p>Telephone (free): 0800 015 0400</p>
+          <p>Email: <a href="mailto:helpdesk@fasttrack.service.gov.uk">helpdesk@fasttrack.service.gov.uk</a>
+          </p>
+          <p>Contact the <a href="https://nationalcareersservice.direct.gov.uk/Pages/Home.aspx"
+            rel="external">National Careers Service</a> if you're wondering whether
+            an apprenticeship is right for you.</p>
+        </section>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
@@ -147,13 +172,13 @@
           <ul class="footer__nav" role="navigation">
             <li class="small-btm-margin">
               <div>
-                <a class="footer__link bold-medium" href="/helpdesk.html">Contact us</a>
-                <a class="footer__link bold-medium" href="/feedback.html">Give feedback</a>
+                <a class="footer__link bold-medium" href="/fasttrack/helpdesk.html">Contact us</a>
+                <a class="footer__link bold-medium" href="/fasttrack/feedback.html">Give feedback</a>
               </div>
             </li>
-            <li class="footer__link"><a href="/apprentice/privacy.html">Privacy and cookies</a>
+            <li class="footer__link"><a href="/fasttrack/privacy.html">Privacy and cookies</a>
             </li>
-            <li class="footer__link"><a href="/apprentice/terms.html">Terms and conditions</a>
+            <li class="footer__link"><a href="/fasttrack/terms.html">Terms and conditions</a>
             </li>
             <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing"
               target="_blank">Civil Service Resourcing</a>
@@ -164,22 +189,17 @@
           </ul>
           <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
           target="_blank">
-            <img src="_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+            <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
             <p>&copy; Crown copyright</p>
           </a>
         </div>
       </div>
-      <!--   <div class="toggle-content show-print">
-    <h3 class="heading-small">Contact the Skills Funding Agency helpdesk</h3>
-    <p class="small-btm-margin">Telephone (free): 0800 015 0400</p>
-    <p>Telephone (from mobiles): 02476 826482</p>
-  </div> -->
     </footer>
-    <script src="_assets/js/vendor/fastclick.js"></script>
-    <script src="_assets/js/scripts.js"></script>
-    <script src="_assets/js/vendor/jstorage.js"></script>
+    <script src="../_assets/js/vendor/fastclick.js"></script>
+    <script src="../_assets/js/scripts.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
     <!-- Prototype specific scripts -->
-    <script src="_assets/js/vendor/jquery.cookie.js"></script>
-    <script src="_assets/js/prototype.js"></script>
+    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
+    <script src="../_assets/js/prototype.js"></script>
   </body>
 </html>
