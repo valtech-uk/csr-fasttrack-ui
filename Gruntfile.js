@@ -96,38 +96,42 @@ module.exports = function(grunt) {
                 files: ['www/email.html']
             }
         },
-        copyto: {
+        copy: {
           prototype: {
             files: [{
-              cwd: 'www/',
-              src: ['**/*'],
+              expand: true,
+              cwd: 'www',
+              src: [
+                '**/*',
+                '!_assets/scss/**/*',
+                '!_assets/js/**/*',
+                '!_templates/**/*',
+                '!_assets/css/*.map',
+                '_assets/js/vendor/**/*',
+                '_assets/js/scripts.min.js',
+                '_assets/js/prototype.js'
+              ],
               dest: 'prototype/'
             }],
             options: {
               ignore: [
-                'www/_assets/scss{,/**/*}',
-                'www/_assets/js{,/**/*}',
-                '!www/_assets/js/vendor{,/**/*}',
-                '!www/_assets/js/scripts.min.js',
-                '!www/_assets/js/prototype.js',
-                'www/_templates{,/**/*}',
-                'www/_assets/css/*.map'
+
               ]
             }
           },
           screenshots: {
             files: [{
               expand: true,
-              dot: true,
-              cwd: 'screens',
-              dest: 'screens/',
-              src: ['{,*/}*.png'],
+              cwd: 'screens/',
+              src: ['**/*.png'],
+              dest: '/Users/henrycharge/Google\ Drive/_CSR/Beta/Screenshots/',
               rename: function(dest, src) {
                 var date = new Date();
-                return dest + src.replace('.png', date + '.png');
+                    now = "-" + date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate() + "-" + date.getHours() + "-" + date.getMinutes();
+
+                return dest + src.replace(/\.png$/, now + ".png");
               }
             }]
-
           }
         },
         clean: {
@@ -256,6 +260,7 @@ module.exports = function(grunt) {
         'grunt-text-replace',
         'grunt-contrib-watch',
         'grunt-copy-to',
+        'grunt-contrib-copy',
         'grunt-contrib-clean',
         'grunt-contrib-compress',
         'grunt-browser-sync',
@@ -276,13 +281,13 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-    grunt.registerTask('proto', ['clean', 'replace:map', 'copyto:prototype', 'prettify:prototype']);
+    grunt.registerTask('proto', ['clean', 'replace:map', 'copy:prototype', 'prettify:prototype']);
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
-    grunt.registerTask('screenshots', ['localscreenshots']);
+    grunt.registerTask('screens', ['localscreenshots', 'copy:screenshots']);
 
-    grunt.registerTask('copyscreens', ['copyto:screenshots']);
+    grunt.registerTask('copyscreens', ['copy:screenshots']);
 
 
 };

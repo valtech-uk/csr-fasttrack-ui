@@ -3,5 +3,4 @@
 node_modules/**
 *.DS_Store
 *.map
-screenshots/**
-screenshots-v/**
+screens/**

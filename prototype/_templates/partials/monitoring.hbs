@@ -1,0 +1,106 @@
+<div class="form-group inline clearfix">
+  <p class="form-label" id="gender-label">Are you?</p>
+  <label for="gender-male" class="block-label">
+    <input name="gender" type="radio" id="gender-male" aria-labelledby="gender-label">Male
+  </label>
+  <label for="gender-female" class="block-label">
+    <input name="gender" type="radio" id="gender-female" aria-labelledby="gender-label">Female
+  </label>
+  <label for="gender-other" class="block-label">
+    <input name="gender" type="radio" id="gender-other" aria-labelledby="gender-label">Other
+  </label>
+  <label for="gender-no" class="block-label">
+    <input  name="gender" type="radio" id="gender-no" aria-labelledby="gender-label">Prefer not to say
+  </label>
+</div>
+
+<div class="form-group inline clearfix">
+  <p class="form-label" id="disability-label">Do you have a learning difficulty, disability or health problem?</p>
+  <label for="disability-yes" class="block-label">
+    <input name="disability" type="radio" id="disability-yes" aria-labelledby="disability-label">Yes
+  </label>
+  <label for="disability-no" class="block-label">
+    <input name="disability" type="radio" id="disability-no" aria-labelledby="disability-label">No
+  </label>
+  <label for="disability-prefno" class="block-label">
+    <input  name="disability" type="radio" id="disability-prefno" aria-labelledby="disability-label">Prefer not to say
+  </label>
+  <div class="text">
+      <details class="med-btm-margin">
+        <summary>Why we collect this info</summary>
+        <div class="detail-content panel-indent">
+          <p>Employers who are part of the ‘Positive about disabled people’ scheme will  guarantee candidates an interview who meet the apprenticeship criteria if they have a disability. </p>
+          <p>For this reason we ask you to provide this information so we can inform the employer and provider.</p>
+        </div>
+      </details>
+    </div>
+</div>
+<div class="form-group">
+  <label for="question4" class="form-label">Is there anything we can do to support your interview?</label>
+  <span class="form-hint">For example, do you need a signer or information in braille</span>
+  <div class="form-group form-group-compound inline">
+    <label data-target="support-panel" for="support-yes" class="block-label">
+      <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
+    </label>
+    <label for="support-no" class="block-label">
+      <input checked name="support" type="radio" id="support-no">No
+    </label>
+  </div>
+  <div id="support-panel" class="panel-indent toggle-content" aria-hidden="true">
+    <span class="form-hint">Please provide details</span>
+    <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+  <!-- <span class="form-hint maxchar-count">4000</span> -->
+  <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+  </div>
+</div>
+
+<div class="form-group inline clearfix">
+  <p class="form-label" id="disability-label">What is your ethnic group?</p>
+  <p class="form-hint text">We need this information to make sure we're giving equal opportunities to all candidates</p>
+  <select name="" id="" class="para-btm-margin">
+    <option value="">-- Please select --</option>
+    <option value="">Prefer not to say</option>
+    <optgroup label="White">
+      <option value="">English/Welsh/Scottish/Northern Irish/British </option>
+      <option value="">Irish </option>
+      <option value="">Gypsy or Irish Traveller </option>
+      <option value="">Other White background</option>
+    </optgroup>
+    <optgroup label="Mixed/Multiple ethnic groups">
+      <option value="">White and Black Caribbean </option>
+      <option value="">White and Black African </option>
+      <option value="">White and Asian </option>
+      <option value="">Other mixed/multiple ethnic background </option>
+    </optgroup>
+    <optgroup label="Asian/Asian British">
+      <option value="">Indian </option>
+      <option value="">Pakistani </option>
+      <option value="">Bangladeshi </option>
+      <option value="">Chinese </option>
+      <option value="">Other Asian background</option>
+    </optgroup>
+    <optgroup label="Black/African/Caribbean/Black British">
+      <option value="">African </option>
+      <option value="">Caribbean </option>
+      <option value="">Other Black/African/Caribbean background</option>
+    </optgroup>
+    <optgroup label="Other ethnic group">
+      <option value="">Arab</option>
+      <option value="">Other ethnic group</option>
+    </optgroup>
+  </select>
+</div>
+<div class="text">
+  <details>
+    <summary>Why are we asking all these questions?</summary>
+    <div class="detail-content">
+      <p>The Skills Funding Agency aims to make apprenticeships and traineeships inclusive. Learning more about you will help us do this and meet our obligations under the Equality Act 2010.</p>
+
+      <p>You don’t have to answer the questions, but the information allows us to make the application process easier.</p>
+
+      <p>Your answers will be treated in confidence and are covered by the Data Protection Act 1998. We’ll only share them with recruiters if you grant us permission. </p>
+
+      <p>Answering the questions may lead to a guaranteed interview if you are disabled and the employer is a member of the Two Ticks scheme.</p>
+    </div>
+  </details>
+</div>
