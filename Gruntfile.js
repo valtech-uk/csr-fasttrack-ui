@@ -108,7 +108,7 @@ module.exports = function(grunt) {
                 '!_templates/**/*',
                 '!_assets/css/*.map',
                 '_assets/js/vendor/**/*',
-                '_assets/js/scripts.min.js',
+                '_assets/js/scripts.js',
                 '_assets/js/prototype.js'
               ],
               dest: 'prototype/'
@@ -124,7 +124,7 @@ module.exports = function(grunt) {
               expand: true,
               cwd: 'screens/',
               src: ['**/*.png'],
-              dest: '/Users/henrycharge/Google\ Drive/_CSR/Beta/Screenshots/',
+              dest: '/Users/henrycharge/Google Drive/_CSR/Beta/Screenshots/',
               rename: function(dest, src) {
                 var date = new Date();
                     now = "-" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + "-" + date.getHours() + "-" + date.getMinutes();
@@ -285,6 +285,8 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', ['buildcontrol']);
 
     grunt.registerTask('screens', ['localscreenshots', 'copy:screenshots']);
+
+    grunt.registerTask('screenshots', ['localscreenshots']);
 
     grunt.registerTask('copyscreens', ['copy:screenshots']);
 
