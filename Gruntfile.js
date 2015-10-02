@@ -137,10 +137,10 @@ module.exports = function(grunt) {
         clean: {
           prototype: [
             "prototype/_assets/",
+            "prototype/_templates/",
             "prototype/fasttrack/",
             "prototype/offline/",
-            "prototype/*.html",
-            "!prototype/not/"
+            "prototype/*.html"
           ]
         },
         replace: {
@@ -182,16 +182,30 @@ module.exports = function(grunt) {
             }
         },
         localscreenshots: {
-          options: {
+          desktop: {
+            options: {
               path: 'screens',
               type: 'png',
               local : {
                   path: 'prototype',
                   port: 5000
               },
-              viewport: ['1024x1024', '480x480']
+              viewport: ['1024x1024']
+            },
+            src: ['prototype/**/*.html']
           },
-          src: ['prototype/**/*.html']
+          mobile: {
+            options: {
+              path: 'screens-mob',
+              type: 'png',
+              local : {
+                  path: 'prototype',
+                  port: 5000
+              },
+              viewport: ['420x420']
+            },
+            src: ['prototype/**/*.html']
+          }
         },
         browserSync: {
             dev: {
@@ -284,9 +298,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
-    grunt.registerTask('screens', ['localscreenshots', 'copy:screenshots']);
+    grunt.registerTask('screens', ['localscreenshots:desktop', 'copy:screenshots']);
 
-    grunt.registerTask('screenshots', ['localscreenshots']);
+    grunt.registerTask('screenshots', ['localscreenshots:desktop']);
+
+    grunt.registerTask('mobilescreenshots', ['localscreenshots:mobile']);
 
     grunt.registerTask('copyscreens', ['copy:screenshots']);
 
