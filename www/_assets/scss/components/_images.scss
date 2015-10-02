@@ -24,6 +24,11 @@ img {
   }
 }
 
+.image-left {
+  float: left;
+  margin-right: 10px;
+}
+
 .map-container {
   position: relative;
   .view-googlemaps {

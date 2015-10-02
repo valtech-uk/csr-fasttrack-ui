@@ -41,6 +41,89 @@
       </div>
     </div>
   </fieldset>
+
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Assistance</legend>
+    <div class="form-group">
+      <label for="question4" class="form-label">Do you have a disability or need other assistance?</label>
+      <p class="form-hint text">We can provide assistance in your assessment and you may be eligibile for the guaranteed interview scheme</p>
+      <div class="form-group form-group-compound inline">
+        <label data-target="support-panel" for="support-yes" class="block-label">
+          <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
+        </label>
+        <label for="support-no" class="block-label">
+          <input checked name="support" type="radio" id="support-no">No
+        </label>
+      </div>
+      <div id="support-panel" class="toggle-content" aria-hidden="true">
+        <div class="form-group">
+          <p>Select from the list or provide details of disability</p>
+          <select name="" id="" class="para-btm-margin">
+            <option value="">-- List of disabilities --</option>
+            <option value="Sensory impairment (vision and hearing)">Sensory impairment (vision and hearing)</option>
+            <option value="Heart conditions">Heart conditions</option>
+            <option value="Musculoskeletal conditions such as back problems">Musculoskeletal conditions such as back problems</option>
+            <option value="Recurring or fluctuating conditions, such as arthritis or asthma">Recurring or fluctuating conditions, such as arthritis or asthma</option>
+            <option value="Mental health problems, such as depression">Mental health problems, such as depression</option>
+            <option value="Epilepsy">Epilepsy</option>
+            <option value="Dyslexia">Dyslexia</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Severe disfigurements">Severe disfigurements</option>
+            <option value="Learning disabilities">Learning disabilities</option>
+          </select>
+          <span class="form-hint">Provide details (optional)</span>
+          <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+          <!-- <span class="form-hint maxchar-count">4000</span> -->
+          <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+        </div>
+        <div class="text">
+          <img src="{{assets}}/img/logo-ticks-small-2x.png" width="38" alt="Two ticks - Positive about disabled people logo" class="image-left">
+          <p>If you have a registered disability you will be eligible for the <a href="https://www.gov.uk/recruitment-disabled-people/encouraging-applications" target="_blank">guaranteed interview scheme</a></p>
+        </div>
+        <div>
+          <h2 class="heading-medium">Adjustments</h2>
+          <p>Will you need any adjustments for your assessment?</p>
+          <div class="form-group form-group-compound inline">
+            <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
+              <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel" aria-expanded="false">Yes
+            </label>
+            <label for="adjustment-no" class="block-label">
+              <input checked name="adjustment" type="radio" id="adjustment-no">No
+            </label>
+          </div>
+          <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
+            <p id="adj-needs">Please select which adjustments you'll need</p>
+            <div class="form-group form-group-compound">
+              <label for="adj-time" class="block-label">
+                <input type="checkbox" id="adj-time" aria-labelledby="adj-needs">Extra time
+              </label>
+            </div>
+            <div class="form-group  form-group-compound">
+              <label for="adj-screen" class="block-label">
+                <input type="checkbox" id="adj-screen" aria-labelledby="adj-needs">Screen magnification
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="adj-paper" class="block-label">
+                <input type="checkbox" id="adj-paper" aria-labelledby="adj-needs">Printed copies on plain or coloured paper
+              </label>
+            </div>
+            <div class="form-group">
+              <label id="adj-other" class="form-label">Other adjustment need (optional)</label>
+              <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+              <!-- <span class="form-hint maxchar-count">4000</span> -->
+              <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+            </div>
+            <div class="panel-indent">
+              <p class="text">If you would like to discuss details of your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </fieldset>
+
   <fieldset>
     <div class="form-group">
       <label for="accept-terms" class="block-label">
