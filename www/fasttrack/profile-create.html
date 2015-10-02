@@ -145,13 +145,13 @@
     <legend class="heading-large">Assistance</legend>
     <div class="form-group">
       <label for="question4" class="form-label">Do you have a disability or need other assistance?</label>
-      <p class="form-hint text">We can provide assistance in your assessment and you may be eligibile for the guaranteed interview scheme</p>
+      <p class="form-hint text">We can provide assistance in your assessment and you may be eligible for the guaranteed interview scheme</p>
       <div class="form-group form-group-compound inline">
         <label data-target="support-panel" for="support-yes" class="block-label">
           <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
         </label>
         <label for="support-no" class="block-label">
-          <input checked name="support" type="radio" id="support-no">No
+          <input name="support" type="radio" id="support-no">No
         </label>
       </div>
       <div id="support-panel" class="toggle-content" aria-hidden="true">
@@ -187,7 +187,7 @@
               <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel" aria-expanded="false">Yes
             </label>
             <label for="adjustment-no" class="block-label">
-              <input checked name="adjustment" type="radio" id="adjustment-no">No
+              <input name="adjustment" type="radio" id="adjustment-no">No
             </label>
           </div>
           <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
@@ -225,12 +225,78 @@
 
   <fieldset class="fieldset-with-border">
     <legend class="heading-large">Nationality and eligibility</legend>
+    <p class="form-label" id="nationality-question">Are you a British citizen?</p>
+    <p class="form-hint text">Or plan to have British citizenship in the next 6 months</p>
+    <div class="form-group inline">
+      <label for="nationality-yes" class="block-label">
+        <input name="nationality" type="radio" id="nationality-yes" aria-labelledby="nationality-question">Yes
+      </label>
+      <label data-target="nationality-panel"  for="nationality-no" class="block-label">
+        <input name="nationality" type="radio" id="nationality-no" aria-controls="nationality-panel" aria-expanded="false" aria-labelledby="nationality-question">No
+      </label>
+    </div>
+    <div class="toggle-content text" id="nationality-panel" aria-hidden="true">
+      <div class="panel-indent">
+        <p>You can apply for the Civil Service Fast Track if you’re a:</p>
+        <ul>
+          <li><a href="https://www.gov.uk/eu-eea" target="_blank">European Economic Area (EEA)</a> national</li>
+          <li>Commonwealth citizen</li>
+          <li>Swiss national</li>
+          <li>Turkish national, in some circumstances</li>
+        </ul>
+
+        <p>You must be a British citizen to apply for some posts, particularly those related to security and intelligence.</p>
+
+        <p>Eligibility requirements are explained in the <a href="https://www.gov.uk/government/publications/nationality-rules" target="_blank">Civil Service nationality rules</a>.</p>
+      </div>
+    </div>
+
+    <p class="form-label text" id="restriction-question">Do you have any restrictions on your continued residence or employment in the UK?</p>
+    <div class="form-group inline">
+      <label data-target="restriction-panel"  for="restriction-yes" class="block-label">
+        <input name="restriction" type="radio" id="restriction-yes" aria-controls="restriction-panel" aria-expanded="false" aria-labelledby="restriction-question">Yes
+      </label>
+      <label for="restriction-no" class="block-label">
+        <input name="restriction" type="radio" id="restriction-no" aria-labelledby="restriction-question">No
+      </label>
+    </div>
+    <div class="toggle-content" id="restriction-panel" aria-hidden="true">
+      <div class="panel-indent">
+        <span class="form-hint">Please provide details</span>
+        <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000" aria-labelledby="restriction-question"></textarea>
+        <!-- <span class="form-hint maxchar-count">4000</span> -->
+        <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <h2 class="heading-medium">Please confirm the following</h2>
+
+    <ul class="list-text list-withicons text">
+      <li><i class="fa fa-check-square-o the-icon"></i>I have been a resident in the UK for the past 2 years</li>
+
+      <li><i class="fa fa-check-square-o the-icon"></i>I will be 16 or older by 31st August 2015</li>
+
+      <li><i class="fa fa-check-square-o the-icon"></i>As a minimum, I have 5 GCSEs (A*-C) <a href="https://www.gov.uk/what-different-qualification-levels-mean/overview" target="_blank">or equivalent</a> including English language and Maths.
+      <p>Note: Applicants for Digital and Technology and Cyber and security must also have 2 A-levels (A*-C) or equivalent in a STEM subject (Science, Technology, Engineering, Mathematics)</p></li>
+
+      <li><i class="fa fa-check-square-o the-icon"></i>I do not hold a degree</li>
+
+      <li><i class="fa fa-check-square-o the-icon"></i>I am available to start work in September 2016</li>
+    </ul>
+
+    <div class="form-group">
+      <label for="accept-eligible" class="block-label">
+        <input type="checkbox" id="accept-eligible"> I confirm that I am eligible to apply
+      </label>
+    </div>
+
   </fieldset>
 
   <fieldset>
+    <legend class="heading-large">Terms and conditions</legend>
     <div class="form-group">
       <label for="accept-terms" class="block-label">
-        <input type="checkbox" id="accept-terms">I accept the <a href="terms.html" target="_blank" id="">terms &amp; conditions</a>
+        <input type="checkbox" id="accept-terms">I accept the <a href="terms.html" target="_blank" id="">terms and conditions</a>
       </label>
     </div>
   </fieldset>
