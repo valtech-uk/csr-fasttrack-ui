@@ -32,7 +32,23 @@
   <script src="{{assets}}/js/vendor/modernizr-custom.js"></script>
 </head>
 <body>
-  {{> header }}
+  <div class="skiplink-container">
+    <div>
+      <a href="#main" class="skiplink">Skip to main content</a>
+    </div>
+  </div>
+  <header role="banner" class="global-header">
+    <div class="global-header__wrapper">
+      <div class="global-header__logo">
+        <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
+          <img src="{{assets}}/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+        </a>
+      </div>
+      <div class="global-header__nav">
+        <div class="global-header__title beta"><a href="/index.html"></a></div>
+      </div>
+    </div>
+  </header>
   <div class="content-container">
     <div class="gov-border">
     </div>

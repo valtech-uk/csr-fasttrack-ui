@@ -34,27 +34,9 @@
       document.documentElement.className += ' no-details';
     }
     </script>
-    <!--[if lte IE 8]>
-    <script>
-      var head = document.getElementsByTagName('head')[0],
-      style = document.createElement('style');
-      style.type = 'text/css';
-      style.styleSheet.cssText = ':before,:after{content:none !important';
-      head.appendChild(style);
-      setTimeout(function(){
-          head.removeChild(style);
-      }, 0);
-    </script>
-  <![endif]-->
     <script src="../_assets/js/vendor/modernizr-custom.js"></script>
-    <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
   </head>
   <body>
-    <!-- <div id="global-cookie-message" class="cookie-banner">
-  <div class="content-container">
-      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
-  </div>
-</div> -->
     <div class="skiplink-container">
       <div>
         <a href="#main" class="skiplink">Skip to main content</a>
@@ -68,38 +50,14 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <div class="global-header__title beta"><a href="/index.html">Civil Service Resourcing</a>
+          <div class="global-header__title beta">
+            <a href="/index.html"></a>
           </div>
         </div>
       </div>
     </header>
     <div class="content-container">
-      <div class="fixed-container">
-        <div class="banner-container">
-          <div class="phase-notice gov-border grid-wrapper">
-            <div class="grid grid-2-3">
-              <div class="prototype-warning">
-                <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#" target="_blank" rel="external">feedback</a> will help to improve it.</span>
-              </div>
-            </div>
-            <div class="grid grid-1-3">
-              <div class="account-info sign-in" id="bannerSignedOut">
-                <div class="small-btm-margin">
-                  <a href="/fasttrack/profile-signin.html?"><i class="fa fa-sign-in"></i>Register / Sign in</a>
-                </div>
-              </div>
-              <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
-                <div class="small-btm-margin">
-                  <span class="your-name" id="bannerUserName">Firstname Lastname</span>
-                </div>
-                <div>
-                  <a class="account-link" id="applicationsLink" href="/fasttrack/profile-home.html">Home</a>
-                  <a class="account-link" href="/fasttrack/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="gov-border">
       </div>
       <main role="main" id="main">
         <h1 class="heading-large">Apply for Fast Track</h1>
@@ -137,7 +95,8 @@
         </div>
       </div>
     </footer>
-    <script src="../_assets/js/vendor/fastclick.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
     <script src="../_assets/js/scripts.js"></script>
     <script src="../_assets/js/vendor/jstorage.js"></script>
     <!-- Prototype specific scripts -->
