@@ -31,28 +31,30 @@
 
   <fieldset class="fieldset-with-border">
     <legend class="heading-large">Contact details</legend>
-    <div class="form-group form-group-compound">
-      <label for="post-code" class="form-label">Postcode</label>
-      <span class="form-hint">For example, BN1 8NH</span>
-      <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
+    <div class="hide-nojs">
+      <div class="form-group form-group-compound">
+        <label for="post-code" class="form-label">Postcode</label>
+        <span class="form-hint">For example, BN1 8NH</span>
+        <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
+      </div>
+      <div class="form-group form-group-compound">
+        <a href="#" class="button" id="findAddressBtn">Find address</a>
+      </div>
+      <div id="addressSelectContainer" class="form-group toggle-content hide-nojs">
+        <label for="addressSelect" class="form-label">Select your address</label>
+        <select name="" id="addressSelect">
+          <option value="void">-- 5 found --</option>
+          <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+          <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+          <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+          <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+          <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
+        </select>
+      </div>
+      <p>
+        <a href="#" id="addressManualLink">Or enter address manually</a>
+      </p>
     </div>
-    <div class="form-group form-group-compound">
-      <a href="#" class="button" id="findAddressBtn">Find address</a>
-    </div>
-    <div id="addressSelectContainer" class="form-group toggle-content hide-nojs">
-      <label for="addressSelect" class="form-label">Select your address</label>
-      <select name="" id="addressSelect">
-        <option value="void">-- 5 found --</option>
-        <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
-        <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
-        <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
-        <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
-        <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
-      </select>
-    </div>
-    <p>
-      <a href="#" id="addressManualLink">Or enter address manually</a>
-    </p>
     <div id="addressManualInput">
       <div class="form-group form-group-compound">
         <label for="address1" class="form-label">Address</label>
