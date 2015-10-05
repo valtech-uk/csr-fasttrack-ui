@@ -1,0 +1,116 @@
+<h1 class="heading-xlarge">Personal details</h1>
+<form action="">
+
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Name and date of birth</legend>
+    <div class="form-group form-group-compound">
+      <label for="first-name" class="form-label">First name</label>
+      <input id="first-name" type="text" class="form-control" autocorrect="off" value="John" >
+    </div>
+    <div class="form-group">
+      <label for="last-name" class="form-label">Last name</label>
+      <input id="last-name" type="text" class="form-control" autocorrect="off" value="Smith" >
+    </div>
+
+    <div class="form-group inline-fixed">
+      <p class="form-label">Date of birth</p>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="dob-day">Day</label>
+        <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
+      </div>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="dob-month">Month</label>
+        <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
+      </div>
+      <div class="form-group form-group-compound form-group-year">
+        <label class="form-hint" for="dob-year">Year</label>
+        <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Contact details</legend>
+    <div class="form-group form-group-compound">
+      <label for="post-code" class="form-label">Postcode</label>
+      <span class="form-hint">For example, BN1 8NH</span>
+      <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <a href="#" class="button" id="findAddressBtn">Find address</a>
+    </div>
+    <div id="addressSelectContainer" class="form-group toggle-content hide-nojs">
+      <label for="addressSelect" class="form-label">Select your address</label>
+      <select name="" id="addressSelect">
+        <option value="void">-- 5 found --</option>
+        <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+        <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+        <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+        <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+        <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
+      </select>
+    </div>
+    <p>
+      <a href="#" id="addressManualLink">Or enter address manually</a>
+    </p>
+    <div id="addressManualInput">
+      <div class="form-group form-group-compound">
+        <label for="address1" class="form-label">Address</label>
+        <input id="address1" type="text" class="form-control" autocorrect="off" value="">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address2" class="form-label visuallyhidden">Second line (optional)</label>
+        <input id="address2" type="text" class="form-control" autocorrect="off">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address3" class="form-label visuallyhidden">Third line (optional)</label>
+        <input id="address3" type="text" class="form-control" autocorrect="off" value="">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address3b" class="form-label visuallyhidden">Fourth line (optional)</label>
+        <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
+      </div>
+      <div class="form-group">
+        <label for="address4" class="form-label">Post code</label>
+        <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="phone-input">Enter mobile phone number</label>
+      <span class="form-hint text">If you don't have a mobile, enter a landline number.</span>
+      <input type="tel" class="form-control form-control-1-3 med-btm-margin" id="phone-input">
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">Civil servant status</legend>
+    <p class="form-label text" id="civilservice-question">Are you currently a civil servant?</p>
+    <div class="form-group inline">
+      <label data-target="civilservice-panel"  for="civilservice-yes" class="block-label">
+        <input name="civilservice" type="radio" id="civilservice-yes" aria-controls="civilservice-panel" aria-expanded="false" aria-labelledby="civilservice-question">Yes
+      </label>
+      <label for="civilservice-no" class="block-label">
+        <input name="civilservice" type="radio" id="civilservice-no" aria-labelledby="civilservice-question">No
+      </label>
+    </div>
+    <div class="toggle-content" id="civilservice-panel" aria-hidden="true">
+      <div class="panel-indent">
+        <span class="form-hint">Please describe your role</span>
+        <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000" aria-labelledby="civilservice-question"></textarea>
+        <!-- <span class="form-hint maxchar-count">4000</span> -->
+        <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form-group">
+    <a id="" class="button" href="profile-success.html">Save details</a>
+  </div>
+</form>
+
+<script>
+  $(function() {
+    $('#addressManualInput').addClass('disabled');
+  });
+</script>

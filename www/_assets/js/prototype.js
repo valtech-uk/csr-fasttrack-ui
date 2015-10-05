@@ -44,6 +44,35 @@ $(function() {
 
   });
 
+  //-- Find address mock behaviour
+
+  $('#findAddressBtn').on('click', function(e) {
+    e.preventDefault();
+
+    $('#addressSelectContainer').show();
+
+  });
+
+  $('#addressSelect').on('change', function() {
+    var $thisVal = $(this).val();
+
+    $('#addressManualInput').removeClass('disabled');
+
+    if($thisVal !== 'void') {
+      $('#address1').val($thisVal);
+      $('#address2').val('Windsor');
+      $('#address4').val($('#post-code').val());
+    }
+  });
+
+  $('#addressManualLink').on('click', function(e) {
+    e.preventDefault();
+
+    $('#addressManualInput').removeClass('disabled');
+    $('#address1').focus();
+  });
+
+
   //-- Errors on pattern library page
 
   $('#errorButton').on('click', function() {
