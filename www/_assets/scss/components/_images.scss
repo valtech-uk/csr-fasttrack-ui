@@ -161,6 +161,11 @@ iframe {
         fill: $link-hover-colour;
       }
     }
+    &.selected {
+      polygon, path {
+        fill: $govuk-blue;
+      }
+    }
   }
 }
 

@@ -60,24 +60,23 @@
     </div>
   </div>
   <div class="grid grid-1-2">
-    <h2 class="heading-large">
-      Select a framework
-    </h2>
+    <section>
+      <h2 class="heading-large">
+        Select a location
+      </h2>
+      <p>Choose from the regions on the map, each region has a number of locations. The frameworks listed will vary depending on what the location offers.</p>
+    </section>
   </div>
 </div>
 
 <script>
   $(function() {
 
-    // $('.map-region').each(function() {
-    //   var $this = $(this),
-    //       $regionName = $this.attr('data-region');
+    var $mostRecentRegion = '',
+        $selectedRegion = '',
+        $selectedRegionMap = '';
 
-    // });
-
-    var $mostRecentRegion = '';
-
-    $('.region-container').hover(function() {
+    $('.region-container').not($selectedRegion).hover(function() {
       var $this = $(this),
           $regionName = $this.attr('id'),
           $regEl = $('.map-region[data-region="' + $regionName);
@@ -86,9 +85,26 @@
 
       $mostRecentRegion = $regEl;
     }, function() {
-      $mostRecentRegion.hide();
+      $mostRecentRegion.not($selectedRegionMap).hide();
     });
 
+    $('.region-container').on('click', function() {
+      var $this = $(this),
+          $regionName = $this.attr('id'),
+          $regEl = $('.map-region[data-region="' + $regionName);
+
+      console.log($regEl);
+
+      $selectedRegion = $this;
+      $selectedRegionMap = $regEl;
+
+      $regEl.show();
+      $this.attr('class', 'region-container selected');
+
+      $('.map-region').not($selectedRegionMap).hide();
+      $('.region-container').not($selectedRegion).attr('class', 'region-container');
+
+    });
 
   });
 </script>
