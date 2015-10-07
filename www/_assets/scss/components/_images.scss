@@ -173,6 +173,15 @@ iframe {
   position: relative;
 }
 
+.map-legend {
+  background: rgba($white, 0.9);
+  border: 2px solid $grey-3;
+  display: none;
+  padding: $gutter-half;
+  position: absolute;
+  top: 5%; right: 0;
+}
+
 .map-region {
   color: $black;
   display: none;

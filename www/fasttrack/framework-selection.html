@@ -94,41 +94,49 @@
 </div>
 
     <main role="main" id="main">
-      <h1 class="heading-xlarge">Choose your location and framework</h1>
+      <div class="text">
+  <h1 class="heading-xlarge">Choose your location and framework</h1>
+</div>
 
 <div class="grid-wrapper">
   <div class="grid grid-1-2">
     <div class="inner-block-padr">
       <div class="svg-map-container">
+        <div class="map-legend grid-1-2">
+          <h2 class="heading-medium" id="hoveredRegionName"></h2>
+          <h3 class="heading-small">Locations</h3>
+          <ul id="regionLocations">
+          </ul>
+        </div>
         <a href="#" data-region="Scotland" class="map-region" title="Scotland: Locations include Glasgow and Edinburgh">
-          <span class="region-description visuallyhidden">Scotland: Locations include Glasgow and Edinburgh</span>
+          <span class="region-description visuallyhidden"><span class="region-name">Scotland</span>: Locations include Glasgow and Edinburgh</span>
           <span id="city-glasgow" class="region-city"><span class="region-citylabel visuallyhidden">Glasgow</span></span>
           <span id="city-edinburgh" class="region-city"><span class="region-citylabel visuallyhidden">Edinburgh</span></span>
         </a>
         <a href="#" data-region="North_East" class="map-region" title="North East: Locations include Newcastle, Washington and Darlington">
-          <span class="region-description visuallyhidden">North East: Locations include Newcastle, Washington and Darlington</span>
+          <span class="region-description visuallyhidden"><span class="region-name">North East</span>: Locations include Newcastle, Washington and Darlington</span>
           <span id="city-newcastle" class="region-city"><span class="region-citylabel visuallyhidden">Newcastle</span></span>
           <span id="city-washington" class="region-city"><span class="region-citylabel visuallyhidden">Washington</span></span>
           <span id="city-darlington" class="region-city"><span class="region-citylabel visuallyhidden">Darlington</span></span>
         </a>
         <a href="#" data-region="North_West" class="map-region" title="North West: Locations include Liverpool, Manchester and Preston">
-          <span class="region-description visuallyhidden">North West: Locations include Liverpool, Manchester and Preston</span>
+          <span class="region-description visuallyhidden"><span class="region-name">North West</span>: Locations include Liverpool, Manchester and Preston</span>
           <span id="city-liverpool" class="region-city"><span class="region-citylabel visuallyhidden">Liverpool</span></span>
           <span id="city-manchester" class="region-city"><span class="region-citylabel visuallyhidden">Manchester</span></span>
           <span id="city-preston" class="region-city"><span class="region-citylabel visuallyhidden">Preston</span></span>
         </a>
         <a href="#" data-region="Yorkshire-Humberside" class="map-region" title="Yorkshire &amp; Humberside: Locations include Leeds and Sheffield">
-          <span class="region-description visuallyhidden">Yorkshire &amp; Humberside: Locations include Leeds and Sheffield</span>
+          <span class="region-description visuallyhidden"><span class="region-name">Yorkshire &amp; Humberside</span>: Locations include Leeds and Sheffield</span>
           <span id="city-leeds" class="region-city"><span class="region-citylabel visuallyhidden">Leeds</span></span>
           <span id="city-sheffield" class="region-city"><span class="region-citylabel visuallyhidden">Sheffield</span></span>
         </a>
         <a href="#" data-region="Wales" class="map-region" title="Wales: Locations include Cardiff and Swansea">
-          <span class="region-description visuallyhidden">Wales: Locations include Cardiff and Swansea</span>
+          <span class="region-description visuallyhidden"><span class="region-name">Wales</span>: Locations include Cardiff and Swansea</span>
           <span id="city-cardiff" class="region-city"><span class="region-citylabel visuallyhidden">Cardiff</span></span>
           <span id="city-swansea" class="region-city"><span class="region-citylabel visuallyhidden">Swansea</span></span>
         </a>
         <a href="#" data-region="Midlands" class="map-region" title="Midlands: Locations include Birmingham, Nottingham, Wolverhampton, Coventry and Telford">
-          <span class="region-description visuallyhidden">Midlands: Locations include Birmingham, Nottingham, Wolverhampton, Coventry and Telford</span>
+          <span class="region-description visuallyhidden"><span class="region-name">Midlands</span>: Locations include Birmingham, Nottingham, Wolverhampton, Coventry and Telford</span>
           <span id="city-birmingham" class="region-city"><span class="region-citylabel visuallyhidden">Birmingham</span></span>
           <span id="city-nottingham" class="region-city"><span class="region-citylabel visuallyhidden">Nottingham</span></span>
           <span id="city-wolverhampton" class="region-city"><span class="region-citylabel visuallyhidden">Wolverhampton</span></span>
@@ -136,18 +144,18 @@
           <span id="city-telford" class="region-city"><span class="region-citylabel visuallyhidden">Telford</span></span>
         </a>
         <a href="#" data-region="Milton_Keynes" class="map-region" title="Milton Keynes: Locations include Milton Keynes, Bedford and Hertford">
-          <span class="region-description visuallyhidden">Milton Keynes: Locations include Milton Keynes, Bedford and Hertford</span>
+          <span class="region-description visuallyhidden"><span class="region-name">Milton Keynes</span>: Locations include Milton Keynes, Bedford and Hertford</span>
           <span id="city-miltonkeynes" class="region-city"><span class="region-citylabel visuallyhidden">Milton Keynes</span> </span>
           <span id="city-bedford" class="region-city"><span class="region-citylabel visuallyhidden">Bedford</span></span>
           <span id="city-hertford" class="region-city"><span class="region-citylabel visuallyhidden">Hertford</span></span>
         </a>
         <a href="#" data-region="London" class="map-region" title="London: Locations include London and Reading">
-          <span class="region-description visuallyhidden">London: Locations include London and Reading</span>
+          <span class="region-description visuallyhidden"><span class="region-name">London</span>: Locations include London and Reading</span>
           <span id="city-london" class="region-city"><span class="region-citylabel visuallyhidden">London</span></span>
           <span id="city-reading" class="region-city"><span class="region-citylabel visuallyhidden">Reading</span></span>
         </a>
         <a href="#" data-region="South_West" class="map-region" title="South West: Locations include  Bristol and Shrivenham">
-          <span class="region-description visuallyhidden">South West: Locations include  Bristol and Shrivenham</span>
+          <span class="region-description visuallyhidden"><span class="region-name">South West</span>: Locations include  Bristol and Shrivenham</span>
           <span id="city-bristol" class="region-city"><span class="region-citylabel visuallyhidden">Bristol</span></span>
           <span id="city-shrivenham" class="region-city"><span class="region-citylabel visuallyhidden">Shrivenham</span></span>
         </a>
@@ -369,26 +377,45 @@
 
     var $mostRecentRegion = '',
         $selectedRegion = '',
-        $selectedRegionMap = '';
+        $selectedRegionMap = '',
+        $selectedRegionName = '',
+        $selectedRegionLocations = [];
 
     $('.region-container').not($selectedRegion).hover(function() {
       var $this = $(this),
-          $regionName = $this.attr('id'),
-          $regEl = $('.map-region[data-region="' + $regionName);
+          $regionNameID = $this.attr('id'),
+          $regEl = $('.map-region[data-region="' + $regionNameID),
+          $regionName = $regEl.find('.region-name').text();
 
       $regEl.show();
+      $('.map-legend').show();
+      $('#hoveredRegionName').text($regionName);
+
+      $('#regionLocations').html('');
+
+      $regEl.find('.region-city').each(function() {
+        var $locationName = $(this).text();
+        $('#regionLocations').append('<li>' + $locationName + '</li>');
+      });
 
       $mostRecentRegion = $regEl;
     }, function() {
       $mostRecentRegion.not($selectedRegionMap).hide();
+
+      $('#regionLocations').html('');
+
+      $('#hoveredRegionName').text($selectedRegionName);
+      $('#regionLocations').append($selectedRegionLocations);
+
     });
+
+
 
     $('.region-container').on('click', function() {
       var $this = $(this),
-          $regionName = $this.attr('id'),
-          $regEl = $('.map-region[data-region="' + $regionName);
-
-      console.log($regEl);
+          $regionNameID = $this.attr('id'),
+          $regEl = $('.map-region[data-region="' + $regionNameID),
+          $regionName = $regEl.find('.region-name').text();
 
       $selectedRegion = $this;
       $selectedRegionMap = $regEl;
@@ -396,10 +423,26 @@
       $regEl.show();
       $this.attr('class', 'region-container selected');
 
+      $('#hoveredRegionName').text($regionName);
+      $selectedRegionName = $regionName;
+
+      $('#regionLocations').html('');
+      $selectedRegionLocations = [];
+
+      $regEl.find('.region-city').each(function() {
+        var $locationName = $(this).text();
+
+        $('#regionLocations').append('<li>' + $locationName + '</li>');
+        $selectedRegionLocations.push('<li>' + $locationName + '</li>');
+      });
+
+      console.log($selectedRegionLocations);
+
       $('.map-region').not($selectedRegionMap).hide();
       $('.region-container').not($selectedRegion).attr('class', 'region-container');
 
     });
+
 
   });
 </script>
