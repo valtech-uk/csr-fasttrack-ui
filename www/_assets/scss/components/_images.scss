@@ -148,3 +148,127 @@ iframe {
     background-image: url(../img/performance-icon-2x.png);
   }
 }
+
+
+//--- SVG Map
+
+.svg-map {
+  .region-container {
+    cursor: pointer;
+    position: relative;
+    &:hover {
+      polygon, path {
+        fill: $link-hover-colour;
+      }
+    }
+  }
+}
+
+.svg-map-container {
+  position: relative;
+}
+
+.map-region {
+  // display: none;
+  display: block;
+  position: absolute;
+  width: 100%; height: 100%;
+  z-index: 1000;
+  .region-city {
+    padding-left: 1.1em;
+    position: relative;
+    &:before {
+      background: $govuk-blue;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 2px; left: 0;
+      width: 1em; height: 1em;
+    }
+  }
+}
+
+a[data-region="Scotland"] {
+  width: 55.98%; //323px
+  height: 46.63%; //477px
+  top: 0; left: 0;
+}
+
+a[data-region="North_East"] {
+  width: 19.24%; //111px
+  height: 15.84%; //162px
+  top: 33.72%; //345px
+  left: 46.1%; //266px
+}
+
+a[data-region="North_West"] {
+  width: 19.76%; //114px
+  height: 24.93%; //255px
+  top: 40.96%; //419px
+  left: 34.66%; //200px
+}
+
+a[data-region="Yorkshire-Humberside"] {
+  width: 33.45%; //193px
+  height: 16.13%; //165px
+  top: 46.63%; //477px
+  left: 46.97%; //271px
+}
+
+a[data-region="Midlands"] {
+  width: 45.23%; //261px
+  height: 20.72%; //212px
+  top: 57.67%; //590px
+  left: 38.3%; //221px
+}
+
+a[data-region="Wales"] {
+  width: 38.13%; //220px
+  height: 24.83%; //254px
+  top: 59.63%; //610px
+  left: 10.23%; //59px
+}
+
+a[data-region="Milton_Keynes"] {
+  width: 31.2%; //180px
+  height: 17.6%; //180px
+  top: 65.59%; //671px
+  left: 69.32%; //401px
+}
+
+a[data-region="London"] {
+  width: 44.19%; //255px
+  height: 17.4%; //178px
+  top: 74.98%; //767px
+  left: 53.9%; //311px
+}
+
+a[data-region="South_West"] {
+  width: 55.46%; //320px
+  height: 22.97%; //235px
+  top: 76.25%; //78px
+  left: 4.85%; //28px
+}
+
+a[data-region="Wales"] {
+  width: 38.13%; //220px
+  height: 24.83%; //254px
+  top: 59.63%; //610px
+  left: 10.23%; //59px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
