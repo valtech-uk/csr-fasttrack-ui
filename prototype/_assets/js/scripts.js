@@ -107,7 +107,6 @@ $(function() {
 
       if($this.closest('.form-group').hasClass('blocklabel-single')) {
 
-        console.log('merp');
         $this.closest('.blocklabel-single-container').find('.blocklabel-content').not('#' + $target).hide();
       }
     }
@@ -356,6 +355,7 @@ $(function() {
     $this.next('.detail-content').toggle();
   });
 
+  $('.chosen-select').chosen({width: '100%'});
 
 });;/*
  *  jQuery Password Strength - v0.0.1

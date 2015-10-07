@@ -138,18 +138,29 @@
     </div>
     <div class="toggle-content text" id="nationality-panel" aria-hidden="true">
       <div class="panel-indent">
-        <p>You can apply for the Civil Service Fast Track if you’re a:</p>
-        <ul>
-          <li><a href="https://www.gov.uk/eu-eea" target="_blank">European Economic Area (EEA)</a> national</li>
-          <li>Commonwealth citizen</li>
-          <li>Swiss national</li>
-          <li>Turkish national, in some circumstances</li>
-        </ul>
+        <section>
+          <p>You can apply for the Civil Service Fast Track if you’re a:</p>
+          <ul>
+            <li><a href="https://www.gov.uk/eu-eea" target="_blank">European Economic Area (EEA)</a> national</li>
+            <li>Commonwealth citizen</li>
+            <li>Swiss national</li>
+            <li>Turkish national, in some circumstances</li>
+          </ul>
 
-        <p>You must be a British citizen to apply for some posts, particularly those related to security and intelligence.</p>
+          <p>You must be a British citizen to apply for some posts, particularly those related to security and intelligence.</p>
 
-        <p>Eligibility requirements are explained in the <a href="https://www.gov.uk/government/publications/nationality-rules" target="_blank">Civil Service nationality rules</a>.</p>
+          <p>Eligibility requirements are explained in the <a href="https://www.gov.uk/government/publications/nationality-rules" target="_blank">Civil Service nationality rules</a>.</p>
+        </section>
+
+        <div class="form-group form-group-compound grid-2-3">
+          <label for="selectNationality" class="bold-medium form-label">Select your nationality</label>
+          <select name="" id="selectNationality" class="chosen-select" data-placeholder="Choose from list or begin typing">
+            {{> country-select }}
+          </select>
+        </div>
+
       </div>
+
     </div>
 
     <h2 class="heading-medium">Please confirm the following</h2>
