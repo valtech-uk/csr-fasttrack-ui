@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                 separator: ';'
             },
             dev: {
-                src: ['www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
+                src: ['www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/region-selector.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
                 dest: 'www/_assets/js/scripts.js'
             }
         },
@@ -109,6 +109,7 @@ module.exports = function(grunt) {
                 '!_assets/css/*.map',
                 '_assets/js/vendor/**/*',
                 '_assets/js/scripts.js',
+                '_assets/js/region-selector.js',
                 '_assets/js/prototype.js'
               ],
               dest: 'prototype/'
