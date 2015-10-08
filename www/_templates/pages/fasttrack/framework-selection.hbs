@@ -173,41 +173,65 @@
         <p class="subtitle" id="regionNameHeading"></p>
       </div>
       <p>The locations in this region are <span id="regionLocationBlurb"></span>.</p>
-      <p>The frameworks provided in this region are: </p>
-      <ul class="list-bullet">
-        <li>Business administration</li>
-        <li>Commercial</li>
-        <li>Cyber security</li>
-        <li>Digital and technology</li>
-        <li>Finance</li>
-      </ul>
+      <details>
+        <summary>Frameworks provided in this region </summary>
+        <div class="detail-content">
+          <ul class="list-bullet">
+            <li>Business administration</li>
+            <li>Commercial</li>
+            <li>Cyber security</li>
+            <li>Digital and technology</li>
+            <li>Finance</li>
+          </ul>
+        </div>
+      </details>
 
       <div class="form-group">
         <label for="frameworkPref1" class="form-label">Your preferred framework</label>
         <select name="" id="frameworkPref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
           <option value=""></option>
-          <option value="">Business administration</option>
-          <option value="">Commercial</option>
-          <option value="">Cyber security</option>
-          <option value="">Digital and technology</option>
-          <option value="">Finance</option>
+          <option value="Business administration">Business administration</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Cyber security">Cyber security</option>
+          <option value="Digital and technology">Digital and technology</option>
+          <option value="Finance">Finance</option>
         </select>
       </div>
 
-      <div class="form-group">
-        <label for="frameworkPref1" class="form-label">Second preference of framework</label>
-        <select name="" id="frameworkPref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
+      <div class="form-group toggle-content" id="secondPreferenceContainer">
+        <label for="frameworkPref2" class="form-label">Second preference of framework</label>
+        <select name="" id="frameworkPref2" class="chosen-select" data-placeholder="Choose from list or begin typing">
           <option value=""></option>
-          <option value="">Business administration</option>
-          <option value="">Commercial</option>
-          <option value="">Cyber security</option>
-          <option value="">Digital and technology</option>
-          <option value="">Finance</option>
+          <option value="Business administration">Business administration</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Cyber security">Cyber security</option>
+          <option value="Digital and technology">Digital and technology</option>
+          <option value="Finance">Finance</option>
         </select>
       </div>
 
       <div class="panel-indent">
-        <p>We can't guarantee that you will be offered your preferred region or framework.</p>
+        <p>If we can't guarantee your preferred region or framework, we may suggest an alernative.</p>
+      </div>
+
+      <p class="form-label">Would you consider an alternative region?</p>
+      <div class="form-group form-group-compound">
+        <label for="altregion-yes" class="block-label">
+          <input name="altregion" type="radio" id="altregion-yes">Yes
+        </label>
+        <label for="altregion-no" class="block-label">
+          <input name="altregion" type="radio" id="altregion-no">No
+        </label>
+      </div>
+
+      <p class="form-label">Would you consider an alternative framework?</p>
+      <div class="form-group form-group-compound">
+        <label for="altframework-yes" class="block-label">
+          <input name="altframework" type="radio" id="altframework-yes">Yes
+        </label>
+        <label for="altframework-no" class="block-label">
+          <input name="altframework" type="radio" id="altframework-no">No
+        </label>
       </div>
 
       <a href="profile-home.html" class="button">Save and continue</a>
@@ -217,7 +241,29 @@
 
 <script src="{{assets}}/js/region-selector.js"></script>
 
+<script>
+  $(function() {
+    $('#frameworkPref1').on('change', function() {
+      var $thisVal = $(this).val();
 
+      $('#secondPreferenceContainer').show();
+
+      $('#frameworkPref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
+      $('#frameworkPref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
+
+      $("#frameworkPref2").trigger("chosen:updated");
+    });
+
+    $('#frameworkPref2').on('change', function() {
+      var $thisVal = $(this).val();
+
+      $('#frameworkPref1').find('option[value="' + $thisVal + '"]').attr('disabled', true);
+      $('#frameworkPref1').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
+
+      $("#frameworkPref1").trigger("chosen:updated");
+    });
+  });
+</script>
 
 
 

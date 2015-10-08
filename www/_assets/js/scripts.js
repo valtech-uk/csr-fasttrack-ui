@@ -548,7 +548,7 @@ $(function() {
 
         $('#regionLocations').append('<li>' + $locationName + '</li>');
         $selectedRegionLocations.push('<li>' + $locationName + '</li>');
-        $selectedLocationLinks.push('<a href="https://maps.google.com" target="_blank">' + $locationName + '</a>');
+        $selectedLocationLinks.push('<a class="link-unimp" href="https://maps.google.com" target="_blank">' + $locationName + '</a>');
 
       });
 
