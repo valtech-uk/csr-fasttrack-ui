@@ -261,7 +261,8 @@
       var $this = $(this),
           $regionNameID = $this.attr('id'),
           $regEl = $('.map-region[data-region="' + $regionNameID),
-          $regionName = $regEl.find('.region-name').text();
+          $regionName = $regEl.find('.region-name').text(),
+          $selectedLocationLinks = [];
 
       $selectedRegion = $this;
       $selectedRegionMap = $regEl;
@@ -279,13 +280,15 @@
       $selectedRegionLocations = [];
 
       $regEl.find('.region-city').each(function() {
-        var $locationName = $(this).text();
+        var $locationName = $.trim($(this).text());
 
         $('#regionLocations').append('<li>' + $locationName + '</li>');
         $selectedRegionLocations.push('<li>' + $locationName + '</li>');
+        $selectedLocationLinks.push('<a href="https://maps.google.com" target="_blank">' + $locationName + '</a>');
 
-        $('#regionLocationBlurb').append('<a href="" class="location-in-blurb">' + $locationName + '</a>, ');
       });
+
+      $('#regionLocationBlurb').append($selectedLocationLinks.join(', '));
 
       $('.map-region').not($selectedRegionMap).hide();
       $('.region-container').not($selectedRegion).attr('class', 'region-container');
