@@ -55,6 +55,9 @@ progress[value] {
   }
   a {
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .active {
     border-bottom: 5px solid $black;
