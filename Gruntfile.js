@@ -132,6 +132,14 @@ module.exports = function(grunt) {
                 return dest + src.replace(/\.png$/, now + ".png");
               }
             }]
+          },
+          latestscreens: {
+            files: [{
+              expand: true,
+              cwd: 'screens/',
+              src: ['**/*.png'],
+              dest: '/Users/henrycharge/Google Drive/_CSR/Beta/Screenshots/_latest'
+            }]
           }
         },
         clean: {
@@ -298,7 +306,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy', ['buildcontrol']);
 
-    grunt.registerTask('screens', ['localscreenshots:desktop', 'copy:screenshots']);
+    grunt.registerTask('screens', ['localscreenshots:desktop', 'copy:screenshots', 'copy:latestscreens']);
 
     grunt.registerTask('screenshots', ['localscreenshots:desktop']);
 
