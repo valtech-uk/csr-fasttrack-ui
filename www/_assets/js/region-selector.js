@@ -13,7 +13,7 @@
           $regionName = $regEl.find('.region-name').text();
 
       $regEl.show();
-      $('.map-legend').show();
+      $('.map-legend').show().removeClass('disabled');
       $('#hoveredRegionName').text($regionName);
 
       $('#regionLocations').html('');
@@ -25,6 +25,7 @@
 
       $mostRecentRegion = $regEl;
     }, function() {
+
       $mostRecentRegion.not($selectedRegionMap).hide();
 
       if($selectedRegionName != '') {
@@ -33,10 +34,15 @@
         $('#hoveredRegionName').text($selectedRegionName);
         $('#regionLocations').append($selectedRegionLocations);
       }
-
     });
 
-
+    $('.svg-map').on('mouseleave', function() {
+      if($selectedRegionName == '') {
+        $('.map-legend').fadeOut();
+      } else {
+        $('.map-legend').addClass('disabled');
+      }
+    });
 
     $('.region-container').on('click', function() {
       var $this = $(this),
