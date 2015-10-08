@@ -153,6 +153,7 @@ iframe {
 //--- SVG Map
 
 .svg-map {
+  max-width: 100%;
   .region-container {
     cursor: pointer;
     position: relative;
@@ -171,6 +172,7 @@ iframe {
 
 .svg-map-container {
   position: relative;
+  @extend %clearfix;
 }
 
 .map-legend {
