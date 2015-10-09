@@ -264,44 +264,22 @@ module.exports = function(grunt) {
             }
         },
         buildcontrol: {
-            prototype: {
+            options: {
+                dir: 'prototype',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            heroku: {
                 options: {
-                    dir: 'prototype',
-                    commit: true,
-                    push: true,
-                    message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-                },
-              heroku: {
-                    options: {
-                        remote: 'git@heroku.com:csr-ft-prototype.git',
-                        branch: 'master'
-                    }
-                },
-              local: {
-                    options: {
-                    remote: '.../',
-                    branch: 'build'
-                    }
+                    remote: 'git@heroku.com:csr-ft-prototype.git',
+                    branch: 'master'
                 }
             },
-            sprint: {
+            local: {
                 options: {
-                    dir: 'sprint',
-                    commit: true,
-                    push: true,
-                    message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-                },
-              heroku: {
-                    options: {
-                        remote: 'git@heroku.com:csr-ft-sprint.git',
-                        branch: 'master'
-                    }
-                },
-              local: {
-                    options: {
-                    remote: '.../',
-                    branch: 'build'
-                    }
+                remote: '../',
+                branch: 'build'
                 }
             }
         }
@@ -342,7 +320,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sprint', ['clean:sprint', 'copy:sprint']);
 
-    grunt.registerTask('deploy', ['buildcontrol:prototype']);
+    grunt.registerTask('deploy', ['buildcontrol']);
 
     grunt.registerTask('deploysprint', ['buildcontrol:sprint']);
 
