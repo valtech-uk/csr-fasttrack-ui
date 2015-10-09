@@ -18,7 +18,14 @@
   }
 }
 
-.svg-map-container {
+// .svg-map-container {
+//   position: relative;
+//   @media screen and (max-height: 576px) {
+//     width: 60%;
+//   }
+// }
+
+.map-legend-container {
   position: relative;
 }
 
@@ -28,7 +35,8 @@
   display: none;
   padding: $gutter-half;
   position: absolute;
-  top: 0; right: 0;
+  top: 0; right: $gutter;
+  z-index: 2000;
 }
 
 .map-region {
@@ -50,7 +58,7 @@
       display: inline-block;
       position: absolute;
       top: 2px; left: 0;
-      width: 1em; height: 1em;
+      width: 11px; height: 11px;
     }
   }
 }
@@ -61,14 +69,14 @@
   top: 0; left: 0;
 }
 
-[data-region="North_East"] {
+[data-region="North-east"] {
   width: 19.24%; //111px
   height: 15.84%; //162px
   top: 33.72%; //345px
   left: 46.1%; //266px
 }
 
-[data-region="North_West"] {
+[data-region="North-west"] {
   width: 19.76%; //114px
   height: 24.93%; //255px
   top: 40.96%; //419px
@@ -96,21 +104,21 @@
   left: 10.23%; //59px
 }
 
-[data-region="Milton_Keynes"] {
+[data-region="East"] {
   width: 31.2%; //180px
   height: 17.6%; //180px
   top: 65.59%; //671px
   left: 69.32%; //401px
 }
 
-[data-region="London"] {
+[data-region="South-east"] {
   width: 44.19%; //255px
   height: 17.4%; //178px
   top: 74.98%; //767px
   left: 53.9%; //311px
 }
 
-[data-region="South_West"] {
+[data-region="South-west"] {
   width: 55.46%; //320px
   height: 22.97%; //235px
   top: 76.25%; //78px
@@ -133,7 +141,7 @@
 }
 
 #city-newcastle, #city-washington {
-  right: 30%; top: 20%;
+  right: 40%; top: 20%;
 }
 
 #city-darlington {
@@ -153,19 +161,19 @@
 }
 
 #city-leeds {
-  left: 30%; top: 45%;
+  left: 30%; top: 25%;
 }
 
 #city-sheffield {
-  left: 35%; top: 65%;
+  left: 35%; top: 45%;
 }
 
 #city-cardiff {
-  left: 70%; bottom: 15%;
+  left: 70%; bottom: 22%;
 }
 
 #city-swansea {
-  left: 45%; bottom: 25%;
+  left: 40%; bottom: 25%;
 }
 
 #city-birmingham {
@@ -185,7 +193,7 @@
 }
 
 #city-miltonkeynes {
-  left: 20%; top: 45%;
+  left: 10%; top: 45%;
 }
 
 #city-bedford {
@@ -193,23 +201,23 @@
 }
 
 #city-hertford {
-  left: 30%; bottom: 35%;
+  left: 20%; bottom: 35%;
 }
 
 #city-london {
-  left: 50%; top: 40%;
+  left: 40%; top: 40%;
 }
 
 #city-reading {
-  left: 35%; top: 45%;
+  left: 25%; top: 45%;
 }
 
 #city-bristol {
-  right: 22%; top: 25%;
+  right: 30%; top: 25%;
 }
 
 #city-shrivenham {
-  right: 5%; top: 20%;
+  right: 15%; top: 20%;
 }
 
 
