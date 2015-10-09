@@ -279,7 +279,7 @@ module.exports = function(grunt) {
                 },
               local: {
                     options: {
-                    remote: '../',
+                    remote: '.../',
                     branch: 'build'
                     }
                 }
@@ -299,7 +299,7 @@ module.exports = function(grunt) {
                 },
               local: {
                     options: {
-                    remote: '../',
+                    remote: '.../',
                     branch: 'build'
                     }
                 }
