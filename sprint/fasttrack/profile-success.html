@@ -98,75 +98,30 @@
         </div>
       </div>
       <main role="main" id="main">
-        <div class="progress-indicator progress-indicator-horizontal">
-          <ul>
-            <li class="active"><a href="profile-home.html"><span class="hide-tablet">Page </span>1<span class="hide-tablet"> of 5</span>. Home</a>
-            </li>
-            <li><a href="profile-details.html"><span class="hide-tablet">Page </span>2<span class="hide-tablet"> of 5</span>. Personal details</a>
-            </li>
-            <li><a href="framework-selection.html"><span class="hide-tablet">Page </span>3<span class="hide-tablet"> of 5</span>. Preferred region/framework</a>
-            </li>
-            <li><a href="" class="disabled"><span class="hide-tablet">Page </span>4<span class="hide-tablet"> of 5</span>. Online test</a>
-            </li>
-            <li><a href="" class="disabled"><span class="hide-tablet">Page </span>5<span class="hide-tablet"> of 5</span>. Submit application</a>
-            </li>
-          </ul>
+        <div class="panel-success">
+          <p id="SuccessMessageText" class="text"><i class="fa fa-check"></i>You've successfully created your account</p>
         </div>
-        <h1 class="heading-xlarge">Your application</h1>
-        <section class="grid-wrapper">
-          <div class="grid grid-1-4">
-            <div class="inner-block-padr">
-              <p>60% complete</p>
-              <progress max="100" value="60">
-                <div class="progress-bar">
-                  <span style="width: 60%;"></span>
-                </div>
-              </progress>
-            </div>
-          </div>
-          <div class="grid grid-3-4">
-            <div class="hgroup-large">
-              <h2 class="heading-large">Personal details</h2>
-              <a href="profile-details.html">Complete your personal details</a>
-            </div>
-          </div>
-        </section>
-        <section class="grid-wrapper">
-          <div class="grid grid-1-4">
-            <div class="inner-block-padr">
-              <p>0% complete</p>
-              <progress max="100" value="0">
-                <div class="progress-bar">
-                  <span style="width: 0%;"></span>
-                </div>
-              </progress>
-            </div>
-          </div>
-          <div class="grid grid-3-4">
-            <div class="hgroup-large">
-              <h2 class="heading-large">Choose preferred region and framework</h2>
-              <a href="framework-selection.html">Select a region and framework</a>
-            </div>
-          </div>
-        </section>
-        <!-- <section class="grid-wrapper disabled">
-  <div class="grid grid-1-4">
-    <div class="inner-block-padr">
-      <p><i class="fa fa-lock"></i>Locked</p>
-      <progress max="100" value="0">
-        <div class="progress-bar">
-          <span style="width: 0%;"></span>
+        <h1 id="accountCreated" class="heading-xlarge">Activate your account</h1>
+        <p class="text">
+          An email has been sent to <b>yourname@email.com</b>. It will contain a
+          6-character code that you’ll need to activate your account.
+        </p>
+        <div class="form-group">
+          <label for="activation-code" class="form-label">Activation code</label>
+          <input type="text" id="activation-code" class="form-control form-control-1-3">
+          <p><a href="">Resend code</a>
+          </p>
         </div>
-      </progress>
-    </div>
-  </div>
-  <div class="grid grid-3-4">
-    <div class="hgroup-large">
-      <h2 class="heading-large">Complete online test</h2>
-      <a href="">Take online test</a>
-    </div>
-  </div>
-</section> -->
+        <div class="form-group">
+          <a href="profile-home.html" class="button activate-page-btn" id="btnSignIn">Activate account</a>
+        </div>
+        <div class="panel-indent text">
+          <p>
+            You must activate your account within 30 days of receiving your activation code.
+            After 30 days your account will be deleted and you'll need to register
+            again.
+          </p>
+        </div>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

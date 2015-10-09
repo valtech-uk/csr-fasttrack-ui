@@ -113,12 +113,18 @@ module.exports = function(grunt) {
                 '_assets/js/prototype.js'
               ],
               dest: 'prototype/'
-            }],
-            options: {
-              ignore: [
-
-              ]
-            }
+            }]
+          },
+          sprint: {
+            files: [{
+              expand: true,
+              cwd: 'prototype',
+              src: [
+                '**/*',
+                '!**/.git'
+              ],
+              dest: 'sprint/'
+            }]
           },
           screenshots: {
             files: [{
@@ -150,6 +156,13 @@ module.exports = function(grunt) {
             "prototype/fasttrack/",
             "prototype/offline/",
             "prototype/*.html"
+          ],
+          sprint: [
+            "sprint/_assets/",
+            "sprint/_templates/",
+            "sprint/fasttrack/",
+            "sprint/offline/",
+            "sprint/*.html"
           ]
         },
         replace: {
@@ -251,24 +264,46 @@ module.exports = function(grunt) {
             }
         },
         buildcontrol: {
-          options: {
-            dir: 'prototype',
-            commit: true,
-            push: true,
-            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-          },
-          heroku: {
-            options: {
-              remote: 'git@heroku.com:csr-ft-prototype.git',
-              branch: 'master'
+            prototype: {
+                options: {
+                    dir: 'prototype',
+                    commit: true,
+                    push: true,
+                    message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+                },
+              heroku: {
+                    options: {
+                        remote: 'git@heroku.com:csr-ft-prototype.git',
+                        branch: 'master'
+                    }
+                },
+              local: {
+                    options: {
+                    remote: '../',
+                    branch: 'build'
+                    }
+                }
+            },
+            sprint: {
+                options: {
+                    dir: 'sprint',
+                    commit: true,
+                    push: true,
+                    message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+                },
+              heroku: {
+                    options: {
+                        remote: 'git@heroku.com:csr-ft-sprint.git',
+                        branch: 'master'
+                    }
+                },
+              local: {
+                    options: {
+                    remote: '../',
+                    branch: 'build'
+                    }
+                }
             }
-          },
-          local: {
-            options: {
-              remote: '../',
-              branch: 'build'
-            }
-          }
         }
 
     });
@@ -305,7 +340,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('proto', ['clean', 'replace:map', 'copy:prototype', 'prettify:prototype']);
 
-    grunt.registerTask('deploy', ['buildcontrol']);
+    grunt.registerTask('sprint', ['clean:sprint', 'copy:sprint']);
+
+    grunt.registerTask('deploy', ['buildcontrol:prototype']);
+
+    grunt.registerTask('deploysprint', ['buildcontrol:sprint']);
 
     grunt.registerTask('screens', ['localscreenshots:desktop', 'copy:screenshots', 'copy:latestscreens']);
 

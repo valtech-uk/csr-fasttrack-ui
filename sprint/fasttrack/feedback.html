@@ -98,75 +98,40 @@
         </div>
       </div>
       <main role="main" id="main">
-        <div class="progress-indicator progress-indicator-horizontal">
-          <ul>
-            <li class="active"><a href="profile-home.html"><span class="hide-tablet">Page </span>1<span class="hide-tablet"> of 5</span>. Home</a>
-            </li>
-            <li><a href="profile-details.html"><span class="hide-tablet">Page </span>2<span class="hide-tablet"> of 5</span>. Personal details</a>
-            </li>
-            <li><a href="framework-selection.html"><span class="hide-tablet">Page </span>3<span class="hide-tablet"> of 5</span>. Preferred region/framework</a>
-            </li>
-            <li><a href="" class="disabled"><span class="hide-tablet">Page </span>4<span class="hide-tablet"> of 5</span>. Online test</a>
-            </li>
-            <li><a href="" class="disabled"><span class="hide-tablet">Page </span>5<span class="hide-tablet"> of 5</span>. Submit application</a>
-            </li>
-          </ul>
+        <div class="panel-success toggle-content" id="feedbackSuccess">
+          <p id="" class="text"><i class="fa fa-check"></i>Your feedback has been successfully sent.
+            Thank you.</p>
         </div>
-        <h1 class="heading-xlarge">Your application</h1>
-        <section class="grid-wrapper">
-          <div class="grid grid-1-4">
-            <div class="inner-block-padr">
-              <p>60% complete</p>
-              <progress max="100" value="60">
-                <div class="progress-bar">
-                  <span style="width: 60%;"></span>
-                </div>
-              </progress>
-            </div>
-          </div>
-          <div class="grid grid-3-4">
-            <div class="hgroup-large">
-              <h2 class="heading-large">Personal details</h2>
-              <a href="profile-details.html">Complete your personal details</a>
-            </div>
-          </div>
-        </section>
-        <section class="grid-wrapper">
-          <div class="grid grid-1-4">
-            <div class="inner-block-padr">
-              <p>0% complete</p>
-              <progress max="100" value="0">
-                <div class="progress-bar">
-                  <span style="width: 0%;"></span>
-                </div>
-              </progress>
-            </div>
-          </div>
-          <div class="grid grid-3-4">
-            <div class="hgroup-large">
-              <h2 class="heading-large">Choose preferred region and framework</h2>
-              <a href="framework-selection.html">Select a region and framework</a>
-            </div>
-          </div>
-        </section>
-        <!-- <section class="grid-wrapper disabled">
-  <div class="grid grid-1-4">
-    <div class="inner-block-padr">
-      <p><i class="fa fa-lock"></i>Locked</p>
-      <progress max="100" value="0">
-        <div class="progress-bar">
-          <span style="width: 0%;"></span>
+        <div class="hgroup text">
+          <h1 class="heading-xlarge">Give feedback</h1>
+          <p class="no-btm-margin">Please leave your suggestions or comments about our service.</p>
+          <p>If you're looking for help then <a href="helpdesk.html">contact us</a> instead.</p>
         </div>
-      </progress>
-    </div>
-  </div>
-  <div class="grid grid-3-4">
-    <div class="hgroup-large">
-      <h2 class="heading-large">Complete online test</h2>
-      <a href="">Take online test</a>
-    </div>
-  </div>
-</section> -->
+        <div class="grid-wrapper">
+          <div class="grid grid-2-3">
+            <section class="controls-3-4">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Full name (optional)</label>
+                <input type="text" id="contactName" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email address (optional)</label>
+                <input type="email" id="contactEmail" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="contactQuery" class="form-label">Your feedback</label>
+                <textarea name="" id="contactQuery" rows="4" data-val-length-max="4000" class="form-control"></textarea>
+                <span class="form-hint"><span class="maxchar-count">4000</span> 
+                <span
+                class="maxchar-text">characters remaining</span>
+                  </span>
+              </div>
+              <div class="form-group">
+                <a href="#" id="feedbackButton" class="button">Give feedback</a>
+              </div>
+            </section>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
