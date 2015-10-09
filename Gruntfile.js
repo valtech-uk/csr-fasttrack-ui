@@ -115,17 +115,6 @@ module.exports = function(grunt) {
               dest: 'prototype/'
             }]
           },
-          sprint: {
-            files: [{
-              expand: true,
-              cwd: 'prototype',
-              src: [
-                '**/*',
-                '!**/.git'
-              ],
-              dest: 'sprint/'
-            }]
-          },
           screenshots: {
             files: [{
               expand: true,
@@ -156,13 +145,6 @@ module.exports = function(grunt) {
             "prototype/fasttrack/",
             "prototype/offline/",
             "prototype/*.html"
-          ],
-          sprint: [
-            "sprint/_assets/",
-            "sprint/_templates/",
-            "sprint/fasttrack/",
-            "sprint/offline/",
-            "sprint/*.html"
           ]
         },
         replace: {
@@ -270,9 +252,15 @@ module.exports = function(grunt) {
                 push: true,
                 message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
             },
-            heroku: {
+            prototypeheroku: {
                 options: {
                     remote: 'git@heroku.com:csr-ft-prototype.git',
+                    branch: 'master'
+                }
+            },
+            sprintheroku: {
+                options: {
+                    remote: 'git@heroku.com:csr-ft-sprint.git',
                     branch: 'master'
                 }
             },
@@ -318,11 +306,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('proto', ['clean', 'replace:map', 'copy:prototype', 'prettify:prototype']);
 
-    grunt.registerTask('sprint', ['clean:sprint', 'copy:sprint']);
+    grunt.registerTask('deploy', ['buildcontrol:prototypeheroku']);
 
-    grunt.registerTask('deploy', ['buildcontrol']);
-
-    grunt.registerTask('deploysprint', ['buildcontrol:sprint']);
+    grunt.registerTask('deploysprint', ['buildcontrol:sprintheroku']);
 
     grunt.registerTask('screens', ['localscreenshots:desktop', 'copy:screenshots', 'copy:latestscreens']);
 
