@@ -165,3 +165,10 @@
 .verified {
   color: $turquoise;
 }
+
+.has-error {
+  color: $error-colour;
+  .form-group & {
+    display: block;
+  }
+}
