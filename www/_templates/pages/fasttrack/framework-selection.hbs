@@ -1,10 +1,9 @@
 <div class="progress-indicator progress-indicator-horizontal">
   <ul>
-    <li><a href="profile-home.html"><span class="hide-tablet">Page </span>1<span class="hide-tablet"> of 5</span>. Home</a></li>
-    <li><a href="profile-details.html"><span class="hide-tablet">Page </span>2<span class="hide-tablet"> of 5</span>. Personal details</a></li>
-    <li class="active"><a href="framework-selection.html"><span class="hide-tablet">Page </span>3<span class="hide-tablet"> of 5</span>. Preferred region/framework</a></li>
-    <li><a href="" class="disabled"><span class="hide-tablet">Page </span>4<span class="hide-tablet"> of 5</span>. Online test</a></li>
-    <li><a href="" class="disabled"><span class="hide-tablet">Page </span>5<span class="hide-tablet"> of 5</span>. Submit application</a></li>
+    <li><a href="profile-home.html"><span class="hide-tablet">Page </span>1<span class="hide-tablet"> of 4</span>. Home</a></li>
+    <li><a href="profile-details.html"><span class="hide-tablet">Page </span>2<span class="hide-tablet"> of 4</span>. Personal details</a></li>
+    <li class="active"><a href="framework-selection.html"><span class="hide-tablet">Page </span>3<span class="hide-tablet"> of 4</span>. Preferred region/framework</a></li>
+    <li><a href="" class="disabled"><span class="hide-tablet">Page </span>4<span class="hide-tablet"> of 4</span>. Submit application</a></li>
   </ul>
 </div>
 
@@ -170,23 +169,11 @@
         </h2>
         <p class="subtitle" id="regionNameHeading"></p>
       </div>
-      <p>The locations in this region are <span id="regionLocationBlurb"></span>.</p>
-      <details>
-        <summary>Frameworks provided in this region </summary>
-        <div class="detail-content">
-          <ul class="list-bullet">
-            <li>Business administration</li>
-            <li>Commercial</li>
-            <li>Cyber security</li>
-            <li>Digital and technology</li>
-            <li>Finance</li>
-          </ul>
-        </div>
-      </details>
+      <h2 class="heading-medium">Choose a framework</h2>
 
       <div class="grid-3-4">
         <div class="form-group">
-          <label for="frameworkPref1" class="form-label">Your preferred framework</label>
+          <label for="frameworkPref1" class="form-label">Select your preferred framework</label>
           <select name="" id="frameworkPref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
             <option value=""></option>
             <option value="Business administration">Business administration</option>
@@ -206,6 +193,7 @@
             <option value="Cyber security">Cyber security</option>
             <option value="Digital and technology">Digital and technology</option>
             <option value="Finance">Finance</option>
+            <option value="No second preference">No second preference</option>
           </select>
         </div>
       </div>
@@ -234,7 +222,7 @@
         </label>
       </div>
 
-      <a href="profile-home-complete.html" class="button">Save and continue</a>
+      <a href="apply-check.html" class="button">Save and continue</a>
     </section>
   </div>
 </div>

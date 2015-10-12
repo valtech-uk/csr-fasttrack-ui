@@ -86,6 +86,9 @@ h4, h5, h6 {
     color: $secondary-text-colour;
     margin: 0;
   }
+  @include media(tablet) {
+    margin-bottom: $gutter;
+  }
 }
 
 .hgroup-small {
