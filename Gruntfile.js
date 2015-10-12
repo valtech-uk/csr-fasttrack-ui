@@ -115,6 +115,17 @@ module.exports = function(grunt) {
               dest: 'prototype/'
             }]
           },
+          prod_assets: {
+            expand: true,
+            cwd: 'prototype/_assets/',
+            src: [
+                '**/*',
+                '!scss',
+                '!js/prototype.js',
+                '!js/region-selector.js'
+                ],
+            dest: '../fasttrack-frontend/public/'
+          },
           screenshots: {
             files: [{
               expand: true,
@@ -305,6 +316,8 @@ module.exports = function(grunt) {
     grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
     grunt.registerTask('proto', ['clean', 'replace:map', 'copy:prototype', 'prettify:prototype']);
+
+    grunt.registerTask('assets', ['copy:prod_assets']);
 
     grunt.registerTask('deploy', ['buildcontrol:prototypeheroku']);
 
