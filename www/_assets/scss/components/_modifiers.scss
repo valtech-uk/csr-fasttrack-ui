@@ -5,6 +5,9 @@
   @media print {
     border: none !important;
   }
+  &.grid {
+    padding-top: $gutter-half;
+  }
 }
 
 @media print {
