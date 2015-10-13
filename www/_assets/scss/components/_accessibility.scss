@@ -9,9 +9,11 @@
 }
 
 .skiplink-container {
-  background: $black;
   font-size: 16px;
   text-align: center;
+  &.header-skiplink {
+    background: $black;
+  }
   div {
     margin: 0 auto;
     max-width: 1020px;

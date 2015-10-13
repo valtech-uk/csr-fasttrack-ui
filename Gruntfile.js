@@ -202,7 +202,7 @@ module.exports = function(grunt) {
               path: 'screens',
               type: 'png',
               local : {
-                  path: 'prototype',
+                  path: 'prototype/',
                   port: 5000
               },
               viewport: ['1024x1024']
