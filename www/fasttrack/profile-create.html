@@ -139,317 +139,7 @@
   </fieldset>
 
   <fieldset class="fieldset-with-border">
-    <legend class="heading-large">Assistance</legend>
-    <div class="form-group">
-      <p class="form-label">Do you have a disability or need other assistance?</p>
-      <p class="form-hint text">We can provide assistance in your online tests and at the assessment centre</p>
-      <div class="form-group form-group-compound inline">
-        <label data-target="support-panel" for="support-yes" class="block-label">
-          <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
-        </label>
-        <label for="support-no" class="block-label">
-          <input name="support" type="radio" id="support-no">No
-        </label>
-      </div>
-      <div id="support-panel" class="toggle-content" aria-hidden="true">
-        <div class="form-group">
-          <p>Select from the list or provide details of disability</p>
-          <select name="" id="" class="para-btm-margin">
-            <option value="">-- List of disabilities --</option>
-            <option value="Sensory impairment (vision and hearing)">Sensory impairment (vision and hearing)</option>
-            <option value="Heart conditions">Heart conditions</option>
-            <option value="Musculoskeletal conditions such as back problems">Musculoskeletal conditions such as back problems</option>
-            <option value="Recurring or fluctuating conditions, such as arthritis or asthma">Recurring or fluctuating conditions, such as arthritis or asthma</option>
-            <option value="Mental health problems, such as depression">Mental health problems, such as depression</option>
-            <option value="Epilepsy">Epilepsy</option>
-            <option value="Dyslexia">Dyslexia</option>
-            <option value="Diabetes">Diabetes</option>
-            <option value="Severe disfigurements">Severe disfigurements</option>
-            <option value="Learning disabilities">Learning disabilities</option>
-          </select>
-          <span class="form-hint">Provide details (optional)</span>
-          <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
-          <!-- <span class="form-hint maxchar-count">4000</span> -->
-          <span class="visuallyhidden aria-limit" aria-live="polite"></span>
-        </div>
-        <div class="text">
-          <img src="../_assets/img/logo-ticks-small-2x.png" width="38" alt="Two ticks - Positive about disabled people logo" class="image-left">
-          <p>If you have a registered disability you will be eligible for the <a href="https://www.gov.uk/recruitment-disabled-people/encouraging-applications" target="_blank">guaranteed interview scheme</a></p>
-        </div>
-        <div>
-          <h2 class="heading-medium">Adjustments</h2>
-          <p>Will you need any adjustments for your assessment?</p>
-          <div class="form-group form-group-compound inline">
-            <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
-              <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel" aria-expanded="false">Yes
-            </label>
-            <label for="adjustment-no" class="block-label">
-              <input name="adjustment" type="radio" id="adjustment-no">No
-            </label>
-          </div>
-          <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
-            <p>Please select which adjustments you'll need</p>
-            <div class="form-group form-group-compound">
-              <label for="adj-time" class="block-label">
-                <input type="checkbox" id="adj-time" aria-labelledby="adj-needs">Extra time
-              </label>
-            </div>
-            <div class="form-group  form-group-compound">
-              <label for="adj-screen" class="block-label">
-                <input type="checkbox" id="adj-screen" aria-labelledby="adj-needs">Screen magnification
-              </label>
-            </div>
-            <div class="form-group">
-              <label for="adj-paper" class="block-label">
-                <input type="checkbox" id="adj-paper" aria-labelledby="adj-needs">Printed copies on plain or coloured paper
-              </label>
-            </div>
-            <div class="form-group">
-              <label id="adj-other" class="form-label">Other adjustment need (optional)</label>
-              <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
-              <!-- <span class="form-hint maxchar-count">4000</span> -->
-              <span class="visuallyhidden aria-limit" aria-live="polite"></span>
-            </div>
-            <div class="panel-indent">
-              <p class="text">If you would like to discuss details of your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </fieldset>
-
-  <fieldset class="fieldset-with-border">
-    <legend class="heading-large">Nationality and eligibility</legend>
-    <!-- <p class="form-label" id="nationality-question">Are you a British citizen?</p>
-    <p class="form-hint text">Or plan to have British citizenship in the next 6 months</p>
-    <div class="form-group inline">
-      <label for="nationality-yes" class="block-label">
-        <input name="nationality" type="radio" id="nationality-yes" aria-labelledby="nationality-question">Yes
-      </label>
-      <label data-target="nationality-panel"  for="nationality-no" class="block-label">
-        <input name="nationality" type="radio" id="nationality-no" aria-controls="nationality-panel" aria-expanded="false" aria-labelledby="nationality-question">No
-      </label>
-    </div> -->
-    <section class="text">
-      <div class="panel-indent">
-        <p>You can apply for the Civil Service Fast Track if you’re a:</p>
-        <ul>
-          <li><a href="https://www.gov.uk/eu-eea" target="_blank">European Economic Area (EEA)</a> national</li>
-          <li>Commonwealth citizen</li>
-          <li>Swiss national</li>
-          <li>Turkish national, in some circumstances</li>
-        </ul>
-
-     <!--    <p>You must be a British citizen to apply for some posts, particularly those related to security and intelligence.</p> -->
-
-        <p>Eligibility requirements are explained in the <a href="https://www.gov.uk/government/publications/nationality-rules" target="_blank">Civil Service nationality rules</a>.</p>
-      </div>
-      <div class="form-group grid-2-3">
-        <label for="selectNationality" class="bold-medium form-label">Select your nationality</label>
-        <select name="" id="selectNationality" class="chosen-select" data-placeholder="Choose from list or begin typing">
-          <option value=""></option>
-<option value="">United Kingdom</option>
-<option value="">Afghanistan</option>
-<option value="">Albania</option>
-<option value="">Algeria</option>
-<option value="">Andorra</option>
-<option value="">Angola</option>
-<option value="">Antigua &amp; Deps</option>
-<option value="">Argentina</option>
-<option value="">Armenia</option>
-<option value="">Australia</option>
-<option value="">Austria</option>
-<option value="">Azerbaijan</option>
-<option value="">Bahamas</option>
-<option value="">Bahrain</option>
-<option value="">Bangladesh</option>
-<option value="">Barbados</option>
-<option value="">Belarus</option>
-<option value="">Belgium</option>
-<option value="">Belize</option>
-<option value="">Benin</option>
-<option value="">Bhutan</option>
-<option value="">Bolivia</option>
-<option value="">Bosnia Herzegovina</option>
-<option value="">Botswana</option>
-<option value="">Brazil</option>
-<option value="">Brunei</option>
-<option value="">Bulgaria</option>
-<option value="">Burkina</option>
-<option value="">Burundi</option>
-<option value="">Cambodia</option>
-<option value="">Cameroon</option>
-<option value="">Canada</option>
-<option value="">Cape Verde</option>
-<option value="">Central African Rep</option>
-<option value="">Chad</option>
-<option value="">Chile</option>
-<option value="">China</option>
-<option value="">Colombia</option>
-<option value="">Comoros</option>
-<option value="">Congo</option>
-<option value="">Congo {Democratic Rep}</option>
-<option value="">Costa Rica</option>
-<option value="">Croatia</option>
-<option value="">Cuba</option>
-<option value="">Cyprus</option>
-<option value="">Czech Republic</option>
-<option value="">Denmark</option>
-<option value="">Djibouti</option>
-<option value="">Dominica</option>
-<option value="">Dominican Republic</option>
-<option value="">East Timor</option>
-<option value="">Ecuador</option>
-<option value="">Egypt</option>
-<option value="">El Salvador</option>
-<option value="">Equatorial Guinea</option>
-<option value="">Eritrea</option>
-<option value="">Estonia</option>
-<option value="">Ethiopia</option>
-<option value="">Fiji</option>
-<option value="">Finland</option>
-<option value="">France</option>
-<option value="">Gabon</option>
-<option value="">Gambia</option>
-<option value="">Georgia</option>
-<option value="">Germany</option>
-<option value="">Ghana</option>
-<option value="">Greece</option>
-<option value="">Grenada</option>
-<option value="">Guatemala</option>
-<option value="">Guinea</option>
-<option value="">Guinea-Bissau</option>
-<option value="">Guyana</option>
-<option value="">Haiti</option>
-<option value="">Honduras</option>
-<option value="">Hungary</option>
-<option value="">Iceland</option>
-<option value="">India</option>
-<option value="">Indonesia</option>
-<option value="">Iran</option>
-<option value="">Iraq</option>
-<option value="">Ireland {Republic}</option>
-<option value="">Israel</option>
-<option value="">Italy</option>
-<option value="">Ivory Coast</option>
-<option value="">Jamaica</option>
-<option value="">Japan</option>
-<option value="">Jordan</option>
-<option value="">Kazakhstan</option>
-<option value="">Kenya</option>
-<option value="">Kiribati</option>
-<option value="">Korea North</option>
-<option value="">Korea South</option>
-<option value="">Kosovo</option>
-<option value="">Kuwait</option>
-<option value="">Kyrgyzstan</option>
-<option value="">Laos</option>
-<option value="">Latvia</option>
-<option value="">Lebanon</option>
-<option value="">Lesotho</option>
-<option value="">Liberia</option>
-<option value="">Libya</option>
-<option value="">Liechtenstein</option>
-<option value="">Lithuania</option>
-<option value="">Luxembourg</option>
-<option value="">Macedonia</option>
-<option value="">Madagascar</option>
-<option value="">Malawi</option>
-<option value="">Malaysia</option>
-<option value="">Maldives</option>
-<option value="">Mali</option>
-<option value="">Malta</option>
-<option value="">Marshall Islands</option>
-<option value="">Mauritania</option>
-<option value="">Mauritius</option>
-<option value="">Mexico</option>
-<option value="">Micronesia</option>
-<option value="">Moldova</option>
-<option value="">Monaco</option>
-<option value="">Mongolia</option>
-<option value="">Montenegro</option>
-<option value="">Morocco</option>
-<option value="">Mozambique</option>
-<option value="">Myanmar, {Burma}</option>
-<option value="">Namibia</option>
-<option value="">Nauru</option>
-<option value="">Nepal</option>
-<option value="">Netherlands</option>
-<option value="">New Zealand</option>
-<option value="">Nicaragua</option>
-<option value="">Niger</option>
-<option value="">Nigeria</option>
-<option value="">Norway</option>
-<option value="">Oman</option>
-<option value="">Pakistan</option>
-<option value="">Palau</option>
-<option value="">Panama</option>
-<option value="">Papua New Guinea</option>
-<option value="">Paraguay</option>
-<option value="">Peru</option>
-<option value="">Philippines</option>
-<option value="">Poland</option>
-<option value="">Portugal</option>
-<option value="">Qatar</option>
-<option value="">Romania</option>
-<option value="">Russian Federation</option>
-<option value="">Rwanda</option>
-<option value="">St Kitts &amp; Nevis</option>
-<option value="">St Lucia</option>
-<option value="">Saint Vincent &amp; the Grenadines</option>
-<option value="">Samoa</option>
-<option value="">San Marino</option>
-<option value="">Sao Tome &amp; Principe</option>
-<option value="">Saudi Arabia</option>
-<option value="">Senegal</option>
-<option value="">Serbia</option>
-<option value="">Seychelles</option>
-<option value="">Sierra Leone</option>
-<option value="">Singapore</option>
-<option value="">Slovakia</option>
-<option value="">Slovenia</option>
-<option value="">Solomon Islands</option>
-<option value="">Somalia</option>
-<option value="">South Africa</option>
-<option value="">South Sudan</option>
-<option value="">Spain</option>
-<option value="">Sri Lanka</option>
-<option value="">Sudan</option>
-<option value="">Suriname</option>
-<option value="">Swaziland</option>
-<option value="">Sweden</option>
-<option value="">Switzerland</option>
-<option value="">Syria</option>
-<option value="">Taiwan</option>
-<option value="">Tajikistan</option>
-<option value="">Tanzania</option>
-<option value="">Thailand</option>
-<option value="">Togo</option>
-<option value="">Tonga</option>
-<option value="">Trinidad &amp; Tobago</option>
-<option value="">Tunisia</option>
-<option value="">Turkey</option>
-<option value="">Turkmenistan</option>
-<option value="">Tuvalu</option>
-<option value="">Uganda</option>
-<option value="">Ukraine</option>
-<option value="">United Arab Emirates</option>
-<option value="">United Kingdom</option>
-<option value="">United States</option>
-<option value="">Uruguay</option>
-<option value="">Uzbekistan</option>
-<option value="">Vanuatu</option>
-<option value="">Vatican City</option>
-<option value="">Venezuela</option>
-<option value="">Vietnam</option>
-<option value="">Yemen</option>
-<option value="">Zambia</option>
-<option value="">Zimbabwe</option>
-        </select>
-      </div>
-    </section>
+    <legend class="heading-large">Eligibility</legend>
 
     <div class="text">
       <h2 class="heading-medium">Please confirm the following statements are all true</h2>
@@ -457,6 +147,8 @@
 
     <ul class="para-btm-margin text">
       <li>I have been a resident in the UK for the past 2 years</li>
+
+      <li>I have an eligible nationality according to the <a href="https://www.gov.uk/government/publications/nationality-rules" target="_blank">Civil Service nationality rules</a></li>
 
       <li>I am eligible to work in the UK</li>
 
@@ -478,6 +170,20 @@
 
   </fieldset>
 
+  <fieldset class="fieldset-with-border">
+    <legend class="heading-large">How did you hear about us?</legend>
+    <div class="form-group">
+      <label for="hearAboutUs" class="form-label">Please select how you heard about us (optional)</label>
+      <select name="" id="hearAboutUs">
+        <option value="">-- Choose method --</option>
+        <option value="">Search engine (eg, Google)</option>
+        <option value="">Word of mouth</option>
+        <option value="">Social media</option>
+        <option value="">Other</option>
+      </select>
+    </div>
+  </fieldset>
+
   <fieldset>
     <legend class="heading-large">Terms and conditions</legend>
     <div class="form-group">
@@ -486,6 +192,8 @@
       </label>
     </div>
   </fieldset>
+
+
 
   <div class="form-group">
     <a id="createAccountBtn" class="button" href="profile-success.html">Create account</a>
