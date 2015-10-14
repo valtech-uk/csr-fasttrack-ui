@@ -98,74 +98,64 @@
         </div>
       </div>
       <main role="main" id="main">
-        <div class="panel-success toggle-content" id="signedOut">
-          <p class=""><i class="fa fa-check"></i>You've successfully signed out. <a href="/feedback.html">Give feedback?</a> (30
-            second survey)</p>
+        <div class="text">
+          <h1 class="heading-xlarge">Can't access your account?</h1>
         </div>
-        <div class="panel-success toggle-content" id="emailAddressSent">
-          <p>We've sent your email address to your verified mobile number <b>07938392982</b>.</p>
-          <p>If you don't receive a text message you may have entered an unverified
-            phone number or a phone number we don't recognise.</p>
-        </div>
-        <h1 class="heading-xlarge">Create account to apply</h2>
-<div class="text">
-  <p class="small-btm-margin">
-    To apply for a Fast Track apprenticeship you'll need to create an account.
-  </p>
-  <p>Before you apply make sure:</p>
-  <ul class="list-bullet">
-    <li>you meet the <a href="">eligibility</a> requirements</li>
-    <li>you’ve read about the <a href="#" target="_blank">frameworks</a></li>
-  </ul>
-  <div class="form-group">
-    <a href="profile-create.html" class="button">Create an account</a>
-  </div>
-</div>
-<div class="text">
-  <h2 class="heading-large">Already have an account? Sign in</h2>
-</div>
-<div class="form-group form-group-compound">
- <label class="form-label" for="email-add">Email address</label>
- <input type="email" class="form-control" id="email-add"/>
-</div>
-<div class="form-group">
- <label class="form-label" for="password">Password</label>
- <input type="password" class="form-control" id="password" />
- <p><a href="profile-noaccess.html">I can't access my account</a></p>
-</div>
-<div class="form-group small-btm-margin">
- <a class="button" id="btnSignIn" href="profile-home.html">Sign in</a>
-</div>
-    </main>
-  </div>
-  <footer class="gov-border" role="contentinfo">
-  <div class="footer__wrapper">
-    <div class="footer__meta">
-      <ul class="footer__nav" role="navigation">
-        <li class="small-btm-margin">
-          <div>
-            <a class="footer__link bold-medium" href="/fasttrack/helpdesk.html">Contact us</a>
-            <a class="footer__link bold-medium" href="/fasttrack/feedback.html">Give feedback</a>
+        <section>
+          <div class="text">
+            <h2 class="heading-medium">Forgotten your password?</h2>
+            <p>To reset your password we need to send you a 6-character code. If you
+              can’t see it in your inbox within a few minutes, please check your
+              spam folder.</p>
           </div>
-        </li>
-        <li class="footer__link"><a href="/fasttrack/privacy.html">Privacy and cookies</a></li>
-        <li class="footer__link"><a href="/fasttrack/terms.html">Terms and conditions</a></li>
-        <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing" target="_blank">Civil Service Resourcing</a></li>
-        <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">Open Government Licence v3.0</a>, except where otherwise stated</li>
-      </ul>
-      <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
-        <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
-        <p>&copy; Crown copyright</p>
-      </a>
+          <div class="form-group">
+            <label class="form-label" for="forgottenEmail">Enter email</label>
+            <input type="email" class="form-control" id="forgottenEmail" />
+          </div>
+          <div class="form-group">
+            <a class="button" href="forgottenpassword-entercode.html">Send code</a>
+          </div>
+        </section>
+        <div class="panel-indent">
+          <p>Your password reset code will expire after an hour</p>
+        </div>
+      </main>
     </div>
-  </div>
-</footer>
-  <script src="../_assets/js/vendor/fastclick.js"></script>
-  <script src="../_assets/js/vendor/chosen.jquery.js"></script>
-  <script src="../_assets/js/scripts.js"></script>
-  <script src="../_assets/js/vendor/jstorage.js"></script>
-  <!-- Prototype specific scripts -->
-  <script src="../_assets/js/vendor/jquery.cookie.js"></script>
-  <script src="../_assets/js/prototype.js"></script>
-</body>
+    <footer class="gov-border" role="contentinfo">
+      <div class="footer__wrapper">
+        <div class="footer__meta">
+          <ul class="footer__nav" role="navigation">
+            <li class="small-btm-margin">
+              <div>
+                <a class="footer__link bold-medium" href="/fasttrack/helpdesk.html">Contact us</a>
+                <a class="footer__link bold-medium" href="/fasttrack/feedback.html">Give feedback</a>
+              </div>
+            </li>
+            <li class="footer__link"><a href="/fasttrack/privacy.html">Privacy and cookies</a>
+            </li>
+            <li class="footer__link"><a href="/fasttrack/terms.html">Terms and conditions</a>
+            </li>
+            <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing"
+              target="_blank">Civil Service Resourcing</a>
+            </li>
+            <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"
+              class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">Open Government Licence v3.0</a>,
+              except where otherwise stated</li>
+          </ul>
+          <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
+          target="_blank">
+            <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+            <p>&copy; Crown copyright</p>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../_assets/js/vendor/fastclick.js"></script>
+    <script src="../_assets/js/vendor/chosen.jquery.js"></script>
+    <script src="../_assets/js/scripts.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
+    <!-- Prototype specific scripts -->
+    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
+    <script src="../_assets/js/prototype.js"></script>
+  </body>
 </html>
