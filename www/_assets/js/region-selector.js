@@ -69,6 +69,8 @@ $(function() {
         $thisVal = $this.val(),
         $theAnchor = $('.map-region[data-region="' + $thisVal + '"]'),
         $theRegion = $('.region-container#' + $thisVal + '');
+
+    selectRegion($theRegion, $theAnchor);
   });
 
 
@@ -82,8 +84,8 @@ $(function() {
     $selectedRegionMap = regionAnchor;
 
     regionAnchor.show();
-    $('#selectLocationBlurb').hide();
-    $('#locationSelectedContainer').removeClass('hidden');
+    $('#selectLocationBlurb').hide().attr('aria-hidden', true);
+    $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
     regionContainer.attr('class', 'region-container selected');
 
     $('#hoveredRegionName, #regionNameHeading').text(regionName);

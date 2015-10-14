@@ -18,9 +18,9 @@
 
 <div class="grid-wrapper">
   <div class="skiplink-container">
-    <div>
-      <a href="#regionSelect" class="skiplink para-btm-margin">Choose a region</a>
-      <select name="" id="regionSelect" class="skiplink para-btm-margin">
+    <div aria-live="polite">
+      <a href="#regionSelect" class="skiplink para-btm-margin" aria-live="polite" title="Choose a region">Choose a region</a>
+      <select name="" id="regionSelect" class="skiplink para-btm-margin" aria-live="polite">
         <option value="null">-- Choose your preferred region from this list --</option>
         <option value="Scotland">Scotland: The locations in this region are Glasgow and Edinburgh</option>
         <option value="North-east">North-east: The locations in this region are Newcastle, Washington and Darlington</option>
@@ -179,16 +179,16 @@
       </h2>
       <p>Choose the region you’d prefer to be based in during your apprenticeship from the map. Each region has a number of locations. The frameworks available at different locations will vary.</p>
     </section>
-    <section class="hidden" id="locationSelectedContainer">
+    <section class="hidden" id="locationSelectedContainer" aria-hidden="true">
       <div class="hgroup-medium">
         <h2 class="heading-medium">
           Region selected
         </h2>
-        <p class="subtitle" id="regionNameHeading"></p>
+        <p class="subtitle" id="regionNameHeading" aria-live="polite"></p>
       </div>
-      <p>The locations in this region are <span id="regionLocationBlurb"></span>.</p>
+      <p aria-live="polite">The locations in this region are <span id="regionLocationBlurb"></span>.</p>
 
-      <h2 class="heading-medium">Choose a framework</h2>
+      <h2 class="heading-medium" aria-live="polite">Choose a framework</h2>
 
       <div class="grid-3-4">
         <div class="form-group">
