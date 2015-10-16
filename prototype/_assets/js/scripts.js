@@ -349,6 +349,8 @@ $(function() {
 
   if($('#password').length) {
 
+    $('#password').after('<p class="form-hint text strength-indicator hide-nojs">Password strength: <span id="pass_meter"></span></p>')
+
     $('body').append('<script src="//cdnjs.cloudflare.com/ajax/libs/zxcvbn/2.0.2/zxcvbn.min.js" type="text/javascript"></script>');
 
     $("#password").keyup(function () {
