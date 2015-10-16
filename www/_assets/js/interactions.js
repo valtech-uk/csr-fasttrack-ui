@@ -345,6 +345,26 @@ $(function() {
       $theInput.focusout();
   });
 
+  //------- Password meter
+
+  if($('#password').length) {
+
+    $('body').append('<script src="//cdnjs.cloudflare.com/ajax/libs/zxcvbn/2.0.2/zxcvbn.min.js" type="text/javascript"></script>');
+
+    $("#password").keyup(function () {
+      initializeStrengthMeter();
+    });
+
+    function initializeStrengthMeter() {
+        $("#pass_meter").pwStrengthManager({
+            password: $("#password").val(),
+            minChars: 8
+        });
+    }
+  }
+
+
+
   //------- Inline details toggle
 
   $('.summary-style').on('click', function() {
