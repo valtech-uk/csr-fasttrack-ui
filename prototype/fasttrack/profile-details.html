@@ -118,6 +118,10 @@
             <label for="last-name" class="form-label">Last name</label>
             <input id="last-name" type="text" class="form-control" autocorrect="off" value="Lastname">
           </div>
+          <div class="form-group">
+            <label for="preferredName" class="form-label">What should we call you?</label>
+            <input type="text" id="preferredName" class="form-control" autocorrect="off" value="Firstname">
+          </div>
           <div class="form-group inline-fixed">
             <p class="form-label">Date of birth</p>
             <span class="form-hint">For example, 19 7 1994</span>
@@ -196,31 +200,21 @@
             <label for="schoolName" class="form-label">Name of most recent school attended</label>
             <input id="schoolName" type="text" class="form-control" autocorrect="off" value="">
           </div>
-          <p class="form-label">Do you have at least 5 GCSEs (A*-C) or <a target="_blank" href="https://www.gov.uk/what-different-qualification-levels-mean/compare-different-qualification-levels">equivalent</a>?</p>
-          <p class="form-hint">These must include English and Maths</p>
-          <div class="form-group">
-            <label for="gcse-yes" class="block-label" data-target="alevel-panel">
-              <input name="gcse" type="radio" id="gcse-yes" aria-controls="alevel-panel" aria-expanded="false">Yes
-            </label>
-            <label for="gcse-no" class="block-label">
-              <input name="gcse" type="radio" id="gcse-no">No
+          <p class="form-label">Please select your highest level of education</p>
+          <div class="form-group form-group-compound">
+            <label for="education-gcse" class="block-label">
+              <input checked name="education" type="radio" id="education-gcse">At least 5 GCSEs (A*-C) or <a target="_blank" href="https://www.gov.uk/what-different-qualification-levels-mean/compare-different-qualification-levels">equivalent</a>
             </label>
           </div>
-          <div class="toggle-content" aria-hidden="true" id="alevel-panel">
-            <div class="panel-indent text">
-              <p>Applicants for Digital and Technology and Cyber and Security must
-                also have 2 A-levels (A*-C) or equivalent in a STEM subject (science,
-                technology, engineering, mathematics)</p>
-            </div>
-            <p class="form-label">Do you have 2 A-levels in a STEM subject?</p>
-            <div class="form-group">
-              <label for="alevel-yes" class="block-label">
-                <input name="alevel" type="radio" id="alevel-yes">Yes
-              </label>
-              <label for="alevel-no" class="block-label">
-                <input name="alevel" type="radio" id="alevel-no">No
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="education-alevel" class="block-label">
+              <input name="education" type="radio" id="education-alevel">At least 2 A-levels in STEM subjects
+            </label>
+          </div>
+          <div class="panel-indent text">
+            <p>Applicants for Digital and Technology and Cyber and Security must also
+              have 2 A-levels (A*-C) or equivalent in a STEM subject (science,
+              technology, engineering, mathematics)</p>
           </div>
         </fieldset>
         <div class="form-group">
