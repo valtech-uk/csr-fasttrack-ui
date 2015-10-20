@@ -100,92 +100,52 @@
       <main role="main" id="main">
         <!-- <div class="progress-indicator progress-indicator-horizontal">
   <ul>
-    <li><a href="profile-home.html"><span class="hide-tablet">Page </span>1<span class="hide-tablet"> of 4</span>. Home</a></li>
+    <li class="active"><a href="profile-home.html"><span class="hide-tablet">Page </span>1<span class="hide-tablet"> of 4</span>. Home</a></li>
     <li><a href="profile-details.html"><span class="hide-tablet">Page </span>2<span class="hide-tablet"> of 4</span>. Personal details</a></li>
     <li><a href="framework-selection.html"><span class="hide-tablet">Page </span>3<span class="hide-tablet"> of 4</span>. Preferred region/framework</a></li>
-    <li class="active"><a href="" class=""><span class="hide-tablet">Page </span>4<span class="hide-tablet"> of 4</span>. Submit application</a></li>
+    <li><a href="" class=""><span class="hide-tablet">Page </span>4<span class="hide-tablet"> of 4</span>. Submit application</a></li>
   </ul>
 </div> -->
-        <div class="text">
-          <h1 class="heading-xlarge">
-    Check your application before submission
-  </h1>
+        <!-- <div class="panel-success">
+  <p id="SuccessMessageText" class="text"><i class="fa fa-check"></i>You've successfully submitted your application</p>
+</div>
+ -->
+        <div class="hgroup">
+          <h1 class="heading-xlarge">Welcome</h1>
+          <p class="subtitle">Firstname Lastname</p>
         </div>
-        <section class="section-border">
-          <h2 class="heading-large">
-    Personal details
-  </h2>
-          <section>
-            <h3 class="heading-small">Full name</h3>
-            <p>Firstname Lastname</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Date of birth</h3>
-            <p>19/5/1994</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Address</h3>
-            <ul class="list-text">
-              <li>38 Bolton Road</li>
-              <li>Windsor</li>
-              <li>Windsor and Maidenhead</li>
-              <li>SL3 5LK</li>
+        <section class="grid-wrapper">
+          <div class="grid grid-1-4">
+            <div class="inner-block-padr">
+              <p>80% complete</p>
+              <progress max="100" value="80">
+                <div class="progress-bar">
+                  <span style="width: 80%;"></span>
+                </div>
+              </progress>
+            </div>
+          </div>
+          <div class="grid grid-3-4">
+            <h2 class="heading-large">Your application</h2>
+            <ul class="list-text list-withicons">
+              <li><i class="fa fa-check the-icon"></i>Complete your personal details</li>
+              <li><i class="fa fa-check the-icon"></i>Select a region and framework</li>
+              <li><i class="fa fa-check the-icon"></i>Tell us about any assistance
+                needs</li>
+              <li><i class="fa fa-circle-thin the-icon"></i>Check and submit</li>
             </ul>
-          </section>
-          <section>
-            <h3 class="heading-small">Telephone number</h3>
-            <p>07988 346763</p>
-          </section>
-          <section>
-            <h3 class="heading-small">School name</h3>
-            <p>The Name of the School</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Qualifications</h3>
-            <p>At least 5 GCSEs (A*-C) or equivalent</p>
-          </section>
+            <p>
+              <a class="" href="profile-details.html">Continue with your application</a>
+            </p>
+          </div>
         </section>
-        <section class="section-border">
-          <h2 class="heading-large">
-    Region and framework
-  </h2>
-          <section>
-            <h3 class="heading-small">Region</h3>
-            <p>South-east</p>
-          </section>
-          <section>
-            <h3 class="heading-small">First framework preference</h3>
-            <p>Business administration</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Second framework preference</h3>
-            <p>Cyber security</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Would consider alternative region?</h3>
-            <p>No</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Would consider alternative framework?</h3>
-            <p>Yes</p>
-          </section>
-        </section>
-        <section class="section-border">
-          <h2 class="heading-large">
-    Assistance
-  </h2>
-          <section>
-            <h3 class="heading-small">Assistance needs</h3>
-            <p>No</p>
-          </section>
-        </section>
-        <h2 class="heading-large">Submit application</h2>
-        <div class="panel-indent text">
-          <p>Once you submit your application you will not be able to amend any of
-            your details</p>
-        </div>
-        <a href="profile-home-complete.html" class="button">Submit application</a>
-        <a href="profile-home-saved.html" class="button-link">Save and return to home</a>
+        <!-- <section>
+  <h2 class="heading-medium">Withdraw application</h2>
+  <div class="text">
+    <p>If you no longer wish to proceed with your application you can withdraw at any time.</p>
+    <a href="withdraw-application.html">Withdraw application</a>
+  </div>
+</section> -->
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
