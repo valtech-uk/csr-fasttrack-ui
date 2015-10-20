@@ -200,21 +200,32 @@
             <label for="schoolName" class="form-label">Name of most recent school attended</label>
             <input id="schoolName" type="text" class="form-control" autocorrect="off" value="">
           </div>
-          <p class="form-label">Please select your highest level of education</p>
-          <div>
-            <label for="education-gcse" class="block-label">
-              <input checked name="education" type="radio" id="education-gcse">At least 5 GCSEs (A*-C) or <a target="_blank" href="https://www.gov.uk/what-different-qualification-levels-mean/compare-different-qualification-levels">equivalent</a>
-            </label>
+          <h2 class="heading-medium">GCSEs</h2>
+          <div class="text">
+            <p>To be eligible to apply you must have at least 5 GCSEs (A*-C) or
+              <a
+              target="_blank" href="https://www.gov.uk/what-different-qualification-levels-mean/compare-different-qualification-levels">equivalent</a>including English language and maths.</p>
+            <!-- <p>Not true? Please read our <a href="">eligibility criteria</a>.</p> -->
           </div>
-          <div>
-            <label for="education-alevel" class="block-label">
-              <input name="education" type="radio" id="education-alevel">At least 2 A-levels in STEM subjects
-            </label>
-          </div>
+          <h2 class="heading-medium">A-levels</h2>
           <div class="panel-indent text">
             <p>Applicants for Digital and Technology and Cyber and Security must also
               have 2 A-levels (A*-C) or equivalent in a STEM subject (science,
               technology, engineering, mathematics)</p>
+          </div>
+          <!--   <div class="form-group">
+    <label for="accept-terms" class="block-label">
+      <input type="checkbox" id="accept-terms">I accept the <a href="terms.html" target="_blank" id="">terms and conditions</a>
+    </label>
+  </div> -->
+          <p class="form-label">Do you have at least 2 A-levels in STEM subjects?</p>
+          <div class="form-group inline">
+            <label for="alevel-yes" class="block-label">
+              <input name="alevel" type="radio" id="alevel-yes">Yes
+            </label>
+            <label for="alevel-no" class="block-label">
+              <input name="alevel" type="radio" id="alevel-no">No
+            </label>
           </div>
         </fieldset>
         <div class="form-group">
