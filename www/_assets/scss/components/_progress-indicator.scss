@@ -135,7 +135,7 @@ progress[value] {
       border-color: $orange;
     }
     &:nth-child(4) {
-      border-color: $grass-green;
+      border-color: $grass-green-50;
     }
     &:before {
       background: $white;
@@ -158,6 +158,9 @@ progress[value] {
         border-radius: 50%;
         margin: -2.5em -3.55em;
       }
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 1.25em;
     }
     &:last-child {
       border-left-color: transparent;
