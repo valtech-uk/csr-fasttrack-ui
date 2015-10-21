@@ -123,19 +123,28 @@ progress[value] {
       margin-top: -1.2em;
     }
     &:nth-child(1) {
-      border-color: $govuk-blue;
+      border-color: $purple-50;
+      &.active {
+        border-color: $purple;
+      }
     }
     &:nth-child(2) {
-      border-color: $mauve;
+      border-color: $mauve-50;
+      &.active {
+        border-color: $mauve;
+      }
     }
-    // &:nth-child(3) {
-    //   border-color: $mellow-red;
-    // }
     &:nth-child(3) {
-      border-color: $orange;
+      border-color: $orange-50;
+      &.active {
+        border-color: $orange;
+      }
     }
     &:nth-child(4) {
       border-color: $grass-green-50;
+      &.active {
+        border-color: $grass-green;
+      }
     }
     &:before {
       background: $white;
@@ -171,10 +180,15 @@ progress[value] {
       }
       &:before {
         border: .6em solid;
-        border-color: $grass-green !important;
+        border-color: $grass-green-50 !important;
         width: 2.5em; height: 2.5em;
         border-radius: 50%;
         margin: -2.5em -3.55em;
+      }
+      &.active {
+        &:before {
+          border-color: $grass-green !important;
+        }
       }
     }
   }
