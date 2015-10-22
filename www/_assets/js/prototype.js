@@ -14,35 +14,27 @@ $(function() {
       return results[1];
   }
 
-  //------------- Copy details from registration
+  //------------- Set personal details
 
-  $('#createAccountBtn').on('click', function(){
-    $firstName  = $('#first-name').val(),
-    $lastName   = $('#last-name').val(),
-    $fullName   = $firstName + ' ' + $lastName,
-    $dobDay     = $('#dob-day').val(),
-    $dobMonth   = $('#dob-month').val(),
-    $dobYear    = $('#dob-year').val(),
-    $dobFull    = $dobDay + '/' + $dobMonth + '/' + $dobYear,
-    $address1   = $('#address1').val(),
-    $address2   = $('#address2').val(),
-    $address3   = $('#address3').val(),
-    $address3b  = $('#address3b').val(),
-    $address4   = $('#address4').val(),
-    $emailInput = $('#email-input').val(),
-    $phoneInput = $('#phone-input').val();
+  if($('#dob-day').length && gup('continue') == 'true') {
+    $('#dob-day').val('14');
+    $('#dob-month').val('4');
+    $('#dob-year').val('1998');
 
-    $.jStorage.set('fullName', $fullName);
-    $.jStorage.set('dobFull', $dobFull);
-    $.jStorage.set('address1', $address1);
-    $.jStorage.set('address2', $address2);
-    $.jStorage.set('address3', $address3);
-    $.jStorage.set('address3b', $address3b);
-    $.jStorage.set('address4', $address4);
-    $.jStorage.set('emailInput', $emailInput);
-    $.jStorage.set('phoneInput', $phoneInput);
+    $('#address1').val('38 Bolton Road');
+    $('#address2').val('Maidenhead');
+    $('#address3').val('Windsor and Maidenhead');
+    $('#address4').val('SL5 4JH');
 
-  });
+    $('#phone-input').val('07984 382819');
+
+    $('#schoolName').val('Maidenhead School for Boys');
+
+    $('#alevel-no').attr('checked', true).parent().addClass('selected');
+
+    $('#detailsContinue').attr('href', $('#detailsContinue').attr('href') + '?continue=true');
+
+  }
 
   //-- Find address mock behaviour
 
