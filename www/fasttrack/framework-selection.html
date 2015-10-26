@@ -110,7 +110,7 @@
       <div class="map-legend grid-1-2">
         <h2 class="heading-small" id="hoveredRegionName"></h2>
       </div>
-      <div class="svg-map-container">
+      <div class="svg-map-container hide-nojs">
         <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg class="svg-map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="571.8 -616.7 775.3 1249.5" style="enable-background:new 571.8 -616.7 775.3 1249.5;"
@@ -338,22 +338,30 @@
       <h3 class="heading-small" id="firstChosenLocation"></h3>
       <p class="small-btm-margin" id="firstChosenFrameworks"></p>
       <p><a href="#">Change this selection</a></p>
-      <div class="form-group">
+      <div class="form-group" id="secondPreferenceControls">
         <a href="#" class="button" id="addSecondButton">Add a second preference</a>
         <a href="#" class="button-link" id="noSecondPreference">No second preference</a>
       </div>
     </section>
 
+    <section class="hidden" id="secondChoiceInfo">
+      <h2 class="heading-medium">Second choice</h2>
+      <h3 class="heading-small" id="secondChosenLocation"></h3>
+      <p class="small-btm-margin" id="secondChosenFrameworks"></p>
+      <p><a href="#">Change this selection</a></p>
+    </section>
+
     <div id="chooseLocationAndFramework">
       <section>
-        <h2 class="heading-medium">
+        <h2 class="heading-medium" id="chooseHeading">
           Choose your preferred location
         </h2>
         <p id="selectLocationBlurb">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The frameworks available at different locations will vary.</p>
+        <p id="selectSecondLocationBlurb" class="hidden">Select a region from the map, or alternatively choose a location from the list.</p>
         <p id="chosenRegionBlurb" class="hidden">Choose a location in the region: <b></b></p>
         <div class="grid-2-3">
           <select name="" id="regionSelect" class="para-btm-margin chosen-select" data-placeholder="-- Select a location, or start typing --">
-            <option value="null"></option>
+            <option value="null" class="hide-nojs"></option>
             <optgroup data-optregion="Scotland" label="Scotland">
               <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
               <option value="Cumbernauld">Cumbernauld</option>
@@ -363,8 +371,8 @@
               <option value="Glasgow">Glasgow</option>
             </optgroup>
             <optgroup data-optregion="North-east" label="North-east">
-              <option value="Jarrow South">Jarrow South</option>
               <option value="Darlington">Darlington</option>
+              <option value="Jarrow South">Jarrow South</option>
               <option value="Newcastle">Newcastle</option>
               <option value="Stockton">Stockton</option>
               <option value="Teeside">Teeside</option>
@@ -473,6 +481,7 @@
     </div>
 
     <a href="#" class="button hidden" id="firstChoiceSave">Save first choice</a>
+    <a href="#" class="button hidden" id="secondChoiceSave">Save second choice</a>
 
     <section id="considerAlternatives" class="hidden">
       <div class="panel-indent">
