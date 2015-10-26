@@ -1,10 +1,7 @@
 $(function() {
 
-  var $mostRecentRegion = '',
-      $selectedRegion = '',
-      $selectedRegionMap = '',
+  var $selectedRegion = '',
       $selectedRegionName = '';
-
 
 
   $('.region-container').not($selectedRegion).hover(function() {
@@ -25,7 +22,6 @@ $(function() {
   });
 
 
-
   $('.svg-map').on('mouseleave', function() {
     if($selectedRegionName == '') {
       $('.map-legend').fadeOut();
@@ -33,8 +29,6 @@ $(function() {
       $('.map-legend').addClass('disabled');
     }
   });
-
-
 
 
   $('.region-container').on('click', function() {
@@ -50,7 +44,6 @@ function selectRegion(regionContainer, regionElement) {
     var regionName = regionElement.attr('label');
 
     $selectedRegion = regionContainer;
-    $selectedRegionMap = regionElement;
 
     $('#selectLocationBlurb').hide().attr('aria-hidden', true);
     $('#locationSelectedContainer').addClass('hidden').attr('aria-hidden', true);
@@ -85,7 +78,9 @@ function selectRegion(regionContainer, regionElement) {
   }
 
   $("#regionSelect").on('change', function() {
+
     $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
+
   });
 
 
@@ -113,6 +108,31 @@ function selectRegion(regionContainer, regionElement) {
 
 });
 
+$('#firstChoiceSave').on('click', function(e) {
+  var locationSelected = $('#regionSelect').val(),
+      firstFramework = $('#frameworkPref1').val(),
+      secondFramework = $('#frameworkPref2').val();
+
+  e.preventDefault();
+
+  $('#firstChosenLocation').text(locationSelected);
+
+  $('#firstChosenFrameworks').append(firstFramework + ', ' + secondFramework);
+
+  $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
+
+  $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
+
+  $('.region-container').attr('class', 'region-container');
+
+  $selectedRegion = '';
+  $selectedRegionName = '';
+
+  $('.map-legend').hide();
+  $('.svg-map').attr('class', 'svg-map disabled');
+
+  $(this).hide();
+})
 
 
 
