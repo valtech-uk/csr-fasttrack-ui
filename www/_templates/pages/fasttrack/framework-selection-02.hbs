@@ -20,23 +20,26 @@
     </div>
   </div>
   <div class="grid grid-2-3">
-    <section class="hidden" id="choiceInfo">
+    <section class="hidden" id="firstChoiceInfo">
       <h2 class="heading-medium">First choice</h2>
+      <h3 class="heading-small" id="firstChosenLocation"></h3>
+      <p class="small-btm-margin" id="firstChosenFrameworks"></p>
+      <p><a href="#">Change this selection</a></p>
+    </section>
+
+    <section class="hidden" id="choiceInfo">
+      <h2 class="heading-medium">Second choice</h2>
       <h3 class="heading-small" id="chosenLocation"></h3>
       <p class="small-btm-margin" id="chosenFrameworks"></p>
       <p><a href="#">Change this selection</a></p>
-      <div class="form-group" id="secondPreferenceControls">
-        <a href="framework-selection-02.html" class="button" id="addSecondButton">Add a second preference</a>
-        <a href="#" class="button-link" id="noSecondPreference">No second preference</a>
-      </div>
     </section>
 
     <div id="chooseLocationAndFramework">
       <section>
         <h2 class="heading-medium" id="chooseHeading">
-          Choose your preferred location
+          Choose your second preferred location
         </h2>
-        <p id="selectLocationBlurb">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The frameworks available at different locations will vary.</p>
+        <p id="selectLocationBlurb">Select a region from the map, or alternatively choose a location from the list.</p>
         <p id="chosenRegionBlurb" class="hidden">Choose a location in the region: <b></b></p>
         <div class="grid-2-3">
           <select name="" id="regionSelect" class="para-btm-margin chosen-select" data-placeholder="-- Select a location, or start typing --">
@@ -159,7 +162,7 @@
       </section>
     </div>
 
-    <a href="#" class="button hidden" id="choiceSave">Save first choice</a>
+    <a href="#" class="button hidden second-choice" id="choiceSave">Save second choice</a>
 
     <section id="considerAlternatives" class="hidden">
       <div class="panel-indent">

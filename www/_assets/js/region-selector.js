@@ -103,99 +103,63 @@ function selectRegion(regionContainer, regionElement) {
 
     $("#frameworkPref1").trigger("chosen:updated");
 
-    $('#firstChoiceSave').removeClass('hidden');
+    $('#choiceSave').removeClass('hidden');
   });
 
 });
 
-$('#firstChoiceSave').on('click', function(e) {
+$('#choiceSave').on('click', function(e) {
   var locationSelected = $('#regionSelect').val(),
       firstFramework = $('#frameworkPref1').val(),
       secondFramework = $('#frameworkPref2').val();
 
   e.preventDefault();
+
+  $('#chosenLocation').text(locationSelected);
+
+  $('#chosenFrameworks').append(firstFramework + ', ' + secondFramework);
+
+  $('#choiceInfo').removeClass('hidden').attr('aria-hidden', false);
+
+  $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
+
+  $('.region-container').attr('class', 'region-container');
+
+  $selectedRegion = '';
+  $selectedRegionName = '';
+
+  $('.map-legend').hide();
+  $('.svg-map').attr('class', 'svg-map disabled');
+
+  $(this).hide();
+
+  if($(this).hasClass('second-choice')) {
+    $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
+    $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+  } else {
+    $.jStorage.set('storageLocation', locationSelected);
+    $.jStorage.set('storageFirstFramework', firstFramework);
+    $.jStorage.set('storageSecondFramework', secondFramework);
+  }
+
+});
+
+if($('#firstChosenLocation').length) {
+  var locationSelected = $.jStorage.get('storageLocation'),
+      firstFramework = $.jStorage.get('storageFirstFramework'),
+      secondFramework = $.jStorage.get('storageSecondFramework');
 
   $('#firstChosenLocation').text(locationSelected);
+  $('#firstChosenFrameworks').text(firstFramework + ', ' + secondFramework);
+}
 
-  $('#firstChosenFrameworks').append(firstFramework + ', ' + secondFramework);
 
-  $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
-
-  $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
-
-  $('.region-container').attr('class', 'region-container');
-
-  $selectedRegion = '';
-  $selectedRegionName = '';
-
-  $('.map-legend').hide();
-  $('.svg-map').attr('class', 'svg-map disabled');
-
-  $(this).hide();
-});
-
-$('#addSecondButton').on('click', function(e) {
+$('#noSecondPreference').on('click', function(e) {
   e.preventDefault();
-
-  $('#firstChoiceInfo').addClass('hidden').attr('aria-hidden', true);
-
-  $('#chooseHeading').text('Choose your second preferred location');
-  $('#selectLocationBlurb, #chosenRegionBlurb, #locationSelectedContainer')
-    .addClass('hidden')
-    .attr('aria-hidden', true);
-
-  $('#secondPreferenceContainer').addClass('toggle-content').hide();
-  $('#frameworkPref2').addClass('secondChoiceSecondFramework');
-
-  $('#selectSecondLocationBlurb').removeClass('hidden').attr('aria-hidden', false);
-
-  $('#regionSelect option').attr('selected', false);
-  $('#regionSelect').trigger("chosen:updated");
-
-  $("#frameworkPref1 option, #frameworkPref2 option").attr('selected', false);
-  $("#frameworkPref1, #frameworkPref2").trigger("chosen:updated");
-
-  $('#chooseLocationAndFramework').removeClass('hidden').attr('aria-hidden', false);
-  $('.svg-map').attr('class', 'svg-map');
-
-});
-
-$('.content-container').on('change', '.secondChoiceSecondFramework', function() {
-  $('#secondChoiceSave').removeClass('hidden').attr('aria-hidden', false);
-});
-
-$('#secondChoiceSave').on('click', function(e) {
-  var locationSelected = $('#regionSelect').val(),
-      firstFramework = $('#frameworkPref1').val(),
-      secondFramework = $('#frameworkPref2').val();
-
-  e.preventDefault();
-
-  $('#secondChosenLocation').text(locationSelected);
-
-  $('#secondChosenFrameworks').append(firstFramework + ', ' + secondFramework);
-
-  $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
-  $('#secondChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
-
-  $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
-
-  $('.region-container').attr('class', 'region-container');
-
-  $selectedRegion = '';
-  $selectedRegionName = '';
-
-  $('.map-legend').hide();
-  $('.svg-map').attr('class', 'svg-map disabled');
-
-  $(this).hide();
-
-  $('#secondPreferenceControls').hide();
 
   $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+
 });
-
-
 
 
 
