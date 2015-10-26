@@ -149,6 +149,9 @@ if($('#firstChosenLocation').length) {
       firstFramework = $.jStorage.get('storageFirstFramework'),
       secondFramework = $.jStorage.get('storageSecondFramework');
 
+  $('option[value="' + locationSelected +'"]').attr('disabled', true);
+  $('#regionSelect').trigger("chosen:updated");
+
   $('#firstChosenLocation').text(locationSelected);
   $('#firstChosenFrameworks').text(firstFramework + ', ' + secondFramework);
 }
