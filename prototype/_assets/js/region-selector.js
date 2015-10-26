@@ -40,7 +40,7 @@ $(function() {
   });
 
 
-function selectRegion(regionContainer, regionElement) {
+  function selectRegion(regionContainer, regionElement) {
     var regionName = regionElement.attr('label');
 
     $selectedRegion = regionContainer;
@@ -78,8 +78,12 @@ function selectRegion(regionContainer, regionElement) {
   }
 
   $("#regionSelect").on('change', function() {
+    var $regionElement = $(this).find('option:selected').parent(),
+        $regionContainer = $('#' + $regionElement.attr('data-optregion'));
 
     $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
+
+    // selectRegion($regionContainer, $regionElement);
 
   });
 
@@ -106,64 +110,75 @@ function selectRegion(regionContainer, regionElement) {
     $('#choiceSave').removeClass('hidden');
   });
 
-});
+  $('#choiceSave').on('click', function(e) {
+    var locationSelected = $('#regionSelect').val(),
+        firstFramework = $('#frameworkPref1').val(),
+        secondFramework = $('#frameworkPref2').val();
 
-$('#choiceSave').on('click', function(e) {
-  var locationSelected = $('#regionSelect').val(),
-      firstFramework = $('#frameworkPref1').val(),
-      secondFramework = $('#frameworkPref2').val();
+    e.preventDefault();
 
-  e.preventDefault();
+    $('#chosenLocation').text(locationSelected);
 
-  $('#chosenLocation').text(locationSelected);
+    $('#chosenFrameworks').append(firstFramework + ', ' + secondFramework);
 
-  $('#chosenFrameworks').append(firstFramework + ', ' + secondFramework);
+    $('#choiceInfo').removeClass('hidden').attr('aria-hidden', false);
 
-  $('#choiceInfo').removeClass('hidden').attr('aria-hidden', false);
+    $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
 
-  $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
+    $('.region-container').attr('class', 'region-container');
 
-  $('.region-container').attr('class', 'region-container');
+    $selectedRegion = '';
+    $selectedRegionName = '';
 
-  $selectedRegion = '';
-  $selectedRegionName = '';
+    $('.map-legend').hide();
+    $('.svg-map').attr('class', 'svg-map disabled');
 
-  $('.map-legend').hide();
-  $('.svg-map').attr('class', 'svg-map disabled');
+    $(this).hide();
 
-  $(this).hide();
+    if($(this).hasClass('second-choice')) {
+      $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
+      $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+    } else {
+      $.jStorage.set('storageLocation', locationSelected);
+      $.jStorage.set('storageFirstFramework', firstFramework);
+      $.jStorage.set('storageSecondFramework', secondFramework);
+    }
 
-  if($(this).hasClass('second-choice')) {
-    $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
-    $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
-  } else {
-    $.jStorage.set('storageLocation', locationSelected);
-    $.jStorage.set('storageFirstFramework', firstFramework);
-    $.jStorage.set('storageSecondFramework', secondFramework);
+  });
+
+  if($('#firstChosenLocation').length) {
+    var locationSelected = $.jStorage.get('storageLocation'),
+        firstFramework = $.jStorage.get('storageFirstFramework'),
+        secondFramework = $.jStorage.get('storageSecondFramework');
+
+    $('option[value="' + locationSelected +'"]').attr('disabled', true);
+    $('#regionSelect').trigger("chosen:updated");
+
+    $('#firstChosenLocation').text(locationSelected);
+    $('#firstChosenFrameworks').text(firstFramework + ', ' + secondFramework);
   }
 
+
+  $('#noSecondPreference').on('click', function(e) {
+    e.preventDefault();
+
+    $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+
+  });
+
+
+  // $('.content-container .group-option').hover(function() {
+  //   var thisRegion = $(this).prev('.group-result');
+
+  //   console.log(thisRegion);
+
+  //   $('#' + thisRegion).attr('class', 'hovering');
+
+  // }, function() {
+
+  // });
+
 });
-
-if($('#firstChosenLocation').length) {
-  var locationSelected = $.jStorage.get('storageLocation'),
-      firstFramework = $.jStorage.get('storageFirstFramework'),
-      secondFramework = $.jStorage.get('storageSecondFramework');
-
-  $('option[value="' + locationSelected +'"]').attr('disabled', true);
-  $('#regionSelect').trigger("chosen:updated");
-
-  $('#firstChosenLocation').text(locationSelected);
-  $('#firstChosenFrameworks').text(firstFramework + ', ' + secondFramework);
-}
-
-
-$('#noSecondPreference').on('click', function(e) {
-  e.preventDefault();
-
-  $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
-
-});
-
 
 
 

@@ -5,7 +5,7 @@
   .region-container {
     cursor: pointer;
     position: relative;
-    &:hover {
+    &:hover, &.hovering {
       polygon, path {
         fill: $link-hover-colour;
       }

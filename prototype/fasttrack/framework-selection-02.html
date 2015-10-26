@@ -104,8 +104,7 @@
             <h1 class="heading-xlarge">Choose preferred location and framework</h1>
           </div>
           <div class="grid grid-1-3">
-            <p class="page-link"><a href="">What is a framework?</a>
-            </p>
+            <!-- <p class="page-link"><a href="">What is a framework?</a></p> -->
           </div>
         </div>
         <div class="grid-wrapper">
@@ -348,7 +347,7 @@
             </div>
           </div>
           <div class="grid grid-2-3">
-            <section class="hidden" id="firstChoiceInfo">
+            <section id="firstChoiceInfo">
               <h2 class="heading-medium">First choice</h2>
               <h3 class="heading-small" id="firstChosenLocation"></h3>
               <p class="small-btm-margin" id="firstChosenFrameworks"></p>
@@ -365,7 +364,7 @@
             <div id="chooseLocationAndFramework">
               <section>
                 <h2 class="heading-medium" id="chooseHeading">
-          Choose your second preferred location
+          Second preference of location
         </h2>
                 <p id="selectLocationBlurb">Select a region from the map, or alternatively choose a location
                   from the list.</p>
@@ -374,7 +373,7 @@
                 <div class="grid-2-3">
                   <select name="" id="regionSelect" class="para-btm-margin chosen-select" data-placeholder="-- Select a location, or start typing --">
                     <option value="null" class="hide-nojs"></option>
-                    <optgroup data-optregion="Scotland" label="Scotland">
+                    <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
                       <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
                       <option value="Cumbernauld">Cumbernauld</option>
                       <option value="Dundee">Dundee</option>
@@ -382,7 +381,7 @@
                       <option value="Edinburgh">Edinburgh</option>
                       <option value="Glasgow">Glasgow</option>
                     </optgroup>
-                    <optgroup data-optregion="North-east" label="North-east">
+                    <optgroup class="North-east" data-optregion="North-east" label="North-east">
                       <option value="Darlington">Darlington</option>
                       <option value="Jarrow South">Jarrow South</option>
                       <option value="Newcastle">Newcastle</option>
@@ -390,7 +389,7 @@
                       <option value="Teeside">Teeside</option>
                       <option value="Washington">Washington</option>
                     </optgroup>
-                    <optgroup data-optregion="North-west" label="North-west">
+                    <optgroup class="North-west" data-optregion="North-west" label="North-west">
                       <option value="Blackpool">Blackpool</option>
                       <option value="Bootle">Bootle</option>
                       <option value="Liverpool">Liverpool</option>
@@ -400,22 +399,22 @@
                       <option value="Salford">Salford</option>
                       <option value="Shipley">Shipley</option>
                     </optgroup>
-                    <optgroup data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
+                    <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
                       <option value="Bradford">Bradford</option>
                       <option value="Leeds">Leeds</option>
                       <option value="Sheffield">Sheffield</option>
                       <option value="York">York</option>
                     </optgroup>
-                    <optgroup data-optregion="Wales" label="Wales">
+                    <optgroup class="Wales" data-optregion="Wales" label="Wales">
                       <option value="Cardiff">Cardiff</option>
                       <option value="Merthyr Tydfil">Merthyr Tydfil</option>
                       <option value="Swansea">Swansea</option>
                     </optgroup>
-                    <optgroup data-optregion="East-midlands" label="East Midlands">
+                    <optgroup class="East-midlands" data-optregion="East-midlands" label="East Midlands">
                       <option value="Leicester">Leicester</option>
                       <option value="Nottingham">Nottingham</option>
                     </optgroup>
-                    <optgroup data-optregion="West-midlands" label="West Midlands">
+                    <optgroup class="West-midlands" data-optregion="West-midlands" label="West Midlands">
                       <option value="Birmingham">Birmingham</option>
                       <option value="Cosford">Cosford</option>
                       <option value="Coventry">Coventry</option>
@@ -427,14 +426,14 @@
                       <option value="Walsall">Walsall</option>
                       <option value="Wolverhampton">Wolverhampton</option>
                     </optgroup>
-                    <optgroup data-optregion="East" label="East">
+                    <optgroup class="East" data-optregion="East" label="East">
                       <option value="Bedford">Bedford</option>
                       <option value="Hertford">Hertford</option>
                       <option value="Milton Keynes">Milton Keynes</option>
                       <option value="Norwich">Norwich</option>
                       <option value="Southend">Southend</option>
                     </optgroup>
-                    <optgroup data-optregion="South-east" label="South-east">
+                    <optgroup class="South-east" data-optregion="South-east" label="South-east">
                       <option value="Andover">Andover</option>
                       <option value="Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
                       <option value="Chilton">Chilton</option>
@@ -447,19 +446,24 @@
                       <option value="Surrey">Surrey</option>
                       <option value="Worthing">Worthing</option>
                     </optgroup>
-                    <optgroup data-optregion="London" label="Greater London">
+                    <optgroup class="London" data-optregion="London" label="Greater London">
                       <option value="Hackney">Hackney</option>
                       <option value="London">London</option>
                       <option value="Northwood">Northwood</option>
                     </optgroup>
-                    <optgroup data-optregion="South-west" label="South-west">
+                    <optgroup class="South-west" data-optregion="South-west" label="South-west">
                       <option value="Bristol">Bristol</option>
                     </optgroup>
                   </select>
                 </div>
               </section>
               <section class="hidden" id="locationSelectedContainer" aria-hidden="true">
-                <h2 class="heading-medium" aria-live="polite">Choose a framework</h2>
+                <div class="hgroup-medium">
+                  <h2 class="heading-medium" aria-live="polite">Choose a framework</h2>
+                  <p class="subtitle">
+                    <a href="#" target="_blank">Find out more about the frameworks we offer</a>
+                  </p>
+                </div>
                 <div class="grid-3-4">
                   <div class="form-group">
                     <label for="frameworkPref1" class="form-label">Select your preferred framework</label>
@@ -487,7 +491,7 @@
                 </div>
               </section>
             </div>
-            <a href="#" class="button hidden second-choice" id="choiceSave">Save second choice</a>
+            <a href="#" class="button hidden second-choice" id="choiceSave">Save second preference</a>
             <section id="considerAlternatives" class="hidden">
               <div class="panel-indent">
                 <p>If we can't guarantee your preferred region or framework, we may
