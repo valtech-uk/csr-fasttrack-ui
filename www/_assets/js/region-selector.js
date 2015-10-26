@@ -8,46 +8,14 @@ $(function() {
 
 
 
-
-  // $('.region-container').not($selectedRegion).hover(function() {
-  //   var $this = $(this),
-  //       $regionNameID = $this.attr('id'),
-  //       $regEl = $('.map-region[data-region="' + $regionNameID + '"]'),
-  //       $regionName = $regEl.find('.region-name').text();
-
-  //   $regEl.show();
-  //   $('.map-legend').show().removeClass('disabled');
-  //   $('#hoveredRegionName').text($regionName);
-
-  //   $('#regionLocations').html('');
-
-  //   $regEl.find('.region-city').each(function() {
-  //     var $locationName = $(this).text();
-  //     $('#regionLocations').append('<li>' + $locationName + '</li>');
-  //   });
-
-  //   $mostRecentRegion = $regEl;
-  // }, function() {
-
-  //   $mostRecentRegion.not($selectedRegionMap).hide();
-
-  //   if($selectedRegionName != '') {
-  //     $('#regionLocations').html('');
-
-  //     $('#hoveredRegionName').text($selectedRegionName);
-  //     $('#regionLocations').append(selectedRegionLocations);
-  //   }
-  // });
-
-
   $('.region-container').not($selectedRegion).hover(function() {
     var $this = $(this),
         $regionID = $this.attr('id'),
-        $regionOption = $('#regionSelect option[value="' + $regionID + '"]'),
-        $regionName = $regionOption.text();
+        $regionOption = $('#regionSelect optgroup[data-optregion="' + $regionID + '"]'),
+        $regionName = $regionOption.attr('label');
 
-    console.log($regionName);
-
+    $('.map-legend').show().removeClass('disabled');
+    $('#hoveredRegionName').text($regionName);
 
   });
 
