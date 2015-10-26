@@ -47,6 +47,12 @@
   .heading-small {
     color: $success-colour;
   }
+  p:before {
+    content: "\f00c";
+    display: inline-block;
+    font-family: FontAwesome;
+    margin-right: 8px;
+  }
   @include media(tablet) {
     margin-left: -18px;
     margin-right: 0;

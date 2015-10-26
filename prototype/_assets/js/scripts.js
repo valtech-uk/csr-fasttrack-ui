@@ -347,19 +347,19 @@ $(function() {
 
   //------- Password meter
 
-  if($('#password').length) {
+  if($('.new-password').length) {
 
-    $('#password').after('<p class="form-hint text strength-indicator hide-nojs">Password strength: <span id="pass_meter"></span></p>')
+    $('.new-password').after('<p class="form-hint text strength-indicator hide-nojs">Password strength: <span id="pass_meter"></span></p>')
 
     $('body').append('<script src="//cdnjs.cloudflare.com/ajax/libs/zxcvbn/2.0.2/zxcvbn.min.js" type="text/javascript"></script>');
 
-    $("#password").keyup(function () {
+    $(".new-password").keyup(function () {
       initializeStrengthMeter();
     });
 
     function initializeStrengthMeter() {
         $("#pass_meter").pwStrengthManager({
-            password: $("#password").val(),
+            password: $(".new-password").val(),
             minChars: 8
         });
     }

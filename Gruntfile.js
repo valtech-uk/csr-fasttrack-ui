@@ -159,25 +159,25 @@ module.exports = function(grunt) {
           ]
         },
         replace: {
-            map: {
-                src: ['www/_assets/css/*.css'],
-                overwrite: true,
-                replacements: [{
-                    from: 'sourceMappingURL=main.css.map',
-                    to: 'Map removed'
-                }, {
-                    from: 'sourceMappingURL=main-ie8.css.map',
-                    to: 'Map removed'
-                }]
-            },
-            scripts: {
-                src: ['www/apprentice/*.html', 'www/*.html'],
-                overwrite: true,
-                replacements: [{
-                    from: 'scripts.js',
-                    to: 'scripts.min.js'
-                }]
-            }
+          map: {
+            src: ['www/_assets/css/*.css'],
+            overwrite: true,
+            replacements: [{
+                from: 'sourceMappingURL=main.css.map',
+                to: 'Map removed'
+            }, {
+                from: 'sourceMappingURL=main-ie8.css.map',
+                to: 'Map removed'
+            }]
+          },
+          scripts: {
+            src: ['www/apprentice/*.html', 'www/*.html'],
+            overwrite: true,
+            replacements: [{
+                from: 'scripts.js',
+                to: 'scripts.min.js'
+            }]
+          }
         },
         prettify: {
             options: {
