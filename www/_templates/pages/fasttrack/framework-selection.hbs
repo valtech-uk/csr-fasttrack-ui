@@ -20,11 +20,23 @@
     </div>
   </div>
   <div class="grid grid-2-3">
+    <section class="hidden" id="firstChoiceInfo">
+      <h2 class="heading-medium">First choice</h2>
+      <h3 class="heading-small" id="firstChosenLocation"></h3>
+      <p id="firstChosenFrameworks"></p>
+      <p><a href="#">Change this selection</a></p>
+      <div class="form-group">
+        <a href="#" class="button" id="addSecondButton">Add a second preference</a>
+        <a href="#" class="button-link" id="noSecondPreference">No second preference</a>
+      </div>
+    </section>
+
     <section>
       <h2 class="heading-medium">
         Choose your preferred location
       </h2>
       <p id="selectLocationBlurb">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The frameworks available at different locations will vary.</p>
+      <p id="chosenRegionBlurb" class="hidden">Choose a location in the region: <b></b></p>
       <div class="grid-2-3">
         <select name="" id="regionSelect" class="para-btm-margin chosen-select" data-placeholder="-- Select a location, or start typing --">
           <option value="null"></option>
@@ -63,6 +75,7 @@
           <optgroup data-optregion="Wales" label="Wales">
             <option value="Cardiff">Cardiff</option>
             <option value="Merthyr Tydfil">Merthyr Tydfil</option>
+            <option value="Swansea">Swansea</option>
           </optgroup>
           <optgroup data-optregion="East-midlands" label="East Midlands">
             <option value="Leicester">Leicester</option>
@@ -100,7 +113,7 @@
             <option value="Surrey">Surrey</option>
             <option value="Worthing">Worthing</option>
           </optgroup>
-          <optgroup data-optregion="London" label="London">
+          <optgroup data-optregion="London" label="Greater London">
             <option value="Hackney">Hackney</option>
             <option value="London">London</option>
             <option value="Northwood">Northwood</option>
@@ -142,10 +155,9 @@
         </div>
       </div>
 
-
-
-      <a href="assistance.html" class="button">Save first choice</a>
     </section>
+
+    <a href="#" class="button hidden" id="firstChoiceSave">Save first choice</a>
 
     <section id="considerAlternatives" class="hidden">
       <div class="panel-indent">
@@ -171,37 +183,13 @@
           <input name="altframework" type="radio" id="altframework-no">No
         </label>
       </div>
+
+      <a href="assistance.html" class="button">Save and continue</a>
     </section>
   </div>
 </div>
 
 <script src="{{assets}}/js/region-selector.js"></script>
-
-<script>
-  $(function() {
-    $('#frameworkPref1').on('change', function() {
-      var $thisVal = $(this).val();
-
-      $('#secondPreferenceContainer').show();
-
-      $('#frameworkPref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
-      $('#frameworkPref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
-
-      $("#frameworkPref2").trigger("chosen:updated");
-    });
-
-    $('#frameworkPref2').on('change', function() {
-      var $thisVal = $(this).val();
-
-      $('#frameworkPref1').find('option[value="' + $thisVal + '"]').attr('disabled', true);
-      $('#frameworkPref1').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
-
-      $("#frameworkPref1").trigger("chosen:updated");
-    });
-  });
-</script>
-
-
 
 
 

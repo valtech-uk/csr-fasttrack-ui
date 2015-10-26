@@ -16,6 +16,12 @@ $(function() {
     $('.map-legend').show().removeClass('disabled');
     $('#hoveredRegionName').text($regionName);
 
+  }, function() {
+
+    if($selectedRegionName != '') {
+      $('#hoveredRegionName').text($selectedRegionName);
+    }
+
   });
 
 
@@ -40,34 +46,6 @@ $(function() {
   });
 
 
-//   function selectRegion(regionContainer, regionElement) {
-//     var regionName = regionElement.find('.region-name').text(),
-//     selectedLocationLinks = [];
-
-//     $selectedRegion = regionContainer;
-//     $selectedRegionMap = regionElement;
-
-//     $('#selectLocationBlurb').hide().attr('aria-hidden', true);
-//     $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
-//     regionContainer.attr('class', 'region-container selected');
-
-//     $('#hoveredRegionName, #regionNameHeading').text(regionName);
-//     $selectedRegionName = regionName;
-
-//     $('#regionLocations').html('');
-//     $('#regionLocationBlurb').html('');
-//     selectedRegionLocations = [];
-
-
-//     $('#regionLocationBlurb').append(selectedLocationLinks.join(', '));
-
-//     $('.map-region').not($selectedRegionMap).hide();
-//     $('.region-container').not($selectedRegion).attr('class', 'region-container');
-//   }
-
-// });
-
-
 function selectRegion(regionContainer, regionElement) {
     var regionName = regionElement.attr('label');
 
@@ -75,19 +53,63 @@ function selectRegion(regionContainer, regionElement) {
     $selectedRegionMap = regionElement;
 
     $('#selectLocationBlurb').hide().attr('aria-hidden', true);
-    $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
+    $('#locationSelectedContainer').addClass('hidden').attr('aria-hidden', true);
+
+    $("#frameworkPref1 option, #frameworkPref2 option").attr('selected', false);
+    $("#frameworkPref1, #frameworkPref2").trigger("chosen:updated");
+
+    $('#chosenRegionBlurb')
+      .removeClass('hidden')
+      .attr('aria-hidden', false)
+      .find('b').text(regionName);
+
     regionContainer.attr('class', 'region-container selected');
 
     $('#hoveredRegionName').text(regionName);
     $selectedRegionName = regionName;
 
-    $('.region-container').not($selectedRegion).attr('class', 'region-container');
+    $('.region-container')
+      .not($selectedRegion)
+      .attr('class', 'region-container');
 
     regionElement.removeClass('hidden').find('option').show();
-    $('[data-optregion]').not(regionElement).addClass('hidden').find('option').hide();
+
+    $('[data-optregion]')
+      .not(regionElement)
+      .addClass('hidden')
+      .find('option')
+      .attr('selected', false)
+      .hide();
 
     $('#regionSelect').trigger("chosen:updated");
   }
+
+  $("#regionSelect").on('change', function() {
+    $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
+  });
+
+
+  $('#frameworkPref1').on('change', function() {
+    var $thisVal = $(this).val();
+
+    $('#secondPreferenceContainer').show();
+
+    $('#frameworkPref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
+    $('#frameworkPref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
+
+    $("#frameworkPref2").trigger("chosen:updated");
+  });
+
+  $('#frameworkPref2').on('change', function() {
+    var $thisVal = $(this).val();
+
+    $('#frameworkPref1').find('option[value="' + $thisVal + '"]').attr('disabled', true);
+    $('#frameworkPref1').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
+
+    $("#frameworkPref1").trigger("chosen:updated");
+
+    $('#firstChoiceSave').removeClass('hidden');
+  });
 
 });
 
