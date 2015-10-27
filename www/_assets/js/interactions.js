@@ -377,6 +377,12 @@ $(function() {
     $this.next('.detail-content').toggle();
   });
 
-  $('.chosen-select').chosen({width: '100%'});
+  if($('html').hasClass('no-touch')) {
+    $('.chosen-select').chosen({width: '100%'});
+  } else {
+    $('.chosen-select').each(function() {
+      $(this).find('.placeholder-option').text('Select an option')
+    });
+  }
 
 });

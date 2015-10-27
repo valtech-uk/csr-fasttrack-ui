@@ -3,7 +3,6 @@ $(function() {
   var $selectedRegion = '',
       $selectedRegionName = '';
 
-
   $('.region-container').not($selectedRegion).hover(function() {
     var $this = $(this),
         $regionID = $this.attr('id'),
