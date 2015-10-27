@@ -1,3 +1,10 @@
+$.fn.triggerAll = function(events) {
+    if(!events) return this; //don't blow up if .triggerAll() without params
+    var self = this;         //keep a reference
+    $.each(events.split(" "), function(i, e) { self.trigger(e); });
+    return this;
+};
+
 $(function() {
 
   var $selectedRegion = '',
@@ -74,6 +81,10 @@ $(function() {
       .hide();
 
     $('#regionSelect').trigger("chosen:updated");
+
+    setTimeout(function() {
+      $('#regionSelect_chosen').trigger('mousedown');
+    }, 200);
 
     $('#chooseRegionText').hide();
     $('#clearMap').show();
