@@ -74,6 +74,9 @@ $(function() {
       .hide();
 
     $('#regionSelect').trigger("chosen:updated");
+
+    $('#chooseRegionText').hide();
+    $('#clearMap').show();
   }
 
   $("#regionSelect").on('change', function() {
@@ -83,6 +86,8 @@ $(function() {
     $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
 
     // selectRegion($regionContainer, $regionElement);
+
+    $('.map-control').hide();
 
   });
 
@@ -165,17 +170,9 @@ $(function() {
 
   });
 
-
-  // $('.content-container .group-option').hover(function() {
-  //   var thisRegion = $(this).prev('.group-result');
-
-  //   console.log(thisRegion);
-
-  //   $('#' + thisRegion).attr('class', 'hovering');
-
-  // }, function() {
-
-  // });
+  $('#clearMap').on('click', function() {
+    window.location.reload();
+  })
 
 });
 

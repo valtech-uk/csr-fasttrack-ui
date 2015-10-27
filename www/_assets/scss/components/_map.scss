@@ -27,6 +27,7 @@
 
 .map-legend-container {
   position: relative;
+  padding-bottom: 50px;
 }
 
 .map-legend {
@@ -37,6 +38,15 @@
   position: absolute;
   top: 0; right: $gutter;
   z-index: 2000;
+}
+
+.map-control {
+  display: block;
+  height: 50px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 .map-region {
