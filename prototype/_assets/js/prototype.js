@@ -16,6 +16,7 @@ $(function() {
 
   var storedFirstName = $.jStorage.get('firstName'),
       storedLastName = $.jStorage.get('lastName'),
+      storedEmail = $.jStorage.get('emailAddress'),
       storedPrefName = $.jStorage.get('preferredName'),
       storedDobDay = ("00" + new Number($.jStorage.get('dobDay'))).substr(-2,2),
       storedDobMonth = ("00" + new Number($.jStorage.get('dobMonth'))).substr(-2,2),
@@ -139,10 +140,31 @@ $(function() {
       $('#secondPreference').addClass('hidden');
     }
 
-    $('#considerAltLocation').text((storedAltLocation ? 'Yes': 'No'));
+    $('#considerAltLocation').text(storedAltLocation);
 
-    $('#considerAltFramework').text((storedAltFramework ? 'Yes': 'No'));
+    $('#considerAltFramework').text(storedAltFramework);
 
+  }
+
+  if($('#choosePrefLocFramHeading').length && gup('continue') == 'true') {
+    $('.svg-map').attr('class', 'svg-map disabled');
+    $('.map-control, #chooseLocationAndFramework, #secondPreferenceControls').hide();
+
+
+    if(storedSecondLoc != null) {
+      $('#second-chosenLocation').text(storedSecondLoc);
+      $('#second-chosenFrameworks').text(storedSecondFrame1 + ', ' + storedSecondFrame2);
+      $('#second-choiceInfo').removeClass('hidden');
+    }
+
+    $('#chosenLocation').text(storedFirstLoc);
+    $('#chosenFrameworks').text(storedFirstFrame1 + ', ' + storedFirstFrame2);
+    $('#choiceInfo, #locFramContinueSaved').removeClass('hidden');
+
+  }
+
+  if($('#SuccessMessageText').length && storedEmail) {
+    $('#emailAddress').text(storedEmail);
   }
 
   //-- Find address mock behaviour
@@ -189,19 +211,18 @@ $(function() {
 
   $('#btnSignOut, #btnDeleteAccount').on('click', function() {
     $.removeCookie('signedIn', { path: '/' });
+    $.jStorage.flush();
   });
 
   if($.cookie('signedIn')) {
     $('#bannerSignedOut').hide();
     $('#bannerSignedIn').show();
-    $('.details-apply').show();
-    $('.details-signIn').hide();
-    $('#beforeApply').hide();
+    if(storedFirstName != null) {
+      $('#bannerUserName').text(storedFirstName + ' ' + storedLastName);
+    }
   } else {
     $('#bannerSignedOut').show();
     $('#bannerSignedIn').hide();
-    $('.details-apply').hide();
-    $('.details-signIn').show();
   }
 
   $("#Password").keyup(function () {

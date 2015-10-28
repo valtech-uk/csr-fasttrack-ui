@@ -1,6 +1,6 @@
 
 <div class="text">
-  <h1 class="heading-xlarge">
+  <h1 class="heading-xlarge" id="checkApplicationHeading">
     Your application
   </h1>
 </div>
@@ -11,59 +11,63 @@
   </h2>
   <section>
     <h3 class="heading-small">Full name</h3>
-    <p>Firstname Lastname</p>
+    <p id="fullName">Firstname Lastname</p>
+  </section>
+  <section>
+    <h3 class="heading-small">What should we call you?</h3>
+    <p id="preferredName">Henry</p>
   </section>
   <section>
     <h3 class="heading-small">Date of birth</h3>
-    <p>19/5/1994</p>
+    <p id="dateOfBirth">19 May 1994</p>
   </section>
   <section>
     <h3 class="heading-small">Address</h3>
     <ul class="list-text">
-      <li>38 Bolton Road</li>
-      <li>Windsor</li>
-      <li>Windsor and Maidenhead</li>
-      <li>SL3 5LK</li>
+      <li id="address1">38 Bolton Road</li>
+      <li id="address2">Windsor</li>
+      <li id="address3">Windsor and Maidenhead</li>
+      <li id="address3b"></li>
+      <li id="address4">SL3 5LK</li>
     </ul>
   </section>
   <section>
     <h3 class="heading-small">Telephone number</h3>
-    <p>07988 346763</p>
+    <p id="phone-input">07988 346763</p>
+    <p id="phone-input2"></p>
   </section>
   <section>
     <h3 class="heading-small">School name</h3>
-    <p>The Name of the School</p>
+    <p id="schoolName">The Name of the School</p>
   </section>
 
   <section>
     <h3 class="heading-small">Qualifications</h3>
-    <p>At least 5 GCSEs (A*-C) or equivalent</p>
+    <p id="minGCSEs" class="hidden">At least 5 GCSEs or equivalent</p>
+    <p id="minAlevels">At least 2 A-levels</p>
   </section>
 </section>
 
 <section class="section-border">
   <h2 class="heading-large">
-    Region and framework
+    Locations and framework
   </h2>
   <section>
-    <h3 class="heading-small">Region</h3>
-    <p>South-east</p>
+    <h3 class="heading-small">First preference</h3>
+    <p id="firstPreference">Newcastle (Business administration, Cyber security)</p>
   </section>
   <section>
-    <h3 class="heading-small">First framework preference</h3>
-    <p>Business administration</p>
+    <h3 class="heading-small">Second preference</h3>
+    <p id="secondPreference">Manchester (Cyber security, Business admin)</p>
+    <p id="noSecondPreference" class="hidden">No second preference chosen</p>
   </section>
   <section>
-    <h3 class="heading-small">Second framework preference</h3>
-    <p>Cyber security</p>
-  </section>
-  <section>
-    <h3 class="heading-small">Would consider alternative region?</h3>
-    <p>No</p>
+    <h3 class="heading-small">Would consider alternative location?</h3>
+    <p id="considerAltLocation">Yes</p>
   </section>
   <section>
     <h3 class="heading-small">Would consider alternative framework?</h3>
-    <p>Yes</p>
+    <p id="considerAltFramework">No</p>
   </section>
 </section>
 
@@ -76,6 +80,7 @@
     <p>No</p>
   </section>
 </section>
+
 
 
 <a href="profile-home-complete.html" class="button-link">Return to home</a>

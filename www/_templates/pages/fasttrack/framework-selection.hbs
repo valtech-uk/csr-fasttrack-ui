@@ -11,8 +11,11 @@
   <div class="grid grid-1-3">
     <div class="inner-block-padr map-legend-container">
       <div class="map-control">
-        <h2 class="heading-small" id="chooseRegionText">Choose a region to filter the locations</h2>
-        <a href="#" id="clearMap" class="toggle-content">Reset selected region</a>
+
+        <div class="panel-indent">
+          <h2 class="heading-small" id="chooseRegionText">Choose a region to filter the locations</h2>
+          <a href="#" id="clearMap" class="toggle-content">Reset selected region</a>
+        </div>
       </div>
       <div class="map-legend grid-1-2">
         <h2 class="heading-small" id="hoveredRegionName"></h2>
@@ -90,7 +93,9 @@
 
       </section>
     </div>
-
+    <div class="hidden" id="locFramContinueSaved">
+      <a href="assistance.html" class="button" >Save and continue</a>
+   </div>
     <a href="#" class="button hidden first-choice-btn" id="choiceSave">Save first preference</a>
 
     <section id="considerAlternatives" class="hidden">
@@ -120,6 +125,8 @@
 
       <a href="assistance.html" class="button" id="locFramContinue">Save and continue</a>
     </section>
+
+
   </div>
 </div>
 
