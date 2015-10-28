@@ -176,11 +176,9 @@ $(function() {
   });
 
   $('#locFramContinue').on('click', function() {
-    var altLocation = $('#altregion-yes').is(':checked'),
-        altFramework = $('#altframework-yes').is(':checked');
 
-    $.jStorage.set('considerAltLocation', (altLocation ? true : false));
-    $.jStorage.set('considerAltFramework', (altLocation ? true : false));
+    $.jStorage.set('considerAltLocation', $('[name="altregion"]:checked').parent().text());
+    $.jStorage.set('considerAltFramework', $('[name="altframework"]:checked').parent().text());
 
   });
 
@@ -201,6 +199,9 @@ $(function() {
     e.preventDefault();
 
     $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+    $.jStorage.deleteKey('second-storageLocation');
+    $.jStorage.deleteKey('second-storageFirstFramework');
+    $.jStorage.deleteKey('second-storageSecondFramework');
 
   });
 

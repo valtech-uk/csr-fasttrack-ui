@@ -139,9 +139,9 @@ $(function() {
       $('#secondPreference').addClass('hidden');
     }
 
-    $('#considerAltLocation').text((storedAltLocation ? 'Yes': 'No'));
+    $('#considerAltLocation').text(storedAltLocation);
 
-    $('#considerAltFramework').text((storedAltFramework ? 'Yes': 'No'));
+    $('#considerAltFramework').text(storedAltFramework);
 
   }
 
