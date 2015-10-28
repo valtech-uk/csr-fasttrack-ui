@@ -35,6 +35,8 @@ $(function() {
       storedSecondLoc = $.jStorage.get('second-storageLocation'),
       storedSecondFrame1 = $.jStorage.get('second-storageFirstFramework'),
       storedSecondFrame2 = $.jStorage.get('second-storageSecondFramework'),
+      storedAltLocation = $.jStorage.get('considerAltLocation'),
+      storedAltFramework = $.jStorage.get('considerAltFramework'),
       longMonths = {'01':'January', '02':'February', '03':'March', '04':'April', '05':'May', '06':'June', '07':'July', '08':'August', '09':'September', '10':'October', '11':'November', '12':'December'},
       shortMonths = {'01':'Jan', '02':'Feb', '03':'Mar', '04':'Apr', '05':'May', '06':'June', '07':'July', '08':'Aug', '09':'Sept', '10':'Oct', '11':'Nov', '12':'Dec'};
 
@@ -136,6 +138,10 @@ $(function() {
       $('#noSecondPreference').removeClass('hidden');
       $('#secondPreference').addClass('hidden');
     }
+
+    $('#considerAltLocation').text((storedAltLocation ? 'Yes': 'No'));
+
+    $('#considerAltFramework').text((storedAltFramework ? 'Yes': 'No'));
 
   }
 

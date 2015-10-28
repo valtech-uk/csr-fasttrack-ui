@@ -149,15 +149,38 @@ $(function() {
     $('.svg-map').attr('class', 'svg-map disabled');
 
     $(this).hide();
+  });
 
-    if($(this).hasClass('second-choice')) {
-      $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
-      $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
-    } else {
-      $.jStorage.set('first-storageLocation', locationSelected);
-      $.jStorage.set('first-storageFirstFramework', firstFramework);
-      $.jStorage.set('first-storageSecondFramework', secondFramework);
-    }
+  $('.first-choice-btn').on('click', function() {
+    var locationSelected = $('#regionSelect').val(),
+        firstFramework = $('#frameworkPref1').val(),
+        secondFramework = $('#frameworkPref2').val();
+
+    $.jStorage.set('first-storageLocation', locationSelected);
+    $.jStorage.set('first-storageFirstFramework', firstFramework);
+    $.jStorage.set('first-storageSecondFramework', secondFramework);
+  });
+
+  $('.second-choice-btn').on('click', function() {
+    var locationSelected = $('#regionSelect').val(),
+        firstFramework = $('#frameworkPref1').val(),
+        secondFramework = $('#frameworkPref2').val();
+
+    $.jStorage.set('second-storageLocation', locationSelected);
+    $.jStorage.set('second-storageFirstFramework', firstFramework);
+    $.jStorage.set('second-storageSecondFramework', secondFramework);
+
+    $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
+    $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+
+  });
+
+  $('#locFramContinue').on('click', function() {
+    var altLocation = $('#altregion-yes').is(':checked'),
+        altFramework = $('#altframework-yes').is(':checked');
+
+    $.jStorage.set('considerAltLocation', (altLocation ? true : false));
+    $.jStorage.set('considerAltFramework', (altLocation ? true : false));
 
   });
 
@@ -178,17 +201,6 @@ $(function() {
     e.preventDefault();
 
     $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
-
-  });
-
-  $('#saveSecondPreference').on('click', function(e) {
-    var locationSelected = $('#regionSelect').val(),
-        firstFramework = $('#frameworkPref1').val(),
-        secondFramework = $('#frameworkPref2').val();
-
-    $.jStorage.set('second-storageLocation', locationSelected);
-    $.jStorage.set('second-storageFirstFramework', firstFramework);
-    $.jStorage.set('second-storageSecondFramework', secondFramework);
 
   });
 
