@@ -14,23 +14,64 @@ $(function() {
       return results[1];
   }
 
+  $('#createAccountBtn').on('click', function() {
+    $.jStorage.set('firstName', $('#first-name').val());
+    $.jStorage.set('lastName', $('#last-name').val());
+    $.jStorage.set('emailAddress', $('#email-input').val());
+  });
+
+  if($('#personalDetailsHeading').length && $.jStorage.get('firstName') != undefined) {
+    $('#first-name').val($.jStorage.get('firstName'));
+    $('#last-name').val($.jStorage.get('lastName'));
+    $('#preferredName').val($.jStorage.get('firstName'));
+  }
+
+  $('#detailsContinue').on('click', function() {
+    $.jStorage.set('dobDay', $('#dob-day').val());
+    $.jStorage.set('dobMonth', $('#dob-month').val());
+    $.jStorage.set('dobYear', $('#dob-year').val());
+
+    $.jStorage.set('address01', $('#address1').val());
+    $.jStorage.set('address02', $('#address2').val());
+    $.jStorage.set('address03', $('#address3').val());
+    $.jStorage.set('address03b', $('#address3b').val());
+    $.jStorage.set('address04', $('#address4').val());
+
+    $.jStorage.set('mob-number', $('#phone-input').val());
+    $.jStorage.set('land-number', $('#phone-input2').val());
+
+    $.jStorage.set('schoolName', $('#schoolName').val());
+
+    if($('#alevel-yes').is(':checked')) {
+      $.jStorage.set('aLevels', true);
+    } else {
+      $.jStorage.set('aLevels', false);
+    }
+  });
+
   //------------- Set personal details
 
   if($('#dob-day').length && gup('continue') == 'true') {
-    $('#dob-day').val('14');
-    $('#dob-month').val('4');
-    $('#dob-year').val('1998');
+    $('#dob-day').val($.jStorage.get('dobDay'));
+    $('#dob-month').val($.jStorage.get('dobMonth'));
+    $('#dob-year').val($.jStorage.get('dobYear'));
 
-    $('#address1').val('38 Bolton Road');
-    $('#address2').val('Maidenhead');
-    $('#address3').val('Windsor and Maidenhead');
-    $('#address4').val('SL5 4JH');
+    $('#address1').val($.jStorage.get('address01'));
+    $('#address2').val($.jStorage.get('address02'));
+    $('#address3').val($.jStorage.get('address03'));
+    $('#address3b').val($.jStorage.get('address03b'));
+    $('#address4').val($.jStorage.get('address04'));
 
-    $('#phone-input').val('07984 382819');
+    $('#phone-input').val($.jStorage.get('mob-number'));
+    $('#phone-input2').val($.jStorage.get('land-number'));
 
-    $('#schoolName').val('Maidenhead School for Boys');
+    $('#schoolName').val($.jStorage.get('schoolName'));
 
-    $('#alevel-no').attr('checked', true).parent().addClass('selected');
+    if($.jStorage.get('aLevels') == false ) {
+      $('#alevel-no').attr('checked', true).parent().addClass('selected');
+    } else {
+      $('#alevel-yes').attr('checked', true).parent().addClass('selected');
+    }
 
     $('#detailsContinue').attr('href', $('#detailsContinue').attr('href') + '?continue=true');
 
