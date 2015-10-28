@@ -97,7 +97,7 @@
     <main role="main" id="main">
       
 <div class="text">
-  <h1 class="heading-xlarge">
+  <h1 class="heading-xlarge" id="checkApplicationHeading">
     Check your application before submission
   </h1>
 </div>
@@ -108,33 +108,40 @@
   </h2>
   <section>
     <h3 class="heading-small">Full name</h3>
-    <p>Firstname Lastname</p>
+    <p id="fullName">Firstname Lastname</p>
+  </section>
+  <section>
+    <h3 class="heading-small">What should we call you?</h3>
+    <p id="preferredName">Henry</p>
   </section>
   <section>
     <h3 class="heading-small">Date of birth</h3>
-    <p>19/5/1994</p>
+    <p id="dateOfBirth">19 May 1994</p>
   </section>
   <section>
     <h3 class="heading-small">Address</h3>
     <ul class="list-text">
-      <li>38 Bolton Road</li>
-      <li>Windsor</li>
-      <li>Windsor and Maidenhead</li>
-      <li>SL3 5LK</li>
+      <li id="address1">38 Bolton Road</li>
+      <li id="address2">Windsor</li>
+      <li id="address3">Windsor and Maidenhead</li>
+      <li id="address3b"></li>
+      <li id="address4">SL3 5LK</li>
     </ul>
   </section>
   <section>
     <h3 class="heading-small">Telephone number</h3>
-    <p>07988 346763</p>
+    <p id="phone-input">07988 346763</p>
+    <p id="phone-input2"></p>
   </section>
   <section>
     <h3 class="heading-small">School name</h3>
-    <p>The Name of the School</p>
+    <p id="schoolName">The Name of the School</p>
   </section>
 
   <section>
     <h3 class="heading-small">Qualifications</h3>
-    <p>2 A-levels</p>
+    <p id="minGCSEs" class="hidden">At least 5 GCSEs or equivalent</p>
+    <p id="minAlevels">At least 2 A-levels</p>
   </section>
 </section>
 
@@ -144,11 +151,12 @@
   </h2>
   <section>
     <h3 class="heading-small">First preference</h3>
-    <p>Newcastle (Business administration, Cyber security)</p>
+    <p id="firstPreference">Newcastle (Business administration, Cyber security)</p>
   </section>
   <section>
     <h3 class="heading-small">Second preference</h3>
-    <p>Manchester (Cyber security, Business admin)</p>
+    <p id="secondPreference">Manchester (Cyber security, Business admin)</p>
+    <p id="noSecondPreference" class="hidden">No second preference chosen</p>
   </section>
   <section>
     <h3 class="heading-small">Would consider alternative location?</h3>

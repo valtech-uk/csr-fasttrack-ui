@@ -154,17 +154,17 @@ $(function() {
       $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
       $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
     } else {
-      $.jStorage.set('storageLocation', locationSelected);
-      $.jStorage.set('storageFirstFramework', firstFramework);
-      $.jStorage.set('storageSecondFramework', secondFramework);
+      $.jStorage.set('first-storageLocation', locationSelected);
+      $.jStorage.set('first-storageFirstFramework', firstFramework);
+      $.jStorage.set('first-storageSecondFramework', secondFramework);
     }
 
   });
 
   if($('#firstChosenLocation').length) {
-    var locationSelected = $.jStorage.get('storageLocation'),
-        firstFramework = $.jStorage.get('storageFirstFramework'),
-        secondFramework = $.jStorage.get('storageSecondFramework');
+    var locationSelected = $.jStorage.get('first-storageLocation'),
+        firstFramework = $.jStorage.get('first-storageFirstFramework'),
+        secondFramework = $.jStorage.get('first-storageSecondFramework');
 
     $('option[value="' + locationSelected +'"]').attr('disabled', true);
     $('#regionSelect').trigger("chosen:updated");
@@ -178,6 +178,17 @@ $(function() {
     e.preventDefault();
 
     $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+
+  });
+
+  $('#saveSecondPreference').on('click', function(e) {
+    var locationSelected = $('#regionSelect').val(),
+        firstFramework = $('#frameworkPref1').val(),
+        secondFramework = $('#frameworkPref2').val();
+
+    $.jStorage.set('second-storageLocation', locationSelected);
+    $.jStorage.set('second-storageFirstFramework', firstFramework);
+    $.jStorage.set('second-storageSecondFramework', secondFramework);
 
   });
 
