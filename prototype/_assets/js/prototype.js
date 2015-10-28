@@ -167,6 +167,11 @@ $(function() {
     $('#emailAddress').text(storedEmail);
   }
 
+  if($('#nameOnHome').length && storedFirstName) {
+    $('#nameOnHome').text(storedFirstName + ' ' + storedLastName);
+  }
+
+
   //-- Find address mock behaviour
 
   $('#findAddressBtn').on('click', function(e) {
