@@ -145,6 +145,21 @@ $(function() {
 
   }
 
+  if($('#choosePrefLocFramHeading').length && gup('continue') == 'true') {
+    $('.svg-map').attr('class', 'svg-map disabled');
+    $('.map-control, #chooseLocationAndFramework, #secondPreferenceControls').hide();
+
+
+    if(storedSecondLoc != null) {
+      $('#second-choiceInfo').removeClass('hidden');
+    }
+
+    $('#chosenLocation').text(storedFirstLoc);
+    $('#chosenFrameworks').text(storedFirstFrame1 + ', ' + storedFirstFrame2);
+    $('#choiceInfo').removeClass('hidden');
+
+  }
+
   //-- Find address mock behaviour
 
   $('#findAddressBtn').on('click', function(e) {

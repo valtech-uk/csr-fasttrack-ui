@@ -133,7 +133,6 @@ $(function() {
     e.preventDefault();
 
     $('#chosenLocation').text(locationSelected);
-
     $('#chosenFrameworks').append(firstFramework + ', ' + secondFramework);
 
     $('#choiceInfo').removeClass('hidden').attr('aria-hidden', false);
@@ -194,7 +193,6 @@ $(function() {
     $('#firstChosenFrameworks').text(firstFramework + ', ' + secondFramework);
   }
 
-
   $('#noSecondPreference').on('click', function(e) {
     e.preventDefault();
 
@@ -207,7 +205,7 @@ $(function() {
 
   $('#clearMap').on('click', function() {
     window.location.reload();
-  })
+  });
 
 });
 
