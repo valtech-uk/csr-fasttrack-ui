@@ -227,6 +227,15 @@ $(function() {
     $('#withdrawnApplication').show();
   }
 
+
+  $('#hideIEMessage').on('click', function() {
+    $.cookie('hideMessage', true, {path: '/'});
+  });
+
+  if($.cookie('hideMessage')) {
+    $('html').addClass('message-hidden');
+  }
+
   if($.cookie('signedIn')) {
     $('#bannerSignedOut').hide();
     $('#bannerSignedIn').show();
