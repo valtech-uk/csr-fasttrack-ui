@@ -1,5 +1,5 @@
 ---
-headerTitle: SFA Pattern library
+pageTitle: Pattern library
 ---
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 <style>
@@ -8,7 +8,7 @@ headerTitle: SFA Pattern library
   }
 </style>
 <div class="hgroup">
-  <h1 class="heading-xlarge">Pattern library</h1>
+  <h1 class="heading-xlarge">{{ pageTitle }}</h1>
   <h2 class="subtitle">UI Components and states</h2>
 </div>
 
@@ -76,6 +76,7 @@ headerTitle: SFA Pattern library
 
   <div id="error1" class="form-group has-an-error">
     <label for="normal-label" class="form-label">Label for input</label>
+    <span class="has-error"></span>
     <input type="text" id="normal-label" class="form-control">
   </div>
 
@@ -92,6 +93,7 @@ headerTitle: SFA Pattern library
 
   <div id="error2" class="form-group form-group-compound inline-fixed has-an-error">
     <p class="form-label">Date of birth</p>
+    <div class="has-error"></div>
     <div class="form-group form-group-compound">
       <label class="form-hint" for="date-day2">Day</label>
       <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="date-day2">

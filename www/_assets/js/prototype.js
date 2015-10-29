@@ -205,7 +205,8 @@ $(function() {
 
   $('#errorButton').on('click', function() {
     $('.validation-summary-errors').toggle();
-    $('.has-an-error').toggleClass('input-validation-error')
+    $('.has-an-error').toggleClass('input-validation-error');
+    $('.has-an-error').find('.has-error').text('Oh no, you need to enter something in there');
   });
 
   //-- Banner sign in
