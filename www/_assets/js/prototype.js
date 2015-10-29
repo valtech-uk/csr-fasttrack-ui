@@ -214,7 +214,7 @@ $(function() {
     $.cookie('signedIn', true, {path: '/'});
   });
 
-  $('#btnSignOut, #btnDeleteAccount').on('click', function() {
+  $('#btnSignOut, #withdrawApplication').on('click', function() {
     $.removeCookie('signedIn', { path: '/' });
     $.jStorage.flush();
   });
@@ -235,65 +235,36 @@ $(function() {
   });
 
   function initializeStrengthMeter() {
-      $("#pass_meter").pwStrengthManager({
-          password: $("#Password").val(),
-          minChars: 8
-      });
+    $("#pass_meter").pwStrengthManager({
+        password: $("#Password").val(),
+        minChars: 8
+    });
   }
 
   $('.pw-masktoggle').on("click", function () {
-      changePassType();
-      toggleShowHide();
+    changePassType();
+    toggleShowHide();
 
-      return false;
+    return false;
   });
 
   function changePassType() {
-      var password = document.getElementById('Password');
-      if (password.type == 'password') {
-          password.type = 'text';
-      } else {
-          password.type = 'password';
-      }
+    var password = document.getElementById('Password');
+    if (password.type == 'password') {
+        password.type = 'text';
+    } else {
+        password.type = 'password';
+    }
   }
 
   function toggleShowHide() {
-      var showOrHide = $('.pw-masktoggle').text();
-      if (showOrHide == 'Show') {
-          $('.pw-masktoggle').text('Hide');
-      } else {
-          $('.pw-masktoggle').text('Show');
-      }
+    var showOrHide = $('.pw-masktoggle').text();
+    if (showOrHide == 'Show') {
+        $('.pw-masktoggle').text('Hide');
+    } else {
+        $('.pw-masktoggle').text('Show');
+    }
   }
-
-  // // ------ Change bookmark icon on click
-
-  // $('.bookmark-result').on('click', function() {
-
-  //   $(this).find('.fa').toggleClass('fa-star-o fa-star');
-
-  //   $(this).attr('title', $(this).find('.fa').hasClass('fa-star') ? 'Remove from saved':'Add to saved');
-
-  //   if($('.fa-star').length) {
-  //     $('#savedHeaderItem').removeClass('toggle-content');
-  //     if($(window).scrollTop() > heightOfHeader) {
-  //       addFixedHeader();
-  //     }
-  //   } else {
-  //     $('#savedHeaderItem').addClass('toggle-content');
-  //   }
-
-  //   $('#savedCount').text($('.fa-star').length);
-
-  //   $(this).toggleClass('filled-in');
-  //   $(this).blur();
-
-  //   if('#settingsLink')
-
-  //   return false;
-
-  // });
-
 
 // --------------- Not to be used in production -------------- //
 });

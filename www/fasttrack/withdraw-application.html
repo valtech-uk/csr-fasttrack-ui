@@ -105,11 +105,23 @@
 </div>
 
 <div class="form-group">
-  <label for="withdrawReason" class="form-label">Please tell us your reason for withdrawal (optional)</label>
-  <textarea name="" id="withdrawReason" rows="6" class="form-control"></textarea>
+  <label for="withdrawReason" class="form-label">Please tell us your reason for withdrawal</label>
+  <select name="withdrawalReasons" id="withdrawReason" class="selectWithOptionTrigger">
+    <option value="">-- Select reason from list --</option>
+    <option value="">I've found another job elsewhere</option>
+    <option value="">I'm joining another apprenticeship scheme</option>
+    <option value="">I realised I wasn't eligible for an apprenticeship</option>
+    <option value="">My circumstances have changed</option>
+    <option value="">I have moved abroad</option>
+    <option class="optionTrigger" value="" data-optiontrigger="moreInfo">Other reason (please provide details)</option>
+  </select>
+</div>
+<div class="form-group toggle-content" id="moreInfo">
+  <label for="otherWithdrawReason" class="form-label">More information about your withdrawal</label>
+  <textarea name="" id="otherWithdrawReason" rows="6" class="form-control"></textarea>
 </div>
 
-<a href="profile-signin.html" class="button">Withdraw my application</a>
+<a href="profile-signin.html" class="button" id="withdrawApplication">Withdraw my application</a>
 
     </main>
   </div>

@@ -113,6 +113,17 @@ $(function() {
 
   });
 
+  $('.selectWithOptionTrigger').on('change', function() {
+    var optionTrigger = $(this).find('.optionTrigger'),
+        optionTarget = $('#' + optionTrigger.attr('data-optiontrigger'));
+
+    if(optionTrigger.is(':selected')) {
+      optionTarget.show();
+    } else {
+      optionTarget.hide();
+    }
+  });
+
   $('.amend-answers').on('click', function() {
     $(this).closest('.form-group').toggleClass('expanded');
     return false;
