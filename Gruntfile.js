@@ -61,8 +61,7 @@ module.exports = function(grunt) {
                 layout: 'default.hbs',
                 layoutdir: 'www/_templates/layouts',
 
-                partials: ['www/_templates/partials/*.hbs'],
-                data: ['www/_templates/data/*.json']
+                partials: ['www/_templates/partials/*.hbs']
             },
 
             dev: {
