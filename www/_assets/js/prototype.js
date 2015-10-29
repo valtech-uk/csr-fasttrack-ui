@@ -219,6 +219,14 @@ $(function() {
     $.jStorage.flush();
   });
 
+  if($('#signedOut').length && gup('Status') == 'signout') {
+    $('#signedOut').show();
+  }
+
+  if($('#signedOut').length && gup('Status') == 'withdrawn') {
+    $('#withdrawnApplication').show();
+  }
+
   if($.cookie('signedIn')) {
     $('#bannerSignedOut').hide();
     $('#bannerSignedIn').show();
