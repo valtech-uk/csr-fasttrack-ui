@@ -16,6 +16,9 @@ table {
     .form-label, .form-hint {
       font-size: inherit;
     }
+    @include media(tablet) {
+      @include core-16;
+    }
   }
   th {
     font-weight: 700;
