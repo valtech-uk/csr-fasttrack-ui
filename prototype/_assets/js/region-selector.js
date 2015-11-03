@@ -148,6 +148,7 @@ $(function() {
     $('.svg-map').attr('class', 'svg-map disabled');
 
     $(this).hide();
+
   });
 
   $('.first-choice-btn').on('click', function() {
@@ -158,6 +159,9 @@ $(function() {
     $.jStorage.set('first-storageLocation', locationSelected);
     $.jStorage.set('first-storageFirstFramework', firstFramework);
     $.jStorage.set('first-storageSecondFramework', secondFramework);
+
+    $("html, body").animate({ scrollTop: 0 }, 300);
+
   });
 
   $('.second-choice-btn').on('click', function() {
