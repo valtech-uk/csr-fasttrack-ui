@@ -174,13 +174,22 @@
             <legend class="heading-large">How did you hear about us?</legend>
             <div class="form-group">
               <label for="hearAboutUs" class="form-label">Please select how you heard about us (optional)</label>
-              <select name="" id="hearAboutUs">
+              <select name="" id="hearAboutUs" class="selectWithOptionTrigger">
                 <option value="">-- Choose method --</option>
-                <option value="">Search engine (eg, Google)</option>
-                <option value="">Word of mouth</option>
-                <option value="">Social media</option>
-                <option value="">Other</option>
+                <option value="">National apprenticeship service</option>
+                <option value="">notgoingtouni.co.uk</option>
+                <option value="">Social media(twitter/facebook)</option>
+                <option value="">Teachers/careers advisors</option>
+                <option value="">Parent/Friends/Family</option>
+                <option value="">Existing apprentice/Civil servant</option>
+                <option class="optionTrigger" value="" data-optiontrigger="hearAboutUsDetail" value="">Careers fair</option>
+                <option value="">Google</option>
+                <option class="optionTrigger" value="" data-optiontrigger="hearAboutUsDetail" value="">Other</option>
               </select>
+            </div>
+            <div class="form-group toggle-content" id="hearAboutUsDetail">
+              <label for="hearAboutUsDetailControl" class="form-label">Please specify details</label>
+              <input type="text" id="hearAboutUsDetailControl" class="form-control">
             </div>
           </fieldset>
           <fieldset>
