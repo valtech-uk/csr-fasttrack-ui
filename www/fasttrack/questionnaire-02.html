@@ -105,109 +105,53 @@
 <h1 class="heading-xlarge">Anonymous questionnaire</h1>
 
 <h2 class="heading-large">
-  Diversity
+  Socio-economic information
 </h2>
 
-<p class="form-label">What is your gender identity?</p>
-<div class="form-group inline">
-  <div>
-    <label for="gender-man" class="block-label">
-      <input name="gender" type="radio" id="gender-man">Man
-    </label>
-  </div>
-  <div>
-    <label for="gender-woman" class="block-label">
-      <input name="gender" type="radio" id="gender-woman">Woman
-    </label>
-  </div>
-  <div>
-    <label for="gender-other" class="block-label">
-      <input name="gender" type="radio" id="gender-other">Other gender identity
-    </label>
-  </div>
-  <div>
-    <label for="gender-nosay" class="block-label">
-      <input name="gender" type="radio" id="gender-nosay">Prefer not to say
-    </label>
-  </div>
-</div>
-
-<div class="form-group inline clearfix">
-  <p class="form-label">What is your ethnic group?</p>
-  <select name="" id="">
-    <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
-    <optgroup label="White">
-      <option value="">English/Welsh/Scottish/Northern Irish/British </option>
-      <option value="">Irish </option>
-      <option value="">Gypsy or Irish Traveller </option>
-      <option value="">Other White background</option>
-    </optgroup>
-    <optgroup label="Mixed/Multiple ethnic groups">
-      <option value="">White and Black Caribbean </option>
-      <option value="">White and Black African </option>
-      <option value="">White and Asian </option>
-      <option value="">Other mixed/multiple ethnic background </option>
-    </optgroup>
-    <optgroup label="Asian/Asian British">
-      <option value="">Indian </option>
-      <option value="">Pakistani </option>
-      <option value="">Bangladeshi </option>
-      <option value="">Chinese </option>
-      <option value="">Other Asian background</option>
-    </optgroup>
-    <optgroup label="Black/African/Caribbean/Black British">
-      <option value="">African </option>
-      <option value="">Caribbean </option>
-      <option value="">Other Black/African/Caribbean background</option>
-    </optgroup>
-    <optgroup label="Other ethnic group">
-      <option value="">Arab</option>
-      <option value="">Other ethnic group</option>
-    </optgroup>
-  </select>
-</div>
-
-<div class="form-group inline clearfix">
-  <p class="form-label">What is your religion? </p>
-  <select name="" id="" class="selectWithOptionTrigger">
-    <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
-    <option value="">No religion</option>
-    <option value="">Christian (all denominations)</option>
-    <option value="">Buddhist</option>
-    <option value="">Hindu</option>
-    <option value="">Jewish</option>
-    <option value="">Muslim</option>
-    <option value="">Sikh</option>
-    <option class="optionTrigger" value="" data-optiontrigger="religionDescribe">Any other religion, please describe</option>
-  </select>
-</div>
-
-<div class="toggle-content" id="religionDescribe">
-  <label for="religionDescribeControl" class="form-label">Please describe your religion</label>
-    <input type="text" id="religionDescribeControl" class="form-control">
+<div class="form-group">
+  <label class="form-label" for="schoolAttended">What school did you attend to do your GCSEs?</label>
+  <input type="text" id="schoolAttended" class="form-control">
 </div>
 
 <div class="form-group">
-  <p class="form-label">What is your marital status? </p>
-  <select name="" id="">
-    <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
-    <option value="">Single</option>
-    <option value="">Married</option>
-    <option value="">Separated, but still legally married</option>
-    <option value="">Divorced</option>
-    <option value="">Widowed</option>
-    <option value="">In a registered same-sex civil partnership</option>
-    <option value="">Separated, but still legally in a same-sex civil partnership</option>
-    <option value="">Formerly in a same-sex civil partnership which is now legally dissolved</option>
-    <option value="">Surviving partner from a same-sex civil partnership </option>
-  </select>
+  <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
+  <span class="form-hint">If you don't know the postcode please enter street name and town</span>
+  <input type="text" id="homePostcode" class="form-control">
+</div>
+
+
+<div class="text">
+  <p class="form-label">Were you eligible to claim Free School Meals or Education Maintenance Allowance?</p>
+  <div class="form-group inline">
+    <label for="freeSchoolMeals-yes" class="block-label">
+      <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-yes">Yes
+    </label>
+    <label for="freeSchoolMeals-no" class="block-label">
+      <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-no">No
+    </label>
+    <label for="freeSchoolMeals-prefer" class="block-label">
+      <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-prefer">Prefer not to say
+    </label>
+  </div>
+</div>
+
+<div class="text">
+  <p class="form-label">Has any member of your immediate family attended university?</p>
+  <div class="form-group inline">
+    <label for="university-yes" class="block-label">
+      <input name="university" type="radio" id="university-yes">Yes
+    </label>
+    <label for="university-no" class="block-label">
+      <input name="university" type="radio" id="university-no">No
+    </label>
+    <label for="university-prefer" class="block-label">
+      <input name="university" type="radio" id="university-prefer">Prefer not to say
+    </label>
+  </div>
 </div>
 
 <p>
-  <a href="questionnaire-02.html" class="button">Save and continue</a>
+  <a href="profile-home-complete.html" class="button">Submit answers</a>
 </p>
 
     </main>
