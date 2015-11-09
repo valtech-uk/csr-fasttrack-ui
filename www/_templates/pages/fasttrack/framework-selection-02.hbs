@@ -34,7 +34,7 @@ pageTitle: Choose preferred location and framework
       <p><a href="framework-selection.html">Change this selection</a></p>
     </section>
 
-    <section class="hidden" id="choiceInfo">
+    <section class="toggle-content hide-nojs" id="choiceInfo">
       <h2 class="heading-medium">Second preference</h2>
       <h3 class="heading-small" id="chosenLocation"></h3>
       <p class="small-btm-margin" id="chosenFrameworks"></p>
@@ -47,12 +47,12 @@ pageTitle: Choose preferred location and framework
           Second preference of location
         </h2>
         <p id="selectLocationBlurb">Select a region from the map, or alternatively choose a location from the list.</p>
-        <p id="chosenRegionBlurb" class="hidden">Choose a location in the region: <b></b></p>
+        <p id="chosenRegionBlurb" class="toggle-content hide-nojs">Choose a location in the region: <b></b></p>
         <div class="grid-2-3">
           {{> location-select }}
         </div>
       </section>
-      <section class="hidden" id="locationSelectedContainer" aria-hidden="true">
+      <section class="toggle-content" id="locationSelectedContainer" aria-hidden="true">
 
         <div class="hgroup-medium">
           <h2 class="heading-medium" aria-live="polite">Choose a framework</h2>
@@ -93,9 +93,9 @@ pageTitle: Choose preferred location and framework
       </section>
     </div>
 
-    <a href="#" class="button hidden second-choice second-choice-btn" id="choiceSave">Save second location and framework</a>
+    <a href="#" class="button toggle-content hide-nojs second-choice second-choice-btn" id="choiceSave">Save second location and framework</a>
 
-    <section id="considerAlternatives" class="hidden">
+    <section id="considerAlternatives" class="toggle-content hide-nojs">
       <div class="panel-indent">
         <p>If we can't guarantee your preferred location or framework, we may suggest an alternative.</p>
       </div>

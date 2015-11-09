@@ -52,13 +52,13 @@ $(function() {
     $selectedRegion = regionContainer;
 
     $('#selectLocationBlurb, #selectSecondLocationBlurb').hide().attr('aria-hidden', true);
-    $('#locationSelectedContainer').addClass('hidden').attr('aria-hidden', true);
+    $('#locationSelectedContainer').addClass('toggle-content').attr('aria-hidden', true);
 
     $("#frameworkPref1 option, #frameworkPref2 option").attr('selected', false);
     $("#frameworkPref1, #frameworkPref2").trigger("chosen:updated");
 
     $('#chosenRegionBlurb')
-      .removeClass('hidden')
+      .removeClass('toggle-content')
       .attr('aria-hidden', false)
       .find('b').text(regionName);
 
@@ -71,11 +71,11 @@ $(function() {
       .not($selectedRegion)
       .attr('class', 'region-container');
 
-    regionElement.removeClass('hidden').find('option').show();
+    regionElement.removeClass('toggle-content').find('option').show();
 
     $('[data-optregion]')
       .not(regionElement)
-      .addClass('hidden')
+      .addClass('toggle-content')
       .find('option')
       .attr('selected', false)
       .hide();
@@ -94,7 +94,7 @@ $(function() {
     var $regionElement = $(this).find('option:selected').parent(),
         $regionContainer = $('#' + $regionElement.attr('data-optregion'));
 
-    $('#locationSelectedContainer').removeClass('hidden').attr('aria-hidden', false);
+    $('#locationSelectedContainer').removeClass('toggle-content').attr('aria-hidden', false);
 
     // selectRegion($regionContainer, $regionElement);
 
@@ -122,7 +122,7 @@ $(function() {
 
     $("#frameworkPref1").trigger("chosen:updated");
 
-    $('#choiceSave').removeClass('hidden');
+    $('#choiceSave').removeClass('toggle-content');
   });
 
   $('#choiceSave').on('click', function(e) {
@@ -135,9 +135,9 @@ $(function() {
     $('#chosenLocation').text(locationSelected);
     $('#chosenFrameworks').append(firstFramework + ', ' + secondFramework);
 
-    $('#choiceInfo').removeClass('hidden').attr('aria-hidden', false);
+    $('#choiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
 
-    $('#chooseLocationAndFramework').addClass('hidden').attr('aria-hidden', true);
+    $('#chooseLocationAndFramework').addClass('toggle-content').attr('aria-hidden', true);
 
     $('.region-container').attr('class', 'region-container');
 
@@ -173,8 +173,8 @@ $(function() {
     $.jStorage.set('second-storageFirstFramework', firstFramework);
     $.jStorage.set('second-storageSecondFramework', secondFramework);
 
-    $('#firstChoiceInfo').removeClass('hidden').attr('aria-hidden', false);
-    $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+    $('#firstChoiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
+    $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
 
   });
 
@@ -200,7 +200,7 @@ $(function() {
   $('#noSecondPreference').on('click', function(e) {
     e.preventDefault();
 
-    $('#considerAlternatives').removeClass('hidden').attr('aria-hidden', false);
+    $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
     $.jStorage.deleteKey('second-storageLocation');
     $.jStorage.deleteKey('second-storageFirstFramework');
     $.jStorage.deleteKey('second-storageSecondFramework');

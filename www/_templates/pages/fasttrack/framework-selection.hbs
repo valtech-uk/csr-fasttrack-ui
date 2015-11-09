@@ -10,11 +10,11 @@ pageTitle: Choose preferred location and framework
 </div>
 
 <div class="grid-wrapper">
-  <div class="grid grid-1-3">
+  <div class="grid grid-1-3 hide-nojs">
     <div class="inner-block-padr map-legend-container">
       <div class="map-control">
 
-        <div class="panel-indent">
+        <div class="panel-indent hide-nojs">
           <h2 class="heading-small" id="chooseRegionText">Choose a region to filter the locations</h2>
           <a href="#" id="clearMap" class="toggle-content">Reset selected region</a>
         </div>
@@ -22,13 +22,13 @@ pageTitle: Choose preferred location and framework
       <div class="map-legend grid-1-2">
         <h2 class="heading-small" id="hoveredRegionName"></h2>
       </div>
-      <div class="svg-map-container hide-nojs">
+      <div class="svg-map-container">
         {{> map-uk }}
       </div>
     </div>
   </div>
   <div class="grid grid-2-3">
-    <section class="hidden" id="choiceInfo">
+    <section class="toggle-content hide-nojs" id="choiceInfo">
       <h2 class="heading-medium">First preference</h2>
       <h3 class="heading-small" id="chosenLocation"></h3>
       <p class="small-btm-margin" id="chosenFrameworks"></p>
@@ -39,7 +39,7 @@ pageTitle: Choose preferred location and framework
       </div>
     </section>
 
-    <section class="hidden" id="second-choiceInfo">
+    <section class="toggle-content hide-nojs" id="second-choiceInfo">
       <h2 class="heading-medium">Second preference</h2>
       <h3 class="heading-small" id="second-chosenLocation"></h3>
       <p class="small-btm-margin" id="second-chosenFrameworks"></p>
@@ -51,13 +51,14 @@ pageTitle: Choose preferred location and framework
         <h2 class="heading-medium" id="chooseHeading">
           First preference of location
         </h2>
-        <p id="selectLocationBlurb">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The frameworks available at different locations will vary.</p>
-        <p id="chosenRegionBlurb" class="hidden">Choose a location in the region: <b></b></p>
+        <p id="selectLocationBlurb" class="hide-nojs">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The frameworks available at different locations will vary.</p>
+        <p class="hide-js">Choose a location from the list</p>
+        <p id="chosenRegionBlurb" class="toggle-content hide-nojs">Choose a location in the region: <b></b></p>
         <div class="grid-2-3">
           {{> location-select }}
         </div>
       </section>
-      <section class="hidden" id="locationSelectedContainer" aria-hidden="true">
+      <section class="toggle-content" id="locationSelectedContainer" aria-hidden="true">
 
         <div class="hgroup-medium">
           <h2 class="heading-medium" aria-live="polite">Choose a framework</h2>
@@ -97,12 +98,11 @@ pageTitle: Choose preferred location and framework
 
       </section>
     </div>
-    <div class="hidden" id="locFramContinueSaved">
+    <div class="toggle-content hide-nojs" id="locFramContinueSaved">
       <a href="assistance.html" class="button" >Save and continue</a>
    </div>
-    <a href="#" class="button hidden first-choice-btn" id="choiceSave">Save first location and framework</a>
 
-    <section id="considerAlternatives" class="hidden">
+    <section id="considerAlternatives" class="toggle-content">
       <div class="panel-indent">
         <p>If we can't guarantee your preferred location or framework, we may suggest an alternative.</p>
       </div>
@@ -127,9 +127,9 @@ pageTitle: Choose preferred location and framework
         </label>
       </div>
 
-      <a href="assistance.html" class="button" id="locFramContinue">Save and continue</a>
+      <a href="assistance.html" class="button hide-nojs" id="locFramContinue">Save and continue</a>
     </section>
-
+    <a href="#" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and framework</a>
 
   </div>
 </div>

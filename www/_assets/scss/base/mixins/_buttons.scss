@@ -52,6 +52,9 @@
     top: 2px;
     @include box-shadow(0 0 0 $colour);
   }
+  &.toggle-content {
+    display: none;
+  }
 
   // Disabled button styles
   .js-enabled & {
