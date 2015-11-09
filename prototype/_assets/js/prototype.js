@@ -158,6 +158,57 @@ $(function() {
 
   }
 
+
+  $('.first-choice-btn').on('click', function() {
+    var locationSelected = $('#regionSelect').val(),
+        firstScheme = $('#schemePref1').val(),
+        secondScheme = $('#schemePref2').val();
+
+    $.jStorage.set('first-storageLocation', locationSelected);
+    $.jStorage.set('first-storageFirstScheme', firstScheme);
+    $.jStorage.set('first-storageSecondScheme', secondScheme);
+
+  });
+
+  $('.second-choice-btn').on('click', function() {
+    var locationSelected = $('#regionSelect').val(),
+        firstScheme = $('#schemePref1').val(),
+        secondScheme = $('#schemePref2').val();
+
+    $.jStorage.set('second-storageLocation', locationSelected);
+    $.jStorage.set('second-storageFirstScheme', firstScheme);
+    $.jStorage.set('second-storageSecondScheme', secondScheme);
+
+  });
+
+  $('#locFramContinue').on('click', function() {
+
+    $.jStorage.set('considerAltLocation', $('[name="altregion"]:checked').parent().text());
+    $.jStorage.set('considerAltScheme', $('[name="altscheme"]:checked').parent().text());
+
+  });
+
+  if($('#firstChosenLocation').length) {
+    var locationSelected = $.jStorage.get('first-storageLocation'),
+        firstScheme = $.jStorage.get('first-storageFirstScheme'),
+        secondScheme = $.jStorage.get('first-storageSecondScheme');
+
+    $('option[value="' + locationSelected +'"]').attr('disabled', true);
+    $('#regionSelect').trigger("chosen:updated");
+
+    $('#firstChosenLocation').text(locationSelected);
+    $('#firstChosenSchemes').text(firstScheme + ', ' + secondScheme);
+  }
+
+  $('#noSecondPreference').on('click', function(e) {
+    e.preventDefault();
+
+    $.jStorage.deleteKey('second-storageLocation');
+    $.jStorage.deleteKey('second-storageFirstScheme');
+    $.jStorage.deleteKey('second-storageSecondScheme');
+
+  });
+
   if($('#SuccessMessageText').length && storedEmail) {
     $('#emailAddress').text(storedEmail);
   }
