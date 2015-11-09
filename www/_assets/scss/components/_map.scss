@@ -18,6 +18,16 @@
   }
 }
 
+.svg-map-container {
+  height: 0;
+  padding-bottom: 161.03%;
+  position: relative;
+  .svg-map {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+}
 
 /* Back Pulse */
 @-webkit-keyframes hvr-back-pulse {
