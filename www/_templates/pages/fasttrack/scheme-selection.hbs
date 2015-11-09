@@ -1,5 +1,5 @@
 ---
-pageTitle: Choose preferred location and framework
+pageTitle: Choose preferred location and scheme
 ---
 <div class="grid-wrapper">
   <div class="grid grid-2-3">
@@ -31,10 +31,10 @@ pageTitle: Choose preferred location and framework
     <section class="toggle-content hide-nojs" id="choiceInfo">
       <h2 class="heading-medium">First preference</h2>
       <h3 class="heading-small" id="chosenLocation"></h3>
-      <p class="small-btm-margin" id="chosenFrameworks"></p>
-      <p><a href="framework-selection.html">Change this selection</a></p>
+      <p class="small-btm-margin" id="chosenSchemes"></p>
+      <p><a href="scheme-selection.html">Change this selection</a></p>
       <div class="form-group" id="secondPreferenceControls">
-        <a href="framework-selection-02.html" class="button" id="addSecondButton">Add a second location</a>
+        <a href="scheme-selection-02.html" class="button" id="addSecondButton">Add a second location</a>
         <a href="#" class="button-link" id="noSecondPreference">Proceed without a second location</a>
       </div>
     </section>
@@ -42,16 +42,16 @@ pageTitle: Choose preferred location and framework
     <section class="toggle-content hide-nojs" id="second-choiceInfo">
       <h2 class="heading-medium">Second preference</h2>
       <h3 class="heading-small" id="second-chosenLocation"></h3>
-      <p class="small-btm-margin" id="second-chosenFrameworks"></p>
-      <p><a href="framework-selection-02.html">Change this selection</a></p>
+      <p class="small-btm-margin" id="second-chosenSchemes"></p>
+      <p><a href="scheme-selection-02.html">Change this selection</a></p>
     </section>
 
-    <div id="chooseLocationAndFramework">
+    <div id="chooseLocationAndScheme">
       <section>
         <h2 class="heading-medium" id="chooseHeading">
           First preference of location
         </h2>
-        <p id="selectLocationBlurb" class="hide-nojs">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The frameworks available at different locations will vary.</p>
+        <p id="selectLocationBlurb" class="hide-nojs">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The schemes available at different locations will vary.</p>
         <p class="hide-js">Choose a location from the list</p>
         <p id="chosenRegionBlurb" class="toggle-content hide-nojs">Choose a location in the region: <b></b></p>
         <div class="grid-2-3">
@@ -61,18 +61,18 @@ pageTitle: Choose preferred location and framework
       <section class="toggle-content" id="locationSelectedContainer" aria-hidden="true">
 
         <div class="hgroup-medium">
-          <h2 class="heading-medium" aria-live="polite">Choose a framework</h2>
+          <h2 class="heading-medium" aria-live="polite">Choose a scheme</h2>
           <p class="subtitle">
-            <a href="#" target="_blank" >Find out more about the frameworks we offer</a>
+            <a href="#" target="_blank" >Find out more about the schemes we offer</a>
           </p>
         </div>
 
         <div class="grid-3-4">
           <div class="form-group">
-            <label for="frameworkPref1" class="form-label">Select your preferred framework</label>
-            <select name="" id="frameworkPref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
+            <label for="schemePref1" class="form-label">Select your preferred scheme</label>
+            <select name="" id="schemePref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
               <option value="" class="placeholder-option"></option>
-              <option value="Business administration">Business administration</option>
+              <option value="Business">Business</option>
               <option value="Commercial">Commercial</option>
               <option value="Cyber security">Cyber security</option>
               <option value="Digital and technology">Digital and technology</option>
@@ -82,10 +82,10 @@ pageTitle: Choose preferred location and framework
           </div>
 
           <div class="form-group toggle-content" id="secondPreferenceContainer">
-            <label for="frameworkPref2" class="form-label">Second preference of framework</label>
-            <select name="" id="frameworkPref2" class="chosen-select" data-placeholder="Choose from list or begin typing">
+            <label for="schemePref2" class="form-label">Second preference of scheme</label>
+            <select name="" id="schemePref2" class="chosen-select" data-placeholder="Choose from list or begin typing">
               <option value="" class="placeholder-option"></option>
-              <option value="Business administration">Business administration</option>
+              <option value="Business">Business</option>
               <option value="Commercial">Commercial</option>
               <option value="Cyber security">Cyber security</option>
               <option value="Digital and technology">Digital and technology</option>
@@ -104,7 +104,7 @@ pageTitle: Choose preferred location and framework
 
     <section id="considerAlternatives" class="toggle-content">
       <div class="panel-indent">
-        <p>If we can't guarantee your preferred location or framework, we may suggest an alternative.</p>
+        <p>If we can't guarantee your preferred location or scheme, we may suggest an alternative.</p>
       </div>
 
       <p class="form-label">Would you consider an alternative location?</p>
@@ -117,19 +117,19 @@ pageTitle: Choose preferred location and framework
         </label>
       </div>
 
-      <p class="form-label">Would you consider an alternative framework?</p>
+      <p class="form-label">Would you consider an alternative scheme?</p>
       <div class="form-group form-group-compound">
-        <label for="altframework-yes" class="block-label">
-          <input name="altframework" type="radio" id="altframework-yes">Yes
+        <label for="altscheme-yes" class="block-label">
+          <input name="altscheme" type="radio" id="altscheme-yes">Yes
         </label>
-        <label for="altframework-no" class="block-label">
-          <input name="altframework" type="radio" id="altframework-no">No
+        <label for="altscheme-no" class="block-label">
+          <input name="altscheme" type="radio" id="altscheme-no">No
         </label>
       </div>
 
       <a href="assistance.html" class="button hide-nojs" id="locFramContinue">Save and continue</a>
     </section>
-    <a href="#" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and framework</a>
+    <a href="#" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and scheme</a>
 
   </div>
 </div>

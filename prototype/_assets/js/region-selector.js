@@ -54,8 +54,8 @@ $(function() {
     $('#selectLocationBlurb, #selectSecondLocationBlurb').hide().attr('aria-hidden', true);
     $('#locationSelectedContainer').addClass('toggle-content').attr('aria-hidden', true);
 
-    $("#frameworkPref1 option, #frameworkPref2 option").attr('selected', false);
-    $("#frameworkPref1, #frameworkPref2").trigger("chosen:updated");
+    $("#schemePref1 option, #schemePref2 option").attr('selected', false);
+    $("#schemePref1, #schemePref2").trigger("chosen:updated");
 
     $('#chosenRegionBlurb')
       .removeClass('toggle-content')
@@ -103,41 +103,41 @@ $(function() {
   });
 
 
-  $('#frameworkPref1').on('change', function() {
+  $('#schemePref1').on('change', function() {
     var $thisVal = $(this).val();
 
     $('#secondPreferenceContainer').show();
 
-    $('#frameworkPref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
-    $('#frameworkPref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
+    $('#schemePref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
+    $('#schemePref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
 
-    $("#frameworkPref2").trigger("chosen:updated");
+    $("#schemePref2").trigger("chosen:updated");
   });
 
-  $('#frameworkPref2').on('change', function() {
+  $('#schemePref2').on('change', function() {
     var $thisVal = $(this).val();
 
-    $('#frameworkPref1').find('option[value="' + $thisVal + '"]').attr('disabled', true);
-    $('#frameworkPref1').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
+    $('#schemePref1').find('option[value="' + $thisVal + '"]').attr('disabled', true);
+    $('#schemePref1').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
 
-    $("#frameworkPref1").trigger("chosen:updated");
+    $("#schemePref1").trigger("chosen:updated");
 
     $('#choiceSave').removeClass('toggle-content');
   });
 
   $('#choiceSave').on('click', function(e) {
     var locationSelected = $('#regionSelect').val(),
-        firstFramework = $('#frameworkPref1').val(),
-        secondFramework = $('#frameworkPref2').val();
+        firstScheme = $('#schemePref1').val(),
+        secondScheme = $('#schemePref2').val();
 
     e.preventDefault();
 
     $('#chosenLocation').text(locationSelected);
-    $('#chosenFrameworks').append(firstFramework + ', ' + secondFramework);
+    $('#chosenSchemes').append(firstScheme + ', ' + secondScheme);
 
     $('#choiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
 
-    $('#chooseLocationAndFramework').addClass('toggle-content').attr('aria-hidden', true);
+    $('#chooseLocationAndScheme').addClass('toggle-content').attr('aria-hidden', true);
 
     $('.region-container').attr('class', 'region-container');
 
@@ -153,12 +153,12 @@ $(function() {
 
   $('.first-choice-btn').on('click', function() {
     var locationSelected = $('#regionSelect').val(),
-        firstFramework = $('#frameworkPref1').val(),
-        secondFramework = $('#frameworkPref2').val();
+        firstScheme = $('#schemePref1').val(),
+        secondScheme = $('#schemePref2').val();
 
     $.jStorage.set('first-storageLocation', locationSelected);
-    $.jStorage.set('first-storageFirstFramework', firstFramework);
-    $.jStorage.set('first-storageSecondFramework', secondFramework);
+    $.jStorage.set('first-storageFirstScheme', firstScheme);
+    $.jStorage.set('first-storageSecondScheme', secondScheme);
 
     $("html, body").animate({ scrollTop: 0 }, 300);
 
@@ -166,12 +166,12 @@ $(function() {
 
   $('.second-choice-btn').on('click', function() {
     var locationSelected = $('#regionSelect').val(),
-        firstFramework = $('#frameworkPref1').val(),
-        secondFramework = $('#frameworkPref2').val();
+        firstScheme = $('#schemePref1').val(),
+        secondScheme = $('#schemePref2').val();
 
     $.jStorage.set('second-storageLocation', locationSelected);
-    $.jStorage.set('second-storageFirstFramework', firstFramework);
-    $.jStorage.set('second-storageSecondFramework', secondFramework);
+    $.jStorage.set('second-storageFirstScheme', firstScheme);
+    $.jStorage.set('second-storageSecondScheme', secondScheme);
 
     $('#firstChoiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
     $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
@@ -181,20 +181,20 @@ $(function() {
   $('#locFramContinue').on('click', function() {
 
     $.jStorage.set('considerAltLocation', $('[name="altregion"]:checked').parent().text());
-    $.jStorage.set('considerAltFramework', $('[name="altframework"]:checked').parent().text());
+    $.jStorage.set('considerAltScheme', $('[name="altscheme"]:checked').parent().text());
 
   });
 
   if($('#firstChosenLocation').length) {
     var locationSelected = $.jStorage.get('first-storageLocation'),
-        firstFramework = $.jStorage.get('first-storageFirstFramework'),
-        secondFramework = $.jStorage.get('first-storageSecondFramework');
+        firstScheme = $.jStorage.get('first-storageFirstScheme'),
+        secondScheme = $.jStorage.get('first-storageSecondScheme');
 
     $('option[value="' + locationSelected +'"]').attr('disabled', true);
     $('#regionSelect').trigger("chosen:updated");
 
     $('#firstChosenLocation').text(locationSelected);
-    $('#firstChosenFrameworks').text(firstFramework + ', ' + secondFramework);
+    $('#firstChosenSchemes').text(firstScheme + ', ' + secondScheme);
   }
 
   $('#noSecondPreference').on('click', function(e) {
@@ -202,8 +202,8 @@ $(function() {
 
     $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
     $.jStorage.deleteKey('second-storageLocation');
-    $.jStorage.deleteKey('second-storageFirstFramework');
-    $.jStorage.deleteKey('second-storageSecondFramework');
+    $.jStorage.deleteKey('second-storageFirstScheme');
+    $.jStorage.deleteKey('second-storageSecondScheme');
 
   });
 

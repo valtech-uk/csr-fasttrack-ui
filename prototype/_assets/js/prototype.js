@@ -28,16 +28,15 @@ $(function() {
       storedAddress04 = $.jStorage.get('address04'),
       storedMobNumber = $.jStorage.get('mob-number'),
       storedLandNumber = $.jStorage.get('land-number'),
-      storedSchoolName = $.jStorage.get('schoolName'),
       storedAlevel = $.jStorage.get('aLevels'),
       storedFirstLoc = $.jStorage.get('first-storageLocation'),
-      storedFirstFrame1 = $.jStorage.get('first-storageFirstFramework'),
-      storedFirstFrame2 = $.jStorage.get('first-storageSecondFramework'),
+      storedFirstFrame1 = $.jStorage.get('first-storageFirstScheme'),
+      storedFirstFrame2 = $.jStorage.get('first-storageSecondScheme'),
       storedSecondLoc = $.jStorage.get('second-storageLocation'),
-      storedSecondFrame1 = $.jStorage.get('second-storageFirstFramework'),
-      storedSecondFrame2 = $.jStorage.get('second-storageSecondFramework'),
+      storedSecondFrame1 = $.jStorage.get('second-storageFirstScheme'),
+      storedSecondFrame2 = $.jStorage.get('second-storageSecondScheme'),
       storedAltLocation = $.jStorage.get('considerAltLocation'),
-      storedAltFramework = $.jStorage.get('considerAltFramework'),
+      storedAltScheme = $.jStorage.get('considerAltScheme'),
       longMonths = {'01':'January', '02':'February', '03':'March', '04':'April', '05':'May', '06':'June', '07':'July', '08':'August', '09':'September', '10':'October', '11':'November', '12':'December'},
       shortMonths = {'01':'Jan', '02':'Feb', '03':'Mar', '04':'Apr', '05':'May', '06':'June', '07':'July', '08':'Aug', '09':'Sept', '10':'Oct', '11':'Nov', '12':'Dec'};
 
@@ -69,7 +68,6 @@ $(function() {
     $.jStorage.set('mob-number', $('#phone-input').val());
     $.jStorage.set('land-number', $('#phone-input2').val());
 
-    $.jStorage.set('schoolName', $('#schoolName').val());
 
     if($('#alevel-yes').is(':checked')) {
       $.jStorage.set('aLevels', true);
@@ -94,7 +92,6 @@ $(function() {
     $('#phone-input').val(storedMobNumber);
     $('#phone-input2').val(storedLandNumber);
 
-    $('#schoolName').val(storedSchoolName);
 
     if(storedAlevel == false ) {
       $('#alevel-no').attr('checked', true).parent().addClass('selected');
@@ -121,8 +118,6 @@ $(function() {
     $('#phone-input').text(storedMobNumber);
     $('#phone-input2').text(storedLandNumber);
 
-    $('#schoolName').text(storedSchoolName);
-
     if(storedAlevel == false ) {
       $('#minGCSEs').removeClass('hidden');
       $('#minAlevels').addClass('hidden');
@@ -142,23 +137,23 @@ $(function() {
 
     $('#considerAltLocation').text(storedAltLocation);
 
-    $('#considerAltFramework').text(storedAltFramework);
+    $('#considerAltScheme').text(storedAltScheme);
 
   }
 
   if($('#choosePrefLocFramHeading').length && gup('continue') == 'true') {
     $('.svg-map').attr('class', 'svg-map disabled');
-    $('.map-control, #chooseLocationAndFramework, #secondPreferenceControls').hide();
+    $('.map-control, #chooseLocationAndScheme, #secondPreferenceControls').hide();
 
 
     if(storedSecondLoc != null) {
       $('#second-chosenLocation').text(storedSecondLoc);
-      $('#second-chosenFrameworks').text(storedSecondFrame1 + ', ' + storedSecondFrame2);
+      $('#second-chosenSchemes').text(storedSecondFrame1 + ', ' + storedSecondFrame2);
       $('#second-choiceInfo').removeClass('hidden');
     }
 
     $('#chosenLocation').text(storedFirstLoc);
-    $('#chosenFrameworks').text(storedFirstFrame1 + ', ' + storedFirstFrame2);
+    $('#chosenSchemes').text(storedFirstFrame1 + ', ' + storedFirstFrame2);
     $('#choiceInfo, #locFramContinueSaved').removeClass('hidden');
 
   }
