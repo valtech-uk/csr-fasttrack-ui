@@ -547,12 +547,13 @@ $(function() {
     });
 
 
-    $('.region-container').on('click', function() {
+    $('.region-container').on('click', function(e) {
       var $this = $(this),
           $regionNameID = $this.attr('id'),
           $regEl = $('#regionSelect optgroup[data-optregion="' + $regionNameID + '"]');
 
       selectRegion($this, $regEl);
+      e.preventDefault();
     });
 
 
@@ -572,7 +573,7 @@ $(function() {
         .attr('aria-hidden', false)
         .find('b').text(regionName);
 
-      regionContainer.attr('class', 'region-container selected');
+      regionContainer.attr('class', 'region-container selected-region');
 
       $('#hoveredRegionName').text(regionName);
       $selectedRegionName = regionName;

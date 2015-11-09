@@ -21,7 +21,10 @@ pageTitle: Choose preferred location and scheme
       <div class="map-legend grid-1-2">
         <h2 class="heading-small" id="hoveredRegionName"></h2>
       </div>
-      <div class="svg-map-container hide-nojs">
+      <div class="show-ie8">
+        {{> map-uk-ie8 }}
+      </div>
+      <div class="svg-map-container hide-ie8">
         {{> map-uk }}
       </div>
     </div>

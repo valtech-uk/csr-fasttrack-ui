@@ -136,3 +136,13 @@
     display: none;
   }
 }
+
+.show-ie8 {
+  display: none !important;
+  visibility: hidden !important;
+  .lt-ie9 & {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
