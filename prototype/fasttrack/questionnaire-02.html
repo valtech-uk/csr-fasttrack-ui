@@ -112,14 +112,24 @@
         <h2 class="heading-large">
   Socio-economic information
 </h2>
-        <div class="form-group">
+        <div class="form-group form-group-compound">
           <label class="form-label" for="schoolAttended">What school did you attend to do your GCSEs?</label>
           <input type="text" id="schoolAttended" class="form-control">
         </div>
         <div class="form-group">
+          <label for="school-prefernot" class="block-label" data-distarget="schoolAttended">
+            <input type="checkbox" id="school-prefernot">Prefer not to say
+          </label>
+        </div>
+        <div class="form-group form-group-compound">
           <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
           <span class="form-hint">If you don't know the postcode please enter street name and town</span>
           <input type="text" id="homePostcode" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="postcode-prefernot" class="block-label" data-distarget="homePostcode">
+            <input type="checkbox" id="postcode-prefernot">Prefer not to say
+          </label>
         </div>
         <div class="text">
           <p class="form-label">Were you eligible to claim Free School Meals or Education Maintenance

@@ -94,7 +94,8 @@ $(function() {
   // Add/remove selected class
   $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
     var $this   = $(this),
-        $target = $this.parent().attr('data-target');
+        $target = $this.parent().attr('data-target'),
+        $disTarget = $this.parent().attr('data-distarget');
 
     $('input:not(:checked)').parent().removeClass('selected');
     $('input:checked').parent().addClass('selected');
@@ -110,6 +111,17 @@ $(function() {
         $this.closest('.blocklabel-single-container').find('.blocklabel-content').not('#' + $target).hide();
       }
     }
+
+    // if($disTarget == undefined) {
+    //   $this.closest('.form-group').find('[aria-expanded]').attr('aria-expanded', false);
+    // } else {
+    //   $('#' + $target).show();
+
+    //   if($this.closest('.form-group').hasClass('blocklabel-single')) {
+
+    //     $this.closest('.blocklabel-single-container').find('.blocklabel-content').not('#' + $target).hide();
+    //   }
+    // }
 
   });
 
