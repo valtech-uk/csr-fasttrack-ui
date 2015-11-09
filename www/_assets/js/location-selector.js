@@ -36,6 +36,7 @@ $(function() {
           $regEl = $('#regionSelect optgroup[data-optregion="' + $regionNameID + '"]');
 
       selectRegion($this, $regEl);
+
       e.preventDefault();
     });
 
@@ -72,12 +73,16 @@ $(function() {
         .addClass('toggle-content')
         .find('option')
         .attr('selected', false)
-        .hide();
+        .hide().removeClass('selectedLocationOptions');
+
+      regionElement.find('option').addClass('selectedLocationOptions');
 
       $('#regionSelect').trigger("chosen:updated");
 
       setTimeout(function() {
-        $('#regionSelect_chosen').trigger('mousedown');
+        $('#regionSelect_chosen')
+          .trigger('mousedown')
+          .find('.chosen-results').scrollTop(0);
       }, 200);
 
       $('#chooseRegionText').hide();
