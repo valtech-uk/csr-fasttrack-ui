@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Anonymous questionnaire | Apply for a Civil Service apprenticeship</title>
+  <title>Welcome | Apply for a Civil Service apprenticeship</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -102,69 +102,127 @@
     <main role="main" id="main">
       
 
-<h1 class="heading-xlarge">Anonymous questionnaire</h1>
-
-<h2 class="heading-large">
-  Socio-economic information
-</h2>
-
-<div class="form-group form-group-compound">
-  <label class="form-label" for="schoolAttended">What school did you attend to do your GCSEs?</label>
-  <input type="text" id="schoolAttended" class="form-control">
+<div class="panel-success">
+  <p id="SuccessMessageText" class="text">You've successfully submitted your questionnaire <a href="/feedback.html">Give feedback?</a> (30 second survey)</p>
 </div>
 
-<div class="form-group">
-  <label for="school-prefernot" class="block-label" data-distarget="schoolAttended">
-    <input type="checkbox" id="school-prefernot">Prefer not to say
-  </label>
+<div class="hgroup">
+  <h1 class="heading-xlarge">Welcome</h1>
+  <p class="subtitle" id="nameOnHome">Firstname Lastname</p>
 </div>
 
-<div class="form-group form-group-compound">
-  <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
-  <span class="form-hint">If you don't know the postcode please enter street name and town</span>
-  <input type="text" id="homePostcode" class="form-control">
-</div>
+<section class="section-border">
+  <ol class="step-by-step-coloured" id="sixSteps">
+    <li>
+      <div class="grid-wrapper">
+        <div class="grid grid-2-3">
+          <div class="inner-block-padr">
+            <h2 class="heading-medium">Complete application form</h2>
+            <p><i class="fa fa-check the-icon"></i>All details have been submitted</p>
+            <p>
+              <a class="" href="apply-submitted.html">View your submitted application</a>
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-1-3">
+          <p>100% complete</p>
+          <progress max="100" value="100">
+            <div class="progress-bar">
+              <span style="width: 100%;"></span>
+            </div>
+          </progress>
+        </div>
+      </div>
+    </li>
+    <li>
+    <div class="grid-wrapper">
+      <div class="grid grid-2-3">
+        <div class="inner-block-padr">
+          <h2 class="heading-medium">Complete anonymous questionnaire</h2>
+          <p><i class="fa fa-check the-icon"></i>You've submitted your questionnaire</p>
+          <!-- <a href="questionnaire.html" class="button">Complete questionnaire</a> -->
+        </div>
+      </div>
+      <div class="grid grid-1-3">
+        <p>100% complete</p>
+        <progress max="100" value="100">
+          <div class="progress-bar">
+            <span style="width: 100%;"></span>
+          </div>
+        </progress>
+      </div>
+    </div>
+  </li>
+  <li class="active">
+    <div class="grid-wrapper">
+      <div class="grid grid-2-3">
+        <div class="inner-block-padr">
+          <h2 class="heading-large">Take the online test</h2>
+          <p>You will be contacted once the online test is ready for you to complete.</p>
+          <!-- <p>Once you've submitted your application and completed the questionnaire you'll be able to take the online test, you'll have 7 days to complete this.   </p> -->
+          <p><a href="">Find out more about the online test</a></p>
+        </div>
+      </div>
+      <div class="grid grid-1-3 disabled">
+        <p>Locked</p>
+        <progress max="100" value="00">
+          <div class="progress-bar">
+            <span style="width: 0%;"></span>
+          </div>
+        </progress>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="grid-wrapper">
+      <div class="grid grid-2-3">
+        <div class="inner-block-padr">
+          <h2 class="heading-medium">Attend interview</h2>
+          <p>If you pass the online test you'll be invited to attend an interview at an assessment centre near you. </p>
+          <p><a href="">Find your nearest assessment centre</a></p>
+        </div>
+      </div>
+      <div class="grid grid-1-3 disabled">
+        <p>Locked</p>
+        <progress max="100" value="00">
+          <div class="progress-bar">
+            <span style="width: 0%;"></span>
+          </div>
+        </progress>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="grid-wrapper">
+      <div class="grid grid-2-3">
+        <div class="inner-block-padr">
+          <h2 class="heading-medium">Receive notification</h2>
+          <p>You'll be notified whether you've been accepted onto the Civil Service apprenticeships programme within x weeks of attending the assessment centre. </p>
+          <p><a href="">What is it like to work for the Civil Service?</a></p>
+        </div>
+      </div>
+      <div class="grid grid-1-3 disabled">
+        <p>Locked</p>
+        <progress max="100" value="00">
+          <div class="progress-bar">
+            <span style="width: 0%;"></span>
+          </div>
+        </progress>
+      </div>
+    </div>
+  </li>
+</ol>
 
-<div class="form-group">
-  <label for="postcode-prefernot" class="block-label" data-distarget="homePostcode">
-    <input type="checkbox" id="postcode-prefernot">Prefer not to say
-  </label>
-</div>
+</section>
 
-<div class="text">
-  <p class="form-label">Were you eligible to claim Free School Meals or Education Maintenance Allowance?</p>
-  <div class="form-group inline">
-    <label for="freeSchoolMeals-yes" class="block-label">
-      <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-yes">Yes
-    </label>
-    <label for="freeSchoolMeals-no" class="block-label">
-      <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-no">No
-    </label>
-    <label for="freeSchoolMeals-prefer" class="block-label">
-      <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-prefer">Prefer not to say
-    </label>
+
+<section>
+  <h2 class="heading-medium">Withdraw application</h2>
+  <div class="text">
+    <p>If you no longer wish to proceed with your application you can withdraw at any time.</p>
+    <a href="withdraw-application.html">Withdraw application</a>
   </div>
-</div>
-
-<div class="text">
-  <p class="form-label">Has any member of your immediate family attended university?</p>
-  <div class="form-group inline">
-    <label for="university-yes" class="block-label">
-      <input name="university" type="radio" id="university-yes">Yes
-    </label>
-    <label for="university-no" class="block-label">
-      <input name="university" type="radio" id="university-no">No
-    </label>
-    <label for="university-prefer" class="block-label">
-      <input name="university" type="radio" id="university-prefer">Prefer not to say
-    </label>
-  </div>
-</div>
-
-<p>
-  <a href="profile-home-completeques.html" class="button">Submit answers</a>
-</p>
-
+</section>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
