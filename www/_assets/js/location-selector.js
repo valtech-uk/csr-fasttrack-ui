@@ -12,6 +12,7 @@ $(function() {
     setTimeout(function() {
       $('.svg-map-container').removeClass('hvr-back-pulse');
       $('.map-legend').fadeOut('slow');
+      $('#chooseRegionContainer').fadeIn('slow');
     }, 2000);
 
     $('.region-container').not($selectedRegion).hover(function() {
