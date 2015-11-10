@@ -108,33 +108,46 @@
   Diversity
 </h2>
 
-<p class="form-label">What is your gender identity?</p>
-<div class="form-group inline">
+<p class="form-label" id="genderQuestion">What is your gender identity?</p>
+<div class="form-group">
+  <div>
+    <label for="gender-nosay" class="block-label">
+      <input name="gender" type="radio" id="gender-nosay" aria-labelledby="genderQuestion">Prefer not to say
+    </label>
+  </div>
   <div>
     <label for="gender-man" class="block-label">
-      <input name="gender" type="radio" id="gender-man">Man
+      <input name="gender" type="radio" id="gender-man" aria-labelledby="genderQuestion">Man
     </label>
   </div>
   <div>
     <label for="gender-woman" class="block-label">
-      <input name="gender" type="radio" id="gender-woman">Woman
+      <input name="gender" type="radio" id="gender-woman" aria-labelledby="genderQuestion">Woman
     </label>
   </div>
   <div>
     <label for="gender-other" class="block-label">
-      <input name="gender" type="radio" id="gender-other">Other gender identity
-    </label>
-  </div>
-  <div>
-    <label for="gender-nosay" class="block-label">
-      <input name="gender" type="radio" id="gender-nosay">Prefer not to say
+      <input name="gender" type="radio" id="gender-other" aria-labelledby="genderQuestion">Other gender identity
     </label>
   </div>
 </div>
 
-<div class="form-group inline clearfix">
-  <p class="form-label">What is your ethnic group?</p>
-  <select name="" id="">
+<div class="form-group">
+  <label class="form-label" for="sexualList">What is your sexual orientation?</label>
+  <select name="" id="sexualList">
+    <option value="">-- Please select --</option>
+    <option value="">Prefer not to say</option>
+    <option value="">Heterosexual/straight</option>
+    <option value="">Gay woman/lesbian</option>
+    <option value="">Gay man</option>
+    <option value="">Bisexual</option>
+    <option value="">Other</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="ethnicList" class="form-label">What is your ethnic group?</label>
+  <select name="" id="ethnicList">
     <option value="">-- Please select --</option>
     <option value="">Prefer not to say</option>
     <optgroup label="White">
@@ -168,9 +181,9 @@
   </select>
 </div>
 
-<div class="form-group inline clearfix">
-  <p class="form-label">What is your religion? </p>
-  <select name="" id="" class="selectWithOptionTrigger">
+<div class="form-group">
+  <label class="form-label" for="religionList">What is your religion?</label>
+  <select name="" id="religionList" class="selectWithOptionTrigger">
     <option value="">-- Please select --</option>
     <option value="">Prefer not to say</option>
     <option value="">No religion</option>
@@ -190,8 +203,8 @@
 </div>
 
 <div class="form-group">
-  <p class="form-label">What is your marital status? </p>
-  <select name="" id="">
+  <label class="form-label" for="maritalList">What is your marital status?</label>
+  <select name="" id="maritalList">
     <option value="">-- Please select --</option>
     <option value="">Prefer not to say</option>
     <option value="">Single</option>
