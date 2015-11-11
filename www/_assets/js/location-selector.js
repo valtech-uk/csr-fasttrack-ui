@@ -4,18 +4,21 @@ $(function() {
         $selectedRegionName = '',
         $regionSelectClone = $('#regionSelect >').clone();
 
+    // Animate map after 2 seconds
     setTimeout(function() {
       $('.svg-map-container').addClass('hvr-back-pulse');
       $('.map-legend').show();
       $('#hoveredRegionName').text('Choose a region to filter the locations');
     }, 2000);
 
+    // Stop animation and remove hint
     setTimeout(function() {
       $('.svg-map-container').removeClass('hvr-back-pulse');
       $('.map-legend').fadeOut('slow');
       $('#chooseRegionContainer').fadeIn('slow');
     }, 4000);
 
+    // On hover highlight the region on the map and show region name
     $('.region-container').not($selectedRegion).hover(function() {
       var $this = $(this),
           $regionID = $this.attr('id'),
@@ -31,6 +34,7 @@ $(function() {
       }
     });
 
+    // Remove the legend if no region selected
     $('.svg-map').on('mouseleave', function() {
       if($selectedRegionName == '') {
         $('.map-legend').fadeOut();
@@ -39,6 +43,7 @@ $(function() {
       }
     });
 
+    // Clicking region will fire the region selection panel
     $('.region-container').on('click', function(e) {
       var $this = $(this),
           $regionNameID = $this.attr('id'),
@@ -48,6 +53,12 @@ $(function() {
 
       e.preventDefault();
     });
+
+    function scrollToTop() {
+      $('html, body').animate({
+        scrollTop: $("#containingGridPreference").offset().top - 20
+      }, 1000);
+    }
 
     function selectRegion(regionContainer, regionElement) {
       var regionName = regionElement.attr('label');
@@ -94,8 +105,6 @@ $(function() {
         }, 1000, function() {
           $regionSelect.focus();
         });
-
-
       }
 
       $('[data-optregion]')
@@ -119,6 +128,7 @@ $(function() {
       $('#clearMap').show();
     }
 
+    // Choosing a location affects schemes
     $("#regionSelect").on('change', function() {
       var $regionElement = $(this).find('option:selected').parent(),
           $regionContainer = $('#' + $regionElement.attr('data-optregion'));
@@ -132,6 +142,7 @@ $(function() {
 
     });
 
+    // Scheme preference 1
     $('#schemePref1').on('change', function() {
       var $thisVal = $(this).val();
 
@@ -145,6 +156,7 @@ $(function() {
       }
     });
 
+    // Scheme preference 2
     $('#schemePref2').on('change', function() {
       var $thisVal = $(this).val();
 
@@ -158,6 +170,7 @@ $(function() {
       }
     });
 
+    // Saving location and scheme shows it on page
     $('#choiceSave').on('click', function(e) {
       var locationSelected = $('#regionSelect').val(),
           firstScheme = $('#schemePref1').val(),
@@ -182,15 +195,7 @@ $(function() {
 
       $(this).hide();
 
-    });
-
-    $('.first-choice-btn').on('click', function() {
-
-      // $("html, body").animate({ scrollTop: 0 }, 300);
-
-      $('html, body').animate({
-          scrollTop: $("#containingGridPreference").offset().top - 20
-        }, 1000);
+      scrollToTop();
 
     });
 
@@ -205,6 +210,8 @@ $(function() {
       e.preventDefault();
 
       $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
+
+      scrollToTop();
 
     });
 
