@@ -566,23 +566,12 @@ $(function() {
       e.preventDefault();
     });
 
-    // Open select menu on iOS
-    function openSelect(elem) {
-      if (document.createEvent) {
-        var e = document.createEvent("MouseEvents");
-        e.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-        elem[0].dispatchEvent(e);
-      } else if (element.fireEvent) {
-        elem[0].fireEvent("onmousedown");
-      }
-    }
-
     function selectRegion(regionContainer, regionElement) {
       var regionName = regionElement.attr('label');
 
       $selectedRegion = regionContainer;
 
-      $('#selectLocationBlurb, #selectSecondLocationBlurb').hide().attr('aria-hidden', true);
+      $('#selectLocationBlurb, #selectSecondLocationBlurb, #locationSelectedText').addClass('toggle-content').attr('aria-hidden', true);
       $('#locationSelectedContainer').addClass('toggle-content').attr('aria-hidden', true);
 
       $("#schemePref1 option, #schemePref2 option").attr('selected', false);
@@ -605,13 +594,24 @@ $(function() {
       regionElement.removeClass('toggle-content').find('option').show();
 
       if($('html').hasClass('touch')) {
-        var $placeholderOption = $('#regionSelect').find('.placeholder-option'),
-            $regionSelect = $('#regionSelect');
+        var $regionSelect = $('#regionSelect'),
+            $placeholderOption = $regionSelect.find('.placeholder-option');
 
-        $regionSelect.prepend(regionElement);
-        $regionSelect.prepend($placeholderOption);
+        $regionSelect.val('');
+        $regionSelect.html($regionSelectClone)
 
-        openSelect($regionSelect);
+        setTimeout(function() {
+          $regionSelect.prepend(regionElement);
+          $regionSelect.prepend($placeholderOption);
+          $regionSelect.find('.placeholder-option:nth-child(n+2)').remove();
+        }, 500);
+
+        $('html, body').animate({
+          scrollTop: $("#chooseHeading").offset().top
+        }, 1000, function() {
+          $regionSelect.focus();
+        });
+
 
       }
 
@@ -643,6 +643,9 @@ $(function() {
       $('#locationSelectedContainer').removeClass('toggle-content').attr('aria-hidden', false);
 
       $('.map-control').hide();
+
+      $('#chosenRegionBlurb, #selectLocationBlurb').addClass('toggle-content').attr('aria-hidden', true);
+      $('#locationSelectedText').removeClass('toggle-content').attr('aria-hidden', false);
 
     });
 

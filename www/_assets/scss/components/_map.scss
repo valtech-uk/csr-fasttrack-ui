@@ -84,6 +84,9 @@
   position: absolute;
   top: 0; right: $gutter;
   z-index: 2000;
+  @media screen and (max-width: 640px) {
+    right: 0;
+  }
 }
 
 .map-control {
