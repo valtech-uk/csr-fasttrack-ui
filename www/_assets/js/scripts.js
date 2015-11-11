@@ -607,7 +607,7 @@ $(function() {
         }, 500);
 
         $('html, body').animate({
-          scrollTop: $("#chooseHeading").offset().top
+          scrollTop: $("#containingGridPreference").offset().top - 20
         }, 1000, function() {
           $regionSelect.focus();
         });
@@ -703,7 +703,11 @@ $(function() {
 
     $('.first-choice-btn').on('click', function() {
 
-      $("html, body").animate({ scrollTop: 0 }, 300);
+      // $("html, body").animate({ scrollTop: 0 }, 300);
+
+      $('html, body').animate({
+          scrollTop: $("#containingGridPreference").offset().top - 20
+        }, 1000);
 
     });
 
