@@ -116,12 +116,14 @@ $(function() {
     $('#schemePref1').on('change', function() {
       var $thisVal = $(this).val();
 
-      $('#secondPreferenceContainer').show();
-
       $('#schemePref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
       $('#schemePref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
 
       $("#schemePref2").trigger("chosen:updated");
+
+      if($('#schemePref2').val() !== '') {
+        $('#choiceSave').removeClass('toggle-content');
+      }
     });
 
     $('#schemePref2').on('change', function() {
@@ -132,7 +134,9 @@ $(function() {
 
       $("#schemePref1").trigger("chosen:updated");
 
-      $('#choiceSave').removeClass('toggle-content');
+      if($('#schemePref1').val() !== '') {
+        $('#choiceSave').removeClass('toggle-content');
+      }
     });
 
     $('#choiceSave').on('click', function(e) {
