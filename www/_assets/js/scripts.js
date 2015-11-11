@@ -519,8 +519,7 @@ $(function() {
   if($('#choosePrefLocFramHeading').length ) {
     var $selectedRegion = '',
         $selectedRegionName = '',
-        $regionSelect = $('#regionSelect').clone(),
-        $optGroup = '';
+        $regionSelectClone = $('#regionSelect >').clone();
 
     $('.svg-map-container').addClass('hvr-back-pulse');
     $('.map-legend').show();
@@ -565,6 +564,17 @@ $(function() {
       e.preventDefault();
     });
 
+    // Open select menu on iOS
+    function openSelect(elem) {
+      if (document.createEvent) {
+        var e = document.createEvent("MouseEvents");
+        e.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        elem[0].dispatchEvent(e);
+      } else if (element.fireEvent) {
+        elem[0].fireEvent("onmousedown");
+      }
+    }
+
     function selectRegion(regionContainer, regionElement) {
       var regionName = regionElement.attr('label');
 
@@ -593,10 +603,14 @@ $(function() {
       regionElement.removeClass('toggle-content').find('option').show();
 
       if($('html').hasClass('touch')) {
-        var $optionsToRemove = $('[data-optregion]').not(regionElement);
+        var $placeholderOption = $('#regionSelect').find('.placeholder-option'),
+            $regionSelect = $('#regionSelect');
 
-        // $optionsToRemove.remove();
-        // $optGroup =
+        $regionSelect.prepend(regionElement);
+        $regionSelect.prepend($placeholderOption);
+
+        openSelect($regionSelect);
+
       }
 
       $('[data-optregion]')
