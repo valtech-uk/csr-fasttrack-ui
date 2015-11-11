@@ -521,15 +521,17 @@ $(function() {
         $selectedRegionName = '',
         $regionSelectClone = $('#regionSelect >').clone();
 
-    $('.svg-map-container').addClass('hvr-back-pulse');
-    $('.map-legend').show();
-    $('#hoveredRegionName').text('Choose a region to filter the locations');
+    setTimeout(function() {
+      $('.svg-map-container').addClass('hvr-back-pulse');
+      $('.map-legend').show();
+      $('#hoveredRegionName').text('Choose a region to filter the locations');
+    }, 2000);
 
     setTimeout(function() {
       $('.svg-map-container').removeClass('hvr-back-pulse');
       $('.map-legend').fadeOut('slow');
       $('#chooseRegionContainer').fadeIn('slow');
-    }, 2000);
+    }, 4000);
 
     $('.region-container').not($selectedRegion).hover(function() {
       var $this = $(this),
