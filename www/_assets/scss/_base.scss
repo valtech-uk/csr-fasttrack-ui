@@ -69,6 +69,7 @@
 html {
   background-color: $grey-8; /*Match footer colour for short pages*/
   overflow-y: scroll;
+  text-rendering: auto !important;
   /* 1 */
   -ms-overflow-style: scrollbar; /*auto | none | scrollbar | -ms-autohiding-scrollbar*/
   -webkit-text-size-adjust: 100%;
@@ -79,6 +80,7 @@ html {
 body {
   background-color: white;
   margin: 0;
+  text-rendering: auto
   @media print {
     font-size: 12pt !important;
   }
