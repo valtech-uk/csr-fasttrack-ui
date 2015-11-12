@@ -9,14 +9,14 @@ $(function() {
       $('.svg-map-container').addClass('hvr-back-pulse');
       $('.map-legend').show();
       $('#hoveredRegionName').text('Choose a region to filter the locations');
-    }, 2000);
+    }, 1000);
 
     // Stop animation and remove hint
     setTimeout(function() {
       $('.svg-map-container').removeClass('hvr-back-pulse');
       $('.map-legend').fadeOut('slow');
       $('#chooseRegionContainer').fadeIn('slow');
-    }, 4000);
+    }, 3000);
 
     // On hover highlight the region on the map and show region name
     $('.region-container').not($selectedRegion).hover(function() {
@@ -54,6 +54,13 @@ $(function() {
       e.preventDefault();
     });
 
+    $('#viewListOfLocations').on('click', function(e) {
+      $('#listOfLocationsContainer').removeClass('toggle-content');
+
+      e.preventDefault();
+
+    });
+
     function scrollToTop() {
       $('html, body').animate({
         scrollTop: $("#containingGridPreference").offset().top - 20
@@ -75,6 +82,8 @@ $(function() {
         .removeClass('toggle-content')
         .attr('aria-hidden', false)
         .find('b').text(regionName);
+
+      $('#listOfLocationsContainer').removeClass('toggle-content');
 
       regionContainer.attr('class', 'region-container selected-region');
 
