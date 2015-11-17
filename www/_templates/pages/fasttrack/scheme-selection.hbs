@@ -52,13 +52,16 @@ pageTitle: Choose preferred location and scheme
         <h2 class="heading-medium" id="chooseHeading">
           First preference of location
         </h2>
-        <p id="selectLocationBlurb" class="hide-nojs">Start by selecting a region on the map to see the available locations, or alternatively choose a location from the list. The schemes available at different locations will vary.</p>
+        <div id="selectLocationBlurb" class="hide-nojs">
+          <p>Select a region on the map to see the available locations listed. The schemes available at different locations will vary.</p>
+          <p>Or, view a <a href="" id="viewListOfLocations">list of the locations</a>.</p>
+        </div>
         <p class="hide-js">Choose a location from the list</p>
         <p id="chosenRegionBlurb" class="toggle-content hide-nojs">Choose a location in the region: <b></b></p>
         <p class="toggle-content hide-nojs" id="locationSelectedText">
           Location selected
         </p>
-        <div class="grid-2-3">
+        <div class="grid-2-3 toggle-content" id="listOfLocationsContainer">
           {{> location-select }}
         </div>
       </section>
