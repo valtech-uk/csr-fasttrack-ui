@@ -200,8 +200,15 @@ $(function() {
     $('#firstChosenSchemes').text(firstScheme + ', ' + secondScheme);
   }
 
-  $('#noSecondPreference').on('click', function(e) {
-    e.preventDefault();
+  if($('#firstChosenLocation').length && storedSecondLoc !== null) {
+
+    $('#secondChoiceInfo').removeClass('toggle-content');
+
+    $('#secondChosenLocation').text(storedSecondLoc);
+    $('#secondChosenSchemes').text(storedSecondFrame1 + ', ' + storedSecondFrame2);
+  }
+
+  $('#noSecondPreference').on('click', function() {
 
     $.jStorage.deleteKey('second-storageLocation');
     $.jStorage.deleteKey('second-storageFirstScheme');

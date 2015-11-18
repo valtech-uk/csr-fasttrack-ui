@@ -181,41 +181,6 @@ $(function() {
       }
     });
 
-    // // Saving location and scheme shows it on page
-    // $('#choiceSave').on('click', function(e) {
-    //   var locationSelected = $('#regionSelect').val(),
-    //       firstScheme = $('#schemePref1').val(),
-    //       secondScheme = $('#schemePref2').val();
-
-    //   e.preventDefault();
-
-    //   $('#chosenLocation').text(locationSelected);
-    //   $('#chosenSchemes').append(firstScheme + ', ' + secondScheme);
-
-    //   $('#choiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
-
-    //   $('#chooseLocationAndScheme').addClass('toggle-content').attr('aria-hidden', true);
-
-    //   $('.region-container').attr('class', 'region-container');
-
-    //   $selectedRegion = '';
-    //   $selectedRegionName = '';
-
-    //   $('.map-legend').hide();
-    //   $('.svg-map').attr('class', 'svg-map disabled');
-
-    //   $(this).hide();
-
-    //   scrollToTop();
-
-    // });
-
-    $('.second-choice-btn').on('click', function() {
-
-      $('#firstChoiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
-      $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
-
-    });
 
     $('#clearMap').on('click', function() {
       window.location.reload();
