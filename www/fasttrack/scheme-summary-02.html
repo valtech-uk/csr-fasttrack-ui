@@ -110,16 +110,7 @@
 </div>
 <div class="grid-wrapper">
   <div class="grid grid-1-3 hide-nojs">
-    <div class="inner-block-padr map-legend-container">
-      <div class="map-control">
-        <div class="panel-indent toggle-content" id="chooseRegionContainer">
-          <h2 class="heading-small" id="chooseRegionText">Choose a region to filter the locations</h2>
-          <a href="#" id="clearMap" class="toggle-content">Reset selected region</a>
-        </div>
-      </div>
-      <div class="map-legend grid-1-2">
-        <h2 class="heading-small" id="hoveredRegionName"></h2>
-      </div>
+    <div class="inner-block-padr map-legend-container disabled">
       <div class="show-ie8">
         <ul id="ie8-map-uk" class="list-text svg-map">
   <li>
@@ -382,152 +373,39 @@
     </div>
   </div>
   <div class="grid grid-2-3" id="containingGridPreference">
+    <section class="" id="choiceInfo">
+      <h2 class="heading-medium">First preference</h2>
+      <h3 class="heading-small" id="chosenLocation">Coventry</h3>
+      <p class="small-btm-margin" id="chosenSchemes">Business, Cyber Security</p>
+      <p><a href="scheme-selection.html">Change this selection</a></p>
+    </section>
+    <section id="considerAlternatives">
+      <div class="panel-indent">
+        <p>If we can't guarantee your preferred location or scheme, we may suggest an alternative.</p>
+      </div>
 
-    <div id="chooseLocationAndScheme">
-      <section>
-        <h2 class="heading-medium" id="chooseHeading">
-          First preference of location
-        </h2>
-        <div id="selectLocationBlurb" class="hide-nojs">
-          <p>Select a region on the map to see the available locations listed. The schemes available at different locations will vary.</p>
-          <p>Or, view a <a href="" id="viewListOfLocations">list of the locations</a>.</p>
-        </div>
-        <p class="hide-js">Choose a location from the list</p>
-        <p id="chosenRegionBlurb" class="toggle-content hide-nojs">Choose a location in the region: <b></b></p>
-        <p class="toggle-content hide-nojs" id="locationSelectedText">
-          Location selected
-        </p>
-        <div class="grid-2-3 toggle-content" id="listOfLocationsContainer">
-          <select name="" id="regionSelect" class="chosen-select para-btm-margin" data-placeholder="-- Select a location, or start typing --">
-  <option value="null" class="placeholder-option"></option>
-  <optgroup class="East" data-optregion="East" label="East">
-    <option value="Bedford">Bedford</option>
-    <option value="Hertford">Hertford</option>
-    <option value="Milton Keynes">Milton Keynes</option>
-    <option value="Norwich">Norwich</option>
-    <option value="Southend">Southend</option>
-  </optgroup>
-  <optgroup class="East-midlands" data-optregion="East-midlands" label="East Midlands">
-    <option value="Leicester">Leicester</option>
-    <option value="Nottingham">Nottingham</option>
-  </optgroup>
-  <optgroup class="London" data-optregion="London" label="Greater London">
-    <option value="Hackney">Hackney</option>
-    <option value="London">London</option>
-    <option value="Northwood">Northwood</option>
-  </optgroup>
-  <optgroup class="North-east" data-optregion="North-east" label="North-east">
-    <option value="Darlington">Darlington</option>
-    <option value="Jarrow South">Jarrow South</option>
-    <option value="Newcastle">Newcastle</option>
-    <option value="Stockton">Stockton</option>
-    <option value="Teeside">Teeside</option>
-    <option value="Washington">Washington</option>
-  </optgroup>
-  <optgroup class="North-west" data-optregion="North-west" label="North-west">
-    <option value="Blackpool">Blackpool</option>
-    <option value="Bootle">Bootle</option>
-    <option value="Liverpool">Liverpool</option>
-    <option value="Lytham St Annes">Lytham St Annes</option>
-    <option value="Manchester">Manchester</option>
-    <option value="Preston">Preston</option>
-    <option value="Salford">Salford</option>
-    <option value="Shipley">Shipley</option>
-  </optgroup>
-  <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
-    <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
-    <option value="Cumbernauld">Cumbernauld</option>
-    <option value="Dundee">Dundee</option>
-    <option value="East Kilbride">East Kilbride</option>
-    <option value="Edinburgh">Edinburgh</option>
-    <option value="Glasgow">Glasgow</option>
-  </optgroup>
-  <optgroup class="South-east" data-optregion="South-east" label="South-east">
-    <option value="Andover">Andover</option>
-    <option value="Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
-    <option value="Chilton">Chilton</option>
-    <option value="Hastings">Hastings</option>
-    <option value="High Wycombe">High Wycombe</option>
-    <option value="Kent (inc.Ramsgate)">Kent (inc.Ramsgate)</option>
-    <option value="Oxford">Oxford</option>
-    <option value="Reading">Reading</option>
-    <option value="Shrivenham">Shrivenham</option>
-    <option value="Surrey">Surrey</option>
-    <option value="Worthing">Worthing</option>
-  </optgroup>
-  <optgroup class="South-west" data-optregion="South-west" label="South-west">
-    <option value="Bristol">Bristol</option>
-  </optgroup>
-    <optgroup class="Wales" data-optregion="Wales" label="Wales">
-    <option value="Cardiff">Cardiff</option>
-    <option value="Merthyr Tydfil">Merthyr Tydfil</option>
-    <option value="Swansea">Swansea</option>
-  </optgroup>
-  <optgroup class="West-midlands" data-optregion="West-midlands" label="West Midlands">
-    <option value="Birmingham">Birmingham</option>
-    <option value="Cosford">Cosford</option>
-    <option value="Coventry">Coventry</option>
-    <option value="Handsworth">Handsworth</option>
-    <option value="Lichfield">Lichfield</option>
-    <option value="Stratford">Stratford</option>
-    <option value="Sutton Coldfield">Sutton Coldfield</option>
-    <option value="Telford">Telford</option>
-    <option value="Walsall">Walsall</option>
-    <option value="Wolverhampton">Wolverhampton</option>
-  </optgroup>
-  <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
-    <option value="Bradford">Bradford</option>
-    <option value="Leeds">Leeds</option>
-    <option value="Sheffield">Sheffield</option>
-    <option value="York">York</option>
-  </optgroup>
-</select>
-        </div>
-      </section>
-      <section class="toggle-content" id="locationSelectedContainer" aria-hidden="true">
+      <p class="form-label">Would you consider an alternative location?</p>
+      <div class="form-group form-group-compound">
+        <label for="altregion-yes" class="block-label">
+          <input name="altregion" type="radio" id="altregion-yes">Yes
+        </label>
+        <label for="altregion-no" class="block-label">
+          <input name="altregion" type="radio" id="altregion-no">No
+        </label>
+      </div>
 
-        <div class="hgroup-medium">
-          <h2 class="heading-medium" aria-live="polite">Choose a scheme</h2>
-          <p class="subtitle">
-            <a href="#" target="_blank" >Find out more about the schemes we offer</a>
-          </p>
-        </div>
+      <p class="form-label">Would you consider an alternative scheme?</p>
+      <div class="form-group form-group-compound">
+        <label for="altscheme-yes" class="block-label">
+          <input name="altscheme" type="radio" id="altscheme-yes">Yes
+        </label>
+        <label for="altscheme-no" class="block-label">
+          <input name="altscheme" type="radio" id="altscheme-no">No
+        </label>
+      </div>
 
-        <div class="grid-3-4">
-          <div class="form-group">
-            <label for="schemePref1" class="form-label">First preference of scheme</label>
-            <select name="" id="schemePref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
-              <option value="" class="placeholder-option"></option>
-              <option value="Business">Business</option>
-              <option value="Commercial">Commercial</option>
-              <option value="Cyber security">Cyber security</option>
-              <option value="Digital and technology">Digital and technology</option>
-              <option value="Finance">Finance</option>
-              <option value="Project delivery">Project delivery</option>
-            </select>
-          </div>
-
-          <div class="form-group" id="secondPreferenceContainer">
-            <label for="schemePref2" class="form-label">Second preference of scheme</label>
-            <select name="" id="schemePref2" class="chosen-select" data-placeholder="Choose from list or begin typing">
-              <option value="" class="placeholder-option"></option>
-              <option value="Business">Business</option>
-              <option value="Commercial">Commercial</option>
-              <option value="Cyber security">Cyber security</option>
-              <option value="Digital and technology">Digital and technology</option>
-              <option value="Finance">Finance</option>
-              <option value="Project delivery">Project delivery</option>
-              <option value="No second preference">No second preference</option>
-            </select>
-          </div>
-        </div>
-
-      </section>
-    </div>
-
-    <div class="hide-nojs">
-      <a href="scheme-summary-01.html" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and scheme</a>
-    </div>
+      <a href="assistance.html" class="button" id="locFramContinue">Save and continue</a>
+    </section>
   </div>
 </div>
 

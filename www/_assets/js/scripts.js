@@ -521,19 +521,21 @@ $(function() {
         $selectedRegionName = '',
         $regionSelectClone = $('#regionSelect >').clone();
 
-    // Animate map after 2 seconds
-    setTimeout(function() {
-      $('.svg-map-container').addClass('hvr-back-pulse');
-      $('.map-legend').show();
-      $('#hoveredRegionName').text('Choose a region to filter the locations');
-    }, 1000);
+    if(!$('.map-legend-container').hasClass('disabled')) {
+      // Animate map after 2 seconds
+      setTimeout(function() {
+        $('.svg-map-container').addClass('hvr-back-pulse');
+        $('.map-legend').show();
+        $('#hoveredRegionName').text('Choose a region to filter the locations');
+      }, 1000);
 
-    // Stop animation and remove hint
-    setTimeout(function() {
-      $('.svg-map-container').removeClass('hvr-back-pulse');
-      $('.map-legend').fadeOut('slow');
-      $('#chooseRegionContainer').fadeIn('slow');
-    }, 3000);
+      // Stop animation and remove hint
+      setTimeout(function() {
+        $('.svg-map-container').removeClass('hvr-back-pulse');
+        $('.map-legend').fadeOut('slow');
+        $('#chooseRegionContainer').fadeIn('slow');
+      }, 3000);
+    }
 
     // On hover highlight the region on the map and show region name
     $('.region-container').not($selectedRegion).hover(function() {
@@ -696,48 +698,39 @@ $(function() {
       }
     });
 
-    // Saving location and scheme shows it on page
-    $('#choiceSave').on('click', function(e) {
-      var locationSelected = $('#regionSelect').val(),
-          firstScheme = $('#schemePref1').val(),
-          secondScheme = $('#schemePref2').val();
+    // // Saving location and scheme shows it on page
+    // $('#choiceSave').on('click', function(e) {
+    //   var locationSelected = $('#regionSelect').val(),
+    //       firstScheme = $('#schemePref1').val(),
+    //       secondScheme = $('#schemePref2').val();
 
-      e.preventDefault();
+    //   e.preventDefault();
 
-      $('#chosenLocation').text(locationSelected);
-      $('#chosenSchemes').append(firstScheme + ', ' + secondScheme);
+    //   $('#chosenLocation').text(locationSelected);
+    //   $('#chosenSchemes').append(firstScheme + ', ' + secondScheme);
 
-      $('#choiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
+    //   $('#choiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
 
-      $('#chooseLocationAndScheme').addClass('toggle-content').attr('aria-hidden', true);
+    //   $('#chooseLocationAndScheme').addClass('toggle-content').attr('aria-hidden', true);
 
-      $('.region-container').attr('class', 'region-container');
+    //   $('.region-container').attr('class', 'region-container');
 
-      $selectedRegion = '';
-      $selectedRegionName = '';
+    //   $selectedRegion = '';
+    //   $selectedRegionName = '';
 
-      $('.map-legend').hide();
-      $('.svg-map').attr('class', 'svg-map disabled');
+    //   $('.map-legend').hide();
+    //   $('.svg-map').attr('class', 'svg-map disabled');
 
-      $(this).hide();
+    //   $(this).hide();
 
-      scrollToTop();
+    //   scrollToTop();
 
-    });
+    // });
 
     $('.second-choice-btn').on('click', function() {
 
       $('#firstChoiceInfo').removeClass('toggle-content').attr('aria-hidden', false);
       $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
-
-    });
-
-    $('#noSecondPreference').on('click', function(e) {
-      e.preventDefault();
-
-      $('#considerAlternatives').removeClass('toggle-content').attr('aria-hidden', false);
-
-      scrollToTop();
 
     });
 
