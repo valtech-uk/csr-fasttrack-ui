@@ -33,6 +33,9 @@
 .no-js {
   .toggle-content, .toggle-content--mob {
     display: block !important;
+    &.button {
+      display: inline-block !important;
+    }
   }
   .nojs-notice {
     display: table-cell;

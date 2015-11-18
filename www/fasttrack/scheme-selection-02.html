@@ -110,7 +110,7 @@
 </div>
 
 <div class="grid-wrapper">
-  <div class="grid grid-1-3">
+  <div class="grid grid-1-3 hide-nojs">
     <div class="inner-block-padr map-legend-container">
       <div class="map-control">
         <div class="panel-indent toggle-content" id="chooseRegionContainer">
@@ -385,8 +385,8 @@
   <div class="grid grid-2-3"id="containingGridPreference">
     <section id="firstChoiceInfo">
       <h2 class="heading-medium">First preference</h2>
-      <h3 class="heading-small" id="firstChosenLocation"></h3>
-      <p class="small-btm-margin" id="firstChosenSchemes"></p>
+      <h3 class="heading-small" id="firstChosenLocation">Coventry</h3>
+      <p class="small-btm-margin" id="firstChosenSchemes">Business, Cyber Security</p>
       <p><a href="scheme-selection.html">Change this selection</a></p>
     </section>
 
@@ -539,9 +539,11 @@
       </section>
     </div>
 
-    <a href="#" class="button toggle-content hide-nojs second-choice second-choice-btn" id="choiceSave">Save second location and scheme</a>
+    <div class="hide-nojs">
+      <a href="#" class="button toggle-content second-choice second-choice-btn" id="choiceSave">Save second location and scheme</a>
+    </div>
 
-    <section id="considerAlternatives" class="toggle-content hide-nojs">
+    <section id="considerAlternatives" class="toggle-content">
       <div class="panel-indent">
         <p>If we can't guarantee your preferred location or scheme, we may suggest an alternative.</p>
       </div>

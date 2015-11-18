@@ -563,7 +563,7 @@
             <div class="toggle-content hide-nojs" id="locFramContinueSaved">
               <a href="assistance.html" class="button">Save and continue</a>
             </div>
-            <section id="considerAlternatives" class="toggle-content">
+            <section id="considerAlternatives" class="toggle-content hide-nojs">
               <div class="panel-indent">
                 <p>If we can't guarantee your preferred location or scheme, we may
                   suggest an alternative.</p>
@@ -588,7 +588,13 @@
               </div>
               <a href="assistance.html" class="button hide-nojs" id="locFramContinue">Save and continue</a>
             </section>
-            <a href="#" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and scheme</a>
+            <div class="hide-nojs">
+              <a href="#" class="button toggle-content first-choice-btn" id="choiceSave">Save first location and scheme</a>
+            </div>
+            <div class="hide-js">
+              <a href="scheme-selection-02.html" class="button">Add a second location</a>
+              <a href="scheme-alternatives-nojs.html" class="button-link">Continue with one location</a>
+            </div>
           </div>
         </div>
       </main>
