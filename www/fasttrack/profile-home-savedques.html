@@ -101,65 +101,46 @@
 
     <main role="main" id="main">
       
-
-<div class="panel-success">
-  <p id="SuccessMessageText" class="text">You've successfully submitted your questionnaire <a href="/feedback.html">Give feedback?</a> (30 second survey)</p>
-</div>
-
 <div class="hgroup">
   <h1 class="heading-xlarge">Welcome</h1>
   <p class="subtitle" id="nameOnHome">Firstname Lastname</p>
 </div>
 
-<section class="section-border">
-  <ol class="step-by-step-coloured" id="sixSteps">
-    <li>
-      <div class="grid-wrapper">
-        <div class="grid grid-2-3">
-          <div class="inner-block-padr">
-            <h2 class="heading-medium">Complete application form</h2>
-            <p><i class="fa fa-check the-icon"></i>All details have been submitted</p>
-            <p>
-              <a class="" href="apply-submitted.html">View your submitted application</a>
-            </p>
-          </div>
-        </div>
-        <div class="grid grid-1-3">
-          <p>100% complete</p>
-          <progress max="100" value="100">
-            <div class="progress-bar">
-              <span style="width: 100%;"></span>
-            </div>
-          </progress>
-        </div>
-      </div>
-    </li>
-    <li>
+<ol class="step-by-step-coloured" id="sixSteps">
+  <li class="active">
     <div class="grid-wrapper">
       <div class="grid grid-2-3">
         <div class="inner-block-padr">
-          <h2 class="heading-medium">Complete anonymous questionnaire</h2>
-          <p><i class="fa fa-check the-icon"></i>You've submitted your questionnaire</p>
-          <!-- <a href="questionnaire.html" class="button">Complete questionnaire</a> -->
+          <h2 class="heading-large">Complete application form</h2>
+          <ul class="list-text list-withicons">
+            <li><i class="fa fa-check the-icon"></i>Enter your personal details</li>
+            <li><i class="fa fa-check the-icon"></i>Select a location and scheme</li>
+            <li><i class="fa fa-check the-icon"></i>Tell us about any assistance needs</li>
+            <li><i class="fa fa-check the-icon"></i>Check your application</li>
+            <li><i class="fa fa-check the-icon"></i>Complete diversity questionnaire</li>
+            <li><i class="fa fa-minus the-icon"></i>Submit</li>
+          </ul>
+          <p>
+            <a class="" href="profile-details.html?continue=true">Continue with your application</a>
+          </p>
         </div>
       </div>
       <div class="grid grid-1-3">
-        <p>100% complete</p>
-        <progress max="100" value="100">
+        <p>90% complete</p>
+        <progress max="100" value="90">
           <div class="progress-bar">
-            <span style="width: 100%;"></span>
+            <span style="width: 90%;"></span>
           </div>
         </progress>
       </div>
     </div>
   </li>
-  <li class="active">
+  <li>
     <div class="grid-wrapper">
       <div class="grid grid-2-3">
         <div class="inner-block-padr">
-          <h2 class="heading-large">Take the online test</h2>
-          <p>You will be contacted once the online test is ready for you to complete.</p>
-          <!-- <p>Once you've submitted your application and completed the questionnaire you'll be able to take the online test, you'll have 7 days to complete this.   </p> -->
+          <h2 class="heading-medium">Take the online test</h2>
+          <p>Once you've submitted your application and completed the questionnaire you'll be able to take the online test, you'll have 7 days to complete this.   </p>
           <p><a href="">Find out more about the online test</a></p>
         </div>
       </div>
@@ -213,10 +194,7 @@
   </li>
 </ol>
 
-</section>
-
-
-<section>
+<!-- <section>
   <h2 class="heading-medium">Withdraw application</h2>
   <div class="text">
     <p>If you no longer wish to proceed with your application you can withdraw at any time.</p>

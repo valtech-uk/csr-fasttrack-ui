@@ -141,23 +141,6 @@ $(function() {
 
   }
 
-  if($('#choosePrefLocFramHeading').length && gup('continue') == 'true') {
-    $('.svg-map').attr('class', 'svg-map disabled');
-    $('.map-control, #chooseLocationAndScheme, #secondPreferenceControls').hide();
-
-
-    if(storedSecondLoc != null) {
-      $('#second-chosenLocation').text(storedSecondLoc);
-      $('#second-chosenSchemes').text(storedSecondFrame1 + ', ' + storedSecondFrame2);
-      $('#second-choiceInfo').removeClass('hidden');
-    }
-
-    $('#chosenLocation').text(storedFirstLoc);
-    $('#chosenSchemes').text(storedFirstFrame1 + ', ' + storedFirstFrame2);
-    $('#choiceInfo, #locFramContinueSaved').removeClass('hidden');
-
-  }
-
 
   $('.first-choice-btn').on('click', function() {
     var locationSelected = $('#regionSelect').val(),

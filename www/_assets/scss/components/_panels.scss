@@ -64,7 +64,7 @@
   .heading-small {
     color: $success-colour;
   }
-  p:before {
+  p:first-child:before {
     content: "\f00c";
     display: inline-block;
     font-family: FontAwesome;
