@@ -4,7 +4,7 @@ $(function() {
         $selectedRegionName = '',
         $regionSelectClone = $('#regionSelect >').clone();
 
-    if(!$('.map-legend-container').hasClass('disabled')) {
+    if(!$('.map-legend-container').hasClass('disabled') && !$('#regionSelect option[selected]').length) {
       // Animate map after 2 seconds
       setTimeout(function() {
         $('.svg-map-container').addClass('hvr-back-pulse');
@@ -74,8 +74,8 @@ $(function() {
 
       $selectedRegion = regionContainer;
 
-      $('#selectLocationBlurb, #selectSecondLocationBlurb, #locationSelectedText').addClass('toggle-content').attr('aria-hidden', true);
-      $('#locationSelectedContainer').addClass('toggle-content').attr('aria-hidden', true);
+      $('#selectLocationBlurb, #selectSecondLocationBlurb, #locationSelectedText, #locationSelectedContainer')
+        .addClass('toggle-content').attr('aria-hidden', true);
 
       $("#schemePref1 option, #schemePref2 option").attr('selected', false);
       $("#schemePref1, #schemePref2").trigger("chosen:updated");
@@ -139,11 +139,7 @@ $(function() {
       $('#clearMap').show();
     }
 
-    // Choosing a location affects schemes
-    $("#regionSelect").on('change', function() {
-      var $regionElement = $(this).find('option:selected').parent(),
-          $regionContainer = $('#' + $regionElement.attr('data-optregion'));
-
+    function hideBlurb() {
       $('#locationSelectedContainer').removeClass('toggle-content').attr('aria-hidden', false);
 
       $('.map-control').hide();
@@ -151,6 +147,16 @@ $(function() {
       $('#chosenRegionBlurb, #selectLocationBlurb').addClass('toggle-content').attr('aria-hidden', true);
       $('#locationSelectedText').removeClass('toggle-content').attr('aria-hidden', false);
 
+    }
+
+    if($('#regionSelect option[selected]').length) {
+      $('#listOfLocationsContainer, #choiceSave').removeClass('toggle-content').attr('aria-hidden', false);
+      hideBlurb();
+    }
+
+    // Choosing a location affects schemes
+    $("#regionSelect").on('change', function() {
+      hideBlurb();
     });
 
     // Scheme preference 1
