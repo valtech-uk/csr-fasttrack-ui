@@ -30,6 +30,9 @@ $(function() {
       $('.map-legend').show().removeClass('disabled');
       $('#hoveredRegionName').text($regionName);
 
+      $('.svg-map-container').removeClass('hvr-back-pulse');
+      $('#chooseRegionContainer').show();
+
     }, function() {
       if($selectedRegionName != '') {
         $('#hoveredRegionName').text($selectedRegionName);
@@ -158,6 +161,16 @@ $(function() {
     $("#regionSelect").on('change', function() {
       hideBlurb();
     });
+
+    if($('#schemePref1 option[selected]').length) {
+      var $selectedPref1 = $('#schemePref1').val(),
+          $selectedPref2 = $('#schemePref2').val();
+
+      $('#schemePref1').find('option[value="' + $selectedPref2 + '"]').attr('disabled', true);
+      $('#schemePref2').find('option[value="' + $selectedPref1 + '"]').attr('disabled', true);
+
+      $("#schemePref1, #schemePref2").trigger("chosen:updated");
+    }
 
     // Scheme preference 1
     $('#schemePref1').on('change', function() {
