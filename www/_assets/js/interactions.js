@@ -112,17 +112,6 @@ $(function() {
       }
     }
 
-    // if($disTarget == undefined) {
-    //   $this.closest('.form-group').find('[aria-expanded]').attr('aria-expanded', false);
-    // } else {
-    //   $('#' + $target).show();
-
-    //   if($this.closest('.form-group').hasClass('blocklabel-single')) {
-
-    //     $this.closest('.blocklabel-single-container').find('.blocklabel-content').not('#' + $target).hide();
-    //   }
-    // }
-
   });
 
   $('.selectWithOptionTrigger').on('change', function() {

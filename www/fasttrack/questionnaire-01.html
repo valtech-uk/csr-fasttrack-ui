@@ -124,57 +124,70 @@
   Diversity
 </h2>
 
-<div class="form-group">
+<div class="form-group form-group-compound">
   <label class="form-label" for="genderList">What is your gender identity?</label>
-  <!-- <div class="form-group">
-    <div>
-      <label for="gender-nosay" class="block-label">
-        <input name="gender" type="radio" id="gender-nosay" aria-labelledby="genderQuestion">Prefer not to say
-      </label>
-    </div>
-    <div>
-      <label for="gender-man" class="block-label">
-        <input name="gender" type="radio" id="gender-man" aria-labelledby="genderQuestion">Man
-      </label>
-    </div>
-    <div>
-      <label for="gender-woman" class="block-label">
-        <input name="gender" type="radio" id="gender-woman" aria-labelledby="genderQuestion">Woman
-      </label>
-    </div>
-    <div>
-      <label for="gender-other" class="block-label">
-        <input name="gender" type="radio" id="gender-other" aria-labelledby="genderQuestion">Other gender identity
-      </label>
-    </div>
-  </div> -->
-  <select name="" id="genderList">
+  <select name="" id="genderList" class="selectWithOptionTrigger">
     <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
     <option value="">Man</option>
     <option value="">Woman</option>
-    <option value="">Other gender identity</option>
+    <option value="" class="optionTrigger" data-optiontrigger="genderDescribe">Other gender identity</option>
   </select>
 </div>
 
+<div class="toggle-content form-group form-group-compound" id="genderDescribe">
+  <label for="genderDescribeControl" class="form-hint">Provide more information (optional)</label>
+  <input type="text" id="genderDescribeControl" class="form-control">
+</div>
+
 <div class="form-group">
+  <label for="gender-prefernot" class="block-label" data-distarget="genderList">
+    <input type="checkbox" id="gender-prefernot">Prefer not to say
+  </label>
+</div>
+
+<div class="form-group form-group-compound">
+  <label class="form-label" for="genderAssignedList">Are you living in the gender assigned to you at birth?</label>
+  <div class="form-group inline">
+    <label for="genderAssigned-yes" class="block-label">
+      <input name="genderAssigned" type="radio" id="genderAssigned-yes">Yes
+    </label>
+    <label for="genderAssigned-no" class="block-label">
+      <input name="genderAssigned" type="radio" id="genderAssigned-no">No
+    </label>
+    <label for="genderAssigned-prefer" class="block-label">
+      <input name="genderAssigned" type="radio" id="genderAssigned-prefer">Prefer not to say
+    </label>
+  </div>
+</div>
+
+
+<div class="form-group form-group-compound">
   <label class="form-label" for="sexualList">What is your sexual orientation?</label>
-  <select name="" id="sexualList">
+  <select name="" id="sexualList" class="selectWithOptionTrigger">
     <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
     <option value="">Heterosexual/straight</option>
     <option value="">Gay woman/lesbian</option>
     <option value="">Gay man</option>
     <option value="">Bisexual</option>
-    <option value="">Other</option>
+    <option value="" class="optionTrigger" data-optiontrigger="sexualDescribe">Other</option>
   </select>
 </div>
 
+<div class="toggle-content form-group form-group-compound" id="sexualDescribe">
+  <label for="sexualDescribeControl" class="form-hint">Provide more information (optional)</label>
+  <input type="text" id="sexualDescribeControl" class="form-control">
+</div>
+
 <div class="form-group">
+  <label for="sexual-prefernot" class="block-label" data-distarget="sexualList">
+    <input type="checkbox" id="sexual-prefernot">Prefer not to say
+  </label>
+</div>
+
+<div class="form-group form-group-compound">
   <label for="ethnicList" class="form-label">What is your ethnic group?</label>
-  <select name="" id="ethnicList">
+  <select name="" id="ethnicList" class="selectWithOptionTrigger">
     <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
     <optgroup label="White">
       <option value="">English/Welsh/Scottish/Northern Irish/British </option>
       <option value="">Irish </option>
@@ -201,47 +214,20 @@
     </optgroup>
     <optgroup label="Other ethnic group">
       <option value="">Arab</option>
-      <option value="">Other ethnic group</option>
+      <option value="" class="optionTrigger" data-optiontrigger="ethnicDescribe">Other ethnic group</option>
     </optgroup>
   </select>
 </div>
 
-<div class="form-group">
-  <label class="form-label" for="religionList">What is your religion?</label>
-  <select name="" id="religionList" class="selectWithOptionTrigger">
-    <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
-    <option value="">No religion</option>
-    <option value="">Christian (all denominations)</option>
-    <option value="">Buddhist</option>
-    <option value="">Hindu</option>
-    <option value="">Jewish</option>
-    <option value="">Muslim</option>
-    <option value="">Sikh</option>
-    <option class="optionTrigger" value="" data-optiontrigger="religionDescribe">Any other religion, please describe</option>
-  </select>
-</div>
-
-<div class="toggle-content form-group" id="religionDescribe">
-  <label for="religionDescribeControl" class="form-label">Please describe your religion</label>
-  <input type="text" id="religionDescribeControl" class="form-control">
+<div class="toggle-content form-group form-group-compound" id="ethnicDescribe">
+  <label for="ethnicDescribeControl" class="form-hint">Provide more information (optional)</label>
+  <input type="text" id="ethnicDescribeControl" class="form-control">
 </div>
 
 <div class="form-group">
-  <label class="form-label" for="maritalList">What is your marital status?</label>
-  <select name="" id="maritalList">
-    <option value="">-- Please select --</option>
-    <option value="">Prefer not to say</option>
-    <option value="">Single</option>
-    <option value="">Married</option>
-    <option value="">Separated, but still legally married</option>
-    <option value="">Divorced</option>
-    <option value="">Widowed</option>
-    <option value="">In a registered same-sex civil partnership</option>
-    <option value="">Separated, but still legally in a same-sex civil partnership</option>
-    <option value="">Formerly in a same-sex civil partnership which is now legally dissolved</option>
-    <option value="">Surviving partner from a same-sex civil partnership </option>
-  </select>
+  <label for="ethnic-prefernot" class="block-label" data-distarget="ethnicList">
+    <input type="checkbox" id="ethnic-prefernot">Prefer not to say
+  </label>
 </div>
 
 <p>

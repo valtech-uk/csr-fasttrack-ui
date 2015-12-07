@@ -159,7 +159,22 @@ $(function() {
 
     // Choosing a location affects schemes
     $("#regionSelect").on('change', function() {
+      var selectedLocation = $(this).val(),
+          selectedRegion = $(this).find('option:selected').parent().attr('data-optregion'),
+          schemesInLocation = availableLocationsAndSchemes[selectedRegion][selectedLocation],
+          schemeOptionsAvailable = '<option value="" class="placeholder-option"></option>';
+
       hideBlurb();
+
+      $.each(schemesInLocation, function(i) {
+        schemeOptionsAvailable += '<option value="' + schemesInLocation[i] + '">' + schemesInLocation[i] + '</option>';
+      });
+
+      $('#schemePref1').html(schemeOptionsAvailable);
+      $('#schemePref2').html(schemeOptionsAvailable + '<option value="">No second preference</option>');
+
+      $("#schemePref1, #schemePref2").trigger("chosen:updated");
+
     });
 
     if($('#schemePref1 option[selected]').length) {
