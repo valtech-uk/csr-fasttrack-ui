@@ -19,19 +19,22 @@ pageTitle: Diversity questionnaire
     </p>
   </div>
 </details>
-<section class="section-border">
+<section>
   <h2 class="heading-large">
     Socio-economic information
   </h2>
 
   <div class="form-group form-group-compound">
-    <label class="form-label" for="schoolAttended">What school did you attend to do your GCSEs?</label>
+    <label class="form-label" for="schoolAttended">What was the name of your school when you were aged 14?</label>
     <input type="text" id="schoolAttended" class="form-control">
   </div>
 
   <div class="form-group">
+    <label for="school-dontremember" class="block-label" data-distarget="schoolAttended">
+      <input name="school" type="radio" id="school-dontremember">I don't remember
+    </label>
     <label for="school-prefernot" class="block-label" data-distarget="schoolAttended">
-      <input type="checkbox" id="school-prefernot">Prefer not to say
+      <input name="school" type="radio" id="school-prefernot">Prefer not to say
     </label>
   </div>
 
@@ -42,19 +45,25 @@ pageTitle: Diversity questionnaire
   </div>
 
   <div class="form-group">
-    <label for="postcode-prefernot" class="block-label" data-distarget="homePostcode">
-      <input type="checkbox" id="postcode-prefernot">Prefer not to say
+    <label for="postcode-dontremember" class="block-label" data-distarget="schoolAttended">
+      <input name="postcode" type="radio" id="postcode-dontremember">I don't remember
+    </label>
+    <label for="postcode-prefernot" class="block-label" data-distarget="schoolAttended">
+      <input name="postcode" type="radio" id="postcode-prefernot">Prefer not to say
     </label>
   </div>
 
   <div class="text">
-    <p class="form-label">Were you eligible to claim Free School Meals or Education Maintenance Allowance?</p>
+    <p class="form-label">During your school years, were you at any time eligible for free school meals? </p>
     <div class="form-group inline">
       <label for="freeSchoolMeals-yes" class="block-label">
         <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-yes">Yes
       </label>
       <label for="freeSchoolMeals-no" class="block-label">
         <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-no">No
+      </label>
+      <label for="freeSchoolMeals-remember" class="block-label">
+        <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-remember">I don't remember
       </label>
       <label for="freeSchoolMeals-prefer" class="block-label">
         <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-prefer">Prefer not to say
@@ -63,7 +72,7 @@ pageTitle: Diversity questionnaire
   </div>
 
   <div class="text">
-    <p class="form-label">Has any member of your immediate family attended university?</p>
+    <p class="form-label">Did any of your parent(s) or guardian(s) complete a university degree course or equivalent? </p>
     <div class="form-group inline">
       <label for="university-yes" class="block-label">
         <input name="university" type="radio" id="university-yes">Yes
@@ -71,18 +80,16 @@ pageTitle: Diversity questionnaire
       <label for="university-no" class="block-label">
         <input name="university" type="radio" id="university-no">No
       </label>
+      <label for="university-remember" class="block-label">
+        <input name="university" type="radio" id="university-remember">I don't remember
+      </label>
       <label for="university-prefer" class="block-label">
         <input name="university" type="radio" id="university-prefer">Prefer not to say
       </label>
     </div>
   </div>
 </section>
-<h2 class="heading-large">Submit application</h2>
-<div class="panel-indent text">
-  <p>Once you submit your application you will not be able to amend any of your details</p>
-</div>
 
 <div>
-  <a href="profile-home-complete.html" class="button">Submit application</a>
-  <a href="profile-home-savedques.html" class="button-link">Save to submit later</a>
+  <a href="questionnaire-03.html" class="button">Save and continue</a>
 </div>

@@ -134,72 +134,151 @@
         </details>
         <section>
           <h2 class="heading-large">
-    Socio-economic information
+    Parental occupation
   </h2>
+          <div class="panel-indent text">
+            <p>Thinking back to when you were aged 14, please answer the following
+              questions in relation to your <b>highest earning</b> parent / guardian</p>
+          </div>
+          <h2 class="heading-small">Type of occupation</h2>
+          <table class="grid-2-3">
+            <colgroup>
+              <col class="t30">
+                <col class="t70">
+                  <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Modern professional</td>
+                <td>Teacher/lecturer, nurse, physiotherapist, social worker, welfare
+                  officer, artist, musician, police officer (sergeant or above),
+                  software designer</td>
+              </tr>
+              <tr>
+                <td>Clerical and intermediate</td>
+                <td>Secretary, personal assistant, clerical worker, office clerk, call
+                  centre agent, nursing auxiliary, nursery nurse</td>
+              </tr>
+              <tr>
+                <td>Senior managers and administrators</td>
+                <td>Usually responsible for planning, organising and co-ordinating
+                  work and for finance such as: finance manager, chief executive</td>
+              </tr>
+              <tr>
+                <td>Technical and craft</td>
+                <td>Motor mechanic, fitter, inspector, plumber, printer, tool maker,
+                  electrician, gardener, train driver</td>
+              </tr>
+              <tr>
+                <td>Semi-routine manual and service</td>
+                <td>Postal worker, machine operative, security guard, caretaker, farm
+                  worker, catering assistant, receptionist, sales assistant</td>
+              </tr>
+              <tr>
+                <td>Routine manual and service</td>
+                <td>HGV driver, van driver, cleaner, porter, packer, sewing machinist,
+                  messenger, labourer, waiter / waitress, bar staff</td>
+              </tr>
+              <tr>
+                <td>Middle or junior managers</td>
+                <td>Office manager, retail manager, bank manager, restaurant manager,
+                  warehouse manager, publican</td>
+              </tr>
+              <tr>
+                <td>Traditional professional</td>
+                <td>Accountant, solicitor, medical practitioner, scientist, civil/mechanical
+                  engineer</td>
+              </tr>
+            </tbody>
+          </table>
           <div class="form-group form-group-compound">
-            <label class="form-label" for="schoolAttended">What was the name of your school when you were aged 14?</label>
-            <input type="text" id="schoolAttended" class="form-control">
+            <label class="form-label" for="parentEmployList">Which type of occupation did they have?</label>
+            <span class="form-hint">If you're unsure, use the table as a reference</span>
+            <select name="" id="parentEmployList">
+              <option value="">-- Please select --</option>
+              <option value="">Modern professional</option>
+              <option value="">Clerical and intermediate</option>
+              <option value="">Senior managers and administrators</option>
+              <option value="">Technical and craft</option>
+              <option value="">Semi-routine manual and service</option>
+              <option value="">Routine manual and service</option>
+              <option value="">Middle or junior managers</option>
+              <option value="">Traditional professional</option>
+              <option value="">Not working</option>
+              <option value="">Not applicable</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="school-dontremember" class="block-label" data-distarget="schoolAttended">
-              <input name="school" type="radio" id="school-dontremember">I don't remember
+            <label for="parentEmploy-dontremember" class="block-label" data-distarget="parentEmployList">
+              <input name="parentEmploy" type="radio" id="parentEmploy-dontremember">I don't remember
             </label>
-            <label for="school-prefernot" class="block-label" data-distarget="schoolAttended">
-              <input name="school" type="radio" id="school-prefernot">Prefer not to say
+            <label for="parentEmploy-prefernot" class="block-label" data-distarget="parentEmployList">
+              <input name="parentEmploy" type="radio" id="parentEmploy-prefernot">Prefer not to say
             </label>
           </div>
           <div class="form-group form-group-compound">
-            <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
-            <span class="form-hint">If you don't know the postcode please enter street name and town</span>
-            <input type="text" id="homePostcode" class="form-control">
+            <label class="form-label" for="parentEmployList">Did they work as an employee or were they self employed?</label>
+            <select name="" id="parentEmployList">
+              <option value="">-- Please select --</option>
+              <option value="">Employee</option>
+              <option value="">Self-employed with employees</option>
+              <option value="">Self-employed/freelancer without employees</option>
+              <option value="">Not employed but seeking work</option>
+              <option value="">Not working</option>
+              <option value="">Not applicable</option>
+            </select>
           </div>
           <div class="form-group">
-            <label for="postcode-dontremember" class="block-label" data-distarget="schoolAttended">
-              <input name="postcode" type="radio" id="postcode-dontremember">I don't remember
+            <label for="parentEmploy-dontremember" class="block-label" data-distarget="parentEmployList">
+              <input name="parentEmploy" type="radio" id="parentEmploy-dontremember">I don't remember
             </label>
-            <label for="postcode-prefernot" class="block-label" data-distarget="schoolAttended">
-              <input name="postcode" type="radio" id="postcode-prefernot">Prefer not to say
+            <label for="parentEmploy-prefernot" class="block-label" data-distarget="parentEmployList">
+              <input name="parentEmploy" type="radio" id="parentEmploy-prefernot">Prefer not to say
             </label>
           </div>
-          <div class="text">
-            <p class="form-label">During your school years, were you at any time eligible for free school
-              meals?</p>
-            <div class="form-group inline">
-              <label for="freeSchoolMeals-yes" class="block-label">
-                <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-yes">Yes
-              </label>
-              <label for="freeSchoolMeals-no" class="block-label">
-                <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-no">No
-              </label>
-              <label for="freeSchoolMeals-remember" class="block-label">
-                <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-remember">I don't remember
-              </label>
-              <label for="freeSchoolMeals-prefer" class="block-label">
-                <input name="freeSchoolMeals" type="radio" id="freeSchoolMeals-prefer">Prefer not to say
-              </label>
-            </div>
+          <div class="form-group form-group-compound">
+            <label class="form-label" for="companySizeList">What size would best describe their place of work?</label>
+            <select name="" id="companySizeList">
+              <option value="">-- Please select --</option>
+              <option value="">Small (1 - 24 employees)</option>
+              <option value="">Large (over 24 employees)</option>
+              <option value="">Not applicable</option>
+            </select>
           </div>
-          <div class="text">
-            <p class="form-label">Did any of your parent(s) or guardian(s) complete a university degree
-              course or equivalent?</p>
-            <div class="form-group inline">
-              <label for="university-yes" class="block-label">
-                <input name="university" type="radio" id="university-yes">Yes
-              </label>
-              <label for="university-no" class="block-label">
-                <input name="university" type="radio" id="university-no">No
-              </label>
-              <label for="university-remember" class="block-label">
-                <input name="university" type="radio" id="university-remember">I don't remember
-              </label>
-              <label for="university-prefer" class="block-label">
-                <input name="university" type="radio" id="university-prefer">Prefer not to say
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="companySize-dontremember" class="block-label" data-distarget="companySizeList">
+              <input name="companySize" type="radio" id="companySize-dontremember">I don't remember
+            </label>
+            <label for="companySize-prefernot" class="block-label" data-distarget="companySizeList">
+              <input name="companySize" type="radio" id="companySize-prefernot">Prefer not to say
+            </label>
+          </div>
+          <div class="form-group form-group-compound">
+            <label class="form-label" for="superviseList">Did they supervise any other employees?</label>
+            <select name="" id="superviseList">
+              <option value="">-- Please select --</option>
+              <option value="">Yes</option>
+              <option value="">No</option>
+              <option value="">Not applicable</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="supervise-dontremember" class="block-label" data-distarget="superviseList">
+              <input name="supervise" type="radio" id="supervise-dontremember">I don't remember
+            </label>
+            <label for="supervise-prefernot" class="block-label" data-distarget="superviseList">
+              <input name="supervise" type="radio" id="supervise-prefernot">Prefer not to say
+            </label>
           </div>
         </section>
         <div>
-          <a href="questionnaire-03.html" class="button">Save and continue</a>
+          <a href="submit-application.html" class="button">Save and continue</a>
         </div>
       </main>
     </div>
