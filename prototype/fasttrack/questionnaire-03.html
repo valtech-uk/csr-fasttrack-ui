@@ -110,7 +110,10 @@
         </div>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Diversity questionnaire</h1>
+        <div class="hgroup">
+          <h1 class="heading-xlarge">Diversity questionnaire</h1>
+          <p class="subtitle">Page 3 of 3</p>
+        </div>
         <div class="panel-indent text">
           <p class="">
             The following information you provide is anonymous and will not be used to affect
@@ -216,10 +219,7 @@
           </div>
           <div class="form-group">
             <label for="parentEmploy-dontremember" class="block-label" data-distarget="parentEmployList">
-              <input name="parentEmploy" type="radio" id="parentEmploy-dontremember">I don't remember
-            </label>
-            <label for="parentEmploy-prefernot" class="block-label" data-distarget="parentEmployList">
-              <input name="parentEmploy" type="radio" id="parentEmploy-prefernot">Prefer not to say
+              <input type="checkbox" id="parentEmploy-dontremember">Unknown/prefer not to say
             </label>
           </div>
           <div class="form-group form-group-compound">
@@ -236,14 +236,11 @@
           </div>
           <div class="form-group">
             <label for="parentEmploy-dontremember" class="block-label" data-distarget="parentEmployList">
-              <input name="parentEmploy" type="radio" id="parentEmploy-dontremember">I don't remember
-            </label>
-            <label for="parentEmploy-prefernot" class="block-label" data-distarget="parentEmployList">
-              <input name="parentEmploy" type="radio" id="parentEmploy-prefernot">Prefer not to say
+              <input type="checkbox" id="parentEmploy-dontremember">Unknown/prefer not to say
             </label>
           </div>
           <div class="form-group form-group-compound">
-            <label class="form-label" for="companySizeList">What size would best describe their place of work?</label>
+            <label class="form-label" for="companySizeList">Which size would best describe their place of work?</label>
             <select name="" id="companySizeList">
               <option value="">-- Please select --</option>
               <option value="">Small (1 - 24 employees)</option>
@@ -253,10 +250,7 @@
           </div>
           <div class="form-group">
             <label for="companySize-dontremember" class="block-label" data-distarget="companySizeList">
-              <input name="companySize" type="radio" id="companySize-dontremember">I don't remember
-            </label>
-            <label for="companySize-prefernot" class="block-label" data-distarget="companySizeList">
-              <input name="companySize" type="radio" id="companySize-prefernot">Prefer not to say
+              <input name="companySize" type="checkbox" id="companySize-dontremember">Unknown/prefer not to say
             </label>
           </div>
           <div class="form-group form-group-compound">
@@ -270,10 +264,7 @@
           </div>
           <div class="form-group">
             <label for="supervise-dontremember" class="block-label" data-distarget="superviseList">
-              <input name="supervise" type="radio" id="supervise-dontremember">I don't remember
-            </label>
-            <label for="supervise-prefernot" class="block-label" data-distarget="superviseList">
-              <input name="supervise" type="radio" id="supervise-prefernot">Prefer not to say
+              <input type="checkbox" id="supervise-dontremember">Unknown/prefer not to say
             </label>
           </div>
         </section>
@@ -289,7 +280,7 @@
             <li class="small-btm-margin">
               <div>
                 <a class="footer__link bold-medium" href="/fasttrack/helpdesk.html">Contact us</a>
-                <a class="footer__link bold-medium" href="/fasttrack/feedback.html">Give feedback</a>
+                <a class="footer__link bold-medium" href="#" rel="external">Give feedback</a>
               </div>
             </li>
             <li class="footer__link"><a href="/fasttrack/privacy.html">Privacy and cookies</a>

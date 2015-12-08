@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Assistance and adjustments | Apply for a Civil Service apprenticeship</title>
+  <title>Additional information | Apply for a Civil Service apprenticeship</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -101,8 +101,10 @@
 
     <main role="main" id="main">
       
+<h1 class="heading-xlarge text">Additional information</h1>
+
 <section class="section-border">
-  <h1 class="heading-xlarge text">Assistance and adjustments</h1>
+  <h2 class="heading-large">Disability and adjustments</h2>
   <div class="form-group">
     <p class="form-label">Do you have a disability?</p>
     <div class="form-group form-group-compound inline">
@@ -154,9 +156,7 @@
     </div>
 
   </div>
-</section>
-<section>
-  <!-- <h2 class="heading-medium">Adjustments and support</h2> -->
+
   <p class="form-label">Will you need any adjustments for your assessment?</p>
   <p class="form-hint text">
     For example, extra time if you require it
@@ -198,6 +198,33 @@
   </div>
 </section>
 
+<section>
+  <h2 class="heading-large">How did you hear about us?</h2>
+  <div class="form-group">
+    <label for="hearAboutUs" class="form-label">Select how you heard about us (optional)</label>
+    <select name="" id="hearAboutUs" class="selectWithOptionTrigger">
+      <option value="">-- Choose method --</option>
+      <option value="">National apprenticeship service</option>
+      <option value="">notgoingtouni.co.uk</option>
+      <option value="">Social media (eg, Twitter/Facebook)</option>
+      <option value="">Teachers/careers advisors</option>
+      <option value="">Parent/Friends/Family</option>
+      <option value="">Existing apprentice/Civil servant</option>
+      <option class="optionTrigger" value="" data-optiontrigger="careersFairDetail" value="">Careers fair</option>
+      <option value="">Search engine (eg Google)</option>
+      <option class="optionTrigger" value="" data-optiontrigger="hearAboutUsDetail" value="">Other</option>
+    </select>
+  </div>
+  <div class="form-group toggle-content" id="hearAboutUsDetail">
+    <label for="hearAboutUsDetailControl" class="form-label">Please enter how you heard about us</label>
+    <input type="text" id="hearAboutUsDetailControl" class="form-control">
+  </div>
+  <div class="form-group toggle-content" id="careersFairDetail">
+    <label for="hearAboutUsDetailControl" class="form-label">Please enter name of careers fair</label>
+    <input type="text" id="hearAboutUsDetailControl" class="form-control">
+  </div>
+</section>
+
 <div class="form-group">
   <a href="apply-check.html" class="button" id="assistanceSave">Save and continue</a>
 </div>
@@ -210,7 +237,7 @@
         <li class="small-btm-margin">
           <div>
             <a class="footer__link bold-medium" href="/fasttrack/helpdesk.html">Contact us</a>
-            <a class="footer__link bold-medium" href="/fasttrack/feedback.html">Give feedback</a>
+            <a class="footer__link bold-medium" href="#" rel="external">Give feedback</a>
           </div>
         </li>
         <li class="footer__link"><a href="/fasttrack/privacy.html">Privacy and cookies</a></li>

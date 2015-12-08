@@ -372,7 +372,7 @@ $(function() {
     function initializeStrengthMeter() {
         $("#pass_meter").pwStrengthManager({
             password: $(".new-password").val(),
-            minChars: 8
+            minChars: 9
         });
     }
   }
