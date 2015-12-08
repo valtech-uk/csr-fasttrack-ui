@@ -129,7 +129,7 @@
   </h2>
 
   <div class="form-group form-group-compound">
-    <label class="form-label" for="schoolAttended">What was the name of your school when you were aged 14?</label>
+    <label class="form-label" for="schoolAttended">In which school did you spend most of your education aged 11-16?</label>
     <input type="text" id="schoolAttended" class="form-control">
   </div>
 
@@ -140,12 +140,23 @@
   </div>
 
   <div class="form-group form-group-compound">
+    <label class="form-label" for="school2Attended">In which school did you spend most of your education aged 16-18?</label>
+    <input type="text" id="school2Attended" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="school2-dontremember" class="block-label" data-distarget="school2Attended">
+      <input type="checkbox" id="school2-dontremember">Unknown/Prefer not to say
+    </label>
+  </div>
+
+  <div class="form-group form-group-compound">
     <label class="form-label" for="homePostcode">What was your home postcode when you were 14?</label>
     <input type="text" id="homePostcode" class="form-control form-control-1-4">
   </div>
 
   <div class="form-group">
-    <label for="postcode-dontremember" class="block-label" data-distarget="schoolAttended">
+    <label for="postcode-dontremember" class="block-label" data-distarget="homePostcode">
       <input type="checkbox" id="postcode-dontremember">Unknown/prefer not to say
     </label>
   </div>

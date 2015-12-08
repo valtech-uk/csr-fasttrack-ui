@@ -95,7 +95,8 @@ $(function() {
   $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
     var $this   = $(this),
         $target = $this.parent().attr('data-target'),
-        $disTarget = $this.parent().attr('data-distarget');
+        $disTarget = $this.parent().attr('data-distarget'),
+        $theTargetControl = $('#' + $disTarget);
 
     $('input:not(:checked)').parent().removeClass('selected');
     $('input:checked').parent().addClass('selected');
@@ -110,6 +111,17 @@ $(function() {
 
         $this.closest('.blocklabel-single-container').find('.blocklabel-content').not('#' + $target).hide();
       }
+    }
+
+    if($disTarget && !$theTargetControl.attr('disabled')) {
+      $theTargetControl.attr('disabled', true);
+      if($theTargetControl.attr('type') == 'text') {
+        $theTargetControl.val('');
+      } else if($theTargetControl.is('select')) {
+        $theTargetControl.find('> option:first-of-type').attr('selected', true);
+      }
+    } else if($disTarget && $theTargetControl.attr('disabled')) {
+      $theTargetControl.attr('disabled', false);
     }
 
   });
