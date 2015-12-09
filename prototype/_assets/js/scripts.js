@@ -124,9 +124,6 @@ $(function() {
       $theTargetControl.attr('disabled', false);
     }
 
-    // if($this.hasClass('hidesContent')) {
-    //   console.log('yes');
-    // }
   });
 
   $('.selectWithOptionTrigger').on('change', function() {

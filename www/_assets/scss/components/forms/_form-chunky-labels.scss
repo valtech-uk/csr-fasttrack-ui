@@ -29,6 +29,10 @@
   .inline & {
     clear: none;
   }
+  table & {
+    margin-bottom: 0;
+    width: 100%;
+  }
 }
 
 // Only if JavaScript is enabled
