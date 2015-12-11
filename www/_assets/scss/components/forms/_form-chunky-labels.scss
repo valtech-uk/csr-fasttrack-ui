@@ -10,6 +10,10 @@
   float: none;
   margin-bottom: $gutter-half;
   padding: 20px $gutter $gutter-half $gutter-half;
+  &.block-label-slim {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
   @include media(tablet) {
     display: inline-block;
     margin-right: $gutter-half - 4px;

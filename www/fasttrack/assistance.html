@@ -114,25 +114,81 @@
       <label for="support-no" class="block-label">
         <input name="support" type="radio" id="support-no">No
       </label>
+      <label for="support-prefer" class="block-label">
+        <input name="support" type="radio" id="support-prefer">Prefer not to say
+      </label>
     </div>
     <div id="support-panel" class="toggle-content" aria-hidden="true">
       <div class="form-group">
         <p class="form-label">Select from the list or provide details of disability</p>
-        <select name="" id="" class="para-btm-margin">
-          <option value="">-- List of disabilities --</option>
-          <option value="Prefer not to say">Prefer not to say</option>
-          <option value="Sensory impairment (vision and hearing)">Sensory impairment (vision and hearing)</option>
-          <option value="Heart conditions">Heart conditions</option>
-          <option value="Musculoskeletal conditions such as back problems">Musculoskeletal conditions such as back problems</option>
-          <option value="Recurring or fluctuating conditions, such as arthritis or asthma">Recurring or fluctuating conditions, such as arthritis or asthma</option>
-          <option value="Mental health problems, such as depression">Mental health problems, such as depression</option>
-          <option value="Epilepsy">Epilepsy</option>
-          <option value="Dyslexia">Dyslexia</option>
-          <option value="Diabetes">Diabetes</option>
-          <option value="Severe disfigurements">Severe disfigurements</option>
-          <option value="Learning disabilities">Learning disabilities</option>
-          <option value="Other">Other disability</option>
-        </select>
+        <!-- <div class="grid-1-2 para-btm-margin">
+          <select multiple name="" id="disabilityList" class="chosen-select" data-placeholder="Select at least one, or begin typing...">
+            <option value="ADHD">ADHD</option>
+            <option value="Asperger's syndrome">Asperger's syndrome</option>
+            <option value="Cerebral palsy">Cerebral palsy</option>
+            <option value="Chronic fatigue syndrome/M.E.">Chronic fatigue syndrome/M.E.</option>
+            <option value="Diabetes">Diabetes</option>
+            <option value="Dyscalculia/Dysgraphia">Dyscalculia/Dysgraphia</option>
+            <option value="Dyslexia">Dyslexia</option>
+            <option value="Dyspraxia">Dyspraxia</option>
+            <option value="Epilepsy">Epilepsy</option>
+            <option value="Hearing difficulties">Hearing difficulties</option>
+            <option value="Mental health problems – e.g. depression">Mental health problems – e.g. depression</option>
+            <option value="Musculoskeletal conditions – e.g. back pain">Musculoskeletal conditions – e.g. back pain</option>
+            <option value="Visual impairments">Visual impairments</option>
+            <option value="Other">Other</option>
+          </select>
+        </div> -->
+        <details class="text">
+          <summary>
+            Choose from multiple options
+          </summary>
+
+          <div class="detail-content">
+            <div>
+              <label for="disability-choice-01" class="block-label block-label-slim"><input id="disability-choice-01" type="checkbox">ADHD</label>
+            </div>
+            <div>
+              <label for="disability-choice-02" class="block-label block-label-slim"><input id="disability-choice-02" type="checkbox">Asperger's syndrome</label>
+            </div>
+            <div>
+              <label for="disability-choice-03" class="block-label block-label-slim"><input id="disability-choice-03" type="checkbox">Cerebral palsy</label>
+            </div>
+            <div>
+              <label for="disability-choice-04" class="block-label block-label-slim"><input id="disability-choice-04" type="checkbox">Chronic fatigue syndrome/M.E.</label>
+            </div>
+            <div>
+              <label for="disability-choice-05" class="block-label block-label-slim"><input id="disability-choice-05" type="checkbox">Diabetes</label>
+            </div>
+            <div>
+              <label for="disability-choice-06" class="block-label block-label-slim"><input id="disability-choice-06" type="checkbox">Dyscalculia/Dysgraphia</label>
+            </div>
+            <div>
+              <label for="disability-choice-07" class="block-label block-label-slim"><input id="disability-choice-07" type="checkbox">Dyslexia</label>
+            </div>
+            <div>
+              <label for="disability-choice-08" class="block-label block-label-slim"><input id="disability-choice-08" type="checkbox">Dyspraxia</label>
+            </div>
+            <div>
+              <label for="disability-choice-09" class="block-label block-label-slim"><input id="disability-choice-09" type="checkbox">Epilepsy</label>
+            </div>
+            <div>
+              <label for="disability-choice-10" class="block-label block-label-slim"><input id="disability-choice-10" type="checkbox">Hearing difficulties</label>
+            </div>
+            <div>
+              <label for="disability-choice-11" class="block-label block-label-slim"><input id="disability-choice-11" type="checkbox">Mental health problems – e.g. depression</label>
+            </div>
+            <div>
+              <label for="disability-choice-12" class="block-label block-label-slim"><input id="disability-choice-12" type="checkbox">Musculoskeletal conditions – e.g. back pain</label>
+            </div>
+            <div>
+              <label for="disability-choice-13" class="block-label block-label-slim"><input id="disability-choice-13" type="checkbox">Visual impairments</label>
+            </div>
+            <div>
+              <label for="disability-choice-14" class="block-label block-label-slim"><input id="disability-choice-14" type="checkbox">Other</label>
+            </div>
+          </div>
+        </details>
         <label id="question4" class="form-label">Enter more information (optional)</label>
         <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
       </div>
@@ -157,9 +213,9 @@
 
   </div>
 
-  <p class="form-label">Will you need any adjustments for your assessment?</p>
+  <p class="form-label">Will you need adjustments or support for your assessment?</p>
   <p class="form-hint text">
-    For example, extra time if you require it
+    If you need extra support with your assessment we can offer reasonable adjustments, such as extra time or printed copies
   </p>
   <div class="form-group form-group-compound inline">
     <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
@@ -171,21 +227,74 @@
   </div>
   <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
     <p class="form-label">Please select which adjustments you'll need</p>
-    <div class="form-group form-group-compound">
-      <label for="adj-time" class="block-label">
-        <input type="checkbox" id="adj-time" aria-labelledby="adj-needs">Extra time
-      </label>
-    </div>
-    <div class="form-group  form-group-compound">
-      <label for="adj-screen" class="block-label">
-        <input type="checkbox" id="adj-screen" aria-labelledby="adj-needs">Screen magnification
-      </label>
-    </div>
-    <div class="form-group">
-      <label for="adj-paper" class="block-label">
-        <input type="checkbox" id="adj-paper" aria-labelledby="adj-needs">Printed copies on plain or coloured paper
-      </label>
-    </div>
+    <p class="form-hint text">Select from the list of adjustments or describe any other support you require</p>
+    <!-- <div class="grid-1-2 para-btm-margin">
+      <select multiple name="" id="adjustmentNeedsList" class="chosen-select" data-placeholder="Select at least one, or begin typing...">
+        <option value="Time extension - e.g. 25% or 30% ">Time extension - e.g. 25% or 30% </option>
+        <option value="Larger screen/Colour background">Larger screen/Colour background</option>
+        <option value="Paper colour">Paper colour</option>
+        <option value="Larger font/ Different style">Larger font/ Different style</option>
+        <option value="Screen reader – e.g. JAWS">Screen reader – e.g. JAWS</option>
+        <option value="Braille test paper">Braille test paper</option>
+        <option value="Room alone">Room alone</option>
+        <option value="Screen magnification software – e.g. Zoom text / Lunar">Screen magnification software – e.g. Zoom text / Lunar</option>
+        <option value="Rest breaks">Rest breaks</option>
+        <option value="Adjusted lighting">Adjusted lighting</option>
+        <option value="Special chair / footstool">Special chair / footstool</option>
+        <option value="Reader/assistant">Reader/assistant</option>
+        <option value="Stand up and move around">Stand up and move around</option>
+        <option value="Other">Other</option>
+      </select>
+    </div> -->
+    <details class="text">
+      <summary>
+        Choose from multiple options
+      </summary>
+      <div class="detail-content">
+        <div>
+          <label for="adjustment-choice-01" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-01">Time extension - e.g. 25% or 30% </label>
+        </div>
+        <div>
+          <label for="adjustment-choice-02" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-02">Larger screen/Colour background</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-03" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-03">Paper colour</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-04" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-04">Larger font/ Different style</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-05" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-05">Screen reader – e.g. JAWS</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-06" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-06">Braille test paper</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-07" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-07">Room alone</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-08" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-08">Screen magnification software – e.g. Zoom text / Lunar</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-09" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-09">Rest breaks</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-10" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-10">Adjusted lighting</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-11" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-11">Special chair / footstool</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-12" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-12">Reader/assistant</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-13" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-13">Stand up and move around</label>
+        </div>
+        <div>
+          <label for="adjustment-choice-14" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-14">Other</label>
+        </div>
+      </div>
+    </details>
     <div class="form-group">
       <label id="adj-other" class="form-label">Other adjustment need (optional)</label>
       <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
