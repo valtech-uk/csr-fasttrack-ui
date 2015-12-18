@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-GB" class="no-js not-ie8">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Administration home | Apply for a Civil Service apprenticeship</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!--[if gt IE 8]><!-->
+    <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <!--<![endif]-->
+    <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+    <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
+    <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
+    <script>
+    var html = document.documentElement;
+    html.className += " js-enabled";
+    if (!('open' in document.createElement('details')))
+    {
+      document.documentElement.className += ' no-details';
+    }
+    </script>
+    <!--[if lte IE 8]>
+    <script>
+      var head = document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+      style.type = 'text/css';
+      style.styleSheet.cssText = ':before,:after{content:none !important';
+      head.appendChild(style);
+      setTimeout(function(){
+          head.removeChild(style);
+      }, 0);
+    </script>
+  <![endif]-->
+    <script src="../_assets/js/vendor/modernizr-custom.js"></script>
+    <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
+  </head>
+  <body class="admin-container">
+    <div class="panel-ie">
+      <img src="../_assets/img/logo-ie.png" height="50" alt="Not optimised for IE 9 and lower"
+      align="left">
+      <p>It looks like you're using a version of Internet Explorer that this prototype
+        has not tested with - For the best experience, please switch to a modern
+        browser.</p>
+      <p><a href="" id="hideIEMessage">Hide this message</a>
+      </p>
+    </div>
+    <!-- <div id="global-cookie-message" class="cookie-banner">
+  <div class="content-container">
+      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
+  </div>
+</div> -->
+    <div class="skiplink-container header-skiplink">
+      <div>
+        <a href="#main" class="skiplink">Skip to main content</a>
+      </div>
+    </div>
+    <header role="banner" class="global-header">
+      <div class="global-header__wrapper">
+        <h1 class="heading-large no-btm-margin">Service administration</h1>
+      </div>
+    </header>
+    <div class="content-container">
+      <div class="phase-notice gov-border grid-wrapper">
+        <div class="grid grid-2-3">
+          <div class="prototype-warning">
+            <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#" target="_blank" rel="external">feedback</a> will help to improve it.</span>
+          </div>
+        </div>
+        <div class="grid grid-1-3">
+          <div class="account-info sign-in" id="bannerSignedOut">
+            <div class="small-btm-margin">
+              <a href="/admin/signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+            </div>
+          </div>
+          <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
+            <div class="small-btm-margin">
+              <span class="your-name" id="bannerUserName">Firstname Lastname</span>
+            </div>
+            <div>
+              <a class="account-link" id="applicationsLink" href="/admin/home.html">Home</a>
+              <a class="account-link" href="/admin/signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main role="main" id="main">
+        <div class="grid-wrapper">
+          <div class="grid grid-1-4">
+            <div class="inner-block-padr">
+              <ul class="list-text">
+                <li>Reporting</li>
+                <li><a href="find-applicant.html">Find an applicant</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid grid-3-4">
+            <h2 class="heading-xlarge">
+      Administration home
+    </h2>
+            <section>
+              <select name="" id="">
+                <option value="">All locations</option>
+                <optgroup class="East" data-optregion="East" label="East">
+                  <option value="Bedford">Bedford</option>
+                  <option value="Hertford">Hertford</option>
+                  <option value="Milton Keynes">Milton Keynes</option>
+                  <option value="Norwich">Norwich</option>
+                  <option value="Southend">Southend</option>
+                </optgroup>
+                <optgroup class="East-midlands" data-optregion="East-midlands" label="East Midlands">
+                  <option value="Leicester">Leicester</option>
+                  <option value="Nottingham">Nottingham</option>
+                </optgroup>
+                <optgroup class="London" data-optregion="London" label="Greater London">
+                  <option value="Hackney">Hackney</option>
+                  <option value="London">London</option>
+                  <option value="Northwood">Northwood</option>
+                </optgroup>
+                <optgroup class="North-east" data-optregion="North-east" label="North-east">
+                  <option value="Darlington">Darlington</option>
+                  <option value="Jarrow South">Jarrow South</option>
+                  <option value="Newcastle">Newcastle</option>
+                  <option value="Stockton">Stockton</option>
+                  <option value="Teeside">Teeside</option>
+                  <option value="Washington">Washington</option>
+                </optgroup>
+                <optgroup class="North-west" data-optregion="North-west" label="North-west">
+                  <option value="Blackpool">Blackpool</option>
+                  <option value="Bootle">Bootle</option>
+                  <option value="Liverpool">Liverpool</option>
+                  <option value="Lytham St Annes">Lytham St Annes</option>
+                  <option value="Manchester">Manchester</option>
+                  <option value="Preston">Preston</option>
+                  <option value="Salford">Salford</option>
+                  <option value="Shipley">Shipley</option>
+                </optgroup>
+                <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
+                  <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
+                  <option value="Cumbernauld">Cumbernauld</option>
+                  <option value="Dundee">Dundee</option>
+                  <option value="East Kilbride">East Kilbride</option>
+                  <option value="Edinburgh">Edinburgh</option>
+                  <option value="Glasgow">Glasgow</option>
+                </optgroup>
+                <optgroup class="South-east" data-optregion="South-east" label="South-east">
+                  <option value="Andover">Andover</option>
+                  <option value="Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
+                  <option value="Chilton">Chilton</option>
+                  <option value="Hastings">Hastings</option>
+                  <option value="High Wycombe">High Wycombe</option>
+                  <option value="Kent (inc.Ramsgate)">Kent (inc.Ramsgate)</option>
+                  <option value="Oxford">Oxford</option>
+                  <option value="Reading">Reading</option>
+                  <option value="Shrivenham">Shrivenham</option>
+                  <option value="Surrey">Surrey</option>
+                  <option value="Worthing">Worthing</option>
+                </optgroup>
+                <optgroup class="South-west" data-optregion="South-west" label="South-west">
+                  <option value="Bristol">Bristol</option>
+                </optgroup>
+                <optgroup class="Wales" data-optregion="Wales" label="Wales">
+                  <option value="Cardiff">Cardiff</option>
+                  <option value="Merthyr Tydfil">Merthyr Tydfil</option>
+                  <option value="Swansea">Swansea</option>
+                </optgroup>
+                <optgroup class="West-midlands" data-optregion="West-midlands" label="West Midlands">
+                  <option value="Birmingham">Birmingham</option>
+                  <option value="Cosford">Cosford</option>
+                  <option value="Coventry">Coventry</option>
+                  <option value="Handsworth">Handsworth</option>
+                  <option value="Lichfield">Lichfield</option>
+                  <option value="Stratford">Stratford</option>
+                  <option value="Sutton Coldfield">Sutton Coldfield</option>
+                  <option value="Telford">Telford</option>
+                  <option value="Walsall">Walsall</option>
+                  <option value="Wolverhampton">Wolverhampton</option>
+                </optgroup>
+                <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
+                  <option value="Bradford">Bradford</option>
+                  <option value="Leeds">Leeds</option>
+                  <option value="Sheffield">Sheffield</option>
+                  <option value="York">York</option>
+                </optgroup>
+              </select>
+              <select name="" id="">
+                <option value="">All schemes</option>
+                <option value="">Business</option>
+                <option value="">Commercial</option>
+                <option value="">Digital technology</option>
+                <option value="">Finance</option>
+                <option value="">Project delivery</option>
+              </select>
+              <a href="" class="button-link">
+        Filter results
+      </a>
+            </section>
+            <section>
+              <h3 class="heading-medium">
+        Total pending applicants: <span>2,124</span>
+      </h3>
+              <h3 class="heading-medium">
+        Total submitted applicants: <span>3,134</span>
+      </h3>
+            </section>
+            <section>
+              <a href="" class="button">Export report</a>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="gov-border" role="contentinfo">
+      <div class="footer__wrapper">
+        <div class="footer__meta">
+          <ul class="footer__nav" role="navigation">
+            <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"
+              class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">Open Government Licence v3.0</a>,
+              except where otherwise stated</li>
+          </ul>
+          <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
+          target="_blank">
+            <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+            <p>&copy; Crown copyright</p>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="../_assets/js/vendor/fastclick.js"></script>
+    <script src="../_assets/js/vendor/chosen.jquery.js"></script>
+    <script src="../_assets/js/scripts.js"></script>
+    <!-- Prototype specific scripts -->
+    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
+    <script src="../_assets/js/prototype.js"></script>
+  </body>
+</html>
