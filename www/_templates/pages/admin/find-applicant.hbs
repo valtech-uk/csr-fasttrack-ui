@@ -47,7 +47,99 @@ layout: admin-layout.hbs
         <a href="" class="button" id="findApplicantBtn">Find applicant</a>
       </div>
     </section>
-    <section>
+    <section class="grid-wrapper" id="singleApplicant">
+      <div class="grid grid-1-2">
+        <h3 class="heading-medium">John Smith</h3>
+        <section>
+          <h4 class="bold-small">Date of birth</h4>
+          <p>23 January 1998</p>
+        </section>
+        <section>
+          <h4 class="bold-small">Address</h4>
+          <p>1 London road, Harrow, HA4 3HD</p>
+        </section>
+        <section>
+          <h4 class="bold-small">Email</h4>
+          <p>john.smith@email.com</p>
+        </section>
+        <section>
+          <h4 class="bold-small">Phone number</h4>
+          <p>078383929829</p>
+        </section>
+        <section>
+          <h4 class="bold-small">Locations and schemes</h4>
+          <p class="small-btm-margin">Birmingham (Business, Project delivery)</p>
+          <p>Coventry (Business, Finance)</p>
+        </section>
+        <section>
+          <h4 class="bold-small">Application status</h4>
+          <p>Submitted application (3 February 2016)</p>
+        </section>
+      </div>
+      <div class="grid grid-1-2">
+        <div class="hgroup-medium">
+          <h3 class="heading-medium">Security questions</h3>
+          <p class="subtitle">Ask 3 of the following questions</p>
+        </div>
+        <div class="panel-border">
+          <div class="form-group form-group-compound">
+            <p class="form-label">What is your postcode?</p>
+            <label for="question-01-correct" class="block-label block-label-slim">
+              <input name="question-01" type="radio" id="question-01-correct">Correct
+            </label>
+            <label for="question-01-wrong" class="block-label block-label-slim">
+              <input name="question-01" type="radio" id="question-01-wrong">Wrong
+            </label>
+          </div>
+          <div class="form-group form-group-compound">
+            <p class="form-label">What is your full address?</p>
+            <label for="question-02-correct" class="block-label block-label-slim">
+              <input name="question-02" type="radio" id="question-02-correct">Correct
+            </label>
+            <label for="question-02-wrong" class="block-label block-label-slim">
+              <input name="question-02" type="radio" id="question-02-wrong">Wrong
+            </label>
+          </div>
+          <div class="form-group form-group-compound">
+            <p class="form-label">What is your phone number?</p>
+            <label for="question-03-correct" class="block-label block-label-slim">
+              <input name="question-03" type="radio" id="question-03-correct">Correct
+            </label>
+            <label for="question-03-wrong" class="block-label block-label-slim">
+              <input name="question-03" type="radio" id="question-03-wrong">Wrong
+            </label>
+          </div>
+          <div class="form-group form-group-compound">
+            <p class="form-label">What is your email address?</p>
+            <label for="question-04-correct" class="block-label block-label-slim">
+              <input name="question-04" type="radio" id="question-04-correct">Correct
+            </label>
+            <label for="question-04-wrong" class="block-label block-label-slim">
+              <input name="question-04" type="radio" id="question-04-wrong">Wrong
+            </label>
+          </div>
+          <div class="form-group form-group-compound">
+            <p class="form-label">Which location did you choose?</p>
+            <label for="question-05-correct" class="block-label block-label-slim">
+              <input name="question-05" type="radio" id="question-05-correct">Correct
+            </label>
+            <label for="question-05-wrong" class="block-label block-label-slim">
+              <input name="question-05" type="radio" id="question-05-wrong">Wrong
+            </label>
+          </div>
+          <div class="form-group form-group-compound">
+            <p class="form-label">Which scheme did you choose?</p>
+            <label for="question-06-correct" class="block-label block-label-slim">
+              <input name="question-06" type="radio" id="question-06-correct">Correct
+            </label>
+            <label for="question-06-wrong" class="block-label block-label-slim">
+              <input name="question-06" type="radio" id="question-06-wrong">Wrong
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="multipleApplicants">
 
     </section>
 

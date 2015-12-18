@@ -151,6 +151,11 @@
   }
 }
 
+.panel-border {
+  outline: 1px solid $grey-2;
+  padding: $gutter-half;
+}
+
 .scrolling-panel {
   overflow-y: auto;
   // -webkit-overflow-scrolling: auto;
