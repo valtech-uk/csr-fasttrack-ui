@@ -11,8 +11,11 @@
 
 .content-container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1020px;
   padding: 0 15px;
+  .admin-container & {
+    max-width: 1200px;
+  }
   @include media(tablet) {
     padding: 0 30px;
   }

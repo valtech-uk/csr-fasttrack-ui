@@ -38,9 +38,12 @@
 
 .global-header__wrapper {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1020px;
   overflow: hidden;
   padding: 15px;
+  .admin-container & {
+    max-width: 1200px;
+  }
   @include media(tablet) {
     padding-left: 30px;
     padding-right: 30px;

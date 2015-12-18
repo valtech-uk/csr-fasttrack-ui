@@ -33,9 +33,12 @@ footer {
 
 .footer__meta {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1000px;
   overflow: hidden;
   padding: 10px 15px 60px;
+  .admin-container & {
+    max-width: 1180px;
+  }
   @include media(tablet) {
     padding-top: 60px;
   }
