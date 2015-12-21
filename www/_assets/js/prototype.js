@@ -344,7 +344,19 @@ $(function() {
     } else {
       $('#securityQuestions').removeClass('failed-security');
     }
+  });
 
+  $('#findApplicantBtn').on('click', function(e) {
+    e.preventDefault();
+
+    $('#multipleApplicants').show();
+  });
+
+  $('.viewApplicant').on('click', function(e) {
+    e.preventDefault();
+
+    $('#multipleApplicants').hide();
+    $('#singleApplicant').show();
   });
 
 // --------------- Not to be used in production -------------- //

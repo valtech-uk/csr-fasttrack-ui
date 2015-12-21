@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Administration home | Apply for a Civil Service apprenticeship</title>
+    <title>Find an applicant | Apply for a Civil Service apprenticeship</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -139,7 +139,24 @@
                 <a href="" class="button" id="findApplicantBtn">Find applicant</a>
               </div>
             </section>
-            <section class="grid-wrapper" id="singleApplicant">
+            <section id="multipleApplicants" class="toggle-content">
+              <h3 class="heading-medium">Multiple matches found</h3>
+              <ul class="list-text">
+                <li>
+                  <a href="" class="inl-block small-right-margin viewApplicant">View applicant</a>
+                  Smith, James; 17/7/1998; 1 Perrinsfield, Lechlade, Gloucestershire, GL7 3SD
+                </li>
+                <li>
+                  <a href="" class="inl-block small-right-margin viewApplicant">View applicant</a>
+                  Smith, John; 17/7/1998; 1 London Road, Harrow, HA4 5JS
+                </li>
+                <li>
+                  <a href="" class="inl-block small-right-margin viewApplicant">View applicant</a>
+                  Smith, Tim, 17/7/1998; 7 Southdown, Wanborough, Swindon, SN4 0DD
+                </li>
+              </ul>
+            </section>
+            <section class="grid-wrapper toggle-content" id="singleApplicant">
               <div class="grid grid-1-2">
                 <h3 class="heading-medium">John Smith</h3>
                 <section>
@@ -232,8 +249,6 @@
                   <p class="bold-small passed-text" id="securityPassed">Security check passed</p>
                 </div>
               </div>
-            </section>
-            <section id="multipleApplicants">
             </section>
           </div>
         </div>
