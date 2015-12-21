@@ -268,6 +268,10 @@ $(function() {
     $('#accountUnlocked').show();
   }
 
+  if($('#signedOut').length && gup('Status') == 'cookie') {
+    $('#global-cookie-message').removeClass('hidden');
+  }
+
 
   $('#hideIEMessage').on('click', function() {
     $.cookie('hideMessage', true, {path: '/'});
