@@ -372,21 +372,47 @@ $(function() {
   //------- Password meter
 
   if($('.new-password').length) {
+    var minChars = 9,
+        upperCase = new RegExp('[A-Z]'),
+        lowerCase = new RegExp('[a-z]'),
+        numbers = new RegExp('[0-9]'),
+        passInput = $(".new-password");
 
-    $('.new-password').after('<p class="form-hint text strength-indicator hide-nojs">Password strength: <span id="pass_meter"></span></p>')
+    passInput.after('<p class="form-hint text strength-indicator hide-nojs">Password validation: <span id="pass_meter"></span></p>');
 
-    $('body').append('<script src="//cdnjs.cloudflare.com/ajax/libs/zxcvbn/2.0.2/zxcvbn.min.js" type="text/javascript"></script>');
+    passInput.keyup(function () {
+      var passVal = $(this).val(),
+          passMeter = $("#pass_meter");
 
-    $(".new-password").keyup(function () {
-      initializeStrengthMeter();
+      passMeter.removeClass();
+
+      if(passVal.length < minChars) {
+        passMeter.addClass('strength-weak').text('Must be at least ' + minChars + ' characters');
+      } else {
+        if(!passVal.match(upperCase) && !passVal.match(lowerCase) && !passVal.match(numbers)) {
+          passMeter.addClass('strength-weak').text('Requires upper and lowercase letters and at least one number');
+        }
+        if(passVal.match(upperCase) && !passVal.match(lowerCase) && !passVal.match(numbers)) {
+          passMeter.addClass('strength-weak').text('Requires lowercase letters and at least one number');
+        }
+        if(!passVal.match(upperCase) && passVal.match(lowerCase) && !passVal.match(numbers)) {
+          passMeter.addClass('strength-weak').text('Requires uppercase letters and at least one number');
+        }
+        if(!passVal.match(upperCase) && !passVal.match(lowerCase) && passVal.match(numbers)) {
+          passMeter.addClass('strength-weak').text('Requires upper and lowercase letters');
+        }
+        if(!passVal.match(upperCase) && passVal.match(lowerCase) && passVal.match(numbers)) {
+          passMeter.addClass('strength-weak').text('Requires uppercase letters');
+        }
+        if(passVal.match(upperCase) && passVal.match(lowerCase) && !passVal.match(numbers)) {
+          passMeter.addClass('strength-weak').text('Requires at least one number');
+        }
+        if(passVal.match(upperCase) && passVal.match(lowerCase) && passVal.match(numbers)) {
+          passMeter.addClass('strength-strong').text('Your password is valid');
+        }
+      }
+
     });
-
-    function initializeStrengthMeter() {
-        $("#pass_meter").pwStrengthManager({
-            password: $(".new-password").val(),
-            minChars: 9
-        });
-    }
   }
 
 
