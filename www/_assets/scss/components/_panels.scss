@@ -154,6 +154,25 @@
 .panel-border {
   outline: 1px solid $grey-2;
   padding: $gutter-half;
+  .failed-text, .passed-text {
+    display: none;
+  }
+  &.failed-security {
+    background-color: $error-background;
+    outline: 2px solid $error-colour;
+    .failed-text {
+      color: $error-colour;
+      display: block;
+    }
+  }
+  &.passed-security {
+    background-color: $success-background;
+    outline: 2px solid $success-colour;
+    .passed-text {
+      color: $success-colour;
+      display: block;
+    }
+  }
 }
 
 .scrolling-panel {

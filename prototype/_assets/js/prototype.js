@@ -320,5 +320,23 @@ $(function() {
     }
   }
 
+  $('#securityQuestions').on('change [radio]', function() {
+    var secureYes = $('#securityQuestions [data-secure="yes"]:checked'),
+        secureNo = $('#securityQuestions [data-secure="no"]:checked');
+
+    if(secureNo.length >= 3) {
+      $('#securityQuestions').addClass('failed-security');
+    } else {
+      $('#securityQuestions').removeClass('failed-security');
+    }
+
+    if(secureYes.length >= 3) {
+      $('#securityQuestions').addClass('passed-security');
+      $('#securityQuestions').removeClass('failed-security');
+    } else {
+      $('#securityQuestions').removeClass('passed-security');
+    }
+  });
+
 // --------------- Not to be used in production -------------- //
 });
