@@ -264,6 +264,10 @@ $(function() {
     $('#withdrawnApplication').show();
   }
 
+  if($('#signedOut').length && gup('Status') == 'unlocked') {
+    $('#accountUnlocked').show();
+  }
+
 
   $('#hideIEMessage').on('click', function() {
     $.cookie('hideMessage', true, {path: '/'});
@@ -324,18 +328,19 @@ $(function() {
     var secureYes = $('#securityQuestions [data-secure="yes"]:checked'),
         secureNo = $('#securityQuestions [data-secure="no"]:checked');
 
-    if(secureNo.length >= 3) {
+    if(secureYes.length >= 3) {
+      $('#securityQuestions').addClass('passed-security');
+    } else {
+      $('#securityQuestions').removeClass('passed-security');
+    }
+
+    if(secureNo.length >= 1) {
       $('#securityQuestions').addClass('failed-security');
+      $('#securityQuestions').removeClass('passed-security');
     } else {
       $('#securityQuestions').removeClass('failed-security');
     }
 
-    if(secureYes.length >= 3) {
-      $('#securityQuestions').addClass('passed-security');
-      $('#securityQuestions').removeClass('failed-security');
-    } else {
-      $('#securityQuestions').removeClass('passed-security');
-    }
   });
 
 // --------------- Not to be used in production -------------- //
