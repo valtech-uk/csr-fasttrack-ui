@@ -112,8 +112,8 @@
 <section class="text">
     <h2 class="heading-large">Privacy</h2>
     <p>
-        This service is run by Civil Service Resourcing ("CSR"). We'll handle the information you give to us according to the
-        <a href="" rel="external" target="_blank">CSR Privacy Notice (TODO)</a>.
+        This service is run by Civil Service Resourcing. We'll handle the information you give to us according to the
+        <a href="" rel="external" target="_blank">Civil Service Resourcing Privacy Notice (TODO)</a>.
     </p>
     <p>When you create an account on the service, the personal information you give us will be used:</p>
     <ul>
@@ -141,16 +141,16 @@
 </section>
 
 <section class="text">
-    <h2 class="heading-medium">Google analytics cookie</h2>
-    <p>We use Google analytics to collect information about how you use the service. This information helps us to make improvements.</p>
-    <p>The Google analytics cookie collects and stores information about:</p>
+    <h2 class="heading-medium">Google Analytics cookie</h2>
+    <p>We use Google Analytics to collect information about how you use the service. This information helps us to make improvements.</p>
+    <p>The Google Analytics cookie collects and stores information about:</p>
     <ul>
         <li>the pages you visit</li>
         <li>how long you spend on each page</li>
         <li>how you got to the service</li>
         <li>what you click on while you're using the service</li>
     </ul>
-    <p>Google analytics isn't allowed to use or share our analytics data with anyone, but you can <a href="https://tools.google.com/dlpage/gaoptout" rel="external" target="_blank">opt out</a> if you wish.</p>
+    <p>Google Analytics isn't allowed to use or share our analytics data with anyone, but you can <a href="https://tools.google.com/dlpage/gaoptout" rel="external" target="_blank">opt out</a> if you wish.</p>
     <table>
       <colgroup>
           <col class="t20">
@@ -177,10 +177,21 @@
               _ga
           </td>
           <td>
-              Measures the number and volume of visitors
+              This helps us identify how you use GOV.UK so we can make the site better
           </td>
           <td>
               2 years
+          </td>
+      </tr>
+      <tr>
+          <td>
+              _gat
+          </td>
+          <td>
+              This helps us identify how you use GOV.UK so we can make the site better
+          </td>
+          <td>
+              10 minutes
           </td>
       </tr>
     </tbody>
@@ -191,98 +202,52 @@
     <h2 class="heading-medium">Session cookies</h2>
     <p>We store session cookies on your computer to help keep your information secure while you use the service.</p>
     <table>
-        <colgroup>
-            <col class="t20">
-            <col class="t60">
-            <col class="t20">
-            <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Purpose
-                </th>
-                <th>
-                    Expires
-                </th>
-            </tr>
-        </thead>
-        <tbody><tr>
-            <td>
-                User.Data
-            </td>
-            <td>
-                Stores the session id and settings of a signed in user that are lost when the session ends.
-            </td>
-            <td>
-                Session
-            </td>
-        </tr>
-        <tr>
-            <td>
-                User.Context
-            </td>
-            <td>
-                Stores the email address and full name of a signed in user.
-            </td>
-            <td>
-                Session
-            </td>
-        </tr>
-        <tr>
-            <td>
-                User.Auth
-            </td>
-            <td>
-                Stores encrypted information that is used by the server to identify the signed in user.
-            </td>
-            <td>
-                2 hours
-            </td>
-        </tr>
->
-        </tr>
-    </tbody></table>
+      <thead>
+      <tr>
+          <th>Name</th>
+          <th>Purpose</th>
+          <th>Expires</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>mdtp</td>
+              <td>Stores session data</td>
+              <td>When you close your browser</td>
+          </tr>
+          <tr>
+              <td>mdtpp</td>
+              <td>Stores session data</td>
+              <td>When you close your browser</td>
+          </tr>
+          <tr>
+              <td>mdtpdf</td>
+              <td>Stores session data</td>
+              <td>When you close your browser</td>
+          </tr>
+      </tbody>
+  </table>
 </section>
 
 <section class="text">
     <h2 class="heading-medium">Introductory message cookies</h2>
-    <p>When you first use the service, you may see pop-up 'welcome' or 'help' messages. Once you've seen one of these, we store a cookie on your computer so it knows not to show it to you again.</p>
+    <p>You may see a pop-up welcome message when you first visit. A cookie is stored so that your computer knows you’ve seen it and knows not to show it again.</p>
     <table>
-        <colgroup>
-            <col class="t20">
-            <col class="t60">
-            <col class="t20">
-            <col>
-        </colgroup>
-        <thead>
-            <tr>
-                <th>
-                    Name
-                </th>
-                <th>
-                    Purpose
-                </th>
-                <th>
-                    Expires
-                </th>
-            </tr>
-        </thead>
-        <tbody><tr>
-            <td>
-                DisplayEuCookieDirective
-            </td>
-            <td>
-                Saves a message to let us know you've seen our cookie message.
-            </td>
-            <td>
-                12 months
-            </td>
-        </tr>
-    </tbody></table>
+      <thead>
+      <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Purpose</th>
+          <th scope="col">Expires</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>seen_cookie_message</td>
+          <td>Saves a message to let us know that you have seen our cookie message</td>
+          <td>1 month</td>
+      </tr>
+      </tbody>
+  </table>
 </section>
 
 
