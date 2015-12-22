@@ -292,17 +292,6 @@ $(function() {
     $('#bannerSignedIn').hide();
   }
 
-  $("#Password").keyup(function () {
-    initializeStrengthMeter();
-  });
-
-  function initializeStrengthMeter() {
-    $("#pass_meter").pwStrengthManager({
-        password: $("#Password").val(),
-        minChars: 8
-    });
-  }
-
   $('.pw-masktoggle').on("click", function () {
     changePassType();
     toggleShowHide();

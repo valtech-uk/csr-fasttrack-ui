@@ -122,25 +122,19 @@ progress[value] {
     .grid {
       margin-top: -1.2em;
     }
-    &:nth-child(1) {
+    &.first-step {
       border-color: $purple-50;
       &.active {
         border-color: $purple;
       }
     }
-    // &:nth-child(2) {
-    //   border-color: $mauve-50;
-    //   &.active {
-    //     border-color: $mauve;
-    //   }
-    // }
-    &:nth-child(2) {
+    &.second-step {
       border-color: $orange-50;
       &.active {
         border-color: $orange;
       }
     }
-    &:nth-child(3) {
+    &.third-step {
       border-color: $grass-green-50;
       &.active {
         border-color: $grass-green;
@@ -168,10 +162,10 @@ progress[value] {
         margin: -2.5em -3.55em;
       }
     }
-    &:nth-last-child(2) {
+    &.fourth-step {
       margin-bottom: 1.25em;
     }
-    &:last-child {
+    &.fourth-step {
       border-left-color: transparent;
       margin-top: 0;
       padding-top: 1em;
