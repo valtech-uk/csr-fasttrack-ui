@@ -348,5 +348,14 @@ $(function() {
     $('#singleApplicant').show();
   });
 
+  $('#returnToApplicants').on('click', function(e) {
+    e.preventDefault();
+
+    $('#multipleApplicants').show();
+    $('#singleApplicant').hide();
+  });
+
+
+
 // --------------- Not to be used in production -------------- //
 });
