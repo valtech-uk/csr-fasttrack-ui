@@ -151,8 +151,7 @@
   }
 }
 
-.panel-border {
-  outline: 1px solid $grey-2;
+.question-panel {
   padding: $gutter-half;
   .failed-text, .passed-text {
     display: none;

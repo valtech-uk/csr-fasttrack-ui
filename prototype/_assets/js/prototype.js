@@ -317,21 +317,21 @@ $(function() {
     }
   }
 
-  $('#securityQuestions').on('change [radio]', function() {
-    var secureYes = $('#securityQuestions [data-secure="yes"]:checked'),
-        secureNo = $('#securityQuestions [data-secure="no"]:checked');
+  $('#singleApplicant').on('change [radio]', function() {
+    var secureYes = $('#singleApplicant [data-secure="yes"]:checked'),
+        secureNo = $('#singleApplicant [data-secure="no"]:checked');
 
     if(secureYes.length >= 3) {
-      $('#securityQuestions').addClass('passed-security');
+      $('#singleApplicant').addClass('passed-security');
     } else {
-      $('#securityQuestions').removeClass('passed-security');
+      $('#singleApplicant').removeClass('passed-security');
     }
 
     if(secureNo.length >= 1) {
-      $('#securityQuestions').addClass('failed-security');
-      $('#securityQuestions').removeClass('passed-security');
+      $('#singleApplicant').addClass('failed-security');
+      $('#singleApplicant').removeClass('passed-security');
     } else {
-      $('#securityQuestions').removeClass('failed-security');
+      $('#singleApplicant').removeClass('failed-security');
     }
   });
 
