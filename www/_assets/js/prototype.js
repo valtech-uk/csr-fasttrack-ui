@@ -299,37 +299,19 @@ $(function() {
     return false;
   });
 
-  function changePassType() {
-    var password = document.getElementById('Password');
-    if (password.type == 'password') {
-        password.type = 'text';
-    } else {
-        password.type = 'password';
-    }
-  }
-
-  function toggleShowHide() {
-    var showOrHide = $('.pw-masktoggle').text();
-    if (showOrHide == 'Show') {
-        $('.pw-masktoggle').text('Hide');
-    } else {
-        $('.pw-masktoggle').text('Show');
-    }
-  }
-
   $('#singleApplicant').on('change [radio]', function() {
     var secureYes = $('#singleApplicant [data-secure="yes"]:checked'),
         secureNo = $('#singleApplicant [data-secure="no"]:checked');
 
     if(secureYes.length >= 3) {
       $('#singleApplicant').addClass('passed-security');
+      $('#singleApplicant').removeClass('failed-security');
     } else {
       $('#singleApplicant').removeClass('passed-security');
     }
 
-    if(secureNo.length >= 1) {
+    if(secureNo.length >= 1 && secureYes.length < 3) {
       $('#singleApplicant').addClass('failed-security');
-      $('#singleApplicant').removeClass('passed-security');
     } else {
       $('#singleApplicant').removeClass('failed-security');
     }

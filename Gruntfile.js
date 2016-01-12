@@ -184,7 +184,7 @@ module.exports = function(grunt) {
             options: {
                 indent: 2,
                 wrap_line_length: 78,
-                brace_style: 'expand',
+                brace_style: 'expand'
             },
             // Specify a number to padcomments
             prototype: {
