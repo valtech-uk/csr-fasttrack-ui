@@ -20,9 +20,9 @@ layout: admin-layout.hbs
     </div>
     <div class="grid-wrapper">
       <div class="grid grid-1-2">
-        <p><a href="find-candidate.html">Return to search</a></p>
+        <p><a href="candidate-results.html">Return to results</a></p>
         <div class="hgroup-medium">
-          <h3 class="heading-medium">John Smith</h3>
+          <h3 class="heading-medium">Candidate information</h3>
         </div>
       </div>
       <!-- <div class="grid grid-1-2">
@@ -31,37 +31,91 @@ layout: admin-layout.hbs
         </div>
       </div> -->
     </div>
+<section class="section-border">
+  <section>
+    <h4 class="bold-small">Email address</h4>
+    <p>john.smith@email.com</p>
+  </section>
 
-    <div>
-      <h4 class="bold-small">Email</h4>
-      <p>john.smith@email.com</p>
-    </div>
+  <section>
+    <h4 class="bold-small">Application status</h4>
+    <p>Submitted application (3 February 2016)</p>
+  </section>
 
-    <div>
-      <h4 class="bold-small">Date of birth</h4>
-      <p>23 January 1998</p>
-    </div>
+  <section>
+    <h3 class="heading-small">Full name</h3>
+    <p id="fullName">John Smith</p>
+  </section>
 
-    <div>
-      <h4 class="bold-small">Address</h4>
-      <p>1 London road, Harrow, HA4 3HD</p>
-    </div>
+  <section>
+    <h3 class="heading-small">What should we call you?</h3>
+    <p id="preferredName">John</p>
+  </section>
+  <section>
+    <h3 class="heading-small">Date of birth</h3>
+    <p id="dateOfBirth">19 May 1994</p>
+  </section>
+  <section>
+    <h3 class="heading-small">Address</h3>
+    <ul class="list-text">
+      <li id="address1">38 Bolton Road</li>
+      <li id="address2">Windsor</li>
+      <li id="address3">Windsor and Maidenhead</li>
+      <li id="address3b"></li>
+      <li id="address4">SL3 5LK</li>
+    </ul>
+  </section>
+  <section>
+    <h3 class="heading-small">Telephone number</h3>
+    <p id="phone-input">07988 346763</p>
+    <p id="phone-input2"></p>
+  </section>
+  <section>
+    <h3 class="heading-small">Qualifications</h3>
+    <p id="minGCSEs" class="hidden">At least 5 GCSEs or equivalent</p>
+    <p id="minAlevels">At least 2 A-levels</p>
+  </section>
+</section>
 
-    <div>
-      <h4 class="bold-small">Phone number</h4>
-      <p>078383929829</p>
-    </div>
+<section class="section-border">
+  <h2 class="heading-large">
+    Locations and scheme
+  </h2>
+  <section>
+    <h3 class="heading-small">First preference</h3>
+    <p id="firstPreference">Newcastle (Business, Project delivery)</p>
+  </section>
+  <section>
+    <h3 class="heading-small">Second preference</h3>
+    <p id="secondPreference">Manchester (Commercial, Business admin)</p>
+  </section>
+  <section>
+    <h3 class="heading-small">Would you consider an alternative location?</h3>
+    <p id="considerAltLocation">Yes</p>
+  </section>
+  <section>
+    <h3 class="heading-small">Would you consider an alternative scheme?</h3>
+    <p id="considerAltScheme">No</p>
+  </section>
+</section>
+<section class="section-border">
+  <h2 class="heading-large">
+    Additional information
+  </h2>
+  <section>
+    <h3 class="heading-small">Do you have a disability?</h3>
+    <p>No</p>
+  </section>
+  <section>
+    <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
+    <p>No</p>
+  </section>
+  <section>
+    <h3 class="heading-small">How did you hear about us?</h3>
+    <p>Not specified</p>
+  </section>
+</section>
 
-    <div>
-      <h4 class="bold-small">Locations and schemes</h4>
-      <p class="small-btm-margin">Birmingham (Business, Project delivery)</p>
-      <p>Coventry (Business, Finance)</p>
-    </div>
-
-    <div>
-      <h4 class="bold-small">Application status</h4>
-      <p>Submitted application (3 February 2016)</p>
-    </div>
 
   </div>
 </div>
