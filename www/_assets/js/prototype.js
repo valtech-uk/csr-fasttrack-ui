@@ -323,21 +323,9 @@ $(function() {
     $('#multipleApplicants').show();
   });
 
-  $('.viewApplicant').on('click', function(e) {
-    e.preventDefault();
-
-    $('#multipleApplicants').hide();
-    $('#singleApplicant').show();
-  });
-
-  $('#returnToApplicants').on('click', function(e) {
-    e.preventDefault();
-
+  if(gup('show') == 'results') {
     $('#multipleApplicants').show();
-    $('#singleApplicant').hide();
-  });
-
-
+  }
 
 // --------------- Not to be used in production -------------- //
 });
