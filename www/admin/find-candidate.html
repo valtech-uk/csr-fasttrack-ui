@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Find an applicant | Apply for a Civil Service apprenticeship</title>
+  <title>Find a candidate | Apply for a Civil Service apprenticeship</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -58,34 +58,17 @@
 </div>
 <header role="banner" class="global-header">
   <div class="global-header__wrapper">
-    <h1 class="heading-medium no-btm-margin">Apply for Civil Service apprenticeship | Administation</h1>
+    <div class="grid-wrapper">
+      <div class="grid grid-3-4">
+        <h1 class="bold-medium">Apply for Civil Service apprenticeship | Administation</h1>
+      </div>
+      <div class="grid grid-1-4">
+        <h2 class="bold-small">Hello, James</h2>
+      </div>
+    </div>
   </div>
 </header>
   <div class="content-container">
-    <div class="phase-notice gov-border grid-wrapper">
-  <div class="grid grid-2-3">
-    <div class="prototype-warning">
-      <strong class="beta__label">Beta</strong> <span>This is a prototype – your <a href="#" target="_blank" rel="external">feedback</a> will help to improve it.</span>
-    </div>
-  </div>
-  <div class="grid grid-1-3">
-    <div class="account-info sign-in" id="bannerSignedOut">
-      <div class="small-btm-margin">
-        <a href="/admin/signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
-      </div>
-    </div>
-    <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
-      <div class="small-btm-margin">
-        <span class="your-name" id="bannerUserName">Firstname Lastname</span>
-      </div>
-      <div>
-        <a class="account-link" id="applicationsLink" href="/admin/home.html">Home</a>
-        <a class="account-link" href="/admin/signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
-      </div>
-    </div>
-  </div>
-</div>
-
     <main role="main" id="main">
       
 
@@ -93,15 +76,15 @@
   <div class="grid grid-1-4">
     <div class="inner-block-padr">
       <ul class="list-text">
-        <li><a href="home.html">Reporting</a></li>
-        <li>Find an applicant</li>
+        <li>Find a candidate</li>
+        <li><a href="reporting.html">Reporting</a></li>
       </ul>
     </div>
   </div>
   <div class="grid grid-3-4">
     <div class="hgroup-large">
       <h2 class="heading-xlarge">
-        Find an applicant
+        Find a candidate
       </h2>
     </div>
     <section class="section-border">
@@ -110,11 +93,11 @@
         <input type="text" class="form-control" id="last-name"/>
       </div>
       <div class="form-group">
-        <label class="form-label" for="email-address">Email address (optional)</label>
+        <label class="form-label" for="email-address">Email address</label>
         <input type="text" class="form-control" id="email-address"/>
       </div>
       <div class="form-group form-group-compound inline-fixed">
-        <p class="form-label">Date of birth (optional)</p>
+        <p class="form-label">Date of birth</p>
         <span class="form-hint">For example, 19 7 1994</span>
         <div class="form-group form-group-compound">
           <label class="date-hint" for="dob-day">Day</label>
@@ -130,26 +113,12 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="address4" class="form-label">Postcode (optional)</label>
+        <label for="address4" class="form-label">Postcode</label>
         <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
       </div>
       <div class="form-group">
-        <a href="" class="button" id="findApplicantBtn">Find applicant</a>
+        <a href="candidate-results.html" class="button">Find candidate</a>
       </div>
-    </section>
-    <section id="multipleApplicants" class="toggle-content">
-      <h3 class="heading-medium">Multiple matches found</h3>
-      <ul class="list-text">
-        <li>
-          <a href="applicant.html" class="inl-block link-unimp">Smith, James; 17/7/1998; 1 Perrinsfield, Lechlade, Gloucestershire, GL7 3SD</a>
-        </li>
-        <li>
-          <a href="applicant.html" class="inl-block link-unimp">Smith, John; 17/7/1998; 1 London Road, Harrow, HA4 5JS</a>
-        </li>
-        <li>
-          <a href="applicant.html" class="inl-block link-unimp">Smith, Tim, 17/7/1998; 7 Southdown, Wanborough, Swindon, SN4 0DD</a>
-        </li>
-      </ul>
     </section>
 
 
