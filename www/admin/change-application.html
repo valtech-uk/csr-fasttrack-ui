@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" class="no-js not-ie8"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Find a candidate | Apply for a Civil Service apprenticeship</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <!--[if gt IE 8]><!--> <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+  <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+
+  <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
+  <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <script>
+    var html = document.documentElement;
+    html.className += " js-enabled";
+
+    if (!('open' in document.createElement('details'))) {
+      document.documentElement.className += ' no-details';
+    }
+  </script>
+  <!--[if lte IE 8]>
+    <script>
+      var head = document.getElementsByTagName('head')[0],
+      style = document.createElement('style');
+
+      style.type = 'text/css';
+      style.styleSheet.cssText = ':before,:after{content:none !important';
+      head.appendChild(style);
+      setTimeout(function(){
+          head.removeChild(style);
+      }, 0);
+    </script>
+  <![endif]-->
+  <script src="../_assets/js/vendor/modernizr-custom.js"></script>
+  <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="../_assets/js/vendor/jstorage.js"></script>
+</head>
+<body class="admin-container">
+  <div class="panel-ie">
+  <img src="../_assets/img/logo-ie.png" height="50" alt="Not optimised for IE 9 and lower" align="left">
+  <p>It looks like you're using a version of Internet Explorer that this prototype has not tested with - For the best experience, please switch to a modern browser.</p>
+  <p><a href="" id="hideIEMessage">Hide this message</a></p>
+</div>
+  <!-- <div id="global-cookie-message" class="cookie-banner">
+  <div class="content-container">
+      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
+  </div>
+</div> -->
+<div class="skiplink-container header-skiplink">
+  <div>
+    <a href="#main" class="skiplink">Skip to main content</a>
+  </div>
+</div>
+<header role="banner" class="global-header">
+  <div class="global-header__wrapper">
+    <div class="grid-wrapper">
+      <div class="grid grid-3-4">
+        <h1 class="bold-small">Apply for Civil Service apprenticeship | Administation</h1>
+      </div>
+      <!-- <div class="grid grid-1-4">
+        <h2 class="bold-small">Hello, James</h2>
+      </div> -->
+    </div>
+  </div>
+</header>
+  <div class="content-container">
+    <main role="main" id="main">
+      
+
+<div class="grid-wrapper">
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <ul class="list-text">
+        <li>Find a candidate</li>
+        <li><a href="reporting.html">Reporting</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid grid-3-4">
+    <h2 class="heading-xlarge">
+      Find a candidate
+    </h2>
+    <p><a href="candidate-results.html">Return to results</a></p>
+
+    <section class="section-border">
+      <div class="grid-wrapper">
+        <div class="grid grid-2-3">
+          <h3 class="heading-large">Candidate application</h3>
+        </div>
+        <div class="grid grid-1-3">
+          <ul class="page-link list-text">
+            <li><a href="view-candidate.html" class="button no-right-margin">Save changes</a></li>
+            <li><a href="view-candidate.html">Cancel changes</a></li>
+          </ul>
+        </div>
+      </div>
+      <section>
+        <p class="form-label" id="question1">Qualifications</p>
+        <select name="" id="">
+          <option value="">At least 5 GCSEs or equivalent</option>
+          <option value="" selected>At least 2 A-levels (grade D or above)</option>
+          <option value="">At least 2 STEM A-levels  (grade C or above)</option>
+        </select>
+      </section>
+      <section>
+        <p class="form-label" id="question2">First preference of location</p>
+        <select name="" id="regionSelect">
+          <optgroup class="East" data-optregion="East" label="East">
+            <option value="Bedford">Bedford</option>
+            <option value="Hertford">Hertford</option>
+            <option value="Milton Keynes">Milton Keynes</option>
+            <option value="Norwich">Norwich</option>
+            <option value="Southend">Southend</option>
+          </optgroup>
+          <optgroup class="East-midlands" data-optregion="East-midlands" label="East Midlands">
+            <option value="Leicester">Leicester</option>
+            <option value="Nottingham">Nottingham</option>
+          </optgroup>
+          <optgroup class="London" data-optregion="London" label="Greater London">
+            <option value="Hackney">Hackney</option>
+            <option value="London">London</option>
+            <option value="Northwood">Northwood</option>
+          </optgroup>
+          <optgroup class="North-east" data-optregion="North-east" label="North-east">
+            <option value="Darlington">Darlington</option>
+            <option value="Jarrow South">Jarrow South</option>
+            <option value="Newcastle" selected>Newcastle</option>
+            <option value="Stockton">Stockton</option>
+            <option value="Teeside">Teeside</option>
+            <option value="Washington">Washington</option>
+          </optgroup>
+          <optgroup class="North-west" data-optregion="North-west" label="North-west">
+            <option value="Blackpool">Blackpool</option>
+            <option value="Bootle">Bootle</option>
+            <option value="Liverpool">Liverpool</option>
+            <option value="Lytham St Annes">Lytham St Annes</option>
+            <option value="Manchester">Manchester</option>
+            <option value="Preston">Preston</option>
+            <option value="Salford">Salford</option>
+            <option value="Shipley">Shipley</option>
+          </optgroup>
+          <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
+            <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
+            <option value="Cumbernauld">Cumbernauld</option>
+            <option value="Dundee">Dundee</option>
+            <option value="East Kilbride">East Kilbride</option>
+            <option value="Edinburgh">Edinburgh</option>
+            <option value="Glasgow">Glasgow</option>
+          </optgroup>
+          <optgroup class="South-east" data-optregion="South-east" label="South-east">
+            <option value="Andover">Andover</option>
+            <option value="Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
+            <option value="Chilton">Chilton</option>
+            <option value="Hastings">Hastings</option>
+            <option value="High Wycombe">High Wycombe</option>
+            <option value="Kent (inc.Ramsgate)">Kent (inc.Ramsgate)</option>
+            <option value="Oxford">Oxford</option>
+            <option value="Reading">Reading</option>
+            <option value="Shrivenham">Shrivenham</option>
+            <option value="Surrey">Surrey</option>
+            <option value="Worthing">Worthing</option>
+          </optgroup>
+          <optgroup class="South-west" data-optregion="South-west" label="South-west">
+            <option value="Bristol">Bristol</option>
+          </optgroup>
+            <optgroup class="Wales" data-optregion="Wales" label="Wales">
+            <option value="Cardiff">Cardiff</option>
+            <option value="Merthyr Tydfil">Merthyr Tydfil</option>
+            <option value="Swansea">Swansea</option>
+          </optgroup>
+          <optgroup class="West-midlands" data-optregion="West-midlands" label="West Midlands">
+            <option value="Birmingham">Birmingham</option>
+            <option value="Cosford">Cosford</option>
+            <option value="Coventry">Coventry</option>
+            <option value="Handsworth">Handsworth</option>
+            <option value="Lichfield">Lichfield</option>
+            <option value="Stratford">Stratford</option>
+            <option value="Sutton Coldfield">Sutton Coldfield</option>
+            <option value="Telford">Telford</option>
+            <option value="Walsall">Walsall</option>
+            <option value="Wolverhampton">Wolverhampton</option>
+          </optgroup>
+          <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
+            <option value="Bradford">Bradford</option>
+            <option value="Leeds">Leeds</option>
+            <option value="Sheffield">Sheffield</option>
+            <option value="York">York</option>
+          </optgroup>
+        </select>
+        <p class="form-label" id="question2a">First scheme</p>
+        <select name="" id="schemePref1">
+          <option value="Business" selected>Business</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Cyber security">Cyber security</option>
+          <option value="Digital and technology">Digital and technology</option>
+          <option value="Finance">Finance</option>
+          <option value="Project delivery">Project delivery</option>
+        </select>
+        <p class="form-label" id="question2b">Second scheme</p>
+        <select name="" id="schemePref1">
+          <option value="Business">Business</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Cyber security">Cyber security</option>
+          <option value="Digital and technology">Digital and technology</option>
+          <option value="Finance">Finance</option>
+          <option value="Project delivery" selected>Project delivery</option>
+        </select>
+      </section>
+      <section>
+        <p class="form-label" id="question3">Second preference of location</p>
+        <select name="" id="regionSelect">
+          <optgroup class="East" data-optregion="East" label="East">
+            <option value="Bedford">Bedford</option>
+            <option value="Hertford">Hertford</option>
+            <option value="Milton Keynes">Milton Keynes</option>
+            <option value="Norwich">Norwich</option>
+            <option value="Southend">Southend</option>
+          </optgroup>
+          <optgroup class="East-midlands" data-optregion="East-midlands" label="East Midlands">
+            <option value="Leicester">Leicester</option>
+            <option value="Nottingham">Nottingham</option>
+          </optgroup>
+          <optgroup class="London" data-optregion="London" label="Greater London">
+            <option value="Hackney">Hackney</option>
+            <option value="London">London</option>
+            <option value="Northwood">Northwood</option>
+          </optgroup>
+          <optgroup class="North-east" data-optregion="North-east" label="North-east">
+            <option value="Darlington">Darlington</option>
+            <option value="Jarrow South">Jarrow South</option>
+            <option value="Newcastle">Newcastle</option>
+            <option value="Stockton">Stockton</option>
+            <option value="Teeside">Teeside</option>
+            <option value="Washington">Washington</option>
+          </optgroup>
+          <optgroup class="North-west" data-optregion="North-west" label="North-west">
+            <option value="Blackpool">Blackpool</option>
+            <option value="Bootle">Bootle</option>
+            <option value="Liverpool">Liverpool</option>
+            <option value="Lytham St Annes">Lytham St Annes</option>
+            <option value="Manchester" selected>Manchester</option>
+            <option value="Preston">Preston</option>
+            <option value="Salford">Salford</option>
+            <option value="Shipley">Shipley</option>
+          </optgroup>
+          <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
+            <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
+            <option value="Cumbernauld">Cumbernauld</option>
+            <option value="Dundee">Dundee</option>
+            <option value="East Kilbride">East Kilbride</option>
+            <option value="Edinburgh">Edinburgh</option>
+            <option value="Glasgow">Glasgow</option>
+          </optgroup>
+          <optgroup class="South-east" data-optregion="South-east" label="South-east">
+            <option value="Andover">Andover</option>
+            <option value="Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
+            <option value="Chilton">Chilton</option>
+            <option value="Hastings">Hastings</option>
+            <option value="High Wycombe">High Wycombe</option>
+            <option value="Kent (inc.Ramsgate)">Kent (inc.Ramsgate)</option>
+            <option value="Oxford">Oxford</option>
+            <option value="Reading">Reading</option>
+            <option value="Shrivenham">Shrivenham</option>
+            <option value="Surrey">Surrey</option>
+            <option value="Worthing">Worthing</option>
+          </optgroup>
+          <optgroup class="South-west" data-optregion="South-west" label="South-west">
+            <option value="Bristol">Bristol</option>
+          </optgroup>
+            <optgroup class="Wales" data-optregion="Wales" label="Wales">
+            <option value="Cardiff">Cardiff</option>
+            <option value="Merthyr Tydfil">Merthyr Tydfil</option>
+            <option value="Swansea">Swansea</option>
+          </optgroup>
+          <optgroup class="West-midlands" data-optregion="West-midlands" label="West Midlands">
+            <option value="Birmingham">Birmingham</option>
+            <option value="Cosford">Cosford</option>
+            <option value="Coventry">Coventry</option>
+            <option value="Handsworth">Handsworth</option>
+            <option value="Lichfield">Lichfield</option>
+            <option value="Stratford">Stratford</option>
+            <option value="Sutton Coldfield">Sutton Coldfield</option>
+            <option value="Telford">Telford</option>
+            <option value="Walsall">Walsall</option>
+            <option value="Wolverhampton">Wolverhampton</option>
+          </optgroup>
+          <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
+            <option value="Bradford">Bradford</option>
+            <option value="Leeds">Leeds</option>
+            <option value="Sheffield">Sheffield</option>
+            <option value="York">York</option>
+          </optgroup>
+        </select>
+        <p class="form-label" id="question3a">First scheme</p>
+        <select name="" id="schemePref1">
+          <option value="Business">Business</option>
+          <option value="Commercial" selected>Commercial</option>
+          <option value="Cyber security">Cyber security</option>
+          <option value="Digital and technology">Digital and technology</option>
+          <option value="Finance">Finance</option>
+          <option value="Project delivery">Project delivery</option>
+        </select>
+        <p class="form-label" id="question3b">Second scheme</p>
+        <select name="" id="schemePref1">
+          <option value="Business" selected>Business</option>
+          <option value="Commercial">Commercial</option>
+          <option value="Cyber security">Cyber security</option>
+          <option value="Digital and technology">Digital and technology</option>
+          <option value="Finance">Finance</option>
+          <option value="Project delivery">Project delivery</option>
+        </select>
+      </section>
+      <section>
+        <p class="form-label">Would you consider an alternative location?</p>
+        <div class="form-group form-group-compound">
+          <label for="altregion-yes" class="block-label">
+            <input name="altregion" type="radio" id="altregion-yes" checked>Yes
+          </label>
+          <label for="altregion-no" class="block-label">
+            <input name="altregion" type="radio" id="altregion-no">No
+          </label>
+        </div>
+      </section>
+      <section>
+        <p class="form-label">Would you consider an alternative scheme?</p>
+        <div class="form-group form-group-compound">
+          <label for="altscheme-yes" class="block-label">
+            <input name="altscheme" type="radio" id="altscheme-yes" checked>Yes
+          </label>
+          <label for="altscheme-no" class="block-label">
+            <input name="altscheme" type="radio" id="altscheme-no">No
+          </label>
+        </div>
+      </section>
+      <section>
+        <p class="form-label">Do you have a disability?</p>
+        <div class="form-group form-group-compound inline">
+          <label data-target="support-panel" for="support-yes" class="block-label">
+            <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
+          </label>
+          <label for="support-no" class="block-label">
+            <input name="support" type="radio" id="support-no" checked>No
+          </label>
+          <label for="support-prefer" class="block-label">
+            <input name="support" type="radio" id="support-prefer">Prefer not to say
+          </label>
+        </div>
+        <div id="support-panel" class="toggle-content" aria-hidden="true">
+          <div class="form-group">
+            <p class="form-label">Select from the list or provide details of disability</p>
+              <div>
+                <label for="disability-choice-01" class="block-label block-label-slim"><input id="disability-choice-01" type="checkbox">ADHD</label>
+              </div>
+              <div>
+                <label for="disability-choice-02" class="block-label block-label-slim"><input id="disability-choice-02" type="checkbox">Asperger's syndrome</label>
+              </div>
+              <div>
+                <label for="disability-choice-03" class="block-label block-label-slim"><input id="disability-choice-03" type="checkbox">Cerebral palsy</label>
+              </div>
+              <div>
+                <label for="disability-choice-04" class="block-label block-label-slim"><input id="disability-choice-04" type="checkbox">Chronic fatigue syndrome/M.E.</label>
+              </div>
+              <div>
+                <label for="disability-choice-05" class="block-label block-label-slim"><input id="disability-choice-05" type="checkbox">Diabetes</label>
+              </div>
+              <div>
+                <label for="disability-choice-06" class="block-label block-label-slim"><input id="disability-choice-06" type="checkbox">Dyscalculia/Dysgraphia</label>
+              </div>
+              <div>
+                <label for="disability-choice-07" class="block-label block-label-slim"><input id="disability-choice-07" type="checkbox">Dyslexia</label>
+              </div>
+              <div>
+                <label for="disability-choice-08" class="block-label block-label-slim"><input id="disability-choice-08" type="checkbox">Dyspraxia</label>
+              </div>
+              <div>
+                <label for="disability-choice-09" class="block-label block-label-slim"><input id="disability-choice-09" type="checkbox">Epilepsy</label>
+              </div>
+              <div>
+                <label for="disability-choice-10" class="block-label block-label-slim"><input id="disability-choice-10" type="checkbox">Hearing difficulties</label>
+              </div>
+              <div>
+                <label for="disability-choice-11" class="block-label block-label-slim"><input id="disability-choice-11" type="checkbox">Mental health problems – e.g. depression</label>
+              </div>
+              <div>
+                <label for="disability-choice-12" class="block-label block-label-slim"><input id="disability-choice-12" type="checkbox">Musculoskeletal conditions – e.g. back pain</label>
+              </div>
+              <div>
+                <label for="disability-choice-13" class="block-label block-label-slim"><input id="disability-choice-13" type="checkbox">Visual impairments</label>
+              </div>
+              <div>
+                <label for="disability-choice-14" class="block-label block-label-slim"><input id="disability-choice-14" type="checkbox">Other</label>
+              </div>
+            <label id="question4" class="form-label">Enter more information (optional)</label>
+            <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+          </div>
+          <div class="text">
+            <h2 class="heading-large">Guaranteed interview scheme</h2>
+            <div class="panel-indent">
+              <img src="../_assets/img/logo-ticks-small-2x.png" width="38" alt="Two ticks - Positive about disabled people logo" class="image-left">
+              <p>If you have a registered disability you may be eligible for the <a href="https://www.gov.uk/recruitment-disabled-people/encouraging-applications" target="_blank">guaranteed interview scheme</a></p>
+            </div>
+            <p class="form-label">Would you like to apply under the guaranteed interview scheme?</p>
+            <div class="form-group form-group-compound inline">
+              <label for="gis-yes" class="block-label">
+                <input name="gis" type="radio" id="gis-yes">Yes
+              </label>
+              <label for="gis-no" class="block-label">
+                <input name="gis" type="radio" id="gis-no">No
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+
+      </section>
+      <section>
+        <p class="form-label">Will you need adjustments or support for your assessment?</p>
+        <div class="form-group form-group-compound inline">
+          <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
+            <input name="adjustment" type="radio" id="adjustment-yes" aria-controls="adjustment-panel" aria-expanded="false">Yes
+          </label>
+          <label for="adjustment-no" class="block-label">
+            <input name="adjustment" type="radio" id="adjustment-no" checked>No
+          </label>
+        </div>
+        <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
+          <p class="form-label">Please select which adjustments you'll need</p>
+          <p class="form-hint text">Select from the list of adjustments or describe any other support you require</p>
+            <div>
+              <label for="adjustment-choice-01" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-01">Time extension - e.g. 25% or 30% </label>
+            </div>
+            <div>
+              <label for="adjustment-choice-02" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-02">Larger screen/Colour background</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-03" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-03">Paper colour</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-04" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-04">Larger font/ Different style</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-05" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-05">Screen reader – e.g. JAWS</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-06" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-06">Braille test paper</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-07" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-07">Room alone</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-08" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-08">Screen magnification software – e.g. Zoom text / Lunar</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-09" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-09">Rest breaks</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-10" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-10">Adjusted lighting</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-11" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-11">Special chair / footstool</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-12" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-12">Reader/assistant</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-13" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-13">Stand up and move around</label>
+            </div>
+            <div>
+              <label for="adjustment-choice-14" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-14">Other</label>
+            </div>
+          <div class="form-group">
+            <label id="adj-other" class="form-label">Other adjustment need (optional)</label>
+            <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+          </div>
+          <div class="panel-indent">
+            <p class="text">If you would like to discuss details of your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="form-group">
+          <label for="hearAboutUs" class="form-label">How did you hear about us? (optional)</label>
+          <select name="" id="hearAboutUs" class="selectWithOptionTrigger">
+            <option value="">-- Choose method --</option>
+            <option value="">National apprenticeship service</option>
+            <option value="" selected>notgoingtouni.co.uk</option>
+            <option value="">Social media (eg, Twitter/Facebook)</option>
+            <option value="">Teachers/careers advisors</option>
+            <option value="">Parent/Friends/Family</option>
+            <option value="">Existing apprentice/Civil servant</option>
+            <option class="optionTrigger" value="" data-optiontrigger="careersFairDetail" value="">Careers fair</option>
+            <option value="">Search engine (eg Google)</option>
+            <option class="optionTrigger" value="" data-optiontrigger="hearAboutUsDetail" value="">Other</option>
+          </select>
+        </div>
+        <div class="form-group toggle-content" id="hearAboutUsDetail">
+          <label for="hearAboutUsDetailControl" class="form-label">Please enter how you heard about us</label>
+          <input type="text" id="hearAboutUsDetailControl" class="form-control">
+        </div>
+        <div class="form-group toggle-content" id="careersFairDetail">
+          <label for="hearAboutUsDetailControl" class="form-label">Please enter name of careers fair</label>
+          <input type="text" id="hearAboutUsDetailControl" class="form-control">
+        </div>
+      </section>
+    </section>
+    <a href="view-candidate.html" class="button">Save changes</a>
+    <a href="view-candidate.html">Cancel changes</a>
+  </div>
+</div>
+    </main>
+  </div>
+  <footer class="gov-border" role="contentinfo">
+  <div class="footer__wrapper">
+    <div class="footer__meta">
+      <ul class="footer__nav" role="navigation">
+        <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">Open Government Licence v3.0</a>, except where otherwise stated</li>
+      </ul>
+      <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
+        <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+        <p>&copy; Crown copyright</p>
+      </a>
+
+      <p data-notice="This is just for the protoype!"><a href="/">Back to start</a></p>
+
+    </div>
+  </div>
+</footer>
+
+  <script src="../_assets/js/vendor/fastclick.js"></script>
+  <script src="../_assets/js/vendor/chosen.jquery.js"></script>
+  <script src="../_assets/js/scripts.js"></script>
+  <!-- Prototype specific scripts -->
+  <script src="../_assets/js/vendor/jquery.cookie.js"></script>
+  <script src="../_assets/js/prototype.js"></script>
+</body>
+</html>
+
+
+
+
