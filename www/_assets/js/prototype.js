@@ -143,7 +143,7 @@ $(function() {
 
 
   $('.first-choice-btn').on('click', function() {
-    var locationSelected = $('#regionSelect').val(),
+    var locationSelected = $('#regionSelect').html(),
         firstScheme = $('#schemePref1').val(),
         secondScheme = $('#schemePref2').val();
 

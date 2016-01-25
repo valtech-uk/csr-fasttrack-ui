@@ -404,89 +404,178 @@
           Location selected
         </p>
         <div class="grid-2-3 toggle-content" id="listOfLocationsContainer">
-          <select name="" id="regionSelect">
-  <optgroup class="East" data-optregion="East" label="East">
-    <option value="Bedford">Bedford</option>
-    <option value="Hertford">Hertford</option>
-    <option value="Milton Keynes">Milton Keynes</option>
-    <option value="Norwich">Norwich</option>
-    <option value="Southend">Southend</option>
-  </optgroup>
-  <optgroup class="East-midlands" data-optregion="East-midlands" label="East Midlands">
-    <option value="Leicester">Leicester</option>
-    <option value="Nottingham">Nottingham</option>
-  </optgroup>
-  <optgroup class="London" data-optregion="London" label="Greater London">
-    <option value="Hackney">Hackney</option>
-    <option value="London">London</option>
-    <option value="Northwood">Northwood</option>
-  </optgroup>
-  <optgroup class="North-east" data-optregion="North-east" label="North-east">
-    <option value="Darlington">Darlington</option>
-    <option value="Jarrow South">Jarrow South</option>
-    <option value="Newcastle">Newcastle</option>
-    <option value="Stockton">Stockton</option>
-    <option value="Teeside">Teeside</option>
-    <option value="Washington">Washington</option>
-  </optgroup>
-  <optgroup class="North-west" data-optregion="North-west" label="North-west">
-    <option value="Blackpool">Blackpool</option>
-    <option value="Bootle">Bootle</option>
-    <option value="Liverpool">Liverpool</option>
-    <option value="Lytham St Annes">Lytham St Annes</option>
-    <option value="Manchester">Manchester</option>
-    <option value="Preston">Preston</option>
-    <option value="Salford">Salford</option>
-    <option value="Shipley">Shipley</option>
-  </optgroup>
-  <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
-    <option value="Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
-    <option value="Cumbernauld">Cumbernauld</option>
-    <option value="Dundee">Dundee</option>
-    <option value="East Kilbride">East Kilbride</option>
-    <option value="Edinburgh">Edinburgh</option>
-    <option value="Glasgow">Glasgow</option>
-  </optgroup>
-  <optgroup class="South-east" data-optregion="South-east" label="South-east">
-    <option value="Andover">Andover</option>
-    <option value="Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
-    <option value="Chilton">Chilton</option>
-    <option value="Hastings">Hastings</option>
-    <option value="High Wycombe">High Wycombe</option>
-    <option value="Kent (inc.Ramsgate)">Kent (inc.Ramsgate)</option>
-    <option value="Oxford">Oxford</option>
-    <option value="Reading">Reading</option>
-    <option value="Shrivenham">Shrivenham</option>
-    <option value="Surrey">Surrey</option>
-    <option value="Worthing">Worthing</option>
-  </optgroup>
-  <optgroup class="South-west" data-optregion="South-west" label="South-west">
-    <option value="Bristol">Bristol</option>
-  </optgroup>
-    <optgroup class="Wales" data-optregion="Wales" label="Wales">
-    <option value="Cardiff">Cardiff</option>
-    <option value="Merthyr Tydfil">Merthyr Tydfil</option>
-    <option value="Swansea">Swansea</option>
-  </optgroup>
-  <optgroup class="West-midlands" data-optregion="West-midlands" label="West Midlands">
-    <option value="Birmingham">Birmingham</option>
-    <option value="Cosford">Cosford</option>
-    <option value="Coventry">Coventry</option>
-    <option value="Handsworth">Handsworth</option>
-    <option value="Lichfield">Lichfield</option>
-    <option value="Stratford">Stratford</option>
-    <option value="Sutton Coldfield">Sutton Coldfield</option>
-    <option value="Telford">Telford</option>
-    <option value="Walsall">Walsall</option>
-    <option value="Wolverhampton">Wolverhampton</option>
-  </optgroup>
-  <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire &amp; Humberside">
-    <option value="Bradford">Bradford</option>
-    <option value="Leeds">Leeds</option>
-    <option value="Sheffield">Sheffield</option>
-    <option value="York">York</option>
-  </optgroup>
-</select>
+          <select name="regionAndlocation" id="regionSelect">
+                <option value="null">Choose from list of locations</option>
+
+                    <optgroup class="East" data-optregion="East" label="East">
+
+                        <option value="East;Bedford">Bedford</option>
+
+                        <option value="East;Hertford">Hertford</option>
+
+                        <option value="East;Milton Keynes">Milton Keynes</option>
+
+                        <option value="East;Norwich">Norwich</option>
+
+                        <option value="East;TestALevelD">TestALevelD</option>
+
+                        <option value="East;TestGCSE">TestGCSE</option>
+
+                    </optgroup>
+
+                    <optgroup class="East-midlands" data-optregion="East-midlands" label="East-midlands">
+
+                        <option value="East-midlands;Leicester">Leicester</option>
+
+                        <option value="East-midlands;Nottingham">Nottingham</option>
+
+                    </optgroup>
+
+                    <optgroup class="London" data-optregion="London" label="London">
+
+                        <option value="London;Hackney">Hackney</option>
+
+                        <option value="London;London">London</option>
+
+                        <option value="London;Northwood">Northwood</option>
+
+                        <option value="London;TestALevelD2">TestALevelD2</option>
+
+                        <option value="London;TestGCSE2">TestGCSE2</option>
+
+                    </optgroup>
+
+                    <optgroup class="North-east" data-optregion="North-east" label="North-east">
+
+                        <option value="North-east;Darlington">Darlington</option>
+
+                        <option value="North-east;Jarrow South">Jarrow South</option>
+
+                        <option value="North-east;Newcastle">Newcastle</option>
+
+                        <option value="North-east;Stockton">Stockton</option>
+
+                        <option value="North-east;Teeside">Teeside</option>
+
+                        <option value="North-east;Washington">Washington</option>
+
+                    </optgroup>
+
+                    <optgroup class="North-west" data-optregion="North-west" label="North-west">
+
+                        <option value="North-west;Blackpool">Blackpool</option>
+
+                        <option value="North-west;Bootle">Bootle</option>
+
+                        <option value="North-west;Liverpool">Liverpool</option>
+
+                        <option value="North-west;Lytham St Annes">Lytham St Annes</option>
+
+                        <option value="North-west;Manchester">Manchester</option>
+
+                        <option value="North-west;Preston">Preston</option>
+
+                        <option value="North-west;Salford">Salford</option>
+
+                        <option value="North-west;Shipley">Shipley</option>
+
+                    </optgroup>
+
+                    <optgroup class="Scotland" data-optregion="Scotland" label="Scotland">
+
+                        <option value="Scotland;Bathgate (Edinburgh)">Bathgate (Edinburgh)</option>
+
+                        <option value="Scotland;Cumbernauld">Cumbernauld</option>
+
+                        <option value="Scotland;Dundee">Dundee</option>
+
+                        <option value="Scotland;East Kilbride">East Kilbride</option>
+
+                        <option value="Scotland;Edinburgh">Edinburgh</option>
+
+                        <option value="Scotland;Glasgow">Glasgow</option>
+
+                    </optgroup>
+
+                    <optgroup class="South-east" data-optregion="South-east" label="South-east">
+
+                        <option value="South-east;Andover">Andover</option>
+
+                        <option value="South-east;Aylesbury (Buckinghamshire)">Aylesbury (Buckinghamshire)</option>
+
+                        <option value="South-east;Chilton">Chilton</option>
+
+                        <option value="South-east;Hastings">Hastings</option>
+
+                        <option value="South-east;High Wycombe">High Wycombe</option>
+
+                        <option value="South-east;Kent (inc.Ramsgate)">Kent (inc.Ramsgate)</option>
+
+                        <option value="South-east;Oxford">Oxford</option>
+
+                        <option value="South-east;Reading">Reading</option>
+
+                        <option value="South-east;Shrivenham">Shrivenham</option>
+
+                        <option value="South-east;Surrey">Surrey</option>
+
+                        <option value="South-east;Worthing">Worthing</option>
+
+                    </optgroup>
+
+                    <optgroup class="South-west" data-optregion="South-west" label="South-west">
+
+                        <option value="South-west;Bristol">Bristol</option>
+
+                    </optgroup>
+
+                    <optgroup class="Wales" data-optregion="Wales" label="Wales">
+
+                        <option value="Wales;Cardiff">Cardiff</option>
+
+                        <option value="Wales;Merthyr Tydfil">Merthyr Tydfil</option>
+
+                        <option value="Wales;Swansea">Swansea</option>
+
+                    </optgroup>
+
+                    <optgroup class="West-midlands" data-optregion="West-midlands" label="West-midlands">
+
+                        <option value="West-midlands;Birmingham">Birmingham</option>
+
+                        <option value="West-midlands;Cosford">Cosford</option>
+
+                        <option value="West-midlands;Coventry">Coventry</option>
+
+                        <option value="West-midlands;Handsworth">Handsworth</option>
+
+                        <option value="West-midlands;Lichfield">Lichfield</option>
+
+                        <option value="West-midlands;Stratford">Stratford</option>
+
+                        <option value="West-midlands;Sutton Coldfield">Sutton Coldfield</option>
+
+                        <option value="West-midlands;Telford">Telford</option>
+
+                        <option value="West-midlands;Walsall">Walsall</option>
+
+                        <option value="West-midlands;Wolverhampton">Wolverhampton</option>
+
+                    </optgroup>
+
+                    <optgroup class="Yorkshire-humberside" data-optregion="Yorkshire-humberside" label="Yorkshire-humberside">
+
+                        <option value="Yorkshire-humberside;Bradford">Bradford</option>
+
+                        <option value="Yorkshire-humberside;Leeds">Leeds</option>
+
+                        <option value="Yorkshire-humberside;Sheffield">Sheffield</option>
+
+                        <option value="Yorkshire-humberside;York">York</option>
+
+                    </optgroup>
+
+            </select>
         </div>
       </section>
       <section class="toggle-content" id="locationSelectedContainer" aria-hidden="true">
@@ -504,7 +593,7 @@
         <div class="grid-3-4">
           <div class="form-group">
             <label for="schemePref1" class="form-label">First preference of scheme</label>
-            <select name="" id="schemePref1" class="chosen-select" data-placeholder="Choose from list or begin typing">
+            <select name="" id="schemePref1">
               <option value="" class="placeholder-option"></option>
               <option value="Business">Business</option>
               <option value="Commercial">Commercial</option>
@@ -517,7 +606,7 @@
 
           <div class="form-group" id="secondPreferenceContainer">
             <label for="schemePref2" class="form-label">Second preference of scheme</label>
-            <select name="" id="schemePref2" class="chosen-select" data-placeholder="Choose from list or begin typing">
+            <select name="" id="schemePref2">
               <option value="" class="placeholder-option"></option>
               <option value="Business">Business</option>
               <option value="Commercial">Commercial</option>
@@ -541,7 +630,8 @@
 
 
 <script>
-  var availableLocationsAndSchemes = {"East":{"Bedford":["Business","Commercial","Finance"],"Hertford":["Business","Commercial","Finance"],"Milton Keynes":["Business","Commercial","Finance"],"Norwich":["Business","Commercial","Finance"],"Southend":["Business","Commercial","Finance"],"TestGCSE":["Business","Commercial","Finance"]},"East-midlands":{"Leicester":["Business","Commercial","Finance"],"Nottingham":["Business","Commercial","Finance"]},"London":{"Hackney":["Business","Commercial","Finance"],"London":["Business","Commercial","Finance"],"Northwood":["Business","Commercial","Finance"]},"North-east":{"Darlington":["Business","Commercial","Finance"],"Jarrow South":["Business","Commercial","Finance"],"Newcastle":["Business","Commercial","Finance"],"Stockton":["Business","Commercial","Finance"],"Teeside":["Business","Commercial","Finance"],"Washington":["Business","Commercial","Finance"]},"North-west":{"Blackpool":["Business","Commercial","Finance"],"Bootle":["Business","Commercial","Finance"],"Liverpool":["Business","Commercial","Finance"],"Lytham St Annes":["Business","Commercial","Finance"],"Manchester":["Business","Commercial","Finance"],"Preston":["Business","Commercial","Finance"],"Salford":["Business","Commercial","Finance"],"Shipley":["Business","Commercial","Finance"]},"Scotland":{"Bathgate (Edinburgh)":["Business","Commercial","Finance"],"Cumbernauld":["Business","Commercial","Finance"],"Dundee":["Business","Commercial","Finance"],"East Kilbride":["Business","Commercial","Finance"],"Edinburgh":["Business","Commercial","Finance"],"Glasgow":["Business","Commercial","Finance"]},"South-east":{"Andover":["Business","Commercial","Finance"],"Aylesbury (Buckinghamshire)":["Business","Commercial","Finance"],"Chilton":["Business","Commercial","Finance"],"Hastings":["Business","Commercial","Finance"],"High Wycombe":["Business","Commercial","Finance"],"Kent (inc.Ramsgate)":["Business","Commercial","Finance"],"Oxford":["Business","Commercial","Finance"],"Reading":["Business","Commercial","Finance"],"Shrivenham":["Business","Commercial","Finance"],"Surrey":["Business","Commercial","Finance"],"Worthing":["Business","Commercial","Finance"]},"South-west":{"Bristol":["Business","Commercial","Finance"]},"Wales":{"Cardiff":["Business","Commercial","Finance"],"Merthyr Tydfil":["Business","Commercial","Finance"],"Swansea":["Business","Commercial","Finance"]},"West-midlands":{"Birmingham":["Business","Commercial","Finance"],"Cosford":["Business","Commercial","Finance"],"Coventry":["Business","Commercial","Finance"],"Handsworth":["Business","Commercial","Finance"],"Lichfield":["Business","Commercial","Finance"],"Stratford":["Business","Commercial","Finance"],"Sutton Coldfield":["Business","Commercial","Finance"],"Telford":["Business","Commercial","Finance"],"Walsall":["Business","Commercial","Finance"],"Wolverhampton":["Business","Commercial","Finance"]},"Yorkshire-humberside":{"Bradford":["Business","Commercial","Finance"],"Leeds":["Business","Commercial","Finance"],"Sheffield":["Business","Commercial","Finance"],"York":["Business","Commercial","Finance"]}}
+  var availableLocationsAndSchemes = {"East":{"Bedford":["Business","Commercial","Finance"],"Hertford":["Business","Commercial","Finance"],"Milton Keynes":["Business","Commercial","Finance"],"Norwich":["Business","Commercial","Finance"],"Southend":["Business","Commercial","Finance"],"TestGCSE":["Business","Commercial","Finance"]},"East-midlands":{"Leicester":["Business","Commercial","Finance"],"Nottingham":["Business","Commercial","Finance"]},"London":{"Hackney":["Business","Commercial","Finance"],"London":["Business","Commercial","Finance"],"Northwood":["Business","Commercial","Finance"]},"North-east":{"Darlington":["Business","Commercial","Finance"],"Jarrow South":["Business","Commercial","Finance"],"Newcastle":["Business","Commercial","Finance"],"Stockton":["Business","Commercial","Finance"],"Teeside":["Business","Commercial","Finance"],"Washington":["Business","Commercial","Finance"]},"North-west":{"Blackpool":["Business","Commercial","Finance"],"Bootle":["Business","Commercial","Finance"],"Liverpool":["Business","Commercial","Finance"],"Lytham St Annes":["Business","Commercial","Finance"],"Manchester":["Business","Commercial","Finance"],"Preston":["Business","Commercial","Finance"],"Salford":["Business","Commercial","Finance"],"Shipley":["Business","Commercial","Finance"]},"Scotland":{"Bathgate (Edinburgh)":["Business","Commercial","Finance"],"Cumbernauld":["Business","Commercial","Finance"],"Dundee":["Business","Commercial","Finance"],"East Kilbride":["Business","Commercial","Finance"],"Edinburgh":["Business","Commercial","Finance"],"Glasgow":["Business","Commercial","Finance"]},"South-east":{"Andover":["Business","Commercial","Finance"],"Aylesbury (Buckinghamshire)":["Business","Commercial","Finance"],"Chilton":["Business","Commercial","Finance"],"Hastings":["Business","Commercial","Finance"],"High Wycombe":["Business","Commercial","Finance"],"Kent (inc.Ramsgate)":["Business","Commercial","Finance"],"Oxford":["Business","Commercial","Finance"],"Reading":["Business","Commercial","Finance"],"Shrivenham":["Business","Commercial","Finance"],"Surrey":["Business","Commercial","Finance"],"Worthing":["Business","Commercial","Finance"]},"South-west":{"Bristol":["Business","Commercial","Finance"]},"Wales":{"Cardiff":["Business","Commercial","Finance"],"Merthyr Tydfil":["Business","Commercial","Finance"],"Swansea":["Business","Commercial","Finance"]},"West-midlands":{"Birmingham":["Business","Commercial","Finance"],"Cosford":["Business","Commercial","Finance"],"Coventry":["Business","Commercial","Finance"],"Handsworth":["Business","Commercial","Finance"],"Lichfield":["Business","Commercial","Finance"],"Stratford":["Business","Commercial","Finance"],"Sutton Coldfield":["Business","Commercial","Finance"],"Telford":["Business","Commercial","Finance"],"Walsall":["Business","Commercial","Finance"],"Wolverhampton":["Business","Commercial","Finance"]},"Yorkshire-humberside":{"Bradford":["Business","Commercial","Finance"],"Leeds":["Business","Commercial","Finance"],"Sheffield":["Business","Commercial","Finance"],"York":["Business","Commercial","Finance"]}};
+  var disabledLocation = '';
 </script>
 
     </main>

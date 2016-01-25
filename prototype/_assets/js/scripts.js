@@ -439,7 +439,8 @@ $(function() {
   if($('#choosePrefLocFramHeading').length ) {
     var $selectedRegion = '',
         $selectedRegionName = '',
-        $regionSelectClone = $('#regionSelect >').clone();
+        $firstSchemeVal = $('#schemePref1').attr('data-scheme'),
+        $secondSchemeVal = $('#schemePref2').attr('data-scheme');
 
     if(!$('.map-legend-container').hasClass('disabled') && !$('#regionSelect option[selected]').length) {
       // Animate map after 2 seconds
@@ -460,9 +461,7 @@ $(function() {
     // On hover highlight the region on the map and show region name
     $('.region-container').not($selectedRegion).hover(function() {
       var $this = $(this),
-          $regionID = $this.attr('id'),
-          $regionOption = $('#regionSelect optgroup[data-optregion="' + $regionID + '"]'),
-          $regionName = $regionOption.attr('label');
+          $regionName = $this.attr('id');
 
       $('.map-legend').show().removeClass('disabled');
       $('#hoveredRegionName').text($regionName);
@@ -488,12 +487,62 @@ $(function() {
     // Clicking region will fire the region selection panel
     $('.region-container').on('click', function(e) {
       var $this = $(this),
-          $regionNameID = $this.attr('id'),
-          $regEl = $('#regionSelect optgroup[data-optregion="' + $regionNameID + '"]');
+          regionName = $this.attr('id');
+          regionObject = availableLocationsAndSchemes[regionName];
 
-      selectRegion($this, $regEl);
+      var locationsInRegion = $.map(regionObject, function(value, key) {
+            return key;
+          });
 
+      $selectedRegion = $this;
+
+      // IE8 Link behaviour
       e.preventDefault();
+
+      $('#regionSelect').html('<option value="null">-- Choose a location in ' + regionName + ' --</option>')
+                        .append('<optgroup id="regionOptGroup" class="' + regionName + '" data-optregion="' + regionName + '" label="' + regionName + '"/>');
+
+      $.each(locationsInRegion, function(i) {
+        locationName = locationsInRegion[i];
+
+        $('#regionOptGroup').append('<option value="' + regionName + ';' + locationName +'">' + locationName + '</option>');
+
+      });
+
+      $('#regionOptGroup').find('[value="'+ disabledLocation +'"]').attr('disabled', 'disabled');
+
+      $('#selectLocationBlurb, #selectSecondLocationBlurb, #locationSelectedText, #locationSelectedContainer, #choiceSave')
+        .addClass('toggle-content').attr('aria-hidden', true);
+
+      $("#schemePref1 option, #schemePref2 option").attr('selected', false);
+
+      $('#chosenRegionBlurb')
+        .removeClass('toggle-content')
+        .attr('aria-hidden', false)
+        .find('b').text(regionName);
+
+      $('#listOfLocationsContainer').removeClass('toggle-content');
+
+      $this.attr('class', 'region-container selected-region');
+
+      $('#hoveredRegionName').text(regionName);
+      $selectedRegionName = regionName;
+
+      $('.region-container')
+        .not($selectedRegion)
+        .attr('class', 'region-container');
+
+      if($(window).width() <= 650) {
+        scrollToTop();
+      }
+
+      setTimeout(function() {
+        $('#regionSelect').focus();
+      }, 200);
+
+      $('#chooseRegionText').hide();
+      $('#clearMap').show();
+
     });
 
     $('#viewListOfLocations').on('click', function(e) {
@@ -509,83 +558,13 @@ $(function() {
       }, 1000);
     }
 
-    function selectRegion(regionContainer, regionElement) {
-      var regionName = regionElement.attr('label');
-
-      $selectedRegion = regionContainer;
-
-      $('#selectLocationBlurb, #selectSecondLocationBlurb, #locationSelectedText, #locationSelectedContainer')
-        .addClass('toggle-content').attr('aria-hidden', true);
-
-      $("#schemePref1 option, #schemePref2 option").attr('selected', false);
-      $("#schemePref1, #schemePref2").trigger("chosen:updated");
-
-      $('#chosenRegionBlurb')
-        .removeClass('toggle-content')
-        .attr('aria-hidden', false)
-        .find('b').text(regionName);
-
-      $('#listOfLocationsContainer').removeClass('toggle-content');
-
-      regionContainer.attr('class', 'region-container selected-region');
-
-      $('#hoveredRegionName').text(regionName);
-      $selectedRegionName = regionName;
-
-      $('.region-container')
-        .not($selectedRegion)
-        .attr('class', 'region-container');
-
-      regionElement.removeClass('toggle-content').find('option').show();
-
-      if($('html').hasClass('touch')) {
-        var $regionSelect = $('#regionSelect'),
-            $placeholderOption = $regionSelect.find('.placeholder-option');
-
-        $regionSelect.val('');
-        $regionSelect.html($regionSelectClone)
-
-        setTimeout(function() {
-          $regionSelect.prepend(regionElement);
-          $regionSelect.prepend($placeholderOption);
-          $regionSelect.find('.placeholder-option:nth-child(n+2)').remove();
-        }, 500);
-
-        $('html, body').animate({
-          scrollTop: $("#containingGridPreference").offset().top - 20
-        }, 1000, function() {
-          $regionSelect.focus();
-        });
-      }
-
-      $('[data-optregion]')
-        .not(regionElement)
-        .addClass('toggle-content')
-        .find('option')
-        .attr('selected', false)
-        .hide().removeClass('selectedLocationOptions');
-
-      regionElement.find('option').addClass('selectedLocationOptions');
-
-      $('#regionSelect').trigger("chosen:updated");
-
-      setTimeout(function() {
-        $('#regionSelect_chosen')
-          .trigger('mousedown')
-          .find('.chosen-results').scrollTop(0);
-      }, 200);
-
-      $('#chooseRegionText').hide();
-      $('#clearMap').show();
-    }
-
     function hideBlurb() {
       $('#locationSelectedContainer').removeClass('toggle-content').attr('aria-hidden', false);
 
       $('.map-control').hide();
 
       $('#chosenRegionBlurb, #selectLocationBlurb').addClass('toggle-content').attr('aria-hidden', true);
-      $('#locationSelectedText').removeClass('toggle-content').attr('aria-hidden', false);
+      $('#locationSelectedText, #choiceSave').removeClass('toggle-content').attr('aria-hidden', false);
 
     }
 
@@ -596,21 +575,56 @@ $(function() {
 
     // Choosing a location affects schemes
     $("#regionSelect").on('change', function() {
-      var selectedLocation = $(this).val(),
-          selectedRegion = $(this).find('option:selected').parent().attr('data-optregion'),
-          schemesInLocation = availableLocationsAndSchemes[selectedRegion][selectedLocation],
-          schemeOptionsAvailable = '<option value="" class="placeholder-option"></option>';
+      if($(this).val() != "null"){
+        var selectedLocation = $(this).val(),
+            selectedRegion = $(this).find('option:selected').parent().attr('data-optregion'),
+            schemesInLocation = availableLocationsAndSchemes[selectedRegion][selectedLocation.split(";")[1]],
+            schemeOptionsAvailable = '<option value="" class="placeholder-option">Choose a scheme</option>'
 
-      hideBlurb();
+        //if first option is no longer available reset both scheme options
+        if($.inArray($firstSchemeVal, schemesInLocation) == -1){
+          $firstSchemeVal = "";
+          $secondSchemeVal = "";
+        }
 
-      $.each(schemesInLocation, function(i) {
-        schemeOptionsAvailable += '<option value="' + schemesInLocation[i] + '">' + schemesInLocation[i] + '</option>';
-      });
 
-      $('#schemePref1').html(schemeOptionsAvailable);
-      $('#schemePref2').html(schemeOptionsAvailable + '<option value="">No second preference</option>');
 
-      $("#schemePref1, #schemePref2").trigger("chosen:updated");
+        //disable second selection when there is only 1 scheme
+        var disabledSecond = false;
+        if(schemesInLocation.length == 1){
+          disabledSecond = true
+        }
+        $('#schemePref2').prop('disabled', disabledSecond);
+
+        hideBlurb();
+
+        $.each(schemesInLocation, function(i) {
+          var schemeName = schemesInLocation[i];
+
+          schemeOptionsAvailable += '<option value="' + schemeName + '">' + schemeName + '</option>';
+        });
+
+        $('#schemePref1').html(schemeOptionsAvailable);
+        $('#schemePref1 option[value= "'+ $firstSchemeVal +'"]').attr('selected', true);
+        $('#schemePref1 option[value= "'+ $secondSchemeVal +'"]').attr('disabled', true);
+
+        $('#schemePref2').html(schemeOptionsAvailable + '<option value="">No second preference</option>');
+        if($secondSchemeVal !== "") {
+          $('#schemePref2 option[value= "'+ $secondSchemeVal +'"]').attr('selected', true);
+        }
+        if($firstSchemeVal !== "") {
+          $('#schemePref2 option[value= "'+ $firstSchemeVal +'"]').attr('disabled', true);
+        }
+      } else {
+        $('#selectLocationBlurb, #selectSecondLocationBlurb, #locationSelectedText, #locationSelectedContainer, #choiceSave')
+          .addClass('toggle-content').attr('aria-hidden', true);
+
+        $('#chosenRegionBlurb')
+          .removeClass('toggle-content')
+          .attr('aria-hidden', false)
+          .find('b').text(regionName);
+      }
+
 
     });
 
@@ -621,19 +635,23 @@ $(function() {
       $('#schemePref1').find('option[value="' + $selectedPref2 + '"]').attr('disabled', true);
       $('#schemePref2').find('option[value="' + $selectedPref1 + '"]').attr('disabled', true);
 
-      $("#schemePref1, #schemePref2").trigger("chosen:updated");
+    }
+
+    if($("#regionSelect").val() != "null"){
+      $("#regionSelect").trigger('change');
     }
 
     // Scheme preference 1
     $('#schemePref1').on('change', function() {
       var $thisVal = $(this).val();
 
+      $firstSchemeVal = $thisVal;
+
       $('#schemePref2').find('option[value="' + $thisVal + '"]').attr('disabled', true);
       $('#schemePref2').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
 
-      $("#schemePref2").trigger("chosen:updated");
 
-      if($('#schemePref2').val() !== '') {
+      if($('#schemePref2').val() !== '' || $('#schemePref2').attr('disabled') == 'disabled') {
         $('#choiceSave').removeClass('toggle-content');
       }
     });
@@ -642,10 +660,11 @@ $(function() {
     $('#schemePref2').on('change', function() {
       var $thisVal = $(this).val();
 
+      $secondSchemeVal = $thisVal;
+
       $('#schemePref1').find('option[value="' + $thisVal + '"]').attr('disabled', true);
       $('#schemePref1').find('option').not('option[value="' + $thisVal + '"]').attr('disabled', false);
 
-      $("#schemePref1").trigger("chosen:updated");
 
       if($('#schemePref1').val() !== '') {
         $('#choiceSave').removeClass('toggle-content');
@@ -658,20 +677,7 @@ $(function() {
     });
 
   }
-
-});
-
-
-
-
-
-
-
-
-
-
-
-;$(function() {
+});;$(function() {
 
   //-- Faking details behaviour
 

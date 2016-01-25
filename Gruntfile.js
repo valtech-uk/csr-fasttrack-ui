@@ -155,6 +155,7 @@ module.exports = function(grunt) {
             "prototype/alt/",
             "prototype/fasttrack/",
             "prototype/admin/",
+            "prototype/tests/",
             "prototype/offline/",
             "prototype/*.html"
           ]
@@ -191,7 +192,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'prototype/',
-                    src: ['alt/fasttrack/*.html', 'fasttrack/*.html', 'admin/*.html', '*.html', '!pattern-library.html'],
+                    src: ['alt/fasttrack/*.html', 'fasttrack/*.html', 'admin/*.html', 'tests/*.html', '*.html', '!pattern-library.html'],
                     dest: 'prototype/',
                     ext: '.html'
                 }]
