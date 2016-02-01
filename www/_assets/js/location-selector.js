@@ -240,4 +240,45 @@ $(function() {
     });
 
   }
+
+  //used on the 3rd questionnaire page
+  $('.initiallyHidden').hide();
+
+  var contentHide = $('.showsContent');
+
+  contentHide.each(function(index) {
+    if($(this).parent().hasClass("selected")) {
+      $('.hidingContent').show();
+    }
+  });
+
+  var occupationHide = $('.showsOccupations');
+
+  occupationHide.each(function(index) {
+    if($(this).parent().hasClass("selected")) {
+      $('.hidingOccupations').show();
+    }
+  });
+
+  $('.hidesContent').on('change', function(){
+      $('.hidingContent').hide();
+      $('.hidingContent').find(":checkbox").attr('checked', false);
+      $('.hidingContent').find('select').val("");
+      $('.hidingContent').find('select').attr('disabled', false);
+  });
+
+  $('.showsContent').on('change', function(){
+      $('.hidingContent').show()
+  });
+
+  $('.hidesOccupations').on('change', function(){
+    $('.hidingOccupations').hide();
+    $('.hidingOccupations').find(":checkbox").attr('checked', false);
+    $('.hidingOccupations').find('select').val("");
+    $('.hidingOccupations').find('select').attr('disabled', false);
+  });
+
+  $('.showsOccupations').on('change', function(){
+    $('.hidingOccupations').show()
+  });
 });

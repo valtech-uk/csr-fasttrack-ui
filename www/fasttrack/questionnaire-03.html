@@ -137,29 +137,31 @@
     <p>Thinking back to when you were aged 14, please answer the following questions in relation to your <b>highest earning</b> parent / guardian</p>
   </div>
 
-  <p class="form-label">Was your highest earning parent / guardian</p>
-  <div>
-    <label for="occupation-09" class="block-label">
-      <input type="radio" name="occupations" id="occupation-09" class="hidesContent">Unemployed but seeking work
-    </label>
-  </div>
-  <div>
-    <label for="occupation-10" class="block-label">
-      <input type="radio" name="occupations" id="occupation-10" class="hidesContent">Unemployed
-    </label>
-  </div>
-  <div>
-    <label for="occupation-11" class="block-label">
-      <input type="radio" name="occupations" id="occupation-11" class="hidesContent">Employed/Self-employed
-    </label>
-  </div>
-  <div>
-    <label for="occupation-12" class="block-label">
-      <input type="radio" name="occupations" id="occupation-12">I don't know/prefer not to say
-    </label>
+  <div class="form-group">
+    <p class="form-label">Was your highest earning parent / guardian</p>
+    <div>
+      <label for="occupation-09" class="block-label">
+        <input type="radio" name="occupations" id="occupation-09" class="hidesContent hidesOccupations">Unemployed but seeking work
+      </label>
+    </div>
+    <div>
+      <label for="occupation-10" class="block-label">
+        <input type="radio" name="occupations" id="occupation-10" class="hidesContent hidesOccupations">Unemployed
+      </label>
+    </div>
+    <div>
+      <label for="occupation-11" class="block-label">
+        <input type="radio" name="occupations" id="occupation-11" class="showsContent showsOccupations">Employed/Self-employed
+      </label>
+    </div>
+    <div>
+      <label for="occupation-12" class="block-label">
+        <input type="radio" name="occupations" id="occupation-12" class="hidesContent hidesOccupations">I don't know/prefer not to say
+      </label>
+    </div>
   </div>
 
-  <div class="toggle-content">
+  <div class="hidingOccupations initiallyHidden">
     <div>
      <div class="form-group form-group-compound">
        <label class="form-label" for="parentOccList">Which type of occupation did they have?</label>
