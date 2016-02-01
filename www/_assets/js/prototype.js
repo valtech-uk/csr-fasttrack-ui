@@ -272,6 +272,9 @@ $(function() {
     $('#global-cookie-message').removeClass('hidden');
   }
 
+  if($('#viewCandidate').length && gup('change') == 'adjustment') {
+    $('#adjustmentTime').removeClass('toggle-content');
+  }
 
   $('#hideIEMessage').on('click', function() {
     $.cookie('hideMessage', true, {path: '/'});

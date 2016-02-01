@@ -27,18 +27,6 @@
       document.documentElement.className += ' no-details';
     }
     </script>
-    <!--[if lte IE 8]>
-    <script>
-      var head = document.getElementsByTagName('head')[0],
-      style = document.createElement('style');
-      style.type = 'text/css';
-      style.styleSheet.cssText = ':before,:after{content:none !important';
-      head.appendChild(style);
-      setTimeout(function(){
-          head.removeChild(style);
-      }, 0);
-    </script>
-  <![endif]-->
     <script src="../_assets/js/vendor/modernizr-custom.js"></script>
     <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
     <script src="../_assets/js/vendor/jstorage.js"></script>
@@ -77,12 +65,14 @@
     </header>
     <div class="content-container">
       <main role="main" id="main">
-        <div class="grid-wrapper">
+        <div class="grid-wrapper" id="viewCandidate">
           <div class="grid grid-1-4">
             <div class="inner-block-padr">
               <ul class="list-text">
                 <li>Find a candidate</li>
                 <li><a href="reporting.html">Reporting</a>
+                </li>
+                <li><a href="campaign.html">Campaign management</a>
                 </li>
               </ul>
             </div>
@@ -179,7 +169,11 @@
               </section>
               <section>
                 <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
-                <p>No</p>
+                <p class="small-btm-margin"><span class="inl-block small-right-margin">Time extension</span>
+                  <span
+                  id="adjustmentTime" class="toggle-content">(25% extension)</span>
+                </p>
+                <a href="requested-adjustment.html">Manage adjustment</a>
               </section>
               <section>
                 <h3 class="heading-small">How did you hear about us?</h3>

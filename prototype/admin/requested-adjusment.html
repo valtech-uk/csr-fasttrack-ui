@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Activate your account | Apply for a Civil Service apprenticeship</title>
+    <title>Find a candidate | Apply for a Civil Service apprenticeship</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -16,13 +16,6 @@
     <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
     <!--<![endif]-->
     <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
-    <!--[if lte IE 8]>
-    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-    <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
-    />
-    <!--<![endif]-->
     <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
     <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
     type="text/css">
@@ -50,12 +43,7 @@
     <script src="../_assets/js/vendor/jquery-1.11.1.min.js"></script>
     <script src="../_assets/js/vendor/jstorage.js"></script>
   </head>
-  <body>
-    <div id="global-cookie-message" class="cookie-banner hidden">
-      <div class="content-container" role="alert" style="padding-top: 0px;">
-        <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="/fasttrack/privacy.html">Find out more about cookies</a></span>
-      </div>
-    </div>
+  <body class="admin-container">
     <div class="panel-ie">
       <img src="../_assets/img/logo-ie.png" height="50" alt="Not optimised for IE 9 and lower"
       align="left">
@@ -77,68 +65,67 @@
     </div>
     <header role="banner" class="global-header">
       <div class="global-header__wrapper">
-        <div class="global-header__logo">
-          <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-            <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
-          </a>
-        </div>
-        <div class="global-header__nav">
-          <div class="global-header__title beta"><a href="profile-home.html">Apply for a Civil Service apprenticeship</a>
+        <div class="grid-wrapper">
+          <div class="grid grid-3-4">
+            <h1 class="bold-small">Apply for Civil Service apprenticeship | Administation</h1>
           </div>
+          <!-- <div class="grid grid-1-4">
+        <h2 class="bold-small">Hello, James</h2>
+      </div> -->
         </div>
       </div>
     </header>
     <div class="content-container">
-      <div class="phase-notice gov-border grid-wrapper">
-        <div class="grid grid-2-3">
-          <div class="prototype-warning">
-            <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#" target="_blank" rel="external">feedback</a> will help to improve it.</span>
-          </div>
-        </div>
-        <div class="grid grid-1-3">
-          <div class="account-info sign-in" id="bannerSignedOut">
-            <div class="small-btm-margin">
-              <a href="/fasttrack/profile-signin.html"><i class="fa fa-sign-in"></i>Create an account</a> or
-              <a
-              href="/fasttrack/profile-signin.html#signInHeading">Sign in</a>
-            </div>
-          </div>
-          <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
-            <div class="small-btm-margin">
-              <span class="your-name" id="bannerUserName">PreferredName</span>
-            </div>
-            <div>
-              <a class="account-link" id="applicationsLink" href="/fasttrack/profile-home.html">Home</a>
-              <a class="account-link" href="/fasttrack/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
-            </div>
-          </div>
-        </div>
-      </div>
       <main role="main" id="main">
-        <div class="panel-success">
-          <p id="SuccessMessageText" class="text">You've successfully created your account</p>
-        </div>
-        <h1 id="accountCreated" class="heading-xlarge">Activate your account</h1>
-        <p class="text">
-          An email has been sent to <b id="emailAddress">yourname@email.com</b>.
-          It will contain a 6-character code that you’ll need to activate your
-          account.
-        </p>
-        <div class="form-group">
-          <label for="activation-code" class="form-label">Activation code</label>
-          <input type="text" id="activation-code" class="form-control form-control-1-3">
-          <p><a href="">Resend code</a>
-          </p>
-        </div>
-        <div class="form-group">
-          <a href="profile-home.html" class="button activate-page-btn" id="btnSignIn">Activate account</a>
-        </div>
-        <div class="panel-indent text">
-          <p>
-            You must activate your account within 30 days of receiving your activation code.
-            After 30 days your account will be deleted and you'll need to register
-            again.
-          </p>
+        <div class="grid-wrapper">
+          <div class="grid grid-1-4">
+            <div class="inner-block-padr">
+              <ul class="list-text">
+                <li>Find a candidate</li>
+                <li><a href="reporting.html">Reporting</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid grid-3-4">
+            <h2 class="heading-xlarge">
+      Find a candidate
+    </h2>
+            <section>
+              <div class="form-group">
+                <label class="form-label" for="email-address">Email address</label>
+                <input type="text" class="form-control" id="email-address" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last name</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="form-group form-group-compound inline-fixed">
+                <p class="form-label">Date of birth</p>
+                <span class="form-hint">For example, 19 7 1994</span>
+                <div class="form-group form-group-compound">
+                  <label class="date-hint" for="dob-day">Day</label>
+                  <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
+                </div>
+                <div class="form-group form-group-compound">
+                  <label class="date-hint" for="dob-month">Month</label>
+                  <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
+                </div>
+                <div class="form-group form-group-compound form-group-year">
+                  <label class="date-hint" for="dob-year">Year</label>
+                  <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address4" class="form-label">Postcode</label>
+                <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters"
+                autocorrect="off" value="">
+              </div>
+              <div class="form-group">
+                <a href="candidate-results.html" class="button">Find candidate</a>
+              </div>
+            </section>
+          </div>
         </div>
       </main>
     </div>
@@ -146,19 +133,6 @@
       <div class="footer__wrapper">
         <div class="footer__meta">
           <ul class="footer__nav" role="navigation">
-            <li class="small-btm-margin">
-              <div>
-                <a class="footer__link bold-medium" href="/fasttrack/helpdesk.html">Contact us</a>
-                <a class="footer__link bold-medium" href="#" rel="external">Give feedback</a>
-              </div>
-            </li>
-            <li class="footer__link"><a href="/fasttrack/privacy.html">Privacy and cookies</a>
-            </li>
-            <li class="footer__link"><a href="/fasttrack/terms.html">Terms and conditions</a>
-            </li>
-            <li class="footer__link">Built by <a href="https://www.gov.uk/government/organisations/civil-service-resourcing"
-              target="_blank">Civil Service Resourcing</a>
-            </li>
             <li class="footer__ogl hide-print"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3"
               class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">Open Government Licence v3.0</a>,
               except where otherwise stated</li>
@@ -168,6 +142,8 @@
             <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
             <p>&copy; Crown copyright</p>
           </a>
+          <p data-notice="This is just for the protoype!"><a href="/">Back to start</a>
+          </p>
         </div>
       </div>
     </footer>

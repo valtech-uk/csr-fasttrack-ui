@@ -3,12 +3,13 @@ pageTitle: Find a candidate
 layout: admin-layout.hbs
 ---
 
-<div class="grid-wrapper">
+<div class="grid-wrapper" id="viewCandidate">
   <div class="grid grid-1-4">
     <div class="inner-block-padr">
       <ul class="list-text">
         <li>Find a candidate</li>
         <li><a href="reporting.html">Reporting</a></li>
+        <li><a href="campaign.html">Campaign management</a></li>
       </ul>
     </div>
   </div>
@@ -50,6 +51,7 @@ layout: admin-layout.hbs
         <h3 class="heading-small">What should we call you?</h3>
         <p id="preferredName">John</p>
       </section>
+
       <section>
         <h3 class="heading-small">Date of birth</h3>
         <p id="dateOfBirth">19 May 1994</p>
@@ -107,7 +109,8 @@ layout: admin-layout.hbs
       </section>
       <section>
         <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
-        <p>No</p>
+        <p class="small-btm-margin"><span class="inl-block small-right-margin">Time extension</span><span id="adjustmentTime" class="toggle-content">(25% extension)</span></p>
+        <a href="requested-adjustment.html">Manage adjustment</a>
       </section>
       <section>
         <h3 class="heading-small">How did you hear about us?</h3>
