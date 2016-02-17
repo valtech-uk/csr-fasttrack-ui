@@ -112,7 +112,7 @@
   <h2 class="heading-large">Disability and adjustments</h2>
   <div class="form-group">
     <p class="form-label">Do you have a disability?</p>
-    <p class="form-hint">For example, Dyslexia</p>
+    <p class="form-hint">For example, dyslexia</p>
     <div class="form-group form-group-compound inline">
       <label data-target="support-panel" for="support-yes" class="block-label">
         <input name="support" type="radio" id="support-yes" aria-controls="support-panel" aria-expanded="false">Yes
@@ -127,24 +127,6 @@
     <div id="support-panel" class="toggle-content" aria-hidden="true">
       <div class="form-group">
         <p class="form-label">Select from the list or provide details of disability</p>
-        <!-- <div class="grid-1-2 para-btm-margin">
-          <select multiple name="" id="disabilityList" class="chosen-select" data-placeholder="Select at least one, or begin typing...">
-            <option value="ADHD">ADHD</option>
-            <option value="Asperger's syndrome">Asperger's syndrome</option>
-            <option value="Cerebral palsy">Cerebral palsy</option>
-            <option value="Chronic fatigue syndrome/M.E.">Chronic fatigue syndrome/M.E.</option>
-            <option value="Diabetes">Diabetes</option>
-            <option value="Dyscalculia/Dysgraphia">Dyscalculia/Dysgraphia</option>
-            <option value="Dyslexia">Dyslexia</option>
-            <option value="Dyspraxia">Dyspraxia</option>
-            <option value="Epilepsy">Epilepsy</option>
-            <option value="Hearing difficulties">Hearing difficulties</option>
-            <option value="Mental health problems – e.g. depression">Mental health problems – e.g. depression</option>
-            <option value="Musculoskeletal conditions – e.g. back pain">Musculoskeletal conditions – e.g. back pain</option>
-            <option value="Visual impairments">Visual impairments</option>
-            <option value="Other">Other</option>
-          </select>
-        </div> -->
           <div>
             <label for="disability-choice-01" class="block-label block-label-slim"><input id="disability-choice-01" type="checkbox">ADHD</label>
           </div>
@@ -161,7 +143,7 @@
             <label for="disability-choice-05" class="block-label block-label-slim"><input id="disability-choice-05" type="checkbox">Diabetes</label>
           </div>
           <div>
-            <label for="disability-choice-06" class="block-label block-label-slim"><input id="disability-choice-06" type="checkbox">Dyscalculia/Dysgraphia</label>
+            <label for="disability-choice-06" class="block-label block-label-slim"><input id="disability-choice-06" type="checkbox">Dyscalculia/dysgraphia</label>
           </div>
           <div>
             <label for="disability-choice-07" class="block-label block-label-slim"><input id="disability-choice-07" type="checkbox">Dyslexia</label>
@@ -176,10 +158,10 @@
             <label for="disability-choice-10" class="block-label block-label-slim"><input id="disability-choice-10" type="checkbox">Hearing difficulties</label>
           </div>
           <div>
-            <label for="disability-choice-11" class="block-label block-label-slim"><input id="disability-choice-11" type="checkbox">Mental health problems – e.g. depression</label>
+            <label for="disability-choice-11" class="block-label block-label-slim"><input id="disability-choice-11" type="checkbox">Mental health problems, eg depression</label>
           </div>
           <div>
-            <label for="disability-choice-12" class="block-label block-label-slim"><input id="disability-choice-12" type="checkbox">Musculoskeletal conditions – e.g. back pain</label>
+            <label for="disability-choice-12" class="block-label block-label-slim"><input id="disability-choice-12" type="checkbox">Musculoskeletal conditions, eg back pain</label>
           </div>
           <div>
             <label for="disability-choice-13" class="block-label block-label-slim"><input id="disability-choice-13" type="checkbox">Visual impairments</label>
@@ -194,18 +176,18 @@
         <h2 class="heading-large">Guaranteed interview scheme</h2>
         <div class="panel-indent">
           <img src="../_assets/img/logo-ticks-small-2x.png" width="38" alt="Two ticks - Positive about disabled people logo" class="image-left">
-          <p>If you have a registered disability you may be eligible for the <a href="https://www.gov.uk/recruitment-disabled-people/encouraging-applications" target="_blank">guaranteed interview scheme</a></p>
+          <p>If you have a registered disability you may be eligible for the <a href="https://www.gov.uk/recruitment-disabled-people/encouraging-applications" target="_blank" rel="external">guaranteed interview scheme</a>.</p>
+          <p>If you choose to apply, we may ask you for supporting documents, if available, at a later stage eg medical documents.</p>
         </div>
-        <p class="form-label">Would you like to apply under the guaranteed interview scheme?</p>
-        <div class="form-group form-group-compound inline">
-          <label for="gis-yes" class="block-label">
-            <input name="gis" type="radio" id="gis-yes">Yes
-          </label>
-          <label for="gis-no" class="block-label">
-            <input name="gis" type="radio" id="gis-no">No
-          </label>
-        </div>
-
+      </div>
+      <p class="form-label">Would you like to apply under the guaranteed interview scheme?</p>
+      <div class="form-group form-group-compound inline">
+        <label for="gis-yes" class="block-label">
+          <input name="gis" type="radio" id="gis-yes">Yes
+        </label>
+        <label for="gis-no" class="block-label">
+          <input name="gis" type="radio" id="gis-no">No
+        </label>
       </div>
     </div>
 
@@ -213,7 +195,10 @@
 
   <p class="form-label">Will you need adjustments or support for your assessment?</p>
   <p class="form-hint text">
-    If you need extra support with your assessment we can offer reasonable adjustments, such as extra time or printed copies
+    If you need extra support with your assessment we can offer reasonable adjustments, eg extra time.
+  </p>
+  <p class="form-hint text">
+    We may need to contact you to talk about and agree any adjustments you request.
   </p>
   <div class="form-group form-group-compound inline">
     <label data-target="adjustment-panel" for="adjustment-yes" class="block-label">
@@ -225,39 +210,11 @@
   </div>
   <div id="adjustment-panel" class="toggle-content" aria-hidden="true">
     <p class="form-label">Please select which adjustments you'll need</p>
-    <p class="form-hint text">Select from the list of adjustments or describe any other support you require</p>
-    <!-- <div class="grid-1-2 para-btm-margin">
-      <select multiple name="" id="adjustmentNeedsList" class="chosen-select" data-placeholder="Select at least one, or begin typing...">
-        <option value="Time extension - e.g. 25% or 30% ">Time extension - e.g. 25% or 30% </option>
-        <option value="Larger screen/Colour background">Larger screen/Colour background</option>
-        <option value="Paper colour">Paper colour</option>
-        <option value="Larger font/ Different style">Larger font/ Different style</option>
-        <option value="Screen reader – e.g. JAWS">Screen reader – e.g. JAWS</option>
-        <option value="Braille test paper">Braille test paper</option>
-        <option value="Room alone">Room alone</option>
-        <option value="Screen magnification software – e.g. Zoom text / Lunar">Screen magnification software – e.g. Zoom text / Lunar</option>
-        <option value="Rest breaks">Rest breaks</option>
-        <option value="Adjusted lighting">Adjusted lighting</option>
-        <option value="Special chair / footstool">Special chair / footstool</option>
-        <option value="Reader/assistant">Reader/assistant</option>
-        <option value="Stand up and move around">Stand up and move around</option>
-        <option value="Other">Other</option>
-      </select>
-    </div> -->
       <div>
-        <label for="adjustment-choice-01" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-01">Time extension - e.g. 25% or 30% </label>
+        <label for="adjustment-choice-01" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-01">Time extension, eg 25% or 30% </label>
       </div>
       <div>
-        <label for="adjustment-choice-02" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-02">Larger screen/Colour background</label>
-      </div>
-      <div>
-        <label for="adjustment-choice-03" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-03">Paper colour</label>
-      </div>
-      <div>
-        <label for="adjustment-choice-04" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-04">Larger font/ Different style</label>
-      </div>
-      <div>
-        <label for="adjustment-choice-05" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-05">Screen reader – e.g. JAWS</label>
+        <label for="adjustment-choice-03" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-03">Coloured paper</label>
       </div>
       <div>
         <label for="adjustment-choice-06" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-06">Braille test paper</label>
@@ -266,16 +223,7 @@
         <label for="adjustment-choice-07" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-07">Room alone</label>
       </div>
       <div>
-        <label for="adjustment-choice-08" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-08">Screen magnification software – e.g. Zoom text / Lunar</label>
-      </div>
-      <div>
         <label for="adjustment-choice-09" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-09">Rest breaks</label>
-      </div>
-      <div>
-        <label for="adjustment-choice-10" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-10">Adjusted lighting</label>
-      </div>
-      <div>
-        <label for="adjustment-choice-11" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-11">Special chair / footstool</label>
       </div>
       <div>
         <label for="adjustment-choice-12" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-12">Reader/assistant</label>
@@ -287,13 +235,16 @@
         <label for="adjustment-choice-14" class="block-label block-label-slim"><input type="checkbox" id="adjustment-choice-14">Other</label>
       </div>
     <div class="form-group">
-      <label id="adj-other" class="form-label">Other adjustment need (optional)</label>
+      <label id="adj-other" class="form-label">Tell us more (optional)</label>
+      <span class="form-hint">If you have any adjustment needs which aren't listed, or want to provide more information, tell us here.</span>
       <textarea id="adj-other" class="form-control" rows="4" data-val-length-max="4000"></textarea>
       <!-- <span class="form-hint maxchar-count">4000</span> -->
       <span class="visuallyhidden aria-limit" aria-live="polite"></span>
     </div>
-    <div class="panel-indent">
-      <p class="text">If you would like to discuss details of your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
+    <div class="panel-indent text">
+      <p>If you want to talk about your adjustment needs in more detail, <a href="helpdesk.html">please contact us</a>.</p>
+      <p>It's important you let us know this information now, as there won't be another opportunity to do this.</p>
+      <p>(But if your situation changes between submitting your application and attending the assessment centre, contact us.)</p>
     </div>
   </div>
 </section>
@@ -302,25 +253,21 @@
   <h2 class="heading-large">How did you hear about us?</h2>
   <div class="form-group">
     <label for="hearAboutUs" class="form-label">Select how you heard about us (optional)</label>
-    <select name="" id="hearAboutUs" class="selectWithOptionTrigger">
+    <select name="campaignReferrer" id="campaignReferrer" class="selectWithOptionTrigger">
       <option value="">-- Choose method --</option>
-      <option value="">National Apprenticeship Service</option>
-      <option value="">notgoingtouni.co.uk</option>
-      <option value="">Social media (eg Twitter/Facebook)</option>
-      <option value="">Teachers/Careers advisors</option>
-      <option value="">Parent/Friends/Family</option>
-      <option value="">Existing apprentice/Civil Servant</option>
-      <option class="optionTrigger" value="" data-optiontrigger="careersFairDetail" value="">Careers fair</option>
-      <option value="">Search engine (eg Google)</option>
-      <option class="optionTrigger" value="" data-optiontrigger="hearAboutUsDetail" value="">Other</option>
+      <option value="National apprenticeship service">National apprenticeship service</option>
+      <option value="notgoingtouni.co.uk">notgoingtouni.co.uk</option>
+      <option value="Social media(Twitter/Facebook)">Social media(Twitter/Facebook)</option>
+      <option value="Teachers/careers advisors">Teachers/careers advisors</option>
+      <option value="Parent/friends/family">Parent/friends/family</option>
+      <option value="Current apprentice/current civil servant">Current apprentice/current civil servant</option>
+      <option value="Careers fair" class="optionTrigger" data-optiontrigger="hearAboutUsDetail">Careers fair</option>
+      <option value="Google">Google</option>
+      <option value="Other" class="optionTrigger" data-optiontrigger="hearAboutUsDetail">Other</option>
     </select>
   </div>
   <div class="form-group toggle-content" id="hearAboutUsDetail">
-    <label for="hearAboutUsDetailControl" class="form-label">Please enter how you heard about us</label>
-    <input type="text" id="hearAboutUsDetailControl" class="form-control">
-  </div>
-  <div class="form-group toggle-content" id="careersFairDetail">
-    <label for="hearAboutUsDetailControl" class="form-label">Please enter name of careers fair</label>
+    <label for="hearAboutUsDetailControl" class="form-label">Provide more information (optional)</label>
     <input type="text" id="hearAboutUsDetailControl" class="form-control">
   </div>
 </section>

@@ -330,5 +330,11 @@ $(function() {
     $('#multipleApplicants').show();
   }
 
+  $('#askSecurityQuestions').on('click', function(e) {
+    e.preventDefault();
+
+    $('#securityQuestions').removeClass('toggle-content');
+  });
+
 // --------------- Not to be used in production -------------- //
 });
