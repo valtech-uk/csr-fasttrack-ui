@@ -260,6 +260,10 @@ $(function() {
     $('#signedOut').show();
   }
 
+  if($('#signedOut').length && gup('Status') == 'testsready') {
+    $('#btnSignIn').attr('href', 'profile-home-tests.html');
+  }
+
   if($('#signedOut').length && gup('Status') == 'withdrawn') {
     $('#withdrawnApplication').show();
   }
