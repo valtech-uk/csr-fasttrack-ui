@@ -83,54 +83,60 @@
     </h2>
             <p><a href="view-candidate.html">Return to candidate</a>
             </p>
-            <section class="section-border">
+            <section>
               <div class="grid-wrapper">
                 <div class="grid grid-2-3">
                   <h3 class="heading-large">Candidate adjustment need</h3>
                 </div>
-                <!-- <div class="grid grid-1-3">
-          <ul class="page-link list-text">
-            <li><a href="change-contact-details.html">Change contact details</a></li>
-            <li><a href="change-application.html">Change application</a></li>
-          </ul>
-        </div> -->
               </div>
               <section>
                 <h4 class="bold-small">Candidate name</h4>
                 <p>John Smith</p>
               </section>
-              <section>
+              <section class="section-border clearfix">
                 <h4 class="bold-small">Adjustment need</h4>
                 <p>Time extension</p>
+                <fieldset>
+                  <legend class="form-label">Have you validated the adjustment?</legend>
+                  <div class="form-group form-group-compound inline">
+                    <label data-target="adjustment-01-panel" for="adjustment-01-yes" class="block-label block-label-slim">
+                      <input name="adjustment-01" type="radio" id="adjustment-01-yes" aria-controls="adjustment-01-panel"
+                      aria-expanded="false">Yes, the adjustment is needed
+                    </label>
+                    <label for="adjustment-01-no" class="block-label block-label-slim">
+                      <input name="adjustment-01" type="radio" id="adjustment-01-no">No, the adjustment is not needed
+                    </label>
+                  </div>
+                  <div id="adjustment-01-panel" class="toggle-content" aria-hidden="true">
+                    <div class="form-group">
+                      <label class="form-label" for="time-needed">Extra time needed (Verbal)</label>
+                      <input type="number" class="form-control form-control-small" id="time-needed" value="0"
+                      min="0" max="100" />
+                      <span>% added time</span>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="time-needed-num">Extra time needed (Numerical)</label>
+                      <input type="number" class="form-control form-control-small" id="time-needed-num"
+                      value="0" min="0" max="100" />
+                      <span>% added time</span>
+                    </div>
+                  </div>
+                </fieldset>
               </section>
-              <!-- <section>
-        <div class="form-group">
-          <label class="form-label" for="time-needed">Extra time needed</label>
-          <input type="number" class="form-control form-control-small" id="time-needed" value="100" min="100" max="200"/>
-          <span>% of the allotted time</span>
-        </div>
-      </section> -->
-              <section>
-                <div class="form-group">
-                  <label class="form-label" for="time-needed">Extra time needed</label>
-                  <!-- <input type="number" class="form-control form-control-small" id="time-needed" value="100" min="100" max="200"/>
-          <span>% of the allotted time</span> -->
-                  <select name="" id="time-needed">
-                    <option value="null">-- Select extra time --</option>
-                    <option value="10">10% added</option>
-                    <option value="25">25% added</option>
-                    <option value="50">50% added</option>
-                    <option value="75">75% added</option>
-                    <option value="100">100% added</option>
-                  </select>
-                </div>
-                <div class="panel-indent text" id="time-examples">
-                  <p id="time-10" class="toggle-content">10% added to a 20 minute test would be 22 minutes</p>
-                  <p id="time-25">25% added to a 20 minute test would be 25 minutes</p>
-                  <p id="time-50" class="toggle-content">50% added to a 20 minute test would be 30 minutes</p>
-                  <p id="time-75" class="toggle-content">75% added to a 20 minute test would be 35 minutes</p>
-                  <p id="time-100" class="toggle-content">100% added to a 20 minute test would be 40 minutes</p>
-                </div>
+              <section class="section-border clearfix">
+                <h4 class="bold-small">Adjustment need</h4>
+                <p>Braille test paper</p>
+                <fieldset>
+                  <legend class="form-label">Have you validated the adjustment?</legend>
+                  <div class="form-group form-group-compound inline">
+                    <label for="adjustment-02-yes" class="block-label block-label-slim">
+                      <input name="adjustment-02" type="radio" id="adjustment-02-yes">Yes, the adjustment is needed
+                    </label>
+                    <label for="adjustment-02-no" class="block-label block-label-slim">
+                      <input name="adjustment-02" type="radio" id="adjustment-02-no">No, the adjustment is not needed
+                    </label>
+                  </div>
+                </fieldset>
               </section>
               <div class="form-group">
                 <a href="view-candidate.html?change=adjustment" class="button">Save adjustment</a>
@@ -138,20 +144,6 @@
             </section>
           </div>
         </div>
-        <script>
-        $(function()
-        {
-          $('#time-needed').on('change', function()
-          {
-            var amount = $(this).val();
-            if (amount !== 'null')
-            {
-              $('#time-examples').find('#time-' + amount).show();
-              $('#time-examples').find('p').not('#time-' + amount).hide();
-            }
-          });
-        });
-        </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

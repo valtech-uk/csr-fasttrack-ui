@@ -80,12 +80,44 @@
       <h3 class="heading-large">
         Online testing
       </h3>
-      <p>Online testing is not enabled</p>
-      <p><a href="">Enable online testing</a></p>
+      <div id="onlineTestingEnabled" class="panel-success toggle-content">
+        <p>Online testing has been enabled</p>
+      </div>
+      <div id="enableOnlineTestingPanel">
+        <p>Online testing is not enabled</p>
+        <fieldset>
+          <legend class="form-label">Do you want to enable online testing?</legend>
+          <div class="form-group form-group-compound inline">
+            <label data-target="enable-online-panel" for="enable-online-yes" class="block-label">
+              <input name="enable-online" type="radio" id="enable-online-yes" aria-controls="enable-online-panel" aria-expanded="false">Yes
+            </label>
+            <label for="enable-online-no" class="block-label">
+              <input name="enable-online" type="radio" id="enable-online-no">No
+            </label>
+          </div>
+          <div id="enable-online-panel" class="toggle-content" aria-hidden="true">
+            <div class="panel-warning">
+              <p class="text">This will enable online testing for all candidates and send emails to let them know they have been enabled.</p>
+            </div>
+            <a href="#" class="button" id="enableOnlineTesting">Enable online testing</a>
+          </div>
+        </fieldset>
+      </div>
 
     </section>
   </div>
 </div>
+
+<script>
+  //Don't include this in prod
+  $('#enableOnlineTesting').on('click', function(e) {
+    e.preventDefault();
+
+    $('#enableOnlineTestingPanel').hide();
+    $('#onlineTestingEnabled').show();
+
+  });
+</script>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">

@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Administration home | Apply for a Civil Service apprenticeship</title>
+    <title>Find a candidate | Apply for a Civil Service apprenticeship</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
@@ -69,61 +69,77 @@
           <div class="grid grid-1-4">
             <div class="inner-block-padr">
               <ul class="list-text">
-                <li><a href="find-candidate.html">Find a candidate</a>
-                </li>
+                <li>Find a candidate</li>
                 <li><a href="reporting.html">Reporting</a>
                 </li>
-                <li>Campaign management</li>
+                <li><a href="campaign.html">Campaign management</a>
+                </li>
               </ul>
             </div>
           </div>
           <div class="grid grid-3-4">
-            <div class="hgroup-large">
-              <h2 class="heading-xlarge">
-        Campaign management
-      </h2>
-            </div>
+            <h1 class="heading-xlarge">
+      Find a candidate
+    </h1>
+            <p><a href="view-candidate.html">Return to candidate</a>
+            </p>
             <section>
-              <h3 class="heading-large">
-        Online testing
-      </h3>
-              <div id="onlineTestingEnabled" class="panel-success toggle-content">
-                <p>Online testing has been enabled</p>
+              <div class="grid-wrapper">
+                <div class="grid grid-2-3">
+                  <h2 class="heading-large">Candidate test management</h2>
+                </div>
               </div>
-              <div id="enableOnlineTestingPanel">
-                <p>Online testing is not enabled</p>
-                <fieldset>
-                  <legend class="form-label">Do you want to enable online testing?</legend>
-                  <div class="form-group form-group-compound inline">
-                    <label data-target="enable-online-panel" for="enable-online-yes" class="block-label">
-                      <input name="enable-online" type="radio" id="enable-online-yes" aria-controls="enable-online-panel"
-                      aria-expanded="false">Yes
-                    </label>
-                    <label for="enable-online-no" class="block-label">
-                      <input name="enable-online" type="radio" id="enable-online-no">No
-                    </label>
-                  </div>
-                  <div id="enable-online-panel" class="toggle-content" aria-hidden="true">
-                    <div class="panel-warning">
-                      <p class="text">This will enable online testing for all candidates and send
-                        emails to let them know they have been enabled.</p>
+              <section>
+                <h3 class="bold-small">Candidate name</h3>
+                <p>John Smith</p>
+              </section>
+              <section class="section-border">
+                <h3 class="bold-small">Online test status</h3>
+                <p>Started: 6 April 2016
+                  <br>Expire: 3:36pm on 10 April 2016</p>
+              </section>
+              <section class="section-border">
+                <section>
+                  <h3 class="heading-small">Choose an option to manage the candidate's test expiry</h3>
+                  <details>
+                    <summary>Reset clock</summary>
+                    <div class="detail-content">
+                      <p>This will start the 7 day period again from today</p>
+                      <a href="" class="button">Reset the clock</a>
                     </div>
-                    <a href="#" class="button" id="enableOnlineTesting">Enable online testing</a>
-                  </div>
-                </fieldset>
-              </div>
+                  </details>
+                </section>
+                <section>
+                  <details>
+                    <summary>Pause/resume clock</summary>
+                    <div class="detail-content">
+                      <p>This will pause the test period until the candidate is ready
+                        to complete the tests</p>
+                      <a href="" class="button">Pause the clock</a>
+                    </div>
+                  </details>
+                </section>
+                <section>
+                  <details>
+                    <summary>Extend time on clock</summary>
+                    <div class="detail-content">
+                      <div class="form-group">
+                        <label for="extendTime" class="form-label">Amount of days to extend test expiry</label>
+                        <input type="number" class="form-control form-control-small" id="extendTime" value="0"
+                        min="0" max="7" />
+                        <span>days</span>
+                      </div>
+                      <a href="" class="button">Extend time</a>
+                    </div>
+                  </details>
+                </section>
+              </section>
+              <a href="view-candidate.html" class="button">Save changes</a>
+              <p><a href="view-candidate.html">Return to candidate</a>
+              </p>
             </section>
           </div>
         </div>
-        <script>
-        //Don't include this in prod
-        $('#enableOnlineTesting').on('click', function(e)
-        {
-          e.preventDefault();
-          $('#enableOnlineTestingPanel').hide();
-          $('#onlineTestingEnabled').show();
-        });
-        </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
