@@ -136,6 +136,7 @@ progress[value] {
     }
     &.third-step {
       border-color: $grass-green-50;
+      padding-bottom: 1.5em;
       &.active {
         border-color: $grass-green;
       }
