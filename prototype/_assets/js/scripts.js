@@ -427,13 +427,13 @@ $(function() {
     $this.next('.detail-content').toggle();
   });
 
-  if($('html').hasClass('no-touch')) {
-    $('.chosen-select').chosen({width: '100%'});
-  } else {
-    $('.chosen-select').each(function() {
-      $(this).find('.placeholder-option').text('Select an option')
-    });
-  }
+  // if($('html').hasClass('no-touch')) {
+  //   $('.chosen-select').chosen({width: '100%'});
+  // } else {
+  //   $('.chosen-select').each(function() {
+  //     $(this).find('.placeholder-option').text('Select an option')
+  //   });
+  // }
 
 });;$(function() {
   if($('#choosePrefLocFramHeading').length ) {
