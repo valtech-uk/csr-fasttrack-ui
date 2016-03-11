@@ -268,6 +268,10 @@ $(function() {
     $('#btnSignIn').attr('href', 'profile-home-tests-complete.html');
   }
 
+  if($('#signedOut').length && gup('Status') == 'testsexpired') {
+    $('#btnSignIn').attr('href', 'profile-home-tests-expired.html');
+  }
+
   if($('#signedOut').length && gup('Status') == 'withdrawn') {
     $('#withdrawnApplication').show();
   }
