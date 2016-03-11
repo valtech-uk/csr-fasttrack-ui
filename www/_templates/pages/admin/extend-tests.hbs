@@ -1,0 +1,53 @@
+---
+pageTitle: Find a candidate
+layout: admin-layout.hbs
+---
+
+<div class="grid-wrapper">
+  <div class="grid grid-1-4">
+    <div class="inner-block-padr">
+      <ul class="list-text">
+        <li>Find a candidate</li>
+        <li><a href="reporting.html">Reporting</a></li>
+        <li><a href="campaign.html">Campaign management</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid grid-3-4">
+    <h1 class="heading-xlarge">
+      Find a candidate
+    </h1>
+    <p><a href="view-candidate.html">Return to candidate</a></p>
+
+    <section>
+      <div class="grid-wrapper">
+        <div class="grid grid-2-3">
+          <h2 class="heading-large">Extend tests time</h2>
+        </div>
+      </div>
+
+      <section>
+        <h3 class="bold-small">Candidate name</h3>
+        <p>John Smith</p>
+      </section>
+
+      <section class="section-border">
+        <h3 class="bold-small">Online test status</h3>
+        <p>Started: 6 April 2016 <br> Expire: 3:36pm on 10 April 2016</p>
+      </section>
+
+      <section class="section-border">
+        <h3 class="heading-medium">Extend time to complete tests</h3>
+        <div class="form-group">
+          <label for="extendTime" class="form-label">Amount of days to extend by</label>
+          <input type="number" class="form-control form-control-small" id="extendTime" value="0" min="0" max="7"/>
+          <span>days</span>
+        </div>
+      </section>
+      <a href="view-candidate.html?Status=extend" class="button">Save changes</a>
+      <p><a href="view-candidate.html">Return to candidate</a></p>
+    </section>
+
+
+  </div>
+</div>

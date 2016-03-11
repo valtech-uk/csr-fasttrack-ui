@@ -288,6 +288,18 @@ $(function() {
     $('#adjustmentTime').removeClass('toggle-content');
   }
 
+  if($('#testsResetSuccess').length && gup('Status') == 'reset') {
+    $('#testsResetSuccess').removeClass('toggle-content');
+    $('#textStarted').addClass('toggle-content');
+    $('#textNotStarted').removeClass('toggle-content');
+    $('#textExpire').text('1:30pm on 17 April 2016');
+  }
+
+  if($('#testsTimeSuccess').length && gup('Status') == 'extend') {
+    $('#testsTimeSuccess').removeClass('toggle-content');
+    $('#textExpire').text('1:30pm on 17 April 2016');
+  }
+
   $('#hideIEMessage').on('click', function() {
     $.cookie('hideMessage', true, {path: '/'});
   });

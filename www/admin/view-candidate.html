@@ -74,7 +74,12 @@
       Find a candidate
     </h2>
     <p><a href="candidate-results.html">Return to results</a></p>
-
+    <div class="panel-success toggle-content" id="testsResetSuccess">
+      <p class="text">The candidate's tests have been reset</p>
+    </div>
+    <div class="panel-success toggle-content" id="testsTimeSuccess">
+      <p class="text">The candidate's time has been extended</p>
+    </div>
     <section class="section-border">
       <div class="grid-wrapper">
         <div class="grid grid-2-3">
@@ -105,10 +110,9 @@
           <section>
             <h4 class="bold-small">Online test status</h4>
             <p>
-              <span class="small-right-margin">Started: 6 April 2016
-              <br>Expire: 3:36pm on 10 April 2016</span>
+              <span id="textStarted">Started: 6 April 2016</span><span class="toggle-content" id="textNotStarted">Not started</span> <br> Expire: <span id="textExpire">3:36pm on 10 April 2016</span>
               <br>
-              <a href="tests-time.html">Manage test expiry</a>
+              <a href="extend-tests.html">Extend tests time</a> or <a href="reset-tests.html">Reset tests</a>
             </p>
           </section>
 
