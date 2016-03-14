@@ -82,49 +82,52 @@
               </select>
             </div>
             <section class="toggle-content" id="sectionSetPassmarks">
-              <div class="grid grid-1-2">
-                <div class="inner-block-padr">
-                  <div class="form-group" data-range-slider>
-                    <label for="score-01" class="form-label">Competency</label>
-                    <input type="range" class="form-range" id="score-01" min="0" max="100">
-                    <label for="score-01-num" class="visuallyhidden">Competency score number input</label>
-                    <input type="number" id="score-01-num" class="form-control form-control-hours"
-                    min="0" max="100">
+              <div class="grid-wrapper">
+                <div class="grid grid-1-2">
+                  <div class="inner-block-padr">
+                    <div class="form-group" data-range-slider>
+                      <h3 class="bold-small">Competency</h3>
+                      <input type="number" id="score-01-fail" class="form-control form-control-hours"
+                      min="0" max="100" value="20">
+                      <input type="number" id="score-01-pass" class="form-control form-control-hours"
+                      min="0" max="100" value="80">
+                    </div>
+                    <div class="form-group" data-range-slider>
+                      <h3 class="bold-small">Verbal</h3>
+                      <input type="number" id="score-02-fail" class="form-control form-control-hours"
+                      min="0" max="100" value="20">
+                      <input type="number" id="score-02-pass" class="form-control form-control-hours"
+                      min="0" max="100" value="80">
+                    </div>
+                    <div class="form-group" data-range-slider>
+                      <h3 class="bold-small">Numerical</h3>
+                      <input type="number" id="score-03-fail" class="form-control form-control-hours"
+                      min="0" max="100" value="20">
+                      <input type="number" id="score-03-pass" class="form-control form-control-hours"
+                      min="0" max="100" value="80">
+                    </div>
+                    <div class="form-group" data-range-slider>
+                      <h3 class="bold-small">SJQ</h3>
+                      <input type="number" id="score-04-fail" class="form-control form-control-hours"
+                      min="0" max="100" value="20">
+                      <input type="number" id="score-04-pass" class="form-control form-control-hours"
+                      min="0" max="100" value="80">
+                    </div>
                   </div>
-                  <div class="form-group" data-range-slider>
-                    <label for="score-02" class="form-label">Verbal</label>
-                    <input type="range" class="form-range" id="score-02" min="0" max="100">
-                    <label for="score-02-num" class="visuallyhidden">Competency score number input</label>
-                    <input type="number" id="score-02-num" class="form-control form-control-hours"
-                    min="0" max="100">
-                  </div>
-                  <div class="form-group" data-range-slider>
-                    <label for="score-03" class="form-label">Numerical</label>
-                    <input type="range" class="form-range" id="score-03" min="0" max="100">
-                    <label for="score-03-num" class="visuallyhidden">Competency score number input</label>
-                    <input type="number" id="score-03-num" class="form-control form-control-hours"
-                    min="0" max="100">
-                  </div>
-                  <div class="form-group" data-range-slider>
-                    <label for="score-04" class="form-label">SJQ</label>
-                    <input type="range" class="form-range" id="score-04" min="0" max="100">
-                    <label for="score-04-num" class="visuallyhidden">Competency score number input</label>
-                    <input type="number" id="score-04-num" class="form-control form-control-hours"
-                    min="0" max="100">
+                </div>
+                <div class="grid grid-1-2">
+                  <div class="inner-block-padr">
+                    <div class="form-group" data-range-slider>
+                      <h3 class="bold-small">Overall</h3>
+                      <input type="number" id="overall-fail" class="form-control form-control-hours"
+                      min="0" max="100" value="20">
+                      <input type="number" id="overall-pass" class="form-control form-control-hours"
+                      min="0" max="100" value="80">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="grid grid-1-2">
-                <div class="inner-block-padr">
-                  <div class="form-group" data-range-slider>
-                    <label for="score-overall" class="form-label">Overall</label>
-                    <input type="range" class="form-range" id="score-overall" min="0" max="100">
-                    <label for="score-overall-num" class="visuallyhidden">Overall score number input</label>
-                    <input type="number" id="score-overall-num" class="form-control form-control-hours"
-                    min="0" max="100">
-                  </div>
-                </div>
-              </div>
+              <a href="#" class="button">Set pass marks</a>
             </section>
           </div>
           <div class="grid grid-2-3">
@@ -132,9 +135,176 @@
               <p>Start by selecting a scheme</p>
             </div>
             <section class="toggle-content" id="sectionMap">
-              <h2 class="heading-medium">Total candidates: 2612</h2>
-              <h2 class="heading-medium">Total passed: 732</h2>
-              Map
+              <h2 class="heading-small">Total candidates: 2612</h2>
+              <h2 class="heading-small">Total passed: 732</h2>
+              <div class="grid grid-1-2">
+                <div class="inner-block-padr">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Location</th>
+                        <th>Fail</th>
+                        <th>Pass</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Airdrie/Motherwell/Hamilton</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Bathgate</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Birmingham</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Blackpool</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Bradford</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Bristol</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Cardiff</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Coventry</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Darlington</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>East Kilbride</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Edinburgh</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Glasgow</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Hastings</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                      <tr>
+                        <td>Leeds/Sheffield</td>
+                        <td>100</td>
+                        <td>200</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="grid grid-1-2">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Location</th>
+                      <th>Fail</th>
+                      <th>Pass</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Liverpool/Bootle/Netherton</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>London</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Manchester/Salford</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Newcastle</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Nottingham</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Shipley</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Southend</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Springburn/Newlands/Govan</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>St Austell</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Stockport</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Telford</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Torquay</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Warrington</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>Worthing</td>
+                      <td>100</td>
+                      <td>200</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
           </div>
         </div>
@@ -162,26 +332,21 @@
               $('#panelStart').show();
             }
           });
-          $('[data-range-slider]').each(function()
-          {
-            var rangeSlider = $(this).find('[type="range"]'),
-              rangeNumber = $(this).find('[type="number"]');
-            rangeNumber.val(rangeSlider.val());
-            rangeSlider.on('input change', function()
-            {
-              rangeNumber.val(rangeSlider.val());
-            });
-            rangeNumber.on('input change', function()
-            {
-              rangeSlider.val(rangeNumber.val());
-            }).focusin(function()
-            {
-              rangeSlider.addClass('active');
-            }).focusout(function()
-            {
-              rangeSlider.removeClass('active');
-            });
-          });
+          // $('[data-range-slider]').each(function() {
+          //   var rangeSlider = $(this).find('[type="range"]'),
+          //       rangeNumber = $(this).find('[type="number"]');
+          //   rangeNumber.val(rangeSlider.val());
+          //   rangeSlider.on('input change', function() {
+          //     rangeNumber.val(rangeSlider.val());
+          //   });
+          //   rangeNumber.on('input change', function() {
+          //     rangeSlider.val(rangeNumber.val());
+          //   }).focusin(function() {
+          //     rangeSlider.addClass('active');
+          //   }).focusout(function() {
+          //     rangeSlider.removeClass('active');
+          //   });
+          // });
         });
         </script>
       </main>
