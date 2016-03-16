@@ -24,35 +24,34 @@ layout: admin-layout.hbs
       <div class="grid-wrapper">
         <div class="grid grid-1-2">
           <div class="inner-block-padr">
-            <div class="form-group" data-range-slider>
+            <div class="form-group">
               <h3 class="bold-small">Competency</h3>
-              <input type="number" id="score-01-fail" class="form-control form-control-hours" min="0" max="100" value="20">
-
-              <input type="number" id="score-01-pass" class="form-control form-control-hours" min="0" max="100" value="80">
+              <input type="number" data-score-fail id="score-01-fail" class="form-control form-control-hours" min="0" max="100" step="5" value="20">
+              <input type="number" data-score-pass id="score-01-pass" class="form-control form-control-hours" min="0" max="100" step="5" value="80">
             </div>
-            <div class="form-group" data-range-slider>
+            <div class="form-group">
               <h3 class="bold-small">Verbal</h3>
-              <input type="number" id="score-02-fail" class="form-control form-control-hours" min="0" max="100" value="20">
-              <input type="number" id="score-02-pass" class="form-control form-control-hours" min="0" max="100" value="80">
+              <input type="number" data-score-fail id="score-02-fail" class="form-control form-control-hours" min="0" max="100" step="5" value="20">
+              <input type="number" data-score-pass id="score-02-pass" class="form-control form-control-hours" min="0" max="100" step="5" value="80">
             </div>
-            <div class="form-group" data-range-slider>
+            <div class="form-group">
               <h3 class="bold-small">Numerical</h3>
-              <input type="number" id="score-03-fail" class="form-control form-control-hours" min="0" max="100" value="20">
-              <input type="number" id="score-03-pass" class="form-control form-control-hours" min="0" max="100" value="80">
+              <input type="number" data-score-fail id="score-03-fail" class="form-control form-control-hours" min="0" max="100" step="5" value="20">
+              <input type="number" data-score-pass id="score-03-pass" class="form-control form-control-hours" min="0" max="100" step="5" value="80">
             </div>
-            <div class="form-group" data-range-slider>
+            <div class="form-group">
               <h3 class="bold-small">SJQ</h3>
-              <input type="number" id="score-04-fail" class="form-control form-control-hours" min="0" max="100" value="20">
-              <input type="number" id="score-04-pass" class="form-control form-control-hours" min="0" max="100" value="80">
+              <input type="number" data-score-fail id="score-04-fail" class="form-control form-control-hours" min="0" max="100" step="5" value="20">
+              <input type="number" data-score-pass id="score-04-pass" class="form-control form-control-hours" min="0" max="100" step="5" value="80">
             </div>
           </div>
         </div>
         <div class="grid grid-1-2">
           <div class="inner-block-padr">
-            <div class="form-group" data-range-slider>
+            <div class="form-group">
               <h3 class="bold-small">Overall</h3>
-              <input type="number" id="overall-fail" class="form-control form-control-hours" min="0" max="100" value="20">
-              <input type="number" id="overall-pass" class="form-control form-control-hours" min="0" max="100" value="80">
+              <input type="number" data-score-fail id="overall-fail" class="form-control form-control-hours" min="0" max="100" step="5" value="20">
+              <input type="number" data-score-pass id="overall-pass" class="form-control form-control-hours" min="0" max="100" step="5" value="80">
             </div>
           </div>
         </div>
@@ -72,8 +71,8 @@ layout: admin-layout.hbs
           <h2 class="heading-small">Left in pool: <span id="candidatesLeft">822</span></h2>
         </div>
         <div class="grid grid-1-2">
-          <h2 class="heading-small">Passed: <span id="candidatesPassed">232</span></h2>
-          <h2 class="heading-small">Failed: <span id="candidatesFailed">146</span></h2>
+          <h2 class="heading-small">Failed: <span id="candidatesFailed">126</span></h2>
+          <h2 class="heading-small">Passed: <span id="candidatesPassed">187</span></h2>
         </div>
       </div>
       <div class="grid grid-1-2">
@@ -287,15 +286,20 @@ layout: admin-layout.hbs
         candidatesPassedEl = $('#candidatesPassed'),
         cellFailedEl = $('[data-failed-cell]'),
         cellPassedEl = $('[data-passed-cell]'),
+        scoreFailEl = $('[data-score-fail]'),
+        scorePassEl = $('[data-score-pass]'),
+        totalCandidates = Number(totalCandidatesEl.text()),
         totalFailed = 0,
-        totalPassed = 0;
+        totalPassed = 0,
+        failedCount = cellFailedEl.length,
+        passedCount = cellPassedEl.length;
 
-    function getTotalCandidates() {
+    function getCandidatesLeft() {
       var canLeftNum = Number(candidatesLeftEl.text()),
           canPassNum = Number(candidatesPassedEl.text()),
           canFailNum = Number(candidatesFailedEl.text());
 
-      totalCandidatesEl.text(canLeftNum + canPassNum + canFailNum);
+      candidatesLeftEl.text(totalCandidates - (canPassNum + canFailNum));
     }
 
     function calcTotalOfCells(theElement, theTotal, displayTotal) {
@@ -305,15 +309,13 @@ layout: admin-layout.hbs
         theTotal = theTotal + thisNum;
       });
 
-      displayTotal.text(theTotal)
-
+      displayTotal.text(theTotal);
     }
 
-    getTotalCandidates();
-
     calcTotalOfCells(cellFailedEl, totalFailed, candidatesFailedEl);
-
     calcTotalOfCells(cellPassedEl, totalPassed, candidatesPassedEl);
+
+    getCandidatesLeft();
 
   });
 </script>
