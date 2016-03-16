@@ -49,7 +49,7 @@ table {
 .ta-left {
   text-align: left;
 }
-.ta-right {
+.ta-right, .numeric {
   text-align: right;
 }
 
@@ -155,3 +155,15 @@ table {
 .t87    { width:87.5% }     /* 7/8 */
 .t90    { width:90% }
 .t95    { width:95% }
+
+
+/* Background colour classes for table columns */
+
+.t-error {
+  background: $mellow-red-25;
+}
+
+.t-success {
+  background: $turquoise-25;
+}
+

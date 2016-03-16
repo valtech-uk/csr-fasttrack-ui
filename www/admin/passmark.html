@@ -122,88 +122,102 @@
       <p>Start by selecting a scheme</p>
     </div>
     <section class="toggle-content" id="sectionMap">
-      <h2 class="heading-small">Total candidates: 2612</h2>
-      <h2 class="heading-small">Total passed: 732</h2>
+      <div class="grid-wrapper">
+        <div class="grid grid-1-2">
+          <h2 class="heading-small">Total candidates: <span id="totalCandidates">1200</span></h2>
+          <h2 class="heading-small">Left in pool: <span id="candidatesLeft">822</span></h2>
+        </div>
+        <div class="grid grid-1-2">
+          <h2 class="heading-small">Passed: <span id="candidatesPassed">232</span></h2>
+          <h2 class="heading-small">Failed: <span id="candidatesFailed">146</span></h2>
+        </div>
+      </div>
       <div class="grid grid-1-2">
         <div class="inner-block-padr">
           <table>
+            <colgroup>
+              <col class="t60"/>
+              <col class="t20 t-error"/>
+              <col class="t20 t-success"/>
+              <col/>
+            </colgroup>
             <thead>
               <tr>
                 <th>Location</th>
-                <th>Fail</th>
-                <th>Pass</th>
+                <th class="numeric">Fail</th>
+                <th class="numeric">Pass</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Airdrie/Motherwell/Hamilton</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">6</td>
+                <td data-passed-cell class="numeric">7</td>
               </tr>
               <tr>
                 <td>Bathgate</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">6</td>
+                <td data-passed-cell class="numeric">5</td>
               </tr>
               <tr>
                 <td>Birmingham</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">8</td>
+                <td data-passed-cell class="numeric">8</td>
               </tr>
               <tr>
                 <td>Blackpool</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">6</td>
+                <td data-passed-cell class="numeric">10</td>
               </tr>
               <tr>
                 <td>Bradford</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">5</td>
+                <td data-passed-cell class="numeric">7</td>
               </tr>
               <tr>
                 <td>Bristol</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">3</td>
+                <td data-passed-cell class="numeric">8</td>
               </tr>
               <tr>
                 <td>Cardiff</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">2</td>
+                <td data-passed-cell class="numeric">6</td>
               </tr>
               <tr>
                 <td>Coventry</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">4</td>
+                <td data-passed-cell class="numeric">10</td>
               </tr>
               <tr>
                 <td>Darlington</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">4</td>
+                <td data-passed-cell class="numeric">9</td>
               </tr>
               <tr>
                 <td>East Kilbride</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">1</td>
+                <td data-passed-cell class="numeric">4</td>
               </tr>
               <tr>
                 <td>Edinburgh</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">5</td>
+                <td data-passed-cell class="numeric">5</td>
               </tr>
               <tr>
                 <td>Glasgow</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">3</td>
+                <td data-passed-cell class="numeric">7</td>
               </tr>
               <tr>
                 <td>Hastings</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">4</td>
+                <td data-passed-cell class="numeric">3</td>
               </tr>
               <tr>
                 <td>Leeds/Sheffield</td>
-                <td>100</td>
-                <td>200</td>
+                <td data-failed-cell class="numeric">6</td>
+                <td data-passed-cell class="numeric">7</td>
               </tr>
             </tbody>
           </table>
@@ -211,83 +225,89 @@
       </div>
       <div class="grid grid-1-2">
         <table>
+          <colgroup>
+            <col class="t60"/>
+            <col class="t20 t-error"/>
+            <col class="t20 t-success"/>
+            <col/>
+          </colgroup>
          <thead>
            <tr>
              <th>Location</th>
-             <th>Fail</th>
-             <th>Pass</th>
+             <th class="numeric">Fail</th>
+             <th class="numeric">Pass</th>
            </tr>
          </thead>
          <tbody>
            <tr>
              <td>Liverpool/Bootle/Netherton</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">6</td>
+             <td data-passed-cell class="numeric">8</td>
            </tr>
            <tr>
              <td>London</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">5</td>
+             <td data-passed-cell class="numeric">8</td>
            </tr>
            <tr>
              <td>Manchester/Salford</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">5</td>
+             <td data-passed-cell class="numeric">3</td>
            </tr>
            <tr>
              <td>Newcastle</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">3</td>
+             <td data-passed-cell class="numeric">7</td>
            </tr>
            <tr>
              <td>Nottingham</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">3</td>
+             <td data-passed-cell class="numeric">9</td>
            </tr>
            <tr>
              <td>Shipley</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">1</td>
+             <td data-passed-cell class="numeric">6</td>
            </tr>
            <tr>
              <td>Southend</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">3</td>
+             <td data-passed-cell class="numeric">4</td>
            </tr>
            <tr>
              <td>Springburn/Newlands/Govan</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">4</td>
+             <td data-passed-cell class="numeric">7</td>
            </tr>
            <tr>
              <td>St Austell</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">6</td>
+             <td data-passed-cell class="numeric">6</td>
            </tr>
            <tr>
              <td>Stockport</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">7</td>
+             <td data-passed-cell class="numeric">8</td>
            </tr>
            <tr>
              <td>Telford</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">5</td>
+             <td data-passed-cell class="numeric">4</td>
            </tr>
            <tr>
              <td>Torquay</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">5</td>
+             <td data-passed-cell class="numeric">4</td>
            </tr>
            <tr>
              <td>Warrington</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">7</td>
+             <td data-passed-cell class="numeric">9</td>
            </tr>
            <tr>
              <td>Worthing</td>
-             <td>100</td>
-             <td>200</td>
+             <td data-failed-cell class="numeric">3</td>
+             <td data-passed-cell class="numeric">8</td>
            </tr>
          </tbody>
        </table>
@@ -309,34 +329,47 @@
 
     $('#selectScheme').on('change', function() {
       if($('#selectScheme').val() !== 'null') {
-        console.log('no');
         $('#sectionSetPassmarks, #sectionMap').show();
         $('#panelStart').hide();
       } else {
-        console.log('yes');
         $('#sectionSetPassmarks, #sectionMap').hide();
         $('#panelStart').show();
       }
     });
 
-    // $('[data-range-slider]').each(function() {
-    //   var rangeSlider = $(this).find('[type="range"]'),
-    //       rangeNumber = $(this).find('[type="number"]');
+    var totalCandidatesEl = $('#totalCandidates'),
+        candidatesLeftEl = $('#candidatesLeft'),
+        candidatesFailedEl = $('#candidatesFailed'),
+        candidatesPassedEl = $('#candidatesPassed'),
+        cellFailedEl = $('[data-failed-cell]'),
+        cellPassedEl = $('[data-passed-cell]'),
+        totalFailed = 0,
+        totalPassed = 0;
 
-    //   rangeNumber.val(rangeSlider.val());
+    function getTotalCandidates() {
+      var canLeftNum = Number(candidatesLeftEl.text()),
+          canPassNum = Number(candidatesPassedEl.text()),
+          canFailNum = Number(candidatesFailedEl.text());
 
-    //   rangeSlider.on('input change', function() {
-    //     rangeNumber.val(rangeSlider.val());
-    //   });
+      totalCandidatesEl.text(canLeftNum + canPassNum + canFailNum);
+    }
 
-    //   rangeNumber.on('input change', function() {
-    //     rangeSlider.val(rangeNumber.val());
-    //   }).focusin(function() {
-    //     rangeSlider.addClass('active');
-    //   }).focusout(function() {
-    //     rangeSlider.removeClass('active');
-    //   });
-    // });
+    function calcTotalOfCells(theElement, theTotal, displayTotal) {
+      theElement.each(function() {
+        var thisNum = Number($(this).text());
+
+        theTotal = theTotal + thisNum;
+      });
+
+      displayTotal.text(theTotal)
+
+    }
+
+    getTotalCandidates();
+
+    calcTotalOfCells(cellFailedEl, totalFailed, candidatesFailedEl);
+
+    calcTotalOfCells(cellPassedEl, totalPassed, candidatesPassedEl);
 
   });
 </script>
