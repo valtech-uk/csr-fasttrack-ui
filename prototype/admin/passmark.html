@@ -66,325 +66,100 @@
     <div class="content-container">
       <main role="main" id="main">
         <div class="hgroup">
-          <h1 class="heading-xlarge">Pass mark setting <a class="inl-block font-small" href="find-candidate.html">Return to start</a></h1>
+          <h1 class="heading-xlarge">Pass mark setting</h1>
+          <a href="find-candidate.html">Return to start</a>
         </div>
         <div class="grid-wrapper">
           <div class="grid grid-1-3">
             <div class="form-group">
-              <label for="selectScheme" class="form-label">Select scheme to filter pass marks</label>
+              <label for="selectScheme" class="form-label">Select scheme to set pass marks</label>
               <select name="" id="selectScheme">
                 <option value="null">-- Select one --</option>
-                <option value="scheme-business" selected>Business</option>
+                <option value="scheme-business">Business</option>
                 <option value="scheme-commercial">Commercial</option>
                 <option value="scheme-dant">Digital and technology</option>
                 <option value="scheme-finance">Finance</option>
                 <option value="scheme-project">Project delivery</option>
               </select>
             </div>
-            <section class="toggle-content" id="sectionSetPassmarks">
-              <div class="grid-wrapper">
-                <div class="grid grid-1-2">
-                  <div class="inner-block-padr">
-                    <div class="form-group">
-                      <h3 class="bold-small">Competency</h3>
-                      <input type="number" data-score-fail id="score-01-fail" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="20">
-                      <input type="number" data-score-pass id="score-01-pass" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="80">
-                    </div>
-                    <div class="form-group">
-                      <h3 class="bold-small">Verbal</h3>
-                      <input type="number" data-score-fail id="score-02-fail" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="20">
-                      <input type="number" data-score-pass id="score-02-pass" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="80">
-                    </div>
-                    <div class="form-group">
-                      <h3 class="bold-small">Numerical</h3>
-                      <input type="number" data-score-fail id="score-03-fail" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="20">
-                      <input type="number" data-score-pass id="score-03-pass" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="80">
-                    </div>
-                    <div class="form-group">
-                      <h3 class="bold-small">SJQ</h3>
-                      <input type="number" data-score-fail id="score-04-fail" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="20">
-                      <input type="number" data-score-pass id="score-04-pass" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="80">
-                    </div>
-                  </div>
-                </div>
-                <div class="grid grid-1-2">
-                  <div class="inner-block-padr">
-                    <div class="form-group">
-                      <h3 class="bold-small">Overall</h3>
-                      <input type="number" data-score-fail id="overall-fail" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="20">
-                      <input type="number" data-score-pass id="overall-pass" class="form-control form-control-hours"
-                      min="0" max="100" step="5" value="80">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="button">Set pass marks</a>
-            </section>
           </div>
           <div class="grid grid-2-3">
-            <div class="panel-info" id="panelStart">
-              <p>Start by selecting a scheme</p>
-            </div>
-            <section class="toggle-content" id="sectionMap">
-              <div class="grid-wrapper">
-                <div class="grid grid-1-2">
-                  <h2 class="heading-small">Total candidates: <span id="totalCandidates">1200</span></h2>
-                  <h2 class="heading-small">Left in pool: <span id="candidatesLeft">822</span></h2>
-                </div>
-                <div class="grid grid-1-2">
-                  <h2 class="heading-small">Failed: <span id="candidatesFailed">126</span></h2>
-                  <h2 class="heading-small">Passed: <span id="candidatesPassed">187</span></h2>
-                </div>
-              </div>
+            <div class="grid-wrapper">
               <div class="grid grid-1-2">
                 <div class="inner-block-padr">
-                  <table>
-                    <colgroup>
-                      <col class="t60" />
-                      <col class="t20 t-error" />
-                      <col class="t20 t-success" />
-                      <col/>
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th>Location</th>
-                        <th class="numeric">Fail</th>
-                        <th class="numeric">Pass</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Airdrie/Motherwell/Hamilton</td>
-                        <td data-failed-cell class="numeric">6</td>
-                        <td data-passed-cell class="numeric">7</td>
-                      </tr>
-                      <tr>
-                        <td>Bathgate</td>
-                        <td data-failed-cell class="numeric">6</td>
-                        <td data-passed-cell class="numeric">5</td>
-                      </tr>
-                      <tr>
-                        <td>Birmingham</td>
-                        <td data-failed-cell class="numeric">8</td>
-                        <td data-passed-cell class="numeric">8</td>
-                      </tr>
-                      <tr>
-                        <td>Blackpool</td>
-                        <td data-failed-cell class="numeric">6</td>
-                        <td data-passed-cell class="numeric">10</td>
-                      </tr>
-                      <tr>
-                        <td>Bradford</td>
-                        <td data-failed-cell class="numeric">5</td>
-                        <td data-passed-cell class="numeric">7</td>
-                      </tr>
-                      <tr>
-                        <td>Bristol</td>
-                        <td data-failed-cell class="numeric">3</td>
-                        <td data-passed-cell class="numeric">8</td>
-                      </tr>
-                      <tr>
-                        <td>Cardiff</td>
-                        <td data-failed-cell class="numeric">2</td>
-                        <td data-passed-cell class="numeric">6</td>
-                      </tr>
-                      <tr>
-                        <td>Coventry</td>
-                        <td data-failed-cell class="numeric">4</td>
-                        <td data-passed-cell class="numeric">10</td>
-                      </tr>
-                      <tr>
-                        <td>Darlington</td>
-                        <td data-failed-cell class="numeric">4</td>
-                        <td data-passed-cell class="numeric">9</td>
-                      </tr>
-                      <tr>
-                        <td>East Kilbride</td>
-                        <td data-failed-cell class="numeric">1</td>
-                        <td data-passed-cell class="numeric">4</td>
-                      </tr>
-                      <tr>
-                        <td>Edinburgh</td>
-                        <td data-failed-cell class="numeric">5</td>
-                        <td data-passed-cell class="numeric">5</td>
-                      </tr>
-                      <tr>
-                        <td>Glasgow</td>
-                        <td data-failed-cell class="numeric">3</td>
-                        <td data-passed-cell class="numeric">7</td>
-                      </tr>
-                      <tr>
-                        <td>Hastings</td>
-                        <td data-failed-cell class="numeric">4</td>
-                        <td data-passed-cell class="numeric">3</td>
-                      </tr>
-                      <tr>
-                        <td>Leeds/Sheffield</td>
-                        <td data-failed-cell class="numeric">6</td>
-                        <td data-passed-cell class="numeric">7</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="form-group inline">
+                    <h3 class="heading-small">Competency</h3>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-01-fail" class="form-label">Fail</label>
+                      <input type="number" data-score-fail id="score-01-fail" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="20">
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-01-pass" class="form-label">Pass</label>
+                      <input type="number" data-score-pass id="score-01-pass" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="80">
+                    </div>
+                  </div>
+                  <div class="form-group inline">
+                    <h3 class="heading-small">Verbal</h3>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-02-fail" class="form-label">Fail</label>
+                      <input type="number" data-score-fail id="score-02-fail" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="20">
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-02-pass" class="form-label">Pass</label>
+                      <input type="number" data-score-pass id="score-02-pass" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="80">
+                    </div>
+                  </div>
+                  <div class="form-group inline">
+                    <h3 class="heading-small">Numerical</h3>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-03-fail" class="form-label">Fail</label>
+                      <input type="number" data-score-fail id="score-03-fail" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="20">
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-03-pass" class="form-label">Pass</label>
+                      <input type="number" data-score-pass id="score-03-pass" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="80">
+                    </div>
+                  </div>
+                  <div class="form-group inline">
+                    <h3 class="heading-small">SJQ</h3>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-04-fail" class="form-label">Fail</label>
+                      <input type="number" data-score-fail id="score-04-fail" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="20">
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="score-04-pass" class="form-label">Pass</label>
+                      <input type="number" data-score-pass id="score-04-pass" class="form-control form-control-hours"
+                      min="20" max="80" step="5" value="80">
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="grid grid-1-2">
-                <table>
-                  <colgroup>
-                    <col class="t60" />
-                    <col class="t20 t-error" />
-                    <col class="t20 t-success" />
-                    <col/>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>Location</th>
-                      <th class="numeric">Fail</th>
-                      <th class="numeric">Pass</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Liverpool/Bootle/Netherton</td>
-                      <td data-failed-cell class="numeric">6</td>
-                      <td data-passed-cell class="numeric">8</td>
-                    </tr>
-                    <tr>
-                      <td>London</td>
-                      <td data-failed-cell class="numeric">5</td>
-                      <td data-passed-cell class="numeric">8</td>
-                    </tr>
-                    <tr>
-                      <td>Manchester/Salford</td>
-                      <td data-failed-cell class="numeric">5</td>
-                      <td data-passed-cell class="numeric">3</td>
-                    </tr>
-                    <tr>
-                      <td>Newcastle</td>
-                      <td data-failed-cell class="numeric">3</td>
-                      <td data-passed-cell class="numeric">7</td>
-                    </tr>
-                    <tr>
-                      <td>Nottingham</td>
-                      <td data-failed-cell class="numeric">3</td>
-                      <td data-passed-cell class="numeric">9</td>
-                    </tr>
-                    <tr>
-                      <td>Shipley</td>
-                      <td data-failed-cell class="numeric">1</td>
-                      <td data-passed-cell class="numeric">6</td>
-                    </tr>
-                    <tr>
-                      <td>Southend</td>
-                      <td data-failed-cell class="numeric">3</td>
-                      <td data-passed-cell class="numeric">4</td>
-                    </tr>
-                    <tr>
-                      <td>Springburn/Newlands/Govan</td>
-                      <td data-failed-cell class="numeric">4</td>
-                      <td data-passed-cell class="numeric">7</td>
-                    </tr>
-                    <tr>
-                      <td>St Austell</td>
-                      <td data-failed-cell class="numeric">6</td>
-                      <td data-passed-cell class="numeric">6</td>
-                    </tr>
-                    <tr>
-                      <td>Stockport</td>
-                      <td data-failed-cell class="numeric">7</td>
-                      <td data-passed-cell class="numeric">8</td>
-                    </tr>
-                    <tr>
-                      <td>Telford</td>
-                      <td data-failed-cell class="numeric">5</td>
-                      <td data-passed-cell class="numeric">4</td>
-                    </tr>
-                    <tr>
-                      <td>Torquay</td>
-                      <td data-failed-cell class="numeric">5</td>
-                      <td data-passed-cell class="numeric">4</td>
-                    </tr>
-                    <tr>
-                      <td>Warrington</td>
-                      <td data-failed-cell class="numeric">7</td>
-                      <td data-passed-cell class="numeric">9</td>
-                    </tr>
-                    <tr>
-                      <td>Worthing</td>
-                      <td data-failed-cell class="numeric">3</td>
-                      <td data-passed-cell class="numeric">8</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="form-group inline">
+                  <h3 class="heading-small">Combination score</h3>
+                  <div class="form-group no-btm-margin">
+                    <label for="score-overall-fail" class="form-label">Fail</label>
+                    <input type="number" data-score-fail id="score-overall-fail" class="form-control form-control-hours"
+                    min="80" max="320" step="5" value="80">
+                  </div>
+                  <div class="form-group no-btm-margin">
+                    <label for="score-overall-pass" class="form-label">Pass</label>
+                    <input type="number" data-score-pass id="score-overall-pass" class="form-control form-control-hours"
+                    min="80" max="320" step="5" value="320">
+                  </div>
+                </div>
               </div>
-            </section>
+            </div>
+            <a href="#" class="button">Set pass marks</a>
           </div>
         </div>
-        <!-- Don't include in prod -->
-        <script>
-        $(function()
-        {
-          if ($('#selectScheme').val() !== 'null')
-          {
-            $('#sectionSetPassmarks, #sectionMap').show();
-            $('#panelStart').hide();
-          }
-          $('#selectScheme').on('change', function()
-          {
-            if ($('#selectScheme').val() !== 'null')
-            {
-              $('#sectionSetPassmarks, #sectionMap').show();
-              $('#panelStart').hide();
-            }
-            else
-            {
-              $('#sectionSetPassmarks, #sectionMap').hide();
-              $('#panelStart').show();
-            }
-          });
-          var totalCandidatesEl = $('#totalCandidates'),
-            candidatesLeftEl = $('#candidatesLeft'),
-            candidatesFailedEl = $('#candidatesFailed'),
-            candidatesPassedEl = $('#candidatesPassed'),
-            cellFailedEl = $('[data-failed-cell]'),
-            cellPassedEl = $('[data-passed-cell]'),
-            scoreFailEl = $('[data-score-fail]'),
-            scorePassEl = $('[data-score-pass]'),
-            totalCandidates = Number(totalCandidatesEl.text()),
-            totalFailed = 0,
-            totalPassed = 0,
-            failedCount = cellFailedEl.length,
-            passedCount = cellPassedEl.length;
-          function getCandidatesLeft()
-          {
-            var canLeftNum = Number(candidatesLeftEl.text()),
-              canPassNum = Number(candidatesPassedEl.text()),
-              canFailNum = Number(candidatesFailedEl.text());
-            candidatesLeftEl.text(totalCandidates - (canPassNum +
-              canFailNum));
-          }
-          function calcTotalOfCells(theElement, theTotal, displayTotal)
-          {
-            theElement.each(function()
-            {
-              var thisNum = Number($(this).text());
-              theTotal = theTotal + thisNum;
-            });
-            displayTotal.text(theTotal);
-          }
-          calcTotalOfCells(cellFailedEl, totalFailed, candidatesFailedEl);
-          calcTotalOfCells(cellPassedEl, totalPassed, candidatesPassedEl);
-          getCandidatesLeft();
-        });
-        </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
