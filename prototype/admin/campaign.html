@@ -57,64 +57,63 @@
           <div class="grid grid-3-4">
             <h1 class="bold-small">Apply for a Civil Service apprenticeship | Administration</h1>
           </div>
-          <!-- <div class="grid grid-1-4">
-        <h2 class="bold-small">Hello, James</h2>
-      </div> -->
+          <div class="grid grid-1-4">
+            <div class="nav-menu ">
+              <a class="nav-menu__trigger" href="" id="headerNavigation">Navigation</a>
+              <ul class="nav-menu__items toggle-content">
+                <li><a href="find-candidate.html">Find a candidate</a>
+                </li>
+                <li><a href="reporting.html">Reporting</a>
+                </li>
+                <li><a href="campaign.html">Campaign management</a>
+                </li>
+                <li><a href="passmark-index.html">Online test passmarks</a>
+                </li>
+                <li><a href="assessment-schedule.html">Assessment centre schedule</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <div class="content-container">
       <main role="main" id="main">
-        <div class="grid-wrapper">
-          <div class="grid grid-1-4">
-            <div class="inner-block-padr">
-              <ul class="list-text">
-                <li><a href="find-candidate.html">Find a candidate</a>
-                </li>
-                <li><a href="reporting.html">Reporting</a>
-                </li>
-                <li>Campaign management</li>
-              </ul>
-            </div>
-          </div>
-          <div class="grid grid-3-4">
-            <div class="hgroup-large">
-              <h2 class="heading-xlarge">
+        <div class="hgroup-large">
+          <h2 class="heading-xlarge">
         Campaign management
       </h2>
-            </div>
-            <section>
-              <h3 class="heading-large">
+        </div>
+        <section>
+          <h3 class="heading-large">
         Online testing
       </h3>
-              <div id="onlineTestingEnabled" class="panel-success toggle-content">
-                <p>Online testing has been enabled</p>
-              </div>
-              <div id="enableOnlineTestingPanel">
-                <p>Online testing is not enabled</p>
-                <fieldset>
-                  <legend class="form-label">Do you want to enable online testing?</legend>
-                  <div class="form-group form-group-compound inline">
-                    <label data-target="enable-online-panel" for="enable-online-yes" class="block-label">
-                      <input name="enable-online" type="radio" id="enable-online-yes" aria-controls="enable-online-panel"
-                      aria-expanded="false">Yes
-                    </label>
-                    <label for="enable-online-no" class="block-label">
-                      <input name="enable-online" type="radio" id="enable-online-no">No
-                    </label>
-                  </div>
-                  <div id="enable-online-panel" class="toggle-content" aria-hidden="true">
-                    <div class="panel-warning">
-                      <p class="text">This will enable online testing for all candidates and send
-                        emails to let them know they have been enabled.</p>
-                    </div>
-                    <a href="#" class="button" id="enableOnlineTesting">Enable online testing</a>
-                  </div>
-                </fieldset>
-              </div>
-            </section>
+          <div id="onlineTestingEnabled" class="panel-success toggle-content">
+            <p>Online testing has been enabled</p>
           </div>
-        </div>
+          <div id="enableOnlineTestingPanel">
+            <p>Online testing is not enabled</p>
+            <fieldset>
+              <legend class="form-label">Do you want to enable online testing?</legend>
+              <div class="form-group form-group-compound inline">
+                <label data-target="enable-online-panel" for="enable-online-yes" class="block-label">
+                  <input name="enable-online" type="radio" id="enable-online-yes" aria-controls="enable-online-panel"
+                  aria-expanded="false">Yes
+                </label>
+                <label for="enable-online-no" class="block-label">
+                  <input name="enable-online" type="radio" id="enable-online-no">No
+                </label>
+              </div>
+              <div id="enable-online-panel" class="toggle-content" aria-hidden="true">
+                <div class="panel-warning">
+                  <p class="text">This will enable online testing for all candidates and send emails
+                    to let them know they have been enabled.</p>
+                </div>
+                <a href="#" class="button" id="enableOnlineTesting">Enable online testing</a>
+              </div>
+            </fieldset>
+          </div>
+        </section>
         <script>
         //Don't include this in prod
         $('#enableOnlineTesting').on('click', function(e)

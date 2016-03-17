@@ -37,8 +37,8 @@ $(function() {
 
   isAndroid();
 
-  $('.menu-trigger').on('click', function() {
-    $(this).next('.menu').toggleClass('menu-open');
+  $('.nav-menu__trigger').on('click', function() {
+    $(this).next('.nav-menu__items').toggleClass('toggle-content');
     $(this).toggleClass('triggered');
     return false;
   });

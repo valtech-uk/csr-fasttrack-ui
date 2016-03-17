@@ -39,6 +39,21 @@ table {
   }
 }
 
+.responsive-table {
+  overflow-y: scroll;
+}
+
+.date-table {
+  th, td {
+    border: 1px solid $border-colour;
+    font-size: 12px;
+    padding: 5px;
+  }
+  tr:nth-child(odd) {
+    background: $grey-3;
+  }
+}
+
 .table-compound {
   margin-bottom: 0;
 }
