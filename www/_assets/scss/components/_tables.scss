@@ -40,17 +40,34 @@ table {
 }
 
 .responsive-table {
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 .date-table {
+  overflow: hidden;
   th, td {
-    border: 1px solid $border-colour;
+    border: 1px solid $grey-1;
     font-size: 12px;
     padding: 5px;
   }
   tr:nth-child(odd) {
     background: $grey-3;
+  }
+  td.confirmed {
+    background: $turquoise-50;
+  }
+  .bank-holiday {
+    position: relative;
+  }
+  .bank-holiday:after {
+    content: "";
+    position: absolute;
+    background-color: #ffa;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    opacity: 0.5;
   }
 }
 
