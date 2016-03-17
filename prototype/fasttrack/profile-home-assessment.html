@@ -115,12 +115,11 @@
         </div>
       </div>
       <main role="main" id="main">
-        <!-- <div class="panel-success">
-  <div class="text">
-    <p id="SuccessMessageText">You've successfully submitted your application. </p>
-    <p>The next thing you'll need to do is the online test. You will be contacted once this ready for you to complete  <a href="/feedback.html">Give feedback?</a> (30 second survey)</p>
-  </div>
-</div> -->
+        <div class="panel-success toggle-content" id="assessmentSuccess">
+          <div class="text">
+            <p>You've successfully confirmed your assessment date.</p>
+          </div>
+        </div>
         <div class="hgroup">
           <h1 class="heading-xlarge">Home</h1>
           <p class="subtitle" id="nameOnHome">PreferredName</p>
@@ -165,8 +164,10 @@
                     <h2 class="heading-medium">3. Attend an assessment centre</h2>
                     <p>Your assessment has been booked for</p>
                     <p class="lede">London, 2 May 2016 at 12pm</p>
-                    <p class="small-btm-margin">Can you attend on this date and time?</p>
-                    <a href="" class="button">I can attend</a>
+                    <div id="attendQuestion">
+                      <p class="small-btm-margin">Can you attend on this date and time?</p>
+                      <a href="?Status=attending" class="button" id="canAttendBtn">I can attend</a>
+                    </div>
                     <p>If you're unable to attend, <a href="helpdesk.html" class="">let us know</a>.</p>
                     <p><a href="https://www.gov.uk/guidance/civil-service-fast-track-apprenticeship-how-to-apply#assessment-day"
                       rel="external" target="_blank">Find out more about the assessment day</a>
@@ -194,14 +195,6 @@
               </div>
             </li>
           </ol>
-        </section>
-        <section>
-          <h2 class="heading-medium">Withdraw application</h2>
-          <div class="text">
-            <p>If you no longer wish to proceed with your application you can withdraw
-              at any time.</p>
-            <a href="withdraw-application.html">Withdraw application</a>
-          </div>
         </section>
       </main>
     </div>

@@ -288,6 +288,11 @@ $(function() {
     $('#adjustmentTime').removeClass('toggle-content');
   }
 
+  if($('#canAttendBtn').length && gup('Status') == 'attending') {
+    $('#attendQuestion').hide();
+    $('#assessmentSuccess').show();
+  }
+
   if($('#testsResetSuccess').length && gup('Status') == 'reset') {
     $('#testsResetSuccess').removeClass('toggle-content');
     $('#textStarted').addClass('toggle-content');
