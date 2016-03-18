@@ -53,8 +53,23 @@ table {
   tr:nth-child(odd) {
     background: $grey-3;
   }
-  td.confirmed {
+  .grid-wrapper {
+    padding: 0;
+    .grid:first-child {
+      border-right: 1px solid $grey-1;
+    }
+  }
+  .confirmed {
     background: $turquoise-50;
+    padding: 5px;
+  }
+  .tentative {
+    background: $orange-50;
+    padding: 5px;
+  }
+  .no-go {
+    background: $red-50;
+    padding: 5px;
   }
   .bank-holiday {
     position: relative;
