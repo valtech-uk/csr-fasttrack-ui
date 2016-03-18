@@ -58,19 +58,6 @@ table {
     .grid:first-child {
       border-right: 1px solid $grey-1;
     }
-    .grid {
-      padding: 5px;
-      text-align: center;
-    }
-  }
-  .confirmed {
-    background: $turquoise-50;
-  }
-  .tentative {
-    background: $orange-50;
-  }
-  .no-go {
-    background: $red-50;
   }
   .bank-holiday {
     position: relative;
@@ -85,6 +72,21 @@ table {
     width: 100%;
     opacity: 0.5;
   }
+}
+
+.day-confirmed, .day-tentative, .day-no-go {
+  padding: 5px;
+  text-align: center;
+}
+
+.day-confirmed {
+  background: $turquoise-50;
+}
+.day-tentative {
+  background: $orange-50;
+}
+.day-no-go {
+  background: $red-50;
 }
 
 .rotatedtext {
@@ -131,7 +133,7 @@ table {
     max-width: 10px;
   }
   .half-day:nth-of-type(1) {
-    border-bottom: 1px solid $grey-1;
+    border-bottom: 3px solid $grey-1;
     tr:last-of-type td {
       padding-bottom: 10px;
     }
@@ -141,20 +143,27 @@ table {
       padding-top: 10px;
     }
   }
-  .empty-slot, .booked-slot {
-    padding: 2px 10px;
-    .slot-action {
-      display: block;
-      padding: 1px 0 0;
-    }
-  }
   .empty-slot {
     border: 1px dashed darken($grey-2, 15%);
   }
-  .booked-slot {
-    background: lighten($turquoise-50, 15%);
-    border: 1px solid $turquoise;
+}
+
+.empty-slot, .booked-slot, .unconfirmed-slot {
+  padding: 2px 10px;
+  .slot-action {
+    display: block;
+    padding: 1px 0 0;
   }
+}
+
+.booked-slot {
+  background: lighten($turquoise-50, 15%);
+  border: 1px solid $turquoise;
+}
+
+.unconfirmed-slot {
+  background: lighten($orange-50, 15%);
+  border: 1px solid $orange;
 }
 
 .table-compound {
