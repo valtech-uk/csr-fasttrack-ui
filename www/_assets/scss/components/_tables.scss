@@ -58,18 +58,19 @@ table {
     .grid:first-child {
       border-right: 1px solid $grey-1;
     }
+    .grid {
+      padding: 5px;
+      text-align: center;
+    }
   }
   .confirmed {
     background: $turquoise-50;
-    padding: 5px;
   }
   .tentative {
     background: $orange-50;
-    padding: 5px;
   }
   .no-go {
     background: $red-50;
-    padding: 5px;
   }
   .bank-holiday {
     position: relative;
@@ -154,20 +155,6 @@ table {
   .fa {
     position: absolute;
     top: 2px; left: 1px;
-  }
-}
-
-.borderradius .tbody-3rows { /*IE9 and above*/
-  tr {
-    display: none;
-  }
-  tr:nth-child(-n+3) {
-    display: table-row;
-  }
-  &.tbody-withReasons {
-    tr:nth-child(-n+6) {
-    display: table-row;
-  }
   }
 }
 

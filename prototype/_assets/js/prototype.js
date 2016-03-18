@@ -293,6 +293,12 @@ $(function() {
     $('#assessmentSuccess').show();
   }
 
+
+  if($('#passMarkSuccess').length && gup('Status') == 'success') {
+    $('#passMarkSuccess').removeClass('toggle-content');
+  }
+
+
   if($('#testsResetSuccess').length && gup('Status') == 'reset') {
     $('#testsResetSuccess').removeClass('toggle-content');
     $('#textStarted').addClass('toggle-content');
