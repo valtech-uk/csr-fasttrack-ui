@@ -87,6 +87,76 @@ table {
   }
 }
 
+.rotatedtext {
+  display: inline-block;
+  -moz-transform: rotate(-90.0deg);
+  transform: rotate(-90.0deg);
+  position: absolute;
+  top: 50%; left: -25px;
+  margin-top: -10px;
+  text-align: center;
+  width: 80px; height: 20px;
+}
+
+.week-selector {
+  .week-prev {
+    text-align: left;
+  }
+  .week-middle {
+    text-align: center;
+  }
+  .week-next {
+    text-align: right;
+  }
+}
+
+.schedule-table {
+  overflow: hidden;
+  th, td {
+    border: none;
+    padding: 5px;
+  }
+  th {
+    border: 1px solid $grey-1;
+    padding: 5px 10px;
+  }
+  thead {
+    background: $grey-3;
+  }
+  .half-day-title {
+    background: $grey-3;
+    border: 1px solid $grey-1;
+    font-weight: bold;
+    position: relative;
+    max-width: 10px;
+  }
+  .half-day:nth-of-type(1) {
+    border-bottom: 1px solid $grey-1;
+    tr:last-of-type td {
+      padding-bottom: 10px;
+    }
+  }
+  .half-day:nth-of-type(2) {
+    tr:first-of-type td {
+      padding-top: 10px;
+    }
+  }
+  .empty-slot, .booked-slot {
+    padding: 2px 10px;
+    .slot-action {
+      display: block;
+      padding: 1px 0 0;
+    }
+  }
+  .empty-slot {
+    border: 1px dashed darken($grey-2, 15%);
+  }
+  .booked-slot {
+    background: lighten($turquoise-50, 15%);
+    border: 1px solid $turquoise;
+  }
+}
+
 .table-compound {
   margin-bottom: 0;
 }
@@ -164,10 +234,13 @@ table {
  * class so that column can soak up the effects of any accidental breakage in
  * the table.
  */
+.t2     { width: 2.5% }
 .t5     { width: 5% }
 .t10    { width:10% }
 .t12    { width:12.5% }     /* 1/8 */
 .t15    { width:15% }
+.t19    { width:19% }
+.t19-5    { width:19.5% }
 .t20    { width:20% }
 .t25    { width:25% }       /* 1/4 */
 .t30    { width:30% }
