@@ -310,8 +310,8 @@ $(function() {
   }
 
   if($('#testsPassed').length && gup('Status') == 'assessment') {
-    $('#testsInProgress').addClass('toggle-content');
-    $('#testsPassed, #assessmentCentre').removeClass('toggle-content');
+    $('#testsInProgress, #placeCandidateInSlot').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre, #addCandidateToSlot').removeClass('toggle-content');
   }
 
   $('#addCandidateToSlot').on('click', function() {
@@ -408,8 +408,8 @@ $(function() {
   });
 
   if($.cookie('addingCandidate') && $('#testsPassed').length) {
-    $('#testsPassed, #assessmentCentre').removeClass('toggle-content');
-    $('#testsInProgress').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre, #placeCandidateInSlot').removeClass('toggle-content');
+    $('#testsInProgress, #addCandidateToSlot').addClass('toggle-content');
 
     $('#addCandidateToSlot').on('click', function() {
       var fullName = $('#fullName').text();
