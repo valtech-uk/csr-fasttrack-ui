@@ -312,6 +312,7 @@ $(function() {
   if($('#testsPassed').length && gup('Status') == 'assessment') {
     $('#testsInProgress').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre').removeClass('toggle-content');
+    $.cookie('placingCandidate', true, {path: '/'});
   }
 
   $('#hideIEMessage').on('click', function() {
@@ -416,6 +417,28 @@ $(function() {
 
   }
 
+  if($.cookie('placingCandidate') && $('#managingCandidatePanel').length) {
+    $('#managingCandidatePanel').removeClass('toggle-content');
+  }
 
+  if($('#managingCandidatePanel').is(':visible')) {
+    var candidateName = $('#candidateManaging').text();
+
+    $('.locationAddCandidate').addClass('toggle-content');
+    $('.locationPlaceCandidate').removeClass('toggle-content');
+
+    $('.locationPlaceCandidate').on('click', function(e) {
+      e.preventDefault();
+
+      $(this).closest('td').html('<div class="booked-slot animate-booked-slot"><div class="candidate-name">'+ candidateName +'</div><a href="" class="link-unimp slot-action">Remove</a></div>');
+
+      $('#managingCandidatePanel').addClass('toggle-content');
+
+      $('.locationAddCandidate').removeClass('toggle-content');
+      $('.locationPlaceCandidate').addClass('toggle-content');
+
+      $.removeCookie('placingCandidate', { path: '/' });
+    })
+  }
 // --------------- Not to be used in production -------------- //
 });
