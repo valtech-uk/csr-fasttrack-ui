@@ -146,6 +146,12 @@ table {
   .empty-slot {
     border: 1px dashed darken($grey-2, 15%);
   }
+  .button-extractcol {
+    width: 100%;
+  }
+  .confirmed-text {
+    color: $grey-1;
+  }
 }
 
 .empty-slot, .booked-slot, .unconfirmed-slot {

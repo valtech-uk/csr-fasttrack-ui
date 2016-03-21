@@ -301,6 +301,12 @@ $(function() {
     $('#passMarkSuccess').removeClass('toggle-content');
   }
 
+  if($('.locationExtractDay').length && gup('Status') == 'confirmed') {
+    $('.locationExtractDay').removeClass('toggle-content');
+    $('[data-daycol="1"]').find('.unconfirmed-slot').toggleClass('unconfirmed-slot booked-slot');
+    $('[data-daycol="1"]').find('.slot-action').html('<span class="confirmed-text">Confirmed</span>');
+  }
+
   if($('#testsResetSuccess').length && gup('Status') == 'reset') {
     $('#testsResetSuccess').removeClass('toggle-content');
     $('#textStarted').addClass('toggle-content');
