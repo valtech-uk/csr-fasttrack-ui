@@ -272,6 +272,10 @@ $(function() {
     $('#btnSignIn').attr('href', 'profile-home-tests-expired.html');
   }
 
+  if($('#signedOut').length && gup('Status') == 'attend') {
+    $('#btnSignIn').attr('href', 'profile-home-assessment.html');
+  }
+
   if($('#signedOut').length && gup('Status') == 'withdrawn') {
     $('#withdrawnApplication').show();
   }
