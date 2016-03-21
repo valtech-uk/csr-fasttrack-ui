@@ -166,6 +166,16 @@ table {
   border: 1px solid $orange;
 }
 
+@keyframes fadeConfirmed {
+  0%   { background-color: lighten($turquoise-50, 15%); }
+  50%  { background-color: $turquoise; }
+  100% { background-color: lighten($turquoise-50, 15%); }
+}
+
+.animate-booked-slot {
+  animation: fadeConfirmed 3s ease-in-out;
+}
+
 .table-compound {
   margin-bottom: 0;
 }

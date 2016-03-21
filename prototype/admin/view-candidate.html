@@ -109,77 +109,92 @@
             </div>
           </div>
           <div class="grid-wrapper">
-            <div class="grid grid-1-2">
-              <section>
-                <h4 class="bold-small">Email address</h4>
-                <p>john.smith@email.com</p>
-              </section>
-              <section>
-                <h4 class="bold-small">Application status</h4>
-                <p>Submitted application (3 February 2016)</p>
-              </section>
-              <section>
-                <h4 class="bold-small">Online test status</h4>
-                <p>
-                  <span id="textStarted">Started: 6 April 2016</span><span class="toggle-content"
-                  id="textNotStarted">Not started</span> 
-                  <br>Expire: <span id="textExpire">3:36pm on 10 April 2016</span>
-                  <br>
-                  <a href="extend-tests.html">Extend tests time</a> or <a href="reset-tests.html">Reset tests</a>
-                </p>
-              </section>
-              <section>
-                <h3 class="heading-small">Full name</h3>
-                <p id="fullName">John Smith</p>
-              </section>
-              <section>
-                <h3 class="heading-small">What should we call you?</h3>
-                <p id="preferredName">John</p>
-              </section>
-              <section>
-                <h3 class="heading-small">Date of birth</h3>
-                <p id="dateOfBirth">19 May 1994</p>
-              </section>
-              <section>
-                <h3 class="heading-small">Address</h3>
-                <ul class="list-text">
-                  <li id="address1">38 Bolton Road</li>
-                  <li id="address2">Windsor</li>
-                  <li id="address3">Windsor and Maidenhead</li>
-                  <li id="address3b"></li>
-                  <li id="address4">SL3 5LK</li>
-                </ul>
-              </section>
-              <section>
-                <h3 class="heading-small">Telephone number</h3>
-                <p id="phone-input">07988 346763</p>
-                <p id="phone-input2"></p>
-              </section>
-              <section>
-                <h3 class="heading-small">Qualifications</h3>
-                <p id="minGCSEs" class="hidden">At least 5 GCSEs or equivalent</p>
-                <p id="minAlevels">At least 2 A-levels</p>
-              </section>
+            <div class="grid grid-2-3 grid-wrapper">
+              <div class="grid grid-1-2">
+                <section>
+                  <h3 class="heading-small">Full name</h3>
+                  <p id="fullName">John Smith</p>
+                </section>
+                <section>
+                  <h3 class="heading-small">What should we call you?</h3>
+                  <p id="preferredName">John</p>
+                </section>
+                <section>
+                  <h3 class="heading-small">Date of birth</h3>
+                  <p id="dateOfBirth">19 May 1994</p>
+                </section>
+                <section>
+                  <h3 class="heading-small">Address</h3>
+                  <ul class="list-text">
+                    <li id="address1">38 Bolton Road</li>
+                    <li id="address2">Windsor</li>
+                    <li id="address3">Windsor and Maidenhead</li>
+                    <li id="address3b"></li>
+                    <li id="address4">SL3 5LK</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3 class="heading-small">Telephone number</h3>
+                  <p id="phone-input">07988 346763</p>
+                  <p id="phone-input2"></p>
+                </section>
+                <section>
+                  <h3 class="heading-small">Qualifications</h3>
+                  <p id="minGCSEs" class="hidden">At least 5 GCSEs or equivalent</p>
+                  <p id="minAlevels">At least 2 A-levels</p>
+                </section>
+              </div>
+              <div class="grid grid-1-2">
+                <section>
+                  <h4 class="bold-small">Email address</h4>
+                  <p>john.smith@email.com</p>
+                </section>
+                <section>
+                  <h4 class="bold-small">Application status</h4>
+                  <p>Submitted application (3 February 2016)</p>
+                </section>
+                <section>
+                  <h4 class="bold-small">Online test status</h4>
+                  <div id="testsInProgress">
+                    <span id="textStarted">Started: 30 March 2016</span><span class="toggle-content"
+                    id="textNotStarted">Not started</span> 
+                    <br>Expire: <span id="textExpire">3:36pm on 6 April 2016</span>
+                    <br>
+                    <a href="extend-tests.html">Extend tests time</a> or <a href="reset-tests.html">Reset tests</a>
+                  </div>
+                  <div id="testsPassed" class="toggle-content">
+                    Completed online tests (4 April 2016)
+                    <br>Success email sent (10 April 2016)
+                  </div>
+                </section>
+                <section id="assessmentCentre" class="toggle-content">
+                  <h4 class="bold-small">Assessment centre</h4>
+                  <div>
+                    <p>Not currently booked</p>
+                    <a href="location-schedule.html" class="button" id="addCandidateToSlot">Add candidate to slot</a>
+                  </div>
+                </section>
+              </div>
             </div>
-            <div class="grid grid-1-2">
+            <div class="grid grid-1-3">
               <section class="toggle-content" id="securityQuestions">
                 <div class="hgroup-medium">
                   <h2 class="heading-medium">Security questions</h2>
                   <p class="subtitle">Ask at least 3 questions</p>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <h3 class="heading-small">Question</h3>
                   </div>
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-2-3">
                     <h3 class="heading-small">Correct</h3>
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Email address</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-01-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-01" type="radio" id="question-01-yes">Yes
                     </label>
@@ -189,10 +204,10 @@
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Full name</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-02-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-02" type="radio" id="question-02-yes">Yes
                     </label>
@@ -202,10 +217,10 @@
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Date of birth</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-03-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-03" type="radio" id="question-03-yes">Yes
                     </label>
@@ -215,10 +230,10 @@
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Address</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-04-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-04" type="radio" id="question-04-yes">Yes
                     </label>
@@ -228,10 +243,10 @@
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Telephone number</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-05-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-05" type="radio" id="question-05-yes">Yes
                     </label>
@@ -241,10 +256,10 @@
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Qualifications</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-06-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-06" type="radio" id="question-06-yes">Yes
                     </label>
@@ -254,10 +269,10 @@
                   </div>
                 </div>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-2">
+                  <div class="grid grid-1-3">
                     <p>Locations and scheme</p>
                   </div>
-                  <div class="grid grid-1-2 font-xsmall">
+                  <div class="grid grid-2-3 font-xsmall">
                     <label for="question-07-yes" class="block-label block-label-slim no-right-margin">
                       <input name="question-07" type="radio" id="question-07-yes">Yes
                     </label>
@@ -271,46 +286,50 @@
             </div>
           </div>
         </section>
-        <section class="section-border">
-          <h2 class="heading-large">
-        Locations and scheme
-      </h2>
-          <section>
-            <h3 class="heading-small">First preference</h3>
-            <p id="firstPreference">Newcastle (Business, Project delivery)</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Second preference</h3>
-            <p id="secondPreference">Manchester (Commercial, Business admin)</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Would you consider an alternative location?</h3>
-            <p id="considerAltLocation">Yes</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Would you consider an alternative scheme?</h3>
-            <p id="considerAltScheme">No</p>
-          </section>
-        </section>
-        <section class="section-border">
-          <h2 class="heading-large">
-        Additional information
-      </h2>
-          <section>
-            <h3 class="heading-small">Do you have a disability?</h3>
-            <p>No</p>
-          </section>
-          <section>
-            <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
-            <p class="small-btm-margin"><span class="inl-block small-right-margin">Time extension</span>
-              <span
-              id="adjustmentTime" class="toggle-content">(Verbal: 25%, Numerical: 25%)</span>
-            </p>
-          </section>
-          <section>
-            <h3 class="heading-small">How did you hear about us?</h3>
-            <p>Not specified</p>
-          </section>
+        <section class="section-border grid-wrapper">
+          <div class="grid grid-1-2">
+            <div class="inner-block-padr">
+              <h2 class="heading-large">
+            Locations and scheme
+          </h2>
+              <section>
+                <h3 class="heading-small">First preference</h3>
+                <p id="firstPreference">Newcastle (Business, Project delivery)</p>
+              </section>
+              <section>
+                <h3 class="heading-small">Second preference</h3>
+                <p id="secondPreference">Manchester (Commercial, Business admin)</p>
+              </section>
+              <section>
+                <h3 class="heading-small">Would you consider an alternative location?</h3>
+                <p id="considerAltLocation">Yes</p>
+              </section>
+              <section>
+                <h3 class="heading-small">Would you consider an alternative scheme?</h3>
+                <p id="considerAltScheme">No</p>
+              </section>
+            </div>
+          </div>
+          <div class="grid grid-1-2">
+            <h2 class="heading-large">
+          Additional information
+        </h2>
+            <section>
+              <h3 class="heading-small">Do you have a disability?</h3>
+              <p>No</p>
+            </section>
+            <section>
+              <h3 class="heading-small">Will you need adjustments or support for your assessment?</h3>
+              <p class="small-btm-margin"><span class="inl-block small-right-margin">Time extension</span>
+                <span
+                id="adjustmentTime" class="toggle-content">(Verbal: 25%, Numerical: 25%)</span>
+              </p>
+            </section>
+            <section>
+              <h3 class="heading-small">How did you hear about us?</h3>
+              <p>Not specified</p>
+            </section>
+          </div>
         </section>
       </main>
     </div>

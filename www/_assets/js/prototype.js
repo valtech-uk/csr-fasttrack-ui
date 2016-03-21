@@ -293,22 +293,25 @@ $(function() {
     $('#assessmentSuccess').show();
   }
 
-
   if($('#passMarkSuccess').length && gup('Status') == 'success') {
     $('#passMarkSuccess').removeClass('toggle-content');
   }
-
 
   if($('#testsResetSuccess').length && gup('Status') == 'reset') {
     $('#testsResetSuccess').removeClass('toggle-content');
     $('#textStarted').addClass('toggle-content');
     $('#textNotStarted').removeClass('toggle-content');
-    $('#textExpire').text('1:30pm on 17 April 2016');
+    $('#textExpire').text('1:30pm on 13 April 2016');
   }
 
   if($('#testsTimeSuccess').length && gup('Status') == 'extend') {
     $('#testsTimeSuccess').removeClass('toggle-content');
-    $('#textExpire').text('1:30pm on 17 April 2016');
+    $('#textExpire').text('1:30pm on 13 April 2016');
+  }
+
+  if($('#testsPassed').length && gup('Status') == 'assessment') {
+    $('#testsInProgress').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre').removeClass('toggle-content');
   }
 
   $('#hideIEMessage').on('click', function() {
@@ -370,6 +373,49 @@ $(function() {
 
     $('#securityQuestions').removeClass('toggle-content');
   });
+
+  $('.locationAddCandidate').on('click', function() {
+    var slotHalf = Number($(this).closest('tbody').attr('data-half')) - 1,
+        slotRow = $(this).closest('tr').index(),
+        slotDay = Number($(this).closest('td').attr('data-daycol')) - 1,
+        slotLocation = '.half-day:eq(' + slotHalf +') tr:eq(' + slotRow +') td:eq(' + slotDay + ')';
+
+    $.jStorage.set('slotLocation', slotLocation);
+
+    $.cookie('addingCandidate', true, {path: '/'});
+
+  });
+
+  if($.cookie('addingCandidate') && $('#testsPassed').length) {
+    $('#testsPassed, #assessmentCentre').removeClass('toggle-content');
+    $('#testsInProgress').addClass('toggle-content');
+
+    $('#addCandidateToSlot').on('click', function() {
+      var fullName = $('#fullName').text();
+
+      $.jStorage.set('candidateName', fullName);
+    })
+  }
+
+  if($.cookie('addingCandidate') && $('.locationAddCandidate').length) {
+    var slotLocater = $($.jStorage.get('slotLocation')),
+        candidateName = $.jStorage.get('candidateName');
+
+    slotLocater.html('<div class="booked-slot animate-booked-slot"><div class="candidate-name">'+ candidateName +'</div><a href="" class="link-unimp slot-action">Remove</a></div>');
+
+    $.removeCookie('addingCandidate', { path: '/' });
+
+  }
+
+  if($('.locationRemoveCandidate').length) {
+    $('.locationRemoveCandidate').on('click', function(e) {
+      $(this).closest('td').html('<div class="empty-slot"><div class="candidate-name">Empty slot</div><a href="find-candidate.html" class="link-unimp slot-action locationAddCandidate">Add candidate</a></div>')
+
+      e.preventDefault()
+    });
+
+  }
+
 
 // --------------- Not to be used in production -------------- //
 });
