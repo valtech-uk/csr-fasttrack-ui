@@ -312,8 +312,28 @@ $(function() {
   if($('#testsPassed').length && gup('Status') == 'assessment') {
     $('#testsInProgress').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre').removeClass('toggle-content');
-    $.cookie('placingCandidate', true, {path: '/'});
   }
+
+  $('#addCandidateToSlot').on('click', function() {
+    $.cookie('placingCandidate', true, {path: '/'});
+  });
+
+  if($('#testsPassed').length && gup('Status') == 'booked') {
+    $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre, #assessmentBooked').removeClass('toggle-content');
+  }
+
+  $('#changeBookedSlot').on('click', function () {
+    $.cookie('placingCandidate', true, {path: '/'});
+  });
+  $('#removeBookedSlot').on('click', function(e){
+    e.preventDefault();
+
+    $('#assessmentNotBooked').removeClass('toggle-content');
+    $('#assessmentBooked').addClass('toggle-content');
+
+    $.removeCookie('placingCandidate', { path: '/' });
+  });
 
   $('#hideIEMessage').on('click', function() {
     $.cookie('hideMessage', true, {path: '/'});
@@ -410,9 +430,14 @@ $(function() {
 
   if($('.locationRemoveCandidate').length) {
     $('.locationRemoveCandidate').on('click', function(e) {
-      $(this).closest('td').html('<div class="empty-slot"><div class="candidate-name">Empty slot</div><a href="find-candidate.html" class="link-unimp slot-action locationAddCandidate">Add candidate</a></div>')
+      var candidateName = $(this).closest('td').find('.candidate-name').text();
 
-      e.preventDefault()
+      $(this).closest('td').html('<div class="empty-slot"><div class="candidate-name">Empty slot</div><a href="find-candidate.html" class="link-unimp toggle-content locationAddCandidate">Add candidate</a><a href="#" class="link-unimp locationPlaceCandidate">Place candidate</a></div>')
+
+      e.preventDefault();
+
+      $('#managingCandidatePanel').removeClass('toggle-content').find('#candidateManaging').text(candidateName);
+      placingCandidate(candidateName);
     });
 
   }
@@ -421,8 +446,8 @@ $(function() {
     $('#managingCandidatePanel').removeClass('toggle-content');
   }
 
-  if($('#managingCandidatePanel').is(':visible')) {
-    var candidateName = $('#candidateManaging').text();
+  function placingCandidate(candidate) {
+    var candidateName = candidate;
 
     $('.locationAddCandidate').addClass('toggle-content');
     $('.locationPlaceCandidate').removeClass('toggle-content');
@@ -430,7 +455,7 @@ $(function() {
     $('.locationPlaceCandidate').on('click', function(e) {
       e.preventDefault();
 
-      $(this).closest('td').html('<div class="booked-slot animate-booked-slot"><div class="candidate-name">'+ candidateName +'</div><a href="" class="link-unimp slot-action">Remove</a></div>');
+      $(this).closest('td').html('<div class="booked-slot animate-booked-slot"><div class="candidate-name">'+ candidateName +'</div><div class="slot-action"><a href="" class="link-unimp">Remove</a></div></div>');
 
       $('#managingCandidatePanel').addClass('toggle-content');
 
@@ -438,7 +463,25 @@ $(function() {
       $('.locationPlaceCandidate').addClass('toggle-content');
 
       $.removeCookie('placingCandidate', { path: '/' });
-    })
+    });
+
+    $('#stopManagingCandidate').on('click', function(e) {
+      $('#managingCandidatePanel').addClass('toggle-content');
+      $('.locationAddCandidate').removeClass('toggle-content');
+      $('.locationPlaceCandidate').addClass('toggle-content');
+
+      $.removeCookie('placingCandidate', { path: '/' });
+
+      e.preventDefault();
+    });
+
   }
+
+  if($('#managingCandidatePanel').is(':visible')) {
+    var candidateName = 'John Smith';
+
+    placingCandidate(candidateName);
+  }
+
 // --------------- Not to be used in production -------------- //
 });
