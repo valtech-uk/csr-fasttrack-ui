@@ -497,5 +497,35 @@ $(function() {
     placingCandidate(candidateName);
   }
 
+  $('[data-candidate-amend]').on('click', function() {
+    var thisSection = $(this).closest('section'),
+        thisCandName = thisSection.find('[data-candidate-name]').text(),
+        thisCandID = thisSection.find('[data-candidate-id]').text(),
+        thisCandScore01 = thisSection.find('[data-candidate-score-01]').text(),
+        thisCandScore02 = thisSection.find('[data-candidate-score-02]').text(),
+        thisCandScore03 = thisSection.find('[data-candidate-score-03]').text(),
+        thisCandScoreOverall = thisSection.find('[data-candidate-score-overall]').text(),
+        thisCandFeedback = thisSection.find('[data-candidate-feedback]').text();
+
+    $.jStorage.set('thisCandName', thisCandName);
+    $.jStorage.set('thisCandID', thisCandID);
+    $.jStorage.set('thisCandScore01', thisCandScore01);
+    $.jStorage.set('thisCandScore02', thisCandScore02);
+    $.jStorage.set('thisCandScore03', thisCandScore03);
+    $.jStorage.set('thisCandScoreOverall', thisCandScoreOverall);
+    $.jStorage.set('thisCandFeedback', thisCandFeedback);
+
+  });
+
+  if($('#01-score-name').length && gup('Status') == 'amend') {
+    $('#01-score-name').val($.jStorage.get('thisCandName'));
+    $('#01-score-id').val($.jStorage.get('thisCandID'));
+    $('#01-score-01').val($.jStorage.get('thisCandScore01'));
+    $('#01-score-02').val($.jStorage.get('thisCandScore02'));
+    $('#01-score-03').val($.jStorage.get('thisCandScore03'));
+    $('#01-score-overall').val($.jStorage.get('thisCandScoreOverall'));
+    $('#01-feedback').html($.jStorage.get('thisCandFeedback'));
+  }
+
 // --------------- Not to be used in production -------------- //
 });
