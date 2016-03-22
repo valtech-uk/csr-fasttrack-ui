@@ -276,6 +276,11 @@ $(function() {
     $('#btnSignIn').attr('href', 'profile-home-assessment.html');
   }
 
+  if($('#signedOut').length && gup('Status') == 'closed') {
+    $('#btnSignIn').attr('href', 'profile-home-closed.html');
+    $('#applicationsClosed').removeClass('toggle-content');
+  }
+
   if($('#signedOut').length && gup('Status') == 'withdrawn') {
     $('#withdrawnApplication').show();
   }
