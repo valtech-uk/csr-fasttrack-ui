@@ -94,55 +94,77 @@
             <h4 class="bold-small">Candidate name</h4>
             <p>John Smith</p>
           </section>
-          <section class="section-border clearfix">
-            <h4 class="bold-small">Adjustment need</h4>
-            <p>Time extension</p>
-            <fieldset>
-              <legend class="form-label">Have you validated the adjustment?</legend>
-              <div class="form-group form-group-compound inline">
-                <label data-target="adjustment-01-panel" for="adjustment-01-yes" class="block-label block-label-slim">
-                  <input name="adjustment-01" type="radio" id="adjustment-01-yes" aria-controls="adjustment-01-panel"
-                  aria-expanded="false">Yes, the adjustment is needed
-                </label>
-                <label for="adjustment-01-no" class="block-label block-label-slim">
-                  <input name="adjustment-01" type="radio" id="adjustment-01-no">No, the adjustment is not needed
-                </label>
-              </div>
-              <div id="adjustment-01-panel" class="toggle-content" aria-hidden="true">
-                <div class="form-group">
-                  <label class="form-label" for="time-needed">Extra time needed (Verbal)</label>
-                  <input type="number" class="form-control form-control-small" id="time-needed" value="0"
-                  min="0" max="100" />
-                  <span>% added time</span>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="time-needed-num">Extra time needed (Numerical)</label>
-                  <input type="number" class="form-control form-control-small" id="time-needed-num"
-                  value="0" min="0" max="100" />
-                  <span>% added time</span>
+          <section class="section-border">
+            <div class="form-group form-group-compound">
+              <div>
+                <label for="adjustment-choice-01" class="block-label block-label-slim">
+                  <input checked type="checkbox" id="adjustment-choice-01">Time extension, eg 25% or 30%</label>
+                <div id="adjustment-choice-01-panel" class="toggle-content" aria-hidden="true">
+                  <div class="form-group">
+                    <label class="form-label" for="time-needed">Extra time needed (Verbal)</label>
+                    <input type="number" class="form-control form-control-small" id="time-needed" value="0"
+                    min="0" max="100" />
+                    <span>% added time</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="time-needed-num">Extra time needed (Numerical)</label>
+                    <input type="number" class="form-control form-control-small" id="time-needed-num"
+                    value="0" min="0" max="100" />
+                    <span>% added time</span>
+                  </div>
                 </div>
               </div>
-            </fieldset>
-          </section>
-          <section class="section-border clearfix">
-            <h4 class="bold-small">Adjustment need</h4>
-            <p>Braille test paper</p>
-            <fieldset>
-              <legend class="form-label">Have you validated the adjustment?</legend>
-              <div class="form-group form-group-compound inline">
-                <label for="adjustment-02-yes" class="block-label block-label-slim">
-                  <input name="adjustment-02" type="radio" id="adjustment-02-yes">Yes, the adjustment is needed
-                </label>
-                <label for="adjustment-02-no" class="block-label block-label-slim">
-                  <input name="adjustment-02" type="radio" id="adjustment-02-no">No, the adjustment is not needed
-                </label>
+              <div>
+                <label for="adjustment-choice-03" class="block-label block-label-slim">
+                  <input type="checkbox" id="adjustment-choice-03">Coloured paper</label>
               </div>
-            </fieldset>
+              <div>
+                <label for="adjustment-choice-06" class="block-label block-label-slim">
+                  <input checked type="checkbox" id="adjustment-choice-06">Braille test paper</label>
+              </div>
+              <div>
+                <label for="adjustment-choice-07" class="block-label block-label-slim">
+                  <input type="checkbox" id="adjustment-choice-07">Room alone</label>
+              </div>
+              <div>
+                <label for="adjustment-choice-09" class="block-label block-label-slim">
+                  <input type="checkbox" id="adjustment-choice-09">Rest breaks</label>
+              </div>
+              <div>
+                <label for="adjustment-choice-12" class="block-label block-label-slim">
+                  <input type="checkbox" id="adjustment-choice-12">Reader/assistant</label>
+              </div>
+              <div>
+                <label for="adjustment-choice-13" class="block-label block-label-slim">
+                  <input type="checkbox" id="adjustment-choice-13">Stand up and move around</label>
+              </div>
+            </div>
+            <div>
+              <h4 class="heading-small">Additional comments from candidate</h4>
+              <p>I also need to have a helper with me at the assessment.</p>
+            </div>
           </section>
+          <div class="panel-indent text">
+            <p>Ensure that the adjustment has been confirmed with the candidate before
+              saving</p>
+          </div>
           <div class="form-group">
             <a href="view-candidate.html?change=adjustment" class="button">Save adjustment</a>
           </div>
         </section>
+        <script>
+        $(function()
+        {
+          if ($('#adjustment-choice-01').is(':checked'))
+          {
+            $('#adjustment-choice-01-panel').show();
+          }
+          $('#adjustment-choice-01').on('change', function()
+          {
+            $('#adjustment-choice-01-panel').toggle();
+          });
+        });
+        </script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
