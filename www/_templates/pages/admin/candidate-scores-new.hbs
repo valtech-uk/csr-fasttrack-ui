@@ -1,0 +1,64 @@
+---
+pageTitle: Record scores
+layout: admin-layout.hbs
+signInClass: toggle-content
+---
+
+    <h1 class="heading-xlarge">
+      Record candidate scores
+    </h1>
+    <section>
+
+      <div class="grid-wrapper">
+        <div class="grid grid-1-2">
+          <div class="grid-wrapper">
+            <div class="grid grid-1-3">
+              <h2 class="bold-small">Location</h2><p>London 1</p>
+            </div>
+            <div class="grid grid-2-3">
+              <h2 class="bold-small">Date</h2><p>Monday 25 April 2016</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <section>
+        <h2 class="heading-medium">Candidate scores</h2>
+        <div class="form-group form-group-compound">
+          <label for="01-score-name" class="form-label">Candidate name</label>
+          <input type="text" class="form-control" id="01-score-name">
+        </div>
+        <div class="form-group">
+          <label for="01-score-id" class="form-label">Candidate ID</label>
+          <input type="text" class="form-control" id="01-score-id">
+        </div>
+        <div class="inline">
+          <div class="form-group form-group-compound">
+            <label for="01-score-01" class="form-label">Score 01</label>
+            <input type="number" class="form-control form-control-hours" id="01-score-01" min="20" max="80">
+          </div>
+          <div class="form-group form-group-compound">
+            <label for="01-score-02" class="form-label">Score 02</label>
+            <input type="number" class="form-control form-control-hours" id="01-score-02" min="20" max="80">
+          </div>
+          <div class="form-group form-group-compound">
+            <label for="01-score-03" class="form-label">Score 03</label>
+            <input type="number" class="form-control form-control-hours" id="01-score-03" min="20" max="80">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="01-score-overall" class="form-label">Overall score</label>
+          <input type="number" class="form-control form-control-hours" id="01-score-overall" min="20" max="80">
+        </div>
+        <div class="form-group">
+          <label id="01-feedback" class="form-label">Candidate feedback</label>
+          <textarea id="01-comments" class="form-control" rows="4"></textarea>
+        </div>
+      </section>
+
+    </section>
+
+    <a href="candidate-scores.html?Status=added" class="button">Save scores</a>
+
+

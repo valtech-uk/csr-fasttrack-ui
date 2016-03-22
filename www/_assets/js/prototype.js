@@ -324,6 +324,10 @@ $(function() {
     $('#testsPassed, #assessmentCentre, #addCandidateToSlot').removeClass('toggle-content');
   }
 
+  if($('#addedSubmitBtn').length && gup('Status') == 'added') {
+    $('#addedCandidates, #addedSubmitBtn').removeClass('toggle-content');
+  }
+
   $('#addCandidateToSlot').on('click', function() {
     $.cookie('placingCandidate', true, {path: '/'});
   });
