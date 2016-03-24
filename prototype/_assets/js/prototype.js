@@ -297,8 +297,9 @@ $(function() {
     $('#global-cookie-message').removeClass('hidden');
   }
 
-  if($('#viewCandidate').length && gup('change') == 'adjustment') {
-    $('#adjustmentTime').removeClass('toggle-content');
+  if($('#adjustmentTime').length && gup('change') == 'adjustment') {
+    $('#adjustmentTime, #adjustmentSuccess').removeClass('toggle-content');
+    $('#adjustmentLink').addClass('toggle-content');
   }
 
   if($('#canAttendBtn').length && gup('Status') == 'attending') {
