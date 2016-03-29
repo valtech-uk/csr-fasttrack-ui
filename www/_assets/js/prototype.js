@@ -312,6 +312,11 @@ $(function() {
     $('#passMarkSuccess').removeClass('toggle-content');
   }
 
+  if($('#passMarkSuccess').length && gup('Status') == 'allset') {
+    $('[data-hiddenpassmark]').removeClass('toggle-content');
+    $('#submitPassMarks').removeClass('disabled');
+  }
+
   if($('.locationExtractDay').length && gup('Status') == 'confirmed') {
     $('.locationExtractDay').removeClass('toggle-content');
     $('[data-daycol="1"]').find('.unconfirmed-slot').toggleClass('unconfirmed-slot booked-slot');

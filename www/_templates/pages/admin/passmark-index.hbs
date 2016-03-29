@@ -6,9 +6,15 @@ layout: admin-layout.hbs
     <p>You've successfully saved the pass marks for that scheme</p>
   </div>
 
-    <h2 class="heading-xlarge">
-      Pass mark setting
-    </h2>
+  <div class="panel-success toggle-content" id="passMarkSubmitted">
+    <p>Pass marks have been successfully submitted</p>
+  </div>
+
+   <div class="text">
+      <h2 class="heading-xlarge">
+       Online tests pass mark setting
+     </h2>
+   </div>
     <section>
       <p>Choose a scheme to set the pass marks</p>
 
@@ -17,20 +23,38 @@ layout: admin-layout.hbs
           <a href="passmark-set.html">Business</a> <span>(Pass marks set)</span>
         </li>
         <li>
-          <a href="passmark-set.html">Commercial</a>
+          <a href="passmark-set.html">Commercial</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
         </li>
         <li>
-          <a href="passmark-set.html">Digital and technology</a>
+          <a href="passmark-set.html">Digital and technology</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
         </li>
         <li>
-          <a href="passmark-set.html">Finance</a>
+          <a href="passmark-set.html">Finance</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
         </li>
         <li>
-          <a href="passmark-set.html">Project delivery</a>
+          <a href="passmark-set.html">Project delivery</a> <span class="toggle-content" data-hiddenpassmark>(Pass marks set)</span>
         </li>
       </ul>
 
     </section>
 
-    <a href="" class="button disabled">Submit pass marks</a>
+    <a href="" class="button disabled" id="submitPassMarks">Submit pass marks</a>
+    <p id="submittedTime"></p>
 
+
+<script>
+  $(function(){
+    $('#submitPassMarks').on('click', function(e) {
+      var date = new Date(),
+          time = date.getHours() + ":" + date.getMinutes(),
+          day = date.getDate() + '/' + (date.getMonth() +1) + '/' + date.getFullYear();
+
+
+      e.preventDefault();
+
+      $('#passMarkSubmitted').show();
+
+      $('#submittedTime').text('Last submitted: ' + time + ' on ' + day);
+    });
+  });
+</script>
