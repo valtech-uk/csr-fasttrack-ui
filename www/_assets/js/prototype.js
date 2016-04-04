@@ -304,7 +304,7 @@ $(function() {
   }
 
   if($('#canAttendBtn').length && gup('Status') == 'attending') {
-    $('#attendQuestion').hide();
+    $('#attendQuestion, #confirmByText').hide();
     $('#assessmentSuccess').show();
   }
 
