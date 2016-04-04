@@ -310,10 +310,13 @@ $(function() {
 
   if($('#passMarkSuccess').length && gup('Status') == 'success') {
     $('#passMarkSuccess').removeClass('toggle-content');
+    $('[data-firstset]').removeClass('toggle-content');
+    $('[data-firstnotset]').addClass('toggle-content');
   }
 
   if($('#passMarkSuccess').length && gup('Status') == 'allset') {
-    $('[data-hiddenpassmark]').removeClass('toggle-content');
+    $('[data-set], [data-firstset]').removeClass('toggle-content');
+    $('[data-notset], [data-firstnotset]').addClass('toggle-content');
     $('#submitPassMarks').removeClass('disabled');
   }
 
