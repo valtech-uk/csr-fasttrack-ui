@@ -303,6 +303,10 @@ $(function() {
     $('#adjustmentLink').addClass('toggle-content');
   }
 
+  if($('#slotsSuccess').length && gup('Status') == 'updated') {
+    $('#slotsSuccess').removeClass('toggle-content');
+  }
+
   if($('#canAttendBtn').length && gup('Status') == 'attending') {
     $('#attendQuestion, #confirmByText').hide();
     $('#assessmentSuccess').show();

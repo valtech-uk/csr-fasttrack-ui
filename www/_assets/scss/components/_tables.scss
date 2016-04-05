@@ -75,18 +75,32 @@ table {
 }
 
 .day-confirmed, .day-tentative, .day-no-go {
+  color: $black;
   padding: 5px;
   text-align: center;
+  text-decoration: none;
+  &:hover {
+    color: lighten($black, 15%);
+  }
 }
 
 .day-confirmed {
   background: $turquoise-50;
+  &:hover {
+    background: darken($turquoise-50, 15%);
+  }
 }
 .day-tentative {
   background: $orange-50;
+  &:hover {
+    background: darken($orange-50, 15%);
+  }
 }
 .day-no-go {
   background: $red-50;
+  &:hover {
+    background: darken($red-50, 15%);
+  }
 }
 
 .rotatedtext {
