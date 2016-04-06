@@ -360,6 +360,11 @@ $(function() {
     $('#testsPassed, #assessmentCentre, #assessmentBooked').removeClass('toggle-content');
   }
 
+  if($('#testsPassed').length && gup('Status') == 'unbooked') {
+    $('#testsInProgress').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre, #assessmentNotBooked').removeClass('toggle-content');
+  }
+
   $('#changeBookedSlot').on('click', function () {
     $.cookie('placingCandidate', true, {path: '/'});
   });
