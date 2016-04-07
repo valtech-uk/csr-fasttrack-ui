@@ -86,7 +86,7 @@
       <p>Pass marks are initially set using the candidate's first Location and Scheme preference (Location 1 Scheme 1).</p>
     </div>
     <fieldset class="form-group">
-      <legend class="form-label">Change the selected option to filter the pass marks.</legend>
+      <legend class="form-label">Change the selected option to filter the pass marks</legend>
       <div class="form-group no-btm-margin no-right-margin">
         <label for="scheme-01" class="block-label no-right-margin">
           <input checked name="scheme-pref" type="radio" id="scheme-01">Location 1 Scheme 1
@@ -347,9 +347,24 @@
 
     </section>
 
-    <a href="" class="button" id="submitPassMarks">Submit pass marks</a>
-    <p id="submittedTime"></p>
-
+    <fieldset>
+      <legend class="form-label">Do you want to submit these pass marks?</legend>
+      <div class="form-group form-group-compound inline">
+        <label data-target="passmarkset-panel" for="passmarkset-yes" class="block-label">
+          <input name="passmarkset" type="radio" id="passmarkset-yes" aria-controls="passmarkset-panel" aria-expanded="false">Yes
+        </label>
+        <label for="passmarkset-no" class="block-label">
+          <input name="passmarkset" type="radio" id="passmarkset-no">No
+        </label>
+      </div>
+      <div id="passmarkset-panel" class="toggle-content" aria-hidden="true">
+        <div class="panel-warning">
+          <p class="text">This will set the pass marks and trigger emails to be sent to candidates.</p>
+        </div>
+        <a href="" class="button" id="submitPassMarks">Submit pass marks</a>
+        <p id="submittedTime"></p>
+      </div>
+    </fieldset>
 
 <script>
   $(function(){
