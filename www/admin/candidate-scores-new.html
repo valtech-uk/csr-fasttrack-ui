@@ -97,7 +97,15 @@
           <label for="01-score-id" class="form-label">Email address</label>
           <input type="text" class="form-control" id="01-score-id">
         </div>
-        <table class="vert-middle" role="presentation">
+        <table class="vert-middle grid-2-3" role="presentation" data-scoretable>
+          <colgroup>
+            <col class="t30" />
+            <col class="t10" />
+            <col class="t10" />
+            <col class="t10" />
+            <col class="t10" />
+            <col />
+          </colgroup>
           <thead>
             <tr>
               <th>Competency</th>
@@ -112,7 +120,7 @@
               <td>Leading &amp; communicating</td>
               <td>
                 <select id="leading-interview">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -122,7 +130,7 @@
               </td>
               <td>
                 <select id="leading-group">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -132,7 +140,7 @@
               </td>
               <td>
                 <select id="leading-written">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -151,7 +159,7 @@
               </td>
               <td>
                 <select id="collaborating-group">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -161,7 +169,7 @@
               </td>
               <td>
                 <select id="collaborating-written">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -177,7 +185,7 @@
               <td>Delivering at pace</td>
               <td>
                 <select id="delivering-interview">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -190,7 +198,7 @@
               </td>
               <td>
                 <select id="delivering-written">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -209,7 +217,7 @@
               </td>
               <td>
                 <select id="effective-group">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -219,7 +227,7 @@
               </td>
               <td>
                 <select id="effective-written">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -235,7 +243,7 @@
               <td>Changing &amp; improving</td>
               <td>
                 <select id="changing-interview">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -248,7 +256,7 @@
               </td>
               <td>
                 <select id="changing-written">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -264,7 +272,7 @@
               <td>Building capability for all</td>
               <td>
                 <select id="capability-interview">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -274,7 +282,36 @@
               </td>
               <td>
                 <select id="capability-group">
-                  <option value="">-- Score --</option>
+                  <option value="0">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr data-doublescore>
+              <td>Motivation fit (scores double)</td>
+              <td>
+                <select id="motivational-interview">
+                  <option value="0">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="motivational-group">
+                  <option value="0">-- Score --</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -290,33 +327,11 @@
               </td>
             </tr>
             <tr>
-              <td>Motivation fit</td>
-              <td>
-                <select id="motivational-interview">
-                  <option value="">-- Score --</option>
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-              </td>
-              <td>
-                <select id="motivational-group">
-                  <option value="">-- Score --</option>
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-              </td>
-              <td>
-
-              </td>
-              <td class="ta-right">
-                <span data-scoretotal>0</span>
-              </td>
+              <td>Overall score</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="ta-right"><span data-overalltotal>0</span></td>
             </tr>
           </tbody>
         </table>
@@ -329,6 +344,41 @@
     </section>
 
     <a href="candidate-scores.html?Status=added" class="button">Save scores</a>
+
+    <script>
+      $(function() {
+
+        $('[data-scoretable] select').on('change', function() {
+          var thisScore = Number($(this).val()),
+              $thisRow = $(this).closest('tr'),
+              $totalElement = $thisRow.find('[data-scoretotal]'),
+              $siblingSelects = $thisRow.find('select').not(this),
+              $allScoreTotals = $(this).closest('table').find('[data-scoretotal]'),
+              $overallElement = $(this).closest('table').find('[data-overalltotal]');
+              rowSum = 0,
+              overallSum = 0;
+
+          $siblingSelects.each(function() {
+            rowSum += parseFloat(this.value);
+          });
+
+          $totalElement.text(thisScore + rowSum);
+
+          if($thisRow.is('[data-doublescore]')) {
+            $totalElement.text((thisScore + rowSum) * 2);
+          }
+
+          $allScoreTotals.each(function() {
+            overallSum += parseFloat($(this).text());
+          });
+
+          $overallElement.text(overallSum);
+
+        });
+
+
+      });
+    </script>
 
 
 
