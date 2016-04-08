@@ -26,31 +26,236 @@ signInClass: toggle-content
       <section>
         <h2 class="heading-medium">Candidate scores</h2>
         <div class="form-group form-group-compound">
-          <label for="01-score-name" class="form-label">Candidate name</label>
+          <label for="01-score-name" class="form-label">Full name</label>
           <input type="text" class="form-control" id="01-score-name">
         </div>
         <div class="form-group">
-          <label for="01-score-id" class="form-label">Candidate ID</label>
+          <label for="01-score-id" class="form-label">Email address</label>
           <input type="text" class="form-control" id="01-score-id">
         </div>
-        <div class="inline">
-          <div class="form-group form-group-compound">
-            <label for="01-score-01" class="form-label">Score 01</label>
-            <input type="number" class="form-control form-control-hours" id="01-score-01" min="20" max="80">
-          </div>
-          <div class="form-group form-group-compound">
-            <label for="01-score-02" class="form-label">Score 02</label>
-            <input type="number" class="form-control form-control-hours" id="01-score-02" min="20" max="80">
-          </div>
-          <div class="form-group form-group-compound">
-            <label for="01-score-03" class="form-label">Score 03</label>
-            <input type="number" class="form-control form-control-hours" id="01-score-03" min="20" max="80">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="01-score-overall" class="form-label">Overall score</label>
-          <input type="number" class="form-control form-control-hours" id="01-score-overall" min="20" max="80">
-        </div>
+        <table class="vert-middle" role="presentation">
+          <thead>
+            <tr>
+              <th>Competency</th>
+              <th>Interview</th>
+              <th>Group exercise</th>
+              <th>Written exercise</th>
+              <th class="ta-right">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Leading &amp; communicating</td>
+              <td>
+                <select id="leading-interview">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="leading-group">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="leading-written">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Collaborating &amp; partnering</td>
+              <td>
+
+              </td>
+              <td>
+                <select id="collaborating-group">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="collaborating-written">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Delivering at pace</td>
+              <td>
+                <select id="delivering-interview">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+
+              </td>
+              <td>
+                <select id="delivering-written">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Making effective decisions</td>
+              <td>
+
+              </td>
+              <td>
+                <select id="effective-group">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="effective-written">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Changing &amp; improving</td>
+              <td>
+                <select id="changing-interview">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+
+              </td>
+              <td>
+                <select id="changing-written">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Building capability for all</td>
+              <td>
+                <select id="capability-interview">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="capability-group">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Motivation fit</td>
+              <td>
+                <select id="motivational-interview">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+                <select id="motivational-group">
+                  <option value="">-- Score --</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+              </td>
+              <td>
+
+              </td>
+              <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <div class="form-group">
           <label for="01-feedback" class="form-label">Candidate feedback</label>
           <textarea id="01-feedback" class="form-control" rows="4"></textarea>
