@@ -786,6 +786,8 @@
 
     $('[data-sessionselector]').on('change', function() {
 
+      $('body').addClass('changes-made');
+
       $('[data-sessionselector] option').attr('disabled', false);
 
       $('[data-sessionselector]').each(function(){
@@ -799,6 +801,12 @@
       });
 
     });
+
+    window.onbeforeunload = function() {
+      if($('body').hasClass('changes-made')) {
+        return "You have unsaved changes on this page.";
+      }
+    };
 
   });
 </script>
