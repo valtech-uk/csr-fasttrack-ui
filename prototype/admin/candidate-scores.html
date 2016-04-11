@@ -101,40 +101,163 @@
             <h2 class="heading-medium">Candidate scores</h2>
             <div id="addedCandidates" class="toggle-content">
               <section class="grid-wrapper section-border">
+                <h3 class="bold-small">Full name</h3>
+                <p data-candidate-name>John Smith</p>
+                <h3 class="bold-small">Email address</h3>
+                <p data-candidate-id>john.smith@email.com</p>
                 <div class="grid-wrapper">
-                  <div class="grid grid-1-3">
-                    <h3 class="bold-small">Full name</h3>
-                    <p data-candidate-name>John Smith</p>
-                    <h3 class="bold-small">Email address</h3>
-                    <p data-candidate-id>john.smith@email.com</p>
+                  <div class="grid grid-1-2">
+                    <div class="inner-block-padr">
+                      <h3 class="heading-small">Scores</h3>
+                      <table class="vert-middle" role="presentation">
+                        <colgroup>
+                          <col class="t30" />
+                          <col class="t10" />
+                          <col class="t10" />
+                          <col class="t10" />
+                          <col class="t10" />
+                          <col />
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>Competency</th>
+                            <th class="ta-right">Interview</th>
+                            <th class="ta-right">Group exercise</th>
+                            <th class="ta-right">Written exercise</th>
+                            <th class="ta-right">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Leading &amp; communicating</td>
+                            <td class="ta-right" id="leading-interview">
+                              3
+                            </td>
+                            <td class="ta-right" id="leading-group">
+                              2
+                            </td>
+                            <td class="ta-right" id="leading-written">
+                              0
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>5</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Collaborating &amp; partnering</td>
+                            <td>
+                            </td>
+                            <td class="ta-right" id="collaborating-group">
+                              2
+                            </td>
+                            <td class="ta-right" id="collaborating-written">
+                              4
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>6</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Delivering at pace</td>
+                            <td class="ta-right" id="delivering-interview">
+                              3
+                            </td>
+                            <td>
+                            </td>
+                            <td class="ta-right" id="delivering-written">
+                              1
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>4</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Making effective decisions</td>
+                            <td>
+                            </td>
+                            <td class="ta-right" id="effective-group">
+                              3
+                            </td>
+                            <td class="ta-right" id="effective-written">
+                              2
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>5</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Changing &amp; improving</td>
+                            <td class="ta-right" id="changing-interview">
+                              2
+                            </td>
+                            <td>
+                            </td>
+                            <td class="ta-right" id="changing-written">
+                              2
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>4</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Building capability for all</td>
+                            <td class="ta-right" id="capability-interview">
+                              3
+                            </td>
+                            <td class="ta-right" id="capability-group">
+                              3
+                            </td>
+                            <td>
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>6</span>
+                            </td>
+                          </tr>
+                          <tr data-doublescore>
+                            <td>Motivation fit (scores double)</td>
+                            <td class="ta-right" id="motivational-interview">
+                              3
+                            </td>
+                            <td class="ta-right" id="motivational-group">
+                              1
+                            </td>
+                            <td>
+                            </td>
+                            <td class="ta-right">
+                              <span data-scoretotal>8</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Overall score</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="ta-right"><span data-overalltotal>38</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  <div class="grid grid-1-3">
-                    <h3 class="heading-small">Scores</h3>
-                    <ul class="list-text">
-                      <li>
-                        First score: <b data-candidate-score-01>65</b>
-                      </li>
-                      <li>
-                        Second score: <b data-candidate-score-02>45</b>
-                      </li>
-                      <li>
-                        Third score: <b data-candidate-score-03>67</b>
-                      </li>
-                      <li>
-                        Overall score: <b data-candidate-score-overall>62</b>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="grid grid-1-3">
+                  <div class="grid grid-1-2">
                     <h3 class="heading-small">Feedback</h3>
-                    <p data-candidate-feedback>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
-                      facere suscipit cumque illum laborum ab maiores provident
-                      dolorum consequuntur, fugiat accusamus ipsa commodi necessitatibus,
-                      earum distinctio blanditiis non doloremque.</p>
+                    <div data-candidate-feedback>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Earum tempore, debitis obcaecati neque repudiandae amet,
+                        voluptatibus repellat hic placeat ex laudantium quasi molestiae
+                        architecto expedita!</p>
+                      <p>Error sapiente velit vero minus hic earum sed, optio quidem,
+                        inventore voluptatem eius nobis, mollitia, distinctio odit
+                        doloribus natus odio placeat quisquam. Distinctio cumque,
+                        velit?</p>
+                      <p>Quaerat harum minima esse, in architecto repellendus, temporibus
+                        aperiam beatae totam rerum facere, dolorem ipsum eaque
+                        sit aut. Magni omnis obcaecati, iure incidunt eaque esse.</p>
+                    </div>
                   </div>
                 </div>
                 <p>
-                  <a href="candidate-scores-new.html?Status=amend" data-candidate-amend>Amend details</a>
+                  <a href="candidate-scores-new.html?Status=amend" data-candidate-amend>Change scores and feedback</a>
                 </p>
               </section>
             </div>
