@@ -368,6 +368,17 @@ $(function() {
   $('#changeBookedSlot').on('click', function () {
     $.cookie('placingCandidate', true, {path: '/'});
   });
+
+  $('#saveSlotBtn').on('click', function(e) {
+    e.preventDefault();
+
+    $('#assessmentNotBooked').addClass('toggle-content');
+    $('#assessmentBooked').removeClass('toggle-content');
+
+    $('#slotBookedText').text('Wednesday 27 April 2016 - Afternoon');
+
+  });
+
   $('#removeBookedSlot').on('click', function(e){
     e.preventDefault();
 
