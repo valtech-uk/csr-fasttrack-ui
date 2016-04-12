@@ -16,29 +16,38 @@ layout: admin-layout.hbs
      </h2>
    </div>
 
-  <div class="inline">
-    <div class="text">
-      <p>Pass marks are initially set using the candidate's first Location and Scheme preference (Location 1 Scheme 1).</p>
-    </div>
-    <fieldset class="form-group">
-      <legend class="form-label">Change the selected option to filter the pass marks</legend>
-      <div class="form-group no-btm-margin no-right-margin">
-        <label for="scheme-01" class="block-label no-right-margin">
-          <input checked name="scheme-pref" type="radio" id="scheme-01">Location 1 Scheme 1
-        </label>
-      </div>
-      <div class="form-group no-btm-margin no-right-margin">
-        <label for="scheme-other" class="block-label no-right-margin">
-          <input name="scheme-pref" type="radio" id="scheme-other">Other scheme preferences
-        </label>
-      </div>
-      <div class="form-group no-btm-margin no-right-margin">
-        <label for="scheme-any" class="block-label no-right-margin">
-          <input name="scheme-pref" type="radio" id="scheme-any">Open to any scheme
-        </label>
-      </div>
-    </fieldset>
+  <div class="text">
+    <p>Pass marks are initially set using the candidate's first Location and Scheme preference (Location 1 Scheme 1).</p>
   </div>
+  <fieldset class="form-group">
+    <legend class="form-label">Set pass marks for candidates with this selection</legend>
+    <table role="presentation" class="vert-middle">
+      <tr>
+        <td>
+          <label for="scheme-01" class="block-label">
+            <input checked name="scheme-pref" type="radio" id="scheme-01">Location 1 Scheme 1
+          </label>
+        </td>
+        <td>(Only set pass marks for candidates with this selection)</td>
+      </tr>
+      <tr>
+        <td>
+          <label for="scheme-other" class="block-label">
+            <input name="scheme-pref" type="radio" id="scheme-other">Other scheme preferences
+          </label>
+        </td>
+        <td>(Set pass marks for Loc 1 Sch 1 <b>and</b> all other scheme preferences)</td>
+      </tr>
+      <tr>
+        <td>
+          <label for="scheme-any" class="block-label">
+            <input name="scheme-pref" type="radio" id="scheme-any">Open to any scheme
+          </label>
+        </td>
+        <td>(Set pass marks for all the above <b>and</b> those that have selected open to any alternative scheme)</td>
+      </tr>
+    </table>
+  </fieldset>
 
     <section>
       <table>
@@ -294,7 +303,7 @@ layout: admin-layout.hbs
       </div>
       <div id="passmarkset-panel" class="toggle-content" aria-hidden="true">
         <div class="panel-warning">
-          <p class="text">This will set the pass marks and trigger emails to be sent to candidates.</p>
+          <p class="text">Once submitted you won't be able to decrease the fail marks or increase the pass marks.</p>
         </div>
         <a href="" class="button" id="submitPassMarks">Submit pass marks</a>
         <p id="submittedTime"></p>
