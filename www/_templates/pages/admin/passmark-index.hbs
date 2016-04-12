@@ -17,10 +17,10 @@ layout: admin-layout.hbs
    </div>
 
   <div class="text">
-    <p>Pass marks are initially set using the candidate's first Location and Scheme preference (Location 1 Scheme 1).</p>
+    <p>By default candidates will progress using their first preference, you can then change the selection to progress more candidates.</p>
   </div>
   <fieldset class="form-group">
-    <legend class="form-label">Set pass marks for candidates with this selection</legend>
+    <legend class="form-label">Progress candidates using the following criteria</legend>
     <table role="presentation" class="vert-middle">
       <tr>
         <td>
@@ -28,7 +28,7 @@ layout: admin-layout.hbs
             <input checked name="scheme-pref" type="radio" id="scheme-01">Location 1 Scheme 1
           </label>
         </td>
-        <td>(Only set pass marks for candidates with this selection)</td>
+        <td>(Only progress candidates based on their first preference)</td>
       </tr>
       <tr>
         <td>
@@ -36,7 +36,7 @@ layout: admin-layout.hbs
             <input name="scheme-pref" type="radio" id="scheme-other">Other scheme preferences
           </label>
         </td>
-        <td>(Set pass marks for Location 1 Scheme 1 <b>and</b> all other scheme preferences)</td>
+        <td>(Only progress based on first <b>and</b> all other scheme preferences)</td>
       </tr>
       <tr>
         <td>
@@ -44,7 +44,7 @@ layout: admin-layout.hbs
             <input name="scheme-pref" type="radio" id="scheme-any">Open to any scheme
           </label>
         </td>
-        <td>(Set pass marks for all the above <b>and</b> those that have selected open to any alternative scheme)</td>
+        <td>(Only progress using the above <b>and</b> those that have selected open to any alternative scheme)</td>
       </tr>
     </table>
   </fieldset>
