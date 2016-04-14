@@ -10,26 +10,72 @@ layout: admin-layout.hbs
   <h1 class="heading-xlarge">
     Session schedule
   </h1>
-  <h2 class="subtitle">Monday 25 April 2016</h2>
+  <h2 class="subtitle">London 1, Monday 25 April 2016</h2>
 </div>
 
-<a href="/25-04-2016-schedule.csv" class="button">Extract schedule</a>
+<a href="/25-04-2016-schedule.csv" class="button" id="extractScheduleBtn">Extract schedule</a>
 
 <p>
   <a href="assessment-schedule.html">Return to assessment summary</a>
 </p>
 
-<section class="section-border">
+<section>
   <h2 class="heading-large">Morning</h2>
-
-  <ul class="list-text">
-    <li><a href="view-candidate.html?Status=booked" class="link-unimp">John Smith</a></li>
-    <li><a href="view-candidate.html?Status=booked" class="link-unimp">Jeffrey Knight</a></li>
-    <li><a href="view-candidate.html?Status=booked" class="link-unimp">Carey Smithson</a> (Unconfirmed)</li>
-    <li><a href="view-candidate.html?Status=booked" class="link-unimp">Otha Bhatia</a></li>
-    <li>Empty slot</li>
-    <li>Empty slot</li>
-  </ul>
+  <table class="grid-2-3">
+    <colgroup>
+      <col class="t20" />
+      <col class="t20" />
+      <col class="t30" />
+      <col class="t10" />
+      <col />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Candidate name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="view-candidate.html?Status=booked" class="link-unimp candidateName">John Smith</a></td>
+        <td></td>
+        <td><a href="candidate-scores-new.html" class="candidateScores">Add scores and feedback</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="view-candidate.html?Status=booked" class="link-unimp candidateName">Jeffrey Knight</a></td>
+        <td></td>
+        <td><a href="candidate-scores-new.html" class="candidateScores">Add scores and feedback</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="view-candidate.html?Status=booked" class="link-unimp candidateName">Carey Smithson</a></td>
+        <td>Unconfirmed</td>
+        <td><a href="candidate-scores-new.html">Add scores and feedback</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="view-candidate.html?Status=booked" class="link-unimp candidateName">Otha Bhatia</a></td>
+        <td></td>
+        <td><a href="candidate-scores-new.html">Add scores and feedback</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>(Empty slot)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>(Empty slot)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 <section>

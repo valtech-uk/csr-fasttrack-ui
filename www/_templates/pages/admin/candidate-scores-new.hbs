@@ -1,7 +1,6 @@
 ---
 pageTitle: Record scores
 layout: admin-layout.hbs
-signInClass: toggle-content
 ---
 
     <h1 class="heading-xlarge">
@@ -24,14 +23,7 @@ signInClass: toggle-content
 
       <section>
         <h2 class="heading-medium">Candidate scores</h2>
-        <div class="form-group form-group-compound">
-          <label for="01-score-id" class="form-label">Email address</label>
-          <input type="text" class="form-control" id="01-score-id">
-        </div>
-        <div class="form-group">
-          <label for="01-score-name" class="form-label">Full name</label>
-          <input type="text" class="form-control" id="01-score-name">
-        </div>
+        <p id="candidateName">John Smith</p>
         <table class="vert-middle grid-2-3" role="presentation" data-scoretable>
           <colgroup>
             <col class="t30" />
@@ -278,7 +270,7 @@ signInClass: toggle-content
 
     </section>
 
-    <a href="candidate-scores.html?Status=added" class="button">Save scores</a>
+    <a href="session-schedule.html?Status=added" class="button">Save scores</a>
 
     <script>
       $(function() {

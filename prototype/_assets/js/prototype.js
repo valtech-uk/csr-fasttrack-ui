@@ -347,10 +347,6 @@ $(function() {
     $('#testsPassed, #assessmentCentre, #addCandidateToSlot').removeClass('toggle-content');
   }
 
-  if($('#addedSubmitBtn').length && gup('Status') == 'added') {
-    $('#addedCandidates, #addedSubmitBtn').removeClass('toggle-content');
-  }
-
   $('#addCandidateToSlot').on('click', function() {
     $.cookie('placingCandidate', true, {path: '/'});
   });
@@ -536,35 +532,26 @@ $(function() {
     placingCandidate(candidateName);
   }
 
-  // $('[data-candidate-amend]').on('click', function() {
-  //   var thisSection = $(this).closest('section'),
-  //       thisCandName = thisSection.find('[data-candidate-name]').text(),
-  //       thisCandID = thisSection.find('[data-candidate-id]').text(),
-  //       thisCandScore01 = thisSection.find('[data-candidate-score-01]').text(),
-  //       thisCandScore02 = thisSection.find('[data-candidate-score-02]').text(),
-  //       thisCandScore03 = thisSection.find('[data-candidate-score-03]').text(),
-  //       thisCandScoreOverall = thisSection.find('[data-candidate-score-overall]').text(),
-  //       thisCandFeedback = thisSection.find('[data-candidate-feedback]').text();
+  if($('#extractScheduleBtn').length && gup('Status') == 'added') {
+    $('.candidateScores').text('Edit scores and feedback').attr('href', 'candidate-scores-new.html?Status=amend');
+  }
 
-  //   $.jStorage.set('thisCandName', thisCandName);
-  //   $.jStorage.set('thisCandID', thisCandID);
-  //   $.jStorage.set('thisCandScore01', thisCandScore01);
-  //   $.jStorage.set('thisCandScore02', thisCandScore02);
-  //   $.jStorage.set('thisCandScore03', thisCandScore03);
-  //   $.jStorage.set('thisCandScoreOverall', thisCandScoreOverall);
-  //   $.jStorage.set('thisCandFeedback', thisCandFeedback);
+  if($('#leading-interview').length && gup('Status') == 'amend') {
+    $('#leading-group, #delivering-written, #capability-interview').find('option[value="1"]').attr('selected', true);
+    $('#leading-interview, #collaborating-written, #effective-written, #motivational-interview').find('option[value="2"]').attr('selected', true);
+    $('#leading-written, #collaborating-group, #effective-group, #changing-interview').find('option[value="3"]').attr('selected', true);
+    $('#delivering-interview, #changing-written, #capability-group, #motivational-group').find('option[value="4"]').attr('selected', true);
 
-  // });
+    $('[data-scoretotal]:eq(0)').text('6');
+    $('[data-scoretotal]:eq(1)').text('5');
+    $('[data-scoretotal]:eq(2)').text('5');
+    $('[data-scoretotal]:eq(3)').text('5');
+    $('[data-scoretotal]:eq(4)').text('7');
+    $('[data-scoretotal]:eq(5)').text('5');
+    $('[data-scoretotal]:eq(6)').text('12');
 
-  // if($('#01-score-name').length && gup('Status') == 'amend') {
-  //   $('#01-score-name').val($.jStorage.get('thisCandName'));
-  //   $('#01-score-id').val($.jStorage.get('thisCandID'));
-  //   $('#01-score-01').val($.jStorage.get('thisCandScore01'));
-  //   $('#01-score-02').val($.jStorage.get('thisCandScore02'));
-  //   $('#01-score-03').val($.jStorage.get('thisCandScore03'));
-  //   $('#01-score-overall').val($.jStorage.get('thisCandScoreOverall'));
-  //   $('#01-feedback').html($.jStorage.get('thisCandFeedback'));
-  // }
+    $('[data-overalltotal]').text('45');
+  }
 
 // --------------- Not to be used in production -------------- //
 });
