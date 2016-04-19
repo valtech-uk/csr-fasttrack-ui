@@ -280,6 +280,10 @@ $(function() {
     $('#btnSignIn').attr('href', 'profile-home-assessment.html');
   }
 
+  if($('#signedOut').length && gup('Status') == 'unsuccessful') {
+    $('#btnSignIn').attr('href', 'profile-home-tests-unsuccessful.html');
+  }
+
   if($('#signedOut').length && gup('Status') == 'closed') {
     $('#btnSignIn').attr('href', 'profile-home-closed.html');
     $('#applicationsClosed').removeClass('toggle-content');
