@@ -105,11 +105,11 @@
             <p id="candidateName">John Smith</p>
             <table class="vert-middle grid-2-3" role="presentation" data-scoretable>
               <colgroup>
-                <col class="t30" />
+                <col class="t40" />
                 <col class="t10" />
                 <col class="t10" />
                 <col class="t10" />
-                <col class="t10" />
+                <!-- <col class="t10" /> -->
                 <col />
               </colgroup>
               <thead>
@@ -118,7 +118,7 @@
                   <th>Interview</th>
                   <th>Group exercise</th>
                   <th>Written exercise</th>
-                  <th class="ta-right">Total</th>
+                  <!-- <th class="ta-right">Total</th> -->
                 </tr>
               </thead>
               <tbody>
@@ -154,9 +154,9 @@
                       <option value="4">4</option>
                     </select>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!-- <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
                 <tr>
                   <td>Collaborating &amp; partnering</td>
@@ -182,9 +182,9 @@
                       <option value="4">4</option>
                     </select>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!-- <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
                 <tr>
                   <td>Delivering at pace</td>
@@ -210,9 +210,9 @@
                       <option value="4">4</option>
                     </select>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!-- <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
                 <tr>
                   <td>Making effective decisions</td>
@@ -238,9 +238,9 @@
                       <option value="4">4</option>
                     </select>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!-- <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
                 <tr>
                   <td>Changing &amp; improving</td>
@@ -266,9 +266,9 @@
                       <option value="4">4</option>
                     </select>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!--  <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
                 <tr>
                   <td>Building capability for all</td>
@@ -294,9 +294,9 @@
                   </td>
                   <td>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!--  <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
                 <tr data-doublescore>
                   <td>Motivation fit (scores double)</td>
@@ -322,18 +322,24 @@
                   </td>
                   <td>
                   </td>
-                  <td class="ta-right">
-                    <span data-scoretotal>0</span>
-                  </td>
+                  <!--  <td class="ta-right">
+                <span data-scoretotal>0</span>
+              </td> -->
                 </tr>
-                <tr>
-                  <td>Overall score</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td class="ta-right"><span data-overalltotal>0</span>
-                  </td>
-                </tr>
+                <!--             <tr>
+              <td>Exercise averages</td>
+              <td class="ta-right"><span data-interviewtotal>0</span></td>
+              <td class="ta-right"><span data-grouptotal>0</span></td>
+              <td class="ta-right"><span data-writtentotal>0</span></td>
+              <td class="ta-right"></td>
+            </tr>
+            <tr>
+              <td>Overall score</td>
+              <td class="ta-right"></td>
+              <td class="ta-right"></td>
+              <td class="ta-right"></td>
+              <td class="ta-right"><span data-overalltotal>0</span></td>
+            </tr> -->
               </tbody>
             </table>
             <div class="form-group">
@@ -351,38 +357,37 @@
           </section>
         </section>
         <a href="session-schedule.html?Status=added" class="button">Save scores and feedback</a>
-        <script>
-        $(function()
-        {
-          $('[data-scoretable] select').on('change', function()
-          {
-            var thisScore = Number($(this).val()),
+        <!--     <script>
+      $(function() {
+        function roundToTwo(num) {
+          return +(Math.round(num + "e+2")  + "e-2");
+        }
+        $('[data-scoretable] select').on('change', function() {
+          var thisScore = Number($(this).val()),
               $thisRow = $(this).closest('tr'),
               $totalElement = $thisRow.find('[data-scoretotal]'),
               $siblingSelects = $thisRow.find('select').not(this),
-              $allScoreTotals = $(this).closest('table').find(
-                '[data-scoretotal]'),
-              $overallElement = $(this).closest('table').find(
-                '[data-overalltotal]');
-            rowSum = 0,
-            overallSum = 0;
-            $siblingSelects.each(function()
-            {
-              rowSum += parseFloat(this.value);
-            });
-            $totalElement.text(thisScore + rowSum);
-            if ($thisRow.is('[data-doublescore]'))
-            {
-              $totalElement.text((thisScore + rowSum) * 2);
-            }
-            $allScoreTotals.each(function()
-            {
-              overallSum += parseFloat($(this).text());
-            });
-            $overallElement.text(overallSum);
+              selectsLength = $siblingSelects.length + 1,
+              $allScoreTotals = $(this).closest('table').find('[data-scoretotal]'),
+              $overallElement = $(this).closest('table').find('[data-overalltotal]');
+              rowSum = 0,
+              overallSum = 0,
+              totalRow = 0;
+          $siblingSelects.each(function() {
+            rowSum += parseFloat(this.value);
           });
+          totalRow = roundToTwo((thisScore + rowSum) / selectsLength);
+          $totalElement.text(totalRow);
+          if($thisRow.is('[data-doublescore]')) {
+            $totalElement.text((thisScore + rowSum) * 2);
+          }
+          $allScoreTotals.each(function() {
+            overallSum += parseFloat($(this).text());
+          });
+          $overallElement.text(overallSum);
         });
-        </script>
+      });
+    </script> -->
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
