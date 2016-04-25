@@ -1152,7 +1152,7 @@ layout: admin-layout.hbs
   </a>
 </div>
 
-<a href="assessment-schedule.html?Status=updated" class="button">Save candidates</a>
+<a href="assessment-schedule.html?Status=updated" class="button" id="submitBtn">Save candidates</a>
 
 
 
@@ -1175,6 +1175,10 @@ layout: admin-layout.hbs
         });
       });
 
+    });
+
+    $('#submitBtn').on('click', function() {
+      window.onbeforeunload = null;
     });
 
     window.onbeforeunload = function() {

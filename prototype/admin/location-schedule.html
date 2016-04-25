@@ -4027,7 +4027,7 @@
             <span class="counter">2 of 21</span>
           </a>
         </div>
-        <a href="assessment-schedule.html?Status=updated" class="button">Save candidates</a>
+        <a href="assessment-schedule.html?Status=updated" class="button" id="submitBtn">Save candidates</a>
         <script>
         $(function()
         {
@@ -4047,6 +4047,10 @@
                   }
                 });
             });
+          });
+          $('#submitBtn').on('click', function()
+          {
+            window.onbeforeunload = null;
           });
           window.onbeforeunload = function()
           {
