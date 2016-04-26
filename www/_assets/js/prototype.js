@@ -351,6 +351,15 @@ $(function() {
     $('#testsPassed, #assessmentCentre, #addCandidateToSlot').removeClass('toggle-content');
   }
 
+  if($('#acceptScoresBtn').length && gup('Status') == 'accepted') {
+    $('#acceptScoresQuestion, [data-scoreslink], [data-unconfirmedtext], #extractScheduleBtn').addClass('toggle-content');
+    $('#acceptedScoresSuccess').removeClass('toggle-content');
+  }
+
+  if($('#acceptScoresBtn').length && gup('Status') == 'no-show') {
+    $('[data-firstscores]').replaceWith('<span>Candidate did not attend</span>')
+  }
+
   $('#addCandidateToSlot').on('click', function() {
     $.cookie('placingCandidate', true, {path: '/'});
   });

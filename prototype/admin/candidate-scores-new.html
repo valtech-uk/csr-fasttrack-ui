@@ -100,6 +100,27 @@
               </p>
             </div>
           </div>
+          <fieldset id="acceptScoresQuestion">
+            <legend class="form-label">Did the candidate attend?</legend>
+            <div class="form-group form-group-compound inline">
+              <label for="candidate-attend-yes" class="block-label">
+                <input name="candidate-attend" type="radio" id="candidate-attend-yes">Yes
+              </label>
+              <label data-target="candidate-attend-panel" for="candidate-attend-no" class="block-label">
+                <input name="candidate-attend" type="radio" id="candidate-attend-no" aria-controls="candidate-attend-panel"
+                aria-expanded="false">No
+              </label>
+            </div>
+            <div id="candidate-attend-panel" class="toggle-content" aria-hidden="true">
+              <div class="panel-warning">
+                <p class="text">This will mark the candidate as a no-show, scores and feedback
+                  will not be entered.</p>
+              </div>
+              <div class="form-group">
+                <a href="session-schedule.html?Status=no-show" class="button" id="acceptScoresBtn">Mark as no-show</a>
+              </div>
+            </div>
+          </fieldset>
           <section>
             <h2 class="heading-medium">Candidate scores</h2>
             <p id="candidateName">John Smith</p>
