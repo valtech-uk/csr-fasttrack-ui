@@ -90,7 +90,7 @@
   </h1>
           <h2 class="subtitle">London 1, Monday 25 April 2016</h2>
         </div>
-        <a href="/25-04-2016-schedule.csv" class="button" id="extractScheduleBtn">Extract schedule</a>
+        <a href="/25-04-2016-schedule.csv" class="button" id="extractScheduleBtn">Download schedule</a>
         <p>
           <a href="assessment-schedule.html">Return to assessment summary</a>
         </p>
@@ -230,6 +230,25 @@
             </tbody>
           </table>
         </section>
+        <fieldset>
+          <legend class="form-label">Do you want to accept these scores?</legend>
+          <div class="form-group form-group-compound inline">
+            <label data-target="accept-scores-panel" for="accept-scores-yes" class="block-label">
+              <input name="accept-scores" type="radio" id="accept-scores-yes" aria-controls="accept-scores-panel"
+              aria-expanded="false">Yes
+            </label>
+            <label for="accept-scores-no" class="block-label">
+              <input name="accept-scores" type="radio" id="accept-scores-no">No
+            </label>
+          </div>
+          <div id="accept-scores-panel" class="toggle-content" aria-hidden="true">
+            <div class="panel-warning">
+              <p class="text">This will accept the candidate's scores into the system and you'll
+                no longer be able to edit these scores.</p>
+            </div>
+            <a href="#" class="button" id="resetTestsBtn">Accept scores</a>
+          </div>
+        </fieldset>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

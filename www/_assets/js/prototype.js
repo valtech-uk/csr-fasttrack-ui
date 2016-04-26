@@ -358,11 +358,13 @@ $(function() {
   if($('#testsPassed').length && gup('Status') == 'booked') {
     $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre, #assessmentBooked').removeClass('toggle-content');
+    $('#returnLink').text('Return to session schedule').attr('href', 'session-schedule.html');
   }
 
   if($('#testsPassed').length && gup('Status') == 'unbooked') {
     $('#testsInProgress').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre, #assessmentNotBooked').removeClass('toggle-content');
+    $('#returnLink').text('Return to venue schedule').attr('href', 'location-schedule.html');
   }
 
   $('#changeBookedSlot').on('click', function () {
