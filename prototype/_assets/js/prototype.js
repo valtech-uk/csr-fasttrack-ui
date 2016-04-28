@@ -351,13 +351,14 @@ $(function() {
     $('#testsPassed, #assessmentCentre, #addCandidateToSlot').removeClass('toggle-content');
   }
 
-  if($('#acceptScoresBtn').length && gup('Status') == 'accepted') {
-    $('#acceptScoresQuestion, [data-scoreslink], [data-unconfirmedtext], #extractScheduleBtn').addClass('toggle-content');
-    $('#acceptedScoresSuccess').removeClass('toggle-content');
+  if($('#extractScheduleBtn').length && gup('Status') == 'accepted') {
+    $('[data-firstscores]').replaceWith('<span>Scores and feedback accepted</span>');
+    $('[data-unconfirmedtext]').addClass('toggle-content');
   }
 
-  if($('#acceptScoresBtn').length && gup('Status') == 'no-show') {
-    $('[data-firstscores]').replaceWith('<span>Candidate did not attend</span>')
+  if($('#extractScheduleBtn').length && gup('Status') == 'no-show') {
+    $('[data-firstscores]').replaceWith('<span>Candidate did not attend</span>');
+    $('[data-unconfirmedtext]').addClass('toggle-content');
   }
 
   $('#addCandidateToSlot').on('click', function() {
@@ -549,23 +550,16 @@ $(function() {
 
   if($('#extractScheduleBtn').length && gup('Status') == 'added') {
     $('.candidateScores').text('Edit scores and feedback').attr('href', 'candidate-scores-new.html?Status=amend');
+    $('#savedScoresSuccess').removeClass('toggle-content');
+    $('[data-unconfirmedtext]').addClass('toggle-content');
   }
 
   if($('#leading-interview').length && gup('Status') == 'amend') {
-    $('#leading-group, #delivering-written, #capability-interview').find('option[value="1"]').attr('selected', true);
-    $('#leading-interview, #collaborating-written, #effective-written, #motivational-interview').find('option[value="2"]').attr('selected', true);
-    $('#leading-written, #collaborating-group, #effective-group, #changing-interview').find('option[value="3"]').attr('selected', true);
-    $('#delivering-interview, #changing-written, #capability-group, #motivational-group').find('option[value="4"]').attr('selected', true);
+    $('#leading-group, #delivering-written, #capability-interview').val('1.24');
+    $('#leading-interview, #collaborating-written, #effective-written, #motivational-interview').val('2.36');
+    $('#leading-written, #collaborating-group, #effective-group, #changing-interview').val('3.15')
+    $('#delivering-interview, #changing-written, #capability-group, #motivational-group').val('1.94')
 
-    $('[data-scoretotal]:eq(0)').text('6');
-    $('[data-scoretotal]:eq(1)').text('5');
-    $('[data-scoretotal]:eq(2)').text('5');
-    $('[data-scoretotal]:eq(3)').text('5');
-    $('[data-scoretotal]:eq(4)').text('7');
-    $('[data-scoretotal]:eq(5)').text('5');
-    $('[data-scoretotal]:eq(6)').text('12');
-
-    $('[data-overalltotal]').text('45');
 
     $('#01-feedback, #02-feedback, #03-feedback').html('Vivamus sit amet nulla purus. Etiam hendrerit scelerisque mollis. Nam augue eros, viverra a rutrum non, vulputate luctus felis. Integer et venenatis nunc. Aliquam sed diam elit. Nunc varius tellus euismod mauris bibendum, eget ultricies metus ultricies. Nulla facilisi. Ut quis condimentum quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla a sagittis lectus. Fusce eu augue at massa congue laoreet interdum ac lorem. Integer vestibulum, mi a tempus mattis, ex ex ultricies ipsum, eleifend imperdiet ipsum lacus id purus.&#13;&#10;&#13;&#10;Pellentesque elementum, tellus in elementum malesuada, orci massa malesuada lorem, nec iaculis mi ligula vitae tellus. In luctus nisi sed nisi ornare, a bibendum purus pulvinar. Integer luctus mollis felis, sed maximus justo convallis ut. Cras sollicitudin magna vehicula enim eleifend, ut ornare tellus tempus. Suspendisse vestibulum ipsum in elit tincidunt imperdiet et sit amet nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent vel sem nec lacus consequat rhoncus. Donec mattis magna at ipsum posuere, nec lacinia nulla tempus. Vivamus a ornare turpis. In consectetur sodales pulvinar. Proin luctus diam nec efficitur fringilla. Duis dui nunc, facilisis id elit nec, volutpat venenatis sem. In aliquet dictum erat ac sagittis. Suspendisse non mi eget neque ornare interdum sit amet ac libero. Curabitur egestas rutrum pretium. Cras consectetur diam non ultrices vulputate.&#13;&#10;&#13;&#10;Mauris at tortor convallis, congue arcu et, viverra tortor. Suspendisse potenti. Mauris at metus velit. Curabitur arcu sem, rhoncus eget faucibus a, euismod at mi. Aenean in faucibus lorem. Donec sit amet ipsum euismod, dignissim lectus vitae, bibendum elit. Nam rhoncus, turpis eu elementum laoreet, libero neque consectetur arcu, quis luctus enim massa vitae eros. Curabitur maximus scelerisque justo id mollis. Aenean eu est purus. Cras efficitur ligula pretium, dictum sapien et, ultrices ipsum. Nunc et quam.');
   }

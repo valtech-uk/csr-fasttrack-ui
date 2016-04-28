@@ -67,8 +67,8 @@
   <div class="content-container">
     <main role="main" id="main">
       
-<div class="panel-success toggle-content" id="acceptedScoresSuccess">
-  <p>You've accepted the scores for this session.</p>
+<div class="panel-success toggle-content" id="savedScoresSuccess">
+  <p>You've successfully saved this candidate's scores.</p>
 </div>
 <div class="hgroup para-btm-margin">
   <h1 class="heading-xlarge">
@@ -200,24 +200,6 @@
     </tbody>
   </table>
 </section>
-
-<fieldset id="acceptScoresQuestion">
-  <legend class="form-label">Do you want to accept these scores?</legend>
-  <div class="form-group form-group-compound inline">
-    <label data-target="accept-scores-panel" for="accept-scores-yes" class="block-label">
-      <input name="accept-scores" type="radio" id="accept-scores-yes" aria-controls="accept-scores-panel" aria-expanded="false">Yes
-    </label>
-    <label for="accept-scores-no" class="block-label">
-      <input name="accept-scores" type="radio" id="accept-scores-no">No
-    </label>
-  </div>
-  <div id="accept-scores-panel" class="toggle-content" aria-hidden="true">
-    <div class="panel-warning">
-      <p class="text">This will accept the candidate's scores into the system and you'll no longer be able to edit these scores.</p>
-    </div>
-    <a href="?Status=accepted" class="button" id="acceptScoresBtn">Accept scores</a>
-  </div>
-</fieldset>
     </main>
   </div>
   <footer class="gov-border" role="contentinfo">
