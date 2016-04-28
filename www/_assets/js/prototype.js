@@ -353,6 +353,7 @@ $(function() {
 
   if($('#extractScheduleBtn').length && gup('Status') == 'accepted') {
     $('[data-firstscores]').replaceWith('<span>Scores and feedback accepted</span>');
+    $('#savedScoresSuccess').removeClass('toggle-content').find('p').text("You've accepted this candidate's scores into the system, they can no longer be changed.");
     $('[data-unconfirmedtext]').addClass('toggle-content');
   }
 
