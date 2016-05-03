@@ -1,0 +1,131 @@
+---
+pageTitle: Pass mark setting
+layout: admin-layout.hbs
+---
+  <div class="panel-success toggle-content" id="passMarkSuccess">
+    <p>You've successfully saved the pass marks for that scheme</p>
+  </div>
+
+  <div class="panel-success toggle-content" id="passMarkSubmitted">
+    <p>Pass marks have been successfully submitted</p>
+  </div>
+
+   <div class="text">
+      <h2 class="heading-xlarge">
+       Assessment centre pass mark setting
+     </h2>
+   </div>
+
+    <section>
+      <table class="hide-errormsgs">
+        <colgroup>
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col class="t15" />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Scheme</th>
+            <th>Overall pass marks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="business-failScore-01">Fail</label><input type="number" value="8" min="8" max="32" class="form-control-small" id="business-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="business-passScore-01">Pass</label><input type="number" value="32" min="8" max="32" class="form-control-small" id="business-passScore-01" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Commercial</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="commercial-failScore-01">Fail</label><input type="number" value="8" min="8" max="32" class="form-control-small" id="commercial-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="commercial-passScore-01">Pass</label><input type="number" value="32" min="8" max="32" class="form-control-small" id="commercial-passScore-01" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Digital and technology</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="dat-failScore-01">Fail</label><input type="number" value="8" min="8" max="32" class="form-control-small" id="dat-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="dat-passScore-01">Pass</label><input type="number" value="32" min="8" max="32" class="form-control-small" id="dat-passScore-01" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Finance</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="finance-failScore-01">Fail</label><input type="number" value="8" min="8" max="32" class="form-control-small" id="finance-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="finance-passScore-01">Pass</label><input type="number" value="32" min="8" max="32" class="form-control-small" id="finance-passScore-01" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Project delivery</td>
+            <td class="grid-wrapper">
+              <div class="grid grid-1-2">
+                <label for="project-failScore-01">Fail</label><input type="number" value="8" min="8" max="32" class="form-control-small" id="project-failScore-01" />
+              </div>
+              <div class="grid grid-1-2">
+                <label for="project-passScore-01">Pass</label><input type="number" value="32" min="8" max="32" class="form-control-small" id="project-passScore-01" />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <fieldset>
+      <legend class="form-label">Do you want to submit these pass marks?</legend>
+      <div class="form-group form-group-compound inline">
+        <label data-target="passmarkset-panel" for="passmarkset-yes" class="block-label">
+          <input name="passmarkset" type="radio" id="passmarkset-yes" aria-controls="passmarkset-panel" aria-expanded="false">Yes
+        </label>
+        <label for="passmarkset-no" class="block-label">
+          <input name="passmarkset" type="radio" id="passmarkset-no">No
+        </label>
+      </div>
+      <div id="passmarkset-panel" class="toggle-content" aria-hidden="true">
+        <div class="panel-warning">
+          <p class="text">Once submitted you won't be able to decrease the fail marks or increase the pass marks.</p>
+        </div>
+        <a href="" class="button" id="submitPassMarks">Submit pass marks</a>
+        <p id="submittedTime"></p>
+      </div>
+    </fieldset>
+
+<script>
+  $(function(){
+    $('#submitPassMarks').on('click', function(e) {
+      var date = new Date(),
+          time = date.getHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes(),
+          day = date.getDate() + '/' + (date.getMonth() +1) + '/' + date.getFullYear();
+
+
+      e.preventDefault();
+
+      $('#passMarkSubmitted').show();
+
+      $('#submittedTime').text('Last submitted: ' + time + ' on ' + day);
+    });
+  });
+</script>
