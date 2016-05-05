@@ -95,6 +95,7 @@ $(function() {
   $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
     var $this   = $(this),
         $target = $this.parent().attr('data-target'),
+        $siblingTarget = $this.parent().siblings().attr('data-target'),
         $disTarget = $this.parent().attr('data-distarget'),
         $theTargetControl = $('#' + $disTarget);
 
@@ -106,6 +107,7 @@ $(function() {
       $this.closest('.form-group').find('[aria-expanded]').attr('aria-expanded', false);
     } else {
       $('#' + $target).show();
+      $('#' + $siblingTarget).hide().attr('aria-hidden', true);
 
       if($this.closest('.form-group').hasClass('blocklabel-single')) {
 
