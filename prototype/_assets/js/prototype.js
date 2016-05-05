@@ -562,6 +562,7 @@ $(function() {
   }
 
   if($('#leading-interview').length && gup('Status') == 'amend') {
+    $('#candidate-attend-yes').trigger('click').parent().addClass('selected');
     $('#leading-group, #delivering-written, #capability-interview').val('1.24');
     $('#leading-interview, #collaborating-written, #effective-written, #motivational-interview').val('2.36');
     $('#leading-written, #collaborating-group, #effective-group, #changing-interview').val('3.15')
