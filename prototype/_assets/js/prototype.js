@@ -378,6 +378,12 @@ $(function() {
     $('#returnLink').text('Return to venue schedule').attr('href', 'location-schedule.html');
   }
 
+  if($('#testsPassed').length && gup('Status') == 'assessment-complete') {
+    $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre, #assessmentComplete').removeClass('toggle-content');
+    $('#returnLink').text('Return to session schedule').attr('href', 'session-schedule.html');
+  }
+
   $('#changeBookedSlot').on('click', function () {
     $.cookie('placingCandidate', true, {path: '/'});
   });
