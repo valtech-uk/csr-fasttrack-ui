@@ -109,6 +109,7 @@ $(function() {
       $('#' + $target).show();
       $('#' + $siblingTarget).hide().attr('aria-hidden', true);
 
+
       if($this.closest('.form-group').hasClass('blocklabel-single')) {
 
         $this.closest('.blocklabel-single-container').find('.blocklabel-content').not('#' + $target).hide();
