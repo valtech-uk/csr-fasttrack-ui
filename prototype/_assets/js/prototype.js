@@ -284,6 +284,14 @@ $(function() {
     $('#btnSignIn').attr('href', 'profile-home-tests-unsuccessful.html');
   }
 
+  if($('#signedOut').length && gup('Status') == 'assessment-unsuccessful') {
+    $('#btnSignIn').attr('href', 'profile-home-assessment-unsuccessful.html');
+  }
+
+  if($('#signedOut').length && gup('Status') == 'assessment-successful') {
+    $('#btnSignIn').attr('href', 'profile-home-assessment-successful.html');
+  }
+
   if($('#signedOut').length && gup('Status') == 'closed') {
     $('#btnSignIn').attr('href', 'profile-home-closed.html');
     $('#applicationsClosed').removeClass('toggle-content');
