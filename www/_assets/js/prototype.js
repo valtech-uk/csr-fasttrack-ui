@@ -388,6 +388,11 @@ $(function() {
 
   $('#changeAllocation').on('change', function() {
     $('#loadSlots').removeClass('toggle-content');
+    if($('#loadSlots').hasClass('toggle-content')) {
+    } else {
+      $('#slotsForLocation').addClass('toggle-content');
+      // $('[data-sessionselector] option:eq(0)').attr('selected', true);
+    }
 
   });
 
