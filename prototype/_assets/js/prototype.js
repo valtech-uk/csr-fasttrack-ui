@@ -386,6 +386,20 @@ $(function() {
     $('#returnLink').text('Return to venue schedule').attr('href', 'location-schedule.html');
   }
 
+  $('#changeAllocation').on('change', function() {
+    $('#loadSlots').removeClass('toggle-content');
+
+  });
+
+  $('#loadSlots').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).addClass('toggle-content');
+    $('#slotsForLocation').removeClass('toggle-content');
+
+  });
+
+
   if($('#testsPassed').length && gup('Status') == 'assessment-complete') {
     $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre, #assessmentComplete').removeClass('toggle-content');

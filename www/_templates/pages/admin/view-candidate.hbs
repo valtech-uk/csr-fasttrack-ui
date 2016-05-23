@@ -99,7 +99,41 @@ layout: admin-layout.hbs
               <div id="assessmentNotBooked">
                 <p>Not currently booked <br>
                 Assessment location: <span>London</span></p>
-                <a href="assessment-schedule.html" class="">View assessment schedule</a>
+                <p>
+                  <a href="assessment-schedule.html" class="">View assessment schedule</a>
+                </p>
+                <div>
+                  <div class="form-group form-group-compound">
+                    <label for="changeAllocation" class="">Allocate to different assessment centre</label>
+                    <select name="" id="changeAllocation">
+                      <option value="">-- Select venue --</option>
+                      <option value="">London</option>
+                      <option value="">Manchester</option>
+                    </select>
+                    <a href="" id="loadSlots" class="toggle-content">Load available slots</a>
+                  </div>
+                  <div class="toggle-content" id="slotsForLocation">
+                    <div class="form-group form-group-compound">
+                      <label for="slotSelector" class="disp-block">Choose slot</label>
+                      {{> session-selector }}
+                    </div>
+                    <fieldset class="inline">
+                      <legend>Request confirmation</legend>
+                      <div class="form-group form-group-compound">
+                        <label for="question-01-yes" class="block-label block-label-slim no-right-margin">
+                          <input name="question-01" type="radio" id="question-01-yes">Yes
+                        </label>
+                      </div>
+                      <div class="form-group form-group-compound">
+                        <label for="question-01-no" class="block-label block-label-slim">
+                          <input name="question-01" type="radio" id="question-01-no">No
+                        </label>
+                      </div>
+                    </fieldset>
+                    <a href="#" class="button" id="saveSlotBtn">Save allocation</a>
+                  </div>
+                </div>
+
               </div>
               <div id="assessmentBooked" class="toggle-content">
                 <p>Booked for London: <br> Monday 25 April 2016 - Morning <br><a id="removeBookedSlot" href="#">Remove from slot</a></p>
