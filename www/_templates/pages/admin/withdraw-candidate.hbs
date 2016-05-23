@@ -1,0 +1,31 @@
+---
+pageTitle: Withdraw candidate
+layout: admin-layout.hbs
+---
+
+<h1 class="heading-xlarge">{{ pageTitle }}</h1>
+
+<div class="panel-indent">
+  <div class="text">
+    <p>This will withdraw the candidate from the process and they'll no longer be able to continue with their application.</p>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="withdrawReason" class="form-label">Reason for withdrawal</label>
+  <select name="withdrawalReasons" id="withdrawReason" class="selectWithOptionTrigger">
+    <option value="">-- Select reason from list --</option>
+    <option value="">I've found another job elsewhere</option>
+    <option value="">I'm joining another apprenticeship scheme</option>
+    <option value="">I realised I wasn't eligible for an apprenticeship</option>
+    <option value="">My circumstances have changed</option>
+    <option value="">I have moved abroad</option>
+    <option class="optionTrigger" value="" data-optiontrigger="moreInfo">Other reason (please provide details)</option>
+  </select>
+</div>
+<div class="form-group toggle-content" id="moreInfo">
+  <label for="otherWithdrawReason" class="form-label">More information about your withdrawal</label>
+  <textarea name="" id="otherWithdrawReason" rows="6" class="form-control"></textarea>
+</div>
+
+<a href="view-candidate.html?Status=withdrawn" class="button" id="withdrawCandidate">Withdraw candidate</a>

@@ -374,6 +374,12 @@ $(function() {
     $.cookie('placingCandidate', true, {path: '/'});
   });
 
+  if($('#testsPassed').length && gup('Status') == 'withdrawn') {
+    $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
+    $('#testsPassed, #candidateWithdrawn').removeClass('toggle-content');
+    $('#adjustmentLink, #withdrawLink').addClass('toggle-content');
+  }
+
   if($('#testsPassed').length && gup('Status') == 'booked') {
     $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre, #assessmentBooked').removeClass('toggle-content');
