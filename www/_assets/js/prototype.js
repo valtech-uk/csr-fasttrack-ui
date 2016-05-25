@@ -386,6 +386,12 @@ $(function() {
     $('#returnLink').text('Return to session schedule').attr('href', 'session-schedule.html');
   }
 
+  if($('#testsPassed').length && gup('Status') == 'unconfirmed') {
+    $('#testsInProgress, #assessmentNotBooked').addClass('toggle-content');
+    $('#testsPassed, #assessmentCentre, #assessmentBooked, #unconfirmedSlot').removeClass('toggle-content');
+    $('#returnLink').text('Return to session schedule').attr('href', 'session-schedule.html');
+  }
+
   if($('#testsPassed').length && gup('Status') == 'unbooked') {
     $('#testsInProgress').addClass('toggle-content');
     $('#testsPassed, #assessmentCentre, #assessmentNotBooked').removeClass('toggle-content');
