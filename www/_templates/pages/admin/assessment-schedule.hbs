@@ -7,6 +7,19 @@ layout: admin-layout.hbs
   <p class="text">You've successfully saved candidate slots</p>
 </div>
 
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+<style type="text/css">
+  th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+        margin: 0 auto;
+    }
+    table.dataTable.no-footer {
+      border-bottom: none;
+    }
+    .DTFC_LeftHeadWrapper {
+      background: white;
+    }
+</style>
 <h1 class="heading-xlarge">
   Assessment schedule
 </h1>
@@ -14,8 +27,8 @@ layout: admin-layout.hbs
   <p>You are currently managing the slot for: <b id="candidateManaging">John Smith</b>.</p>
   <p><a href="" id="stopManagingCandidate">Stop managing</a></p>
 </div>
-<section class="responsive-table scrolling-panel">
-  <table class="date-table">
+<section class="responsive-table">
+  <table class="date-table stripe row-border">
     <thead>
       <tr>
         <th></th>
@@ -1725,3 +1738,20 @@ layout: admin-layout.hbs
   <li><span class="inl-block day-tentative small-right-margin">4</span> Unconfirmed</li>
   <li><span class="inl-block day-confirmed small-right-margin">6</span> Confirmed</li>
 </ul>
+
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/fixedcolumns/3.2.2/js/dataTables.fixedColumns.min.js"></script>
+
+<script>
+  $(function() {
+    $('table').DataTable({
+      scrollX:        true,
+      paging:         false,
+      fixedColumns:   {
+          leftColumns: 1
+      },
+      searching: false,
+      ordering: false
+    });
+  });
+</script>
