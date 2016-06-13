@@ -1,0 +1,44 @@
+---
+pageTitle: Find a candidate
+layout: admin-layout.hbs
+---
+    <div class="panel-success toggle-content" id="issueSuccess">
+      <p class="text">The candidate's issue has been saved</p>
+    </div>
+    <h1 class="heading-xlarge">
+      Find a candidate
+    </h1>
+    <p><a id="issueReturn" href="view-candidate.html">Return to candidate</a></p>
+    <section>
+      <div class="grid-wrapper">
+        <div class="grid grid-2-3">
+          <h2 class="heading-large">Create an issue</h2>
+        </div>
+      </div>
+
+      <section>
+        <h3 class="bold-small">Candidate name</h3>
+        <p>John Smith</p>
+      </section>
+
+      <section>
+        <fieldset>
+            <legend class="form-label">Is there an issue with this candidate?</legend>
+            <div class="form-group form-group-compound inline">
+            <label data-target="issue-panel" for="issue-yes" class="block-label">
+              <input name="issue" type="radio" id="issue-yes" aria-controls="issue-panel" aria-expanded="false">Yes
+            </label>
+            <label for="issue-no" class="block-label">
+              <input checked name="issue" type="radio" id="issue-no">No
+            </label>
+          </div>
+          <div id="issue-panel" class="toggle-content" aria-hidden="true">
+            <div class="form-group">
+              <label for="nameIssue" class="form-label">Enter the issue</label>
+              <textarea name="" id="nameIssue" rows="4" class="form-control"></textarea>
+            </div>
+          </div>
+          <a href="" class="button" id="issueSaveBtn">Save issue</a>
+        </fieldset>
+      </section>
+    </section>

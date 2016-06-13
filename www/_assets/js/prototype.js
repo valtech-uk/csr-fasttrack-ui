@@ -349,6 +349,32 @@ $(function() {
     $('#textExpire').text('1:30pm on 13 April 2016');
   }
 
+  if($('#testsResetSuccess').length && gup('Status') == 'issue') {
+    $('#issueWithCandidate').removeClass('toggle-content');
+    $('#markWithIssue').find('a').attr('href', 'create-issue.html?Status=issue');
+  }
+
+  if($('#issueSaveBtn').length && gup('Status') == 'issue') {
+    $('#issue-yes').trigger('click').parent().addClass('selected').siblings().removeClass('selected');
+    $('#issue-panel').show();
+    $('#issueReturn').attr('href', 'view-candidate.html?Status=issue');
+    $('#nameIssue').html('This candidate has changed their email address to john.smith@hotmail.com.');
+  }
+
+  $('#issueSaveBtn').on('click', function(e) {
+    if($('#issue-yes').is(':checked')) {
+      $('#issueSuccess').removeClass('toggle-content');
+      $('#issue-yes').trigger('click').parent().addClass('selected').siblings().removeClass('selected');
+      $('#issue-panel').show();
+      $('#issueReturn').attr('href', 'view-candidate.html?Status=issue');
+    } else {
+      $('#issueSuccess').removeClass('toggle-content');
+      $('#issueReturn').attr('href', 'view-candidate.html');
+    }
+
+    e.preventDefault();
+  });
+
   if($('#testsTimeSuccess').length && gup('Status') == 'extend') {
     $('#testsTimeSuccess').removeClass('toggle-content');
     $('#textExpire').text('1:30pm on 13 April 2016');
