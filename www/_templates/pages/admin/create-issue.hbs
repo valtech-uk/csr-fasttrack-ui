@@ -3,7 +3,7 @@ pageTitle: Find a candidate
 layout: admin-layout.hbs
 ---
     <div class="panel-success toggle-content" id="issueSuccess">
-      <p class="text">The candidate's issue has been saved</p>
+      <p class="text">The flag has been saved</p>
     </div>
     <h1 class="heading-xlarge">
       Find a candidate
@@ -12,7 +12,7 @@ layout: admin-layout.hbs
     <section>
       <div class="grid-wrapper">
         <div class="grid grid-2-3">
-          <h2 class="heading-large">Create an issue</h2>
+          <h2 class="heading-large">Flag candidate</h2>
         </div>
       </div>
 
@@ -23,7 +23,7 @@ layout: admin-layout.hbs
 
       <section>
         <fieldset>
-            <legend class="form-label">Is there an issue with this candidate?</legend>
+            <legend class="form-label">Do you want to flag this candidate?</legend>
             <div class="form-group form-group-compound inline">
             <label data-target="issue-panel" for="issue-yes" class="block-label">
               <input name="issue" type="radio" id="issue-yes" aria-controls="issue-panel" aria-expanded="false">Yes
@@ -34,7 +34,7 @@ layout: admin-layout.hbs
           </div>
           <div id="issue-panel" class="toggle-content" aria-hidden="true">
             <div class="form-group">
-              <label for="nameIssue" class="form-label">Enter the issue</label>
+              <label for="nameIssue" class="form-label">Enter the reason for the flag</label>
               <textarea name="" id="nameIssue" rows="4" class="form-control"></textarea>
             </div>
           </div>
